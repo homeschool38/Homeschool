@@ -444,6 +444,71 @@ nav {
 
 /* ===== ABOUT (from new site) ===== */
 .about-section { background:var(--white); padding:80px 24px; }
+
+/* ===== LEAD MAGNET / FREE COURSE (new design) ===== */
+.lead-magnet-section {
+  background: linear-gradient(135deg, #FFF9F5 0%, #FEFCF7 100%);
+  padding: 80px 24px;
+}
+.lead-magnet-card {
+  max-width: 800px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, #FFFDF5 0%, #FFF9ED 100%);
+  border: 2px solid var(--yellow);
+  border-radius: 24px;
+  padding: 48px 44px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(232,196,90,0.15);
+}
+.lead-magnet-card::before {
+  content:''; position:absolute; top:-60%; right:-20%;
+  width:400px; height:400px;
+  background: radial-gradient(circle, rgba(232,134,138,0.06) 0%, transparent 70%);
+  border-radius:50%; pointer-events:none;
+}
+.lead-magnet-card .lm-badge {
+  display:inline-flex; align-items:center; gap:8px;
+  background:var(--pink); color:var(--white);
+  padding:8px 20px; border-radius:50px;
+  font-size:0.85rem; font-weight:700;
+  font-family:'Playfair Display',serif; margin-bottom:20px;
+}
+.lead-magnet-card h2 { color:var(--charcoal); margin-bottom:12px; }
+.lead-magnet-card .lm-subtitle {
+  font-size:1.05rem; color:var(--mid);
+  max-width:600px; margin:0 auto 28px; line-height:1.7;
+}
+.lead-magnet-card .lm-benefits {
+  display:grid; grid-template-columns:1fr 1fr;
+  gap:12px 30px; text-align:left;
+  max-width:580px; margin:0 auto 32px;
+}
+.lm-benefits .lm-benefit {
+  display:flex; align-items:flex-start; gap:10px;
+  font-size:0.95rem; color:#555; line-height:1.5;
+}
+.lm-benefits .lm-benefit .lm-num {
+  flex-shrink:0; background:var(--yellow); color:var(--charcoal);
+  width:22px; height:22px; border-radius:50%;
+  display:flex; align-items:center; justify-content:center;
+  font-size:0.75rem; font-weight:700; margin-top:3px;
+}
+.lead-magnet-form { max-width:480px; margin:0 auto; }
+.lead-magnet-form .form-row { display:flex; gap:12px; margin-bottom:12px; }
+.lead-magnet-form input[type="text"],
+.lead-magnet-form input[type="email"] {
+  flex:1; padding:14px 18px;
+  border:2px solid rgba(133,181,168,0.3); border-radius:12px;
+  font-family:'Nunito',sans-serif; font-size:0.95rem;
+  color:var(--charcoal); background:var(--white);
+  transition:border-color 0.3s ease; outline:none;
+}
+.lead-magnet-form input:focus { border-color:var(--pink); }
+.lead-magnet-form input::placeholder { color:#bbb; }
+.lead-magnet-form .btn { width:100%; justify-content:center; margin-top:8px; }
+.lead-magnet-form .privacy-note { font-size:0.82rem; color:#aaa; margin-top:12px; }
 .about-grid { display:grid; grid-template-columns:1fr 1fr; gap:50px; align-items:start; max-width:980px; margin:0 auto; }
 .about-founder { background:var(--cream); border-radius:20px; padding:36px; }
 .about-founder .founder-icon { width:80px; height:80px; border-radius:50%; background:linear-gradient(135deg,var(--pink),var(--peach)); margin-bottom:20px; display:flex; align-items:center; justify-content:center; font-size:2.2rem; color:var(--white); }
@@ -509,6 +574,9 @@ footer a:hover { color:var(--white); }
   .promise-list { grid-template-columns:1fr; }
   .who-grid { grid-template-columns:1fr; }
   .faq-grid { grid-template-columns:1fr; }
+  .lead-magnet-card { padding:36px 24px; }
+  .lead-magnet-card .lm-benefits { grid-template-columns:1fr; }
+  .lead-magnet-form .form-row { flex-direction:column; }
   .nav-links .hide-mobile { display:none; }
   .nav-links .dropdown-content { display:none; position:static; box-shadow:none; background:transparent; padding:10px 0 10px 20px; border:none; }
   .nav-links .dropdown-content a { color:var(--mid); font-size:0.95rem; padding:6px 0; display:block; }
@@ -899,63 +967,29 @@ footer a:hover { color:var(--white); }
   </div>
 </section>
 
-<!-- ===== FREE 5-DAY EMAIL COURSE (MailerLite from current site) ===== -->
-<section class="lead-magnet-wrap" id="free-course">
-  <div class="lead-magnet-inner">
-    <p class="lm-label">Not ready to purchase yet?</p>
-    <h2>Start with our FREE 5-Day Email Course</h2>
-    <p>Get 5 days of faith-centered homeschool guidance delivered straight to your inbox — completely free. Written by a Muslim homeschool mama, for sisters just like you.</p>
-
-    <!-- MailerLite Form from current site -->
-    <div id="mlb2-41364102" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-41364102">
-      <div class="ml-form-align-center">
-        <div class="ml-form-embedWrapper embedForm">
-          <div class="ml-form-embedBody ml-form-embedBodyDefault row-form">
-            <div class="ml-form-embedContent" style="display:none;"></div>
-            <form class="ml-block-form" action="https://assets.mailerlite.com/jsonp/2351886/forms/187569738288727653/subscribe" method="post" target="_blank">
-              <div class="ml-form-formContent">
-                <div class="ml-form-fieldRow">
-                  <div class="ml-field-group ml-field-name">
-                    <input class="form-control" type="text" name="fields[name]" placeholder="First Name" autocomplete="given-name" aria-label="name">
-                  </div>
-                </div>
-                <div class="ml-form-fieldRow ml-last-item">
-                  <div class="ml-field-group ml-field-email ml-validate-email ml-validate-required">
-                    <input class="form-control" type="email" name="fields[email]" placeholder="Email address" autocomplete="email" aria-required="true" aria-label="email">
-                  </div>
-                </div>
-              </div>
-              <div class="ml-form-recaptcha ml-validate-required" style="float:left;">
-                <style>.ml-form-recaptcha{margin-bottom:12px}.ml-form-recaptcha.ml-error iframe{border:solid 1px red}@media screen and (max-width:480px){.ml-form-recaptcha{width:220px!important}.g-recaptcha{transform:scale(0.78);-webkit-transform:scale(0.78);transform-origin:0 0;-webkit-transform-origin:0 0}}</style>
-                <script src="https://www.google.com/recaptcha/api.js"></script>
-                <div class="g-recaptcha" data-sitekey="6Lf1KHQUAAAAAFNKEX1hdSWCS3mRMv4FlFaNslaD"></div>
-              </div>
-              <input type="hidden" name="ml-submit" value="1">
-              <div class="ml-form-embedSubmit">
-                <button type="submit" class="primary">Yes, I'm ready to start!</button>
-                <button class="loading" style="display:none;" disabled="disabled" type="button"><div class="ml-form-embedSubmitLoad"></div><span class="sr-only">Loading...</span></button>
-              </div>
-              <input type="hidden" name="anticsrf" value="true">
-            </form>
-          </div>
-          <div class="ml-form-successBody row-success" style="display:none;">
-            <div class="ml-form-successContent">
-              <h4>JazakAllahu Khayran, sister!</h4>
-              <p>One last step — check your inbox now for a confirmation email and click the link inside to start your free course.</p>
-              <p><strong>Don't forget to check your spam folder!</strong></p>
-            </div>
-          </div>
-        </div>
+<!-- ===== FREE 5-DAY EMAIL COURSE (new design) ===== -->
+<section class="lead-magnet-section" id="free-course">
+  <div class="container" style="max-width:900px;padding:0 24px;">
+    <div class="lead-magnet-card">
+      <div class="lm-badge">🎁 FREE 5-DAY EMAIL COURSE</div>
+      <h2 class="section-title">5 Days to a Calm Muslim Homeschool Morning (Even If Your Kids Won't Listen)</h2>
+      <p class="lm-subtitle">A free email course for Muslim mothers who want to transform chaotic mornings into moments of barakah — without forcing your kids or losing your mind.</p>
+      <div class="lm-benefits">
+        <div class="lm-benefit"><span class="lm-num">1</span><span>The real reason your mornings fall apart (and the 2-minute fix)</span></div>
+        <div class="lm-benefit"><span class="lm-num">2</span><span>How to wake up before your children without burning out</span></div>
+        <div class="lm-benefit"><span class="lm-num">3</span><span>The "Fajr to First Lesson" blueprint that works for real families</span></div>
+        <div class="lm-benefit"><span class="lm-num">4</span><span>How to get your kids to actually cooperate — without threats or bribes</span></div>
+        <div class="lm-benefit"><span class="lm-num">5</span><span>The niyyah reset that will change everything</span></div>
       </div>
+      <form class="lead-magnet-form" action="#" method="post">
+        <div class="form-row">
+          <input type="text" name="name" placeholder="Your name" required>
+          <input type="email" name="email" placeholder="Your email address" required>
+        </div>
+        <button type="submit" class="btn btn-gold" style="width:100%;justify-content:center;padding:14px 28px;">Get Free Access →</button>
+        <p class="privacy-note">We hate spam too. Only My Muslim Homeschool emails, and you can unsubscribe anytime.</p>
+      </form>
     </div>
-    <script>
-    function ml_webform_success_41364102(){var $=ml_jQuery||jQuery;$('.ml-subscribe-form-41364102 .row-success').show();$('.ml-subscribe-form-41364102 .row-form').hide();}
-    </script>
-    <script src="https://groot.mailerlite.com/js/w/webforms.min.js?vb397d78ebaa8a0f631d35384c46d781b" type="text/javascript"></script>
-    <script>fetch("https://assets.mailerlite.com/jsonp/2351886/forms/187569738288727653/takel");</script>
-    <!-- /MailerLite Form -->
-
-    <p class="lm-footnote">Free • Faith-Centered • Starts Immediately • No spam, ever</p>
   </div>
 </section>
 
