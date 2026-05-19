@@ -389,8 +389,9 @@ nav {
 
 /* ===== FAQ ===== */
 .faq { background:var(--cream); padding:64px 24px; }
-.faq-inner { max-width:600px; margin:0 auto; }
+.faq-inner { max-width:900px; margin:0 auto; }
 .faq-inner h2 { text-align:center; margin-bottom:38px; }
+.faq-grid { display:grid; grid-template-columns:1fr 1fr; gap:0 40px; }
 .faq-item { border-bottom:1px solid var(--border); padding:18px 0; }
 .faq-item:last-child { border-bottom:none; }
 .faq-q { font-size:1rem; font-weight:600; color:var(--charcoal); margin-bottom:7px; font-family:'Playfair Display',Georgia,'Times New Roman',serif; }
@@ -507,7 +508,7 @@ footer a:hover { color:var(--white); }
   .bundle-content { grid-template-columns:1fr; gap:24px; }
   .promise-list { grid-template-columns:1fr; }
   .who-grid { grid-template-columns:1fr; }
-  .coming-form { flex-direction:column; }
+  .faq-grid { grid-template-columns:1fr; }
   .nav-links .hide-mobile { display:none; }
   .nav-links .dropdown-content { display:none; position:static; box-shadow:none; background:transparent; padding:10px 0 10px 20px; border:none; }
   .nav-links .dropdown-content a { color:var(--mid); font-size:0.95rem; padding:6px 0; display:block; }
@@ -822,6 +823,7 @@ footer a:hover { color:var(--white); }
 <section class="faq" id="faq">
   <div class="faq-inner">
     <h2 class="section-title">Questions answered</h2>
+    <div class="faq-grid">
     <div class="faq-item">
       <p class="faq-q">What format are the files?</p>
       <p class="faq-a">All resources are delivered as PDFs. Fillable digitally in Adobe Acrobat or any PDF reader, and designed to be printed at home too.</p>
@@ -845,6 +847,7 @@ footer a:hover { color:var(--white); }
     <div class="faq-item">
       <p class="faq-q">Can I share these with friends or in a co-op?</p>
       <p class="faq-a">These are licensed for your personal household use only. If a sister would love them, please send her this link instead, jazakAllahu khayran!</p>
+    </div>
     </div>
   </div>
 </section>
