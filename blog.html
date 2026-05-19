@@ -1,0 +1,1177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Muslim Homeschool Morning Routine That Actually Works — My Muslim Homeschool Blog</title>
+<meta name="description" content="The exact Muslim homeschool morning routine system that transforms chaotic mornings into calm, productive, barakah-filled starts. No perfect wake-up times required.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Georgia&family=Calibri&display=swap" rel="stylesheet">
+<style>
+/* ===== RESET & BASE ===== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: 'Calibri', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #404040;
+  background: #FFFFFF;
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+img { max-width: 100%; height: auto; display: block; }
+a { text-decoration: none; color: inherit; }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ===== TYPOGRAPHY ===== */
+h1, h2, h3, h4, .brand-name {
+  font-family: 'Georgia', 'Times New Roman', Times, serif;
+  line-height: 1.3;
+}
+
+h1 {
+  font-size: clamp(2rem, 4.5vw, 3rem);
+  color: #E8909A;
+  letter-spacing: -0.01em;
+}
+
+h2 {
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  color: #E8909A;
+  margin-bottom: 16px;
+}
+
+h3 {
+  font-size: clamp(1.15rem, 2.2vw, 1.4rem);
+  color: #404040;
+  margin-bottom: 12px;
+  margin-top: 32px;
+}
+
+h3:first-child {
+  margin-top: 0;
+}
+
+p { margin-bottom: 16px; font-size: 1.05rem; line-height: 1.8; }
+
+/* ===== BUTTONS ===== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Calibri', 'Segoe UI', sans-serif;
+  font-weight: 700;
+  font-size: 1.05rem;
+  padding: 16px 36px;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+  letter-spacing: 0.02em;
+}
+
+.btn-primary {
+  background: #E8909A;
+  color: #FFFFFF;
+  box-shadow: 0 4px 15px rgba(232, 144, 154, 0.35);
+}
+
+.btn-primary:hover {
+  background: #d47a84;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(232, 144, 154, 0.45);
+}
+
+.btn-gold {
+  background: #FDDF8D;
+  color: #404040;
+  box-shadow: 0 4px 15px rgba(253, 223, 141, 0.4);
+}
+
+.btn-gold:hover {
+  background: #f0d07a;
+  transform: translateY(-2px);
+}
+
+/* ===== STICKY HEADER ===== */
+.sticky-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.97);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(168, 203, 189, 0.2);
+  transition: all 0.3s ease;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 0;
+}
+
+.brand-name {
+  font-family: 'Georgia', 'Times New Roman', Times, serif;
+  font-size: 1.3rem;
+  color: #E8909A;
+  font-weight: bold;
+  letter-spacing: -0.01em;
+}
+
+.brand-name span {
+  color: #A8CBBD;
+}
+
+.header-nav {
+  display: flex;
+  gap: 28px;
+  align-items: center;
+}
+
+.header-nav a {
+  font-family: 'Calibri', 'Segoe UI', sans-serif;
+  font-size: 0.95rem;
+  color: #404040;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.header-nav a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #E8909A;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.header-nav a:hover {
+  color: #E8909A;
+}
+
+.header-nav a:hover::after {
+  transform: scaleX(1);
+}
+
+.header-nav a.active {
+  color: #E8909A;
+}
+
+.header-nav a.active::after {
+  transform: scaleX(1);
+}
+
+.header-nav .btn {
+  padding: 10px 24px;
+  font-size: 0.9rem;
+}
+
+.mobile-menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 4px;
+}
+
+.mobile-menu-toggle span {
+  display: block;
+  width: 26px;
+  height: 2.5px;
+  background: #404040;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.header-spacer {
+  height: 70px;
+}
+
+/* ===== BLOG HEADER ===== */
+.blog-header {
+  background: linear-gradient(135deg, #FFF9F5 0%, #FFF5F0 40%, #FEFCF7 100%);
+  padding: 60px 0 40px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.blog-header::before {
+  content: '';
+  position: absolute;
+  top: -30%;
+  right: -10%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(253, 223, 141, 0.12) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.blog-header h1 {
+  margin-bottom: 8px;
+}
+
+.blog-header .blog-meta {
+  color: #888;
+  font-size: 0.95rem;
+}
+
+.blog-header .blog-meta span {
+  color: #A8CBBD;
+  font-weight: 600;
+}
+
+.blog-header .breadcrumb {
+  font-size: 0.85rem;
+  color: #aaa;
+  margin-bottom: 16px;
+}
+
+.blog-header .breadcrumb a {
+  color: #E8909A;
+}
+
+.blog-header .breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+/* ===== BLOG LAYOUT ===== */
+.blog-layout {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 50px;
+  padding: 60px 0;
+}
+
+.blog-main {
+  min-width: 0;
+}
+
+/* ===== BLOG POST STYLING ===== */
+.blog-post h2 {
+  margin-top: 48px;
+  padding-top: 8px;
+}
+
+.blog-post h2:first-of-type {
+  margin-top: 0;
+}
+
+.blog-post h3 {
+  margin-top: 32px;
+  color: #404040;
+  font-family: 'Georgia', 'Times New Roman', Times, serif;
+  font-size: 1.25rem;
+}
+
+.blog-post .intro-block {
+  background: rgba(168, 203, 189, 0.08);
+  border-left: 4px solid #A8CBBD;
+  padding: 24px 28px;
+  border-radius: 0 12px 12px 0;
+  margin-bottom: 32px;
+  font-size: 1.05rem;
+  color: #555;
+  line-height: 1.8;
+}
+
+.blog-post .intro-block strong {
+  color: #404040;
+}
+
+.blog-post ul, .blog-post ol {
+  margin: 16px 0 24px 24px;
+}
+
+.blog-post ul li, .blog-post ol li {
+  margin-bottom: 8px;
+  font-size: 1.02rem;
+  line-height: 1.7;
+  color: #555;
+}
+
+.blog-post ul li strong, .blog-post ol li strong {
+  color: #404040;
+}
+
+.blog-post .step-card {
+  background: #FFF9F5;
+  border: 1px solid rgba(232, 144, 154, 0.15);
+  border-radius: 16px;
+  padding: 28px;
+  margin-bottom: 24px;
+  transition: all 0.3s ease;
+}
+
+.blog-post .step-card:hover {
+  border-color: rgba(232, 144, 154, 0.3);
+  box-shadow: 0 4px 16px rgba(232, 144, 154, 0.06);
+}
+
+.blog-post .step-card h4 {
+  font-family: 'Georgia', 'Times New Roman', Times, serif;
+  font-size: 1.1rem;
+  color: #E8909A;
+  margin-bottom: 8px;
+}
+
+.blog-post .step-card p {
+  font-size: 0.98rem;
+  color: #555;
+  margin-bottom: 0;
+}
+
+.blog-post .step-card ul {
+  margin: 12px 0 0 20px;
+}
+
+.blog-post .step-card ul li {
+  font-size: 0.95rem;
+  margin-bottom: 4px;
+}
+
+.blog-post .tip-box {
+  background: rgba(253, 223, 141, 0.15);
+  border: 1px solid rgba(253, 223, 141, 0.3);
+  border-radius: 12px;
+  padding: 20px 24px;
+  margin: 24px 0;
+}
+
+.blog-post .tip-box p {
+  font-size: 0.98rem;
+  color: #555;
+  margin-bottom: 0;
+}
+
+.blog-post .tip-box p strong {
+  color: #404040;
+}
+
+.blog-post .emphasis-text {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #A8CBBD;
+  font-family: 'Georgia', 'Times New Roman', Times, serif;
+  margin: 32px 0;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.blog-post .number-list {
+  counter-reset: step-counter;
+  list-style: none;
+  margin-left: 0;
+}
+
+.blog-post .number-list li {
+  counter-increment: step-counter;
+  padding-left: 36px;
+  position: relative;
+  margin-bottom: 12px;
+}
+
+.blog-post .number-list li::before {
+  content: counter(step-counter);
+  position: absolute;
+  left: 0;
+  top: 2px;
+  background: #FDDF8D;
+  color: #404040;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.blog-post .cta-box {
+  background: linear-gradient(135deg, #FFFDF5 0%, #FFF9ED 100%);
+  border: 2px solid #FDDF8D;
+  border-radius: 20px;
+  padding: 36px 32px;
+  text-align: center;
+  margin: 48px 0;
+}
+
+.blog-post .cta-box h3 {
+  color: #404040;
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+.blog-post .cta-box p {
+  color: #666;
+  max-width: 500px;
+  margin: 0 auto 24px;
+}
+
+.blog-post .cta-box .cta-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+}
+
+.blog-post .cta-box .cta-link-item {
+  text-align: center;
+  padding: 12px 20px;
+  background: #FFFFFF;
+  border-radius: 12px;
+  border: 1px solid rgba(168, 203, 189, 0.15);
+  min-width: 150px;
+}
+
+.blog-post .cta-box .cta-link-item .cta-label {
+  font-size: 0.82rem;
+  color: #E8909A;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.blog-post .cta-box .cta-link-item .cta-title {
+  font-size: 0.95rem;
+  color: #404040;
+  font-weight: 600;
+  margin: 4px 0;
+}
+
+.blog-post .cta-box .cta-link-item .cta-price {
+  font-size: 0.85rem;
+  color: #E8909A;
+  font-weight: 700;
+}
+
+/* ===== SIDEBAR ===== */
+.blog-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.sidebar-widget {
+  background: #FFFFFF;
+  border-radius: 16px;
+  padding: 28px;
+  border: 1px solid rgba(168, 203, 189, 0.12);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.03);
+}
+
+.sidebar-widget h4 {
+  font-family: 'Georgia', 'Times New Roman', Times, serif;
+  font-size: 1.1rem;
+  color: #E8909A;
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid rgba(168, 203, 189, 0.2);
+}
+
+.sidebar-widget p {
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 16px;
+}
+
+/* Lead magnet in sidebar */
+.sidebar-lead-magnet {
+  background: linear-gradient(135deg, #FFFDF5 0%, #FFF9ED 100%);
+  border: 2px solid #FDDF8D;
+  text-align: center;
+}
+
+.sidebar-lead-magnet .slm-badge {
+  display: inline-block;
+  background: #E8909A;
+  color: #FFFFFF;
+  padding: 4px 14px;
+  border-radius: 50px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  font-family: 'Georgia', serif;
+  margin-bottom: 12px;
+}
+
+.sidebar-lead-magnet h4 {
+  border-bottom: none;
+  padding-bottom: 0;
+  font-size: 1rem;
+  color: #404040;
+  margin-bottom: 12px;
+}
+
+.sidebar-lead-magnet ul {
+  list-style: none;
+  text-align: left;
+  margin: 0 0 20px;
+}
+
+.sidebar-lead-magnet ul li {
+  padding: 5px 0 5px 20px;
+  position: relative;
+  font-size: 0.88rem;
+  color: #555;
+  line-height: 1.4;
+}
+
+.sidebar-lead-magnet ul li::before {
+  content: '✦';
+  position: absolute;
+  left: 0;
+  color: #FDDF8D;
+  font-size: 0.7rem;
+}
+
+.sidebar-lead-magnet input[type="text"],
+.sidebar-lead-magnet input[type="email"] {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid rgba(168, 203, 189, 0.3);
+  border-radius: 10px;
+  font-family: 'Calibri', sans-serif;
+  font-size: 0.9rem;
+  color: #404040;
+  background: #FFFFFF;
+  outline: none;
+  transition: border-color 0.3s ease;
+  margin-bottom: 10px;
+}
+
+.sidebar-lead-magnet input:focus {
+  border-color: #E8909A;
+}
+
+.sidebar-lead-magnet .btn {
+  width: 100%;
+  justify-content: center;
+  padding: 12px 20px;
+  font-size: 0.9rem;
+}
+
+.sidebar-lead-magnet .slm-privacy {
+  font-size: 0.75rem;
+  color: #aaa;
+  margin-top: 8px;
+  margin-bottom: 0;
+}
+
+/* Related posts in sidebar */
+.related-post-item {
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(168, 203, 189, 0.1);
+}
+
+.related-post-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.related-post-item .rp-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #404040;
+  transition: color 0.3s ease;
+  font-family: 'Georgia', 'Times New Roman', Times, serif;
+}
+
+.related-post-item .rp-title:hover {
+  color: #E8909A;
+}
+
+.related-post-item .rp-meta {
+  font-size: 0.8rem;
+  color: #aaa;
+  margin-top: 2px;
+}
+
+/* ===== AUTHOR BIO ===== */
+.author-bio {
+  background: #FFF9F5;
+  border-radius: 16px;
+  padding: 32px;
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  margin-top: 48px;
+  border: 1px solid rgba(168, 203, 189, 0.12);
+}
+
+.author-bio .author-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #E8909A 0%, #FAB488 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: #FFFFFF;
+  flex-shrink: 0;
+}
+
+.author-bio .author-info h4 {
+  font-family: 'Georgia', 'Times New Roman', Times, serif;
+  font-size: 1.05rem;
+  color: #404040;
+  margin-bottom: 4px;
+}
+
+.author-bio .author-info p {
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 0;
+  line-height: 1.6;
+}
+
+/* ===== FOOTER ===== */
+.site-footer {
+  background: #FFFFFF;
+  padding: 40px 0 32px;
+  border-top: 1px solid rgba(168, 203, 189, 0.15);
+}
+
+.footer-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  text-align: center;
+}
+
+.footer-brand {
+  font-family: 'Georgia', 'Times New Roman', Times, serif;
+  font-size: 1.1rem;
+  color: #E8909A;
+  font-weight: bold;
+}
+
+.footer-links {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.footer-links a {
+  font-size: 0.88rem;
+  color: #888;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #E8909A;
+}
+
+.footer-copyright {
+  font-size: 0.82rem;
+  color: #aaa;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .blog-layout {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .blog-sidebar {
+    order: 2;
+  }
+  
+  .header-nav {
+    display: none;
+  }
+  
+  .header-nav.mobile-open {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: rgba(255,255,255,0.98);
+    backdrop-filter: blur(10px);
+    padding: 20px 24px;
+    gap: 16px;
+    border-bottom: 1px solid rgba(168, 203, 189, 0.15);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  }
+  
+  .mobile-menu-toggle {
+    display: flex;
+  }
+  
+  .mobile-menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 6px);
+  }
+  
+  .mobile-menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .mobile-menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -6px);
+  }
+  
+  .author-bio {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .blog-post .cta-box .cta-links {
+    flex-direction: column;
+  }
+  
+  .blog-post .cta-box .cta-link-item {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 16px;
+  }
+  
+  h1 {
+    font-size: 1.6rem;
+  }
+}
+
+/* ===== ANIMATIONS ===== */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.5s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+</style>
+</head>
+<body>
+
+<!-- ===== STICKY HEADER ===== -->
+<header class="sticky-header" id="header">
+  <div class="container header-inner">
+    <a href="landing_page.html" class="brand-name">My Muslim <span>Homeschool</span></a>
+    <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <nav class="header-nav" id="headerNav">
+      <a href="landing_page.html#free-course">Free Course</a>
+      <a href="landing_page.html#products">Products</a>
+      <a href="landing_page.html#testimonials">Testimonials</a>
+      <a href="blog.html" class="active">Blog</a>
+      <a href="landing_page.html#about">About</a>
+      <a href="landing_page.html#final-cta" class="btn btn-primary" style="padding:10px 24px;font-size:0.9rem;">Shop Bundle →</a>
+    </nav>
+  </div>
+</header>
+
+<div class="header-spacer"></div>
+
+<!-- ===== BLOG HEADER ===== -->
+<section class="blog-header">
+  <div class="container">
+    <p class="breadcrumb"><a href="landing_page.html">Home</a> / Blog</p>
+    <h1>My Muslim Homeschool Blog</h1>
+    <p class="blog-meta">Practical wisdom for Muslim mothers raising the next generation — <span>one barakah-filled morning at a time</span></p>
+  </div>
+</section>
+
+<!-- ===== BLOG CONTENT ===== -->
+<section class="blog-layout">
+  <div class="container" style="display:contents;">
+    
+    <!-- Main Content -->
+    <div class="blog-main">
+      <article class="blog-post">
+        <h1 style="font-size:clamp(1.6rem,3.5vw,2.2rem);margin-bottom:12px;color:#404040;">The Muslim Homeschool Morning Routine That Actually Works (No More Chaos)</h1>
+        <p style="color:#aaa;font-size:0.9rem;margin-bottom:32px;padding-bottom:24px;border-bottom:1px solid rgba(168,203,189,0.2);">Published October 2024 • 6 min read</p>
+        
+        <!-- Introduction -->
+        <div class="intro-block">
+          <p style="font-size:1.05rem;"><strong>She was crying in the bathroom at 9 AM.</strong></p>
+          <p style="font-size:1.05rem;">Not because anything dramatic happened. Not because someone was sick or hurt.</p>
+          <p style="font-size:1.05rem;">Because at 9:17 AM, her four children were still in pajamas, breakfast was scattered across the counter, no one had prayed Fajr, and she had just realized she forgot to start the math lesson she'd planned the night before.</p>
+          <p style="font-size:1.05rem;">And she thought: "This is it. I'm failing them."</p>
+          <p style="font-size:1.05rem;">I know this feeling. I've been this mama.</p>
+          <p style="font-size:1.05rem;">And I'm here to tell you: <strong>the chaos isn't your fault — but the calm is possible.</strong></p>
+        </div>
+        
+        <p>Today I'm sharing the exact morning routine system I use with my own children — the one that took me three years to figure out, and the one that has transformed our homeschool from frantic to peaceful.</p>
+        <p>No perfect wake-up times. No elaborate systems. Just a simple, repeatable structure that works with real children in a real Muslim home.</p>
+        <p><strong>If you've been struggling with mornings, this post is for you.</strong></p>
+        
+        <!-- Section 1 -->
+        <h2>Why Your Morning Routine Keeps Failing (And Why It's Not Your Fault)</h2>
+        
+        <p>Let's start here: <strong>you are not broken.</strong></p>
+        <p>The problem isn't you. The problem is that most "morning routine" advice was written for someone without a prayer rug in her living room and five adhans going off in one morning.</p>
+        <p>Secular homeschool routines don't account for:</p>
+        <ul>
+          <li>Wudu breaks (multiple, for multiple children)</li>
+          <li>Fajr prayer and its aftermath</li>
+          <li>The spiritual weight of starting your day in worship, not productivity</li>
+          <li>Halal/haram considerations in breakfast planning</li>
+          <li>A thousand other things that Muslim mothers navigate daily</li>
+        </ul>
+        <p>And Instagram "homeschool mom" content? That's the highlight reel. Not reality.</p>
+        
+        <p><strong>The real reasons your routine keeps failing:</strong></p>
+        <ol class="number-list">
+          <li><strong>You're trying to copy someone else's life</strong> — their schedule, their wake-up time, their breakfast philosophy. None of it was built for you.</li>
+          <li><strong>You don't have a written plan</strong> — good intentions are not a strategy.</li>
+          <li><strong>You're doing everything yourself</strong> — without teaching your children to be independent.</li>
+          <li><strong>Your niyyah got lost</strong> — you started homeschooling for a reason, but somewhere in the daily grind, you forgot why.</li>
+        </ol>
+        <p>The solution isn't more willpower. It's a better system.</p>
+        
+        <!-- Section 2 -->
+        <h2>The 5-Step "Fajr to First Lesson" Blueprint (Copy This Today)</h2>
+        <p>Here's the exact system I use. Feel free to adjust it for your family's ages and rhythms — but start here. Don't reinvent the wheel.</p>
+        
+        <div class="step-card">
+          <h4>Step 1: Protect the First 20 Minutes (Before the Kids Wake Up)</h4>
+          <p>I know. I know. Some of you are laughing. "She clearly doesn't have babies who wake at 5 AM."</p>
+          <p>But hear me out: The way you start your day determines everything.</p>
+          <p>If you wake up already behind, already reacting, already chasing — your children will feel that energy. If you wake up grounded, calm, and centered — that's what they'll wake into.</p>
+          <p>Even if you have a baby who wakes at 5 AM, you can protect 20 minutes of "you time" before your older children stir.</p>
+          <ul>
+            <li>Make du'a before checking your phone</li>
+            <li>Drink water, make wudu, pray Fajr if you haven't yet</li>
+            <li>Write one sentence in a journal: "Today my intention is ___"</li>
+            <li>Sip something warm, breathe, exist</li>
+          </ul>
+          <p style="margin-top:8px;">This isn't about productivity. It's about <strong>arriving</strong> — being present before you have to be reactive.</p>
+        </div>
+        
+        <div class="step-card">
+          <h4>Step 2: Start With Bismillah, Not Breakfast</h4>
+          <p>Before any child gets food, before anyone gets dressed — say "Bismillah" out loud.</p>
+          <p>Let it be the first word of the day in your home.</p>
+          <p>This is sunnah. And it changes the energy of your morning.</p>
+          <p>When you start with Allah's name, you are consciously choosing to place Him at the center — before the chaos, before the lists, before the demands.</p>
+          <p>My children know: no one eats until we've said Bismillah together.</p>
+          <p>It takes 10 seconds. And it sets everything right.</p>
+        </div>
+        
+        <div class="step-card">
+          <h4>Step 3: Make the Bed and Get Dressed (Yours and Theirs)</h4>
+          <p>Here's where most families lose the morning.</p>
+          <p>Kids wander in and out of the living room in pajamas. Breakfast happens in phases. Getting ready becomes a 3-hour marathon.</p>
+          <p><strong>Rule: Everyone gets dressed before breakfast.</strong></p>
+          <p>Not after. Not "when they're ready." Before.</p>
+          <p>This includes you. Yes, mama. Get dressed. Put on something that makes you feel human. Do your hijab if that's your practice. You don't have to be fancy — just presentable. For yourself, not for anyone else.</p>
+          <p>For younger children, create a simple "getting ready" checklist they can follow. For older children, set a timer and challenge them to beat it.</p>
+          <div class="tip-box">
+            <p><strong>Pro tip:</strong> Do this <em>before</em> breakfast, not after. Everyone is more cooperative when they're hungry (not hangry) and you have more energy to help them.</p>
+          </div>
+        </div>
+        
+        <div class="step-card">
+          <h4>Step 4: Breakfast Is Functional, Not Fancy</h4>
+          <p>Your children do not need a Pinterest breakfast.</p>
+          <p>They need food that fuels them and a table that gets cleared.</p>
+          <p><strong>Sample breakfast rotation (no-cook or minimal cook):</strong></p>
+          <ul>
+            <li>Monday: Toast, eggs, fruit</li>
+            <li>Tuesday: Cereal, yogurt, berries</li>
+            <li>Wednesday: Pancakes (make extra for tomorrow)</li>
+            <li>Thursday: Bagels, cream cheese, apple slices</li>
+            <li>Friday: Leftover muffins, cheese, grapes</li>
+          </ul>
+          <p>Whatever you choose, set a firm end time for breakfast. "The table closes at 8:30." After that, lunch is next. No grazing all morning.</p>
+          <p>This isn't about control — it's about <strong>predictability</strong>. Children thrive in structures they can count on.</p>
+        </div>
+        
+        <div class="step-card">
+          <h4>Step 5: School Starts at a Written Time — No Matter What</h4>
+          <p>Write it down: "School begins at 9:00 AM."</p>
+          <p>Not "when everyone's ready." Not "after we're settled." At 9:00.</p>
+          <p>Put it on a whiteboard. Put it in a place where everyone can see it.</p>
+          <p>When the clock hits 9:00, you begin — even if:</p>
+          <ul>
+            <li>Someone is in pajamas (they'll learn)</li>
+            <li>The kitchen is a mess (it can wait)</li>
+            <li>You didn't finish your coffee (pour it into a travel mug)</li>
+          </ul>
+          <p><strong>Consistency is built through showing up imperfectly, not waiting for perfection.</strong></p>
+          <p>Your children will rise to what's expected of them. But they can only rise to something they can see.</p>
+        </div>
+        
+        <!-- Section 3 -->
+        <h2>The Cooperation Secret Nobody Tells You</h2>
+        
+        <p>Here's the thing that changed everything for me:</p>
+        <p><strong>Kids don't resist structure. They resist chaos.</strong></p>
+        <p>When the morning is unstructured — when they don't know what's coming next — they fill the space with testing, pushing, and seeking boundaries.</p>
+        <p>When the morning is structured — when they know exactly what's happening and when — they relax into cooperation.</p>
+        
+        <p><strong>The tool: the morning routine chart.</strong></p>
+        <p>Buy a small whiteboard. Write these items in order:</p>
+        <ol class="number-list">
+          <li>Wake up + make bed</li>
+          <li>Get dressed</li>
+          <li>Pray Fajr (if old enough)</li>
+          <li>Eat breakfast</li>
+          <li>Clean up table</li>
+          <li>Start school</li>
+        </ol>
+        <p>Every child who can read should have this chart memorized. Every child who can't should have pictures.</p>
+        <p>Before school starts each day, ask: "What chart says we do first?"</p>
+        <p>They will answer. Then hold the boundary.</p>
+        
+        <p><strong>The other piece: natural consequences.</strong></p>
+        <p>If a child refuses to get dressed, she goes to circle time in pajamas. If she refuses breakfast, she waits until snack. If she refuses to clean up, she loses a privilege after school.</p>
+        <p class="emphasis-text">You are not punishing. You are allowing reality to teach.</p>
+        <p>This is hard at first. You will want to give in. Don't.</p>
+        <p>After a week of consistency, your children will know: this is how we do mornings in this house. And they'll do it.</p>
+        
+        <!-- Section 4 -->
+        <h2>When You've Lost the Niyyah — A Reset for Muslim Homeschool Mamas</h2>
+        
+        <p>Every mother loses it sometimes.</p>
+        <p>The niyyah that started you — the burning desire to raise Muslim children in a Muslim home — gets buried under laundry, logistics, and the daily grind.</p>
+        <p>You look at your children and wonder: "Is this even working? Are they learning anything? Am I ruining them?"</p>
+        <p><strong>If this is you, stop.</strong></p>
+        <p>Breathe.</p>
+        <p>And try this:</p>
+        
+        <ol class="number-list">
+          <li><strong>Remember why you started.</strong> Pull out the piece of paper you wrote when you first pulled your children from school. Read it. Remember the fire.</li>
+          <li><strong>Make du'a specifically for niyyah.</strong> "Ya Allah, remind me why I chose this. Fill my heart with barakah. Help me see my children as the amanah they are."</li>
+          <li><strong>Do one thing today with full presence.</strong> Not multitasking. Not rushing. Just one task — teaching, playing, cooking — with your full heart and attention. Notice how it feels.</li>
+          <li><strong>Forgive yourself for the hard days.</strong> You are allowed to be imperfect. You are allowed to fail and try again. You are allowed to not have it together every single morning.</li>
+        </ol>
+        
+        <p>Your children don't need a perfect mother.</p>
+        <p>They need a mother who shows up, tries again, and keeps going.</p>
+        <p class="emphasis-text">That is enough.</p>
+        
+        <!-- Conclusion / CTA -->
+        <div class="cta-box">
+          <h3>Ready to Transform Your Mornings?</h3>
+          <p>If you're tired of feeling behind before the day has even begun — if you're ready to trade chaos for calm, guilt for grace, and overwhelm for a simple system that actually works — I'm here to help.</p>
+          <div class="cta-links">
+            <div class="cta-link-item">
+              <div class="cta-label">🎁 Free</div>
+              <div class="cta-title">5-Day Email Course</div>
+              <a href="landing_page.html#free-course" class="cta-price" style="color:#E8909A;">Get the Framework →</a>
+            </div>
+            <div class="cta-link-item">
+              <div class="cta-label">🕌 $7</div>
+              <div class="cta-title">Morning Routine Playbook</div>
+              <a href="landing_page.html#products" class="cta-price" style="color:#E8909A;">Full System →</a>
+            </div>
+            <div class="cta-link-item">
+              <div class="cta-label">⭐ $35</div>
+              <div class="cta-title">Complete Bundle</div>
+              <a href="landing_page.html#products" class="cta-price" style="color:#E8909A;">Everything You Need →</a>
+            </div>
+          </div>
+        </div>
+        
+        <p style="text-align:center;font-size:1.1rem;color:#888;">You've got this, mama. And you've got support.<br><strong style="color:#E8909A;">Wa alaikum assalam.</strong></p>
+        
+      </article>
+      
+      <!-- Author Bio -->
+      <div class="author-bio reveal">
+        <div class="author-avatar">💛</div>
+        <div class="author-info">
+          <h4>About the Author</h4>
+          <p>A Muslim mother who believes that raising righteous children is the most important work we will ever do. After years of trial and error (and a lot of coffee), she created practical, deen-centered homeschool resources for Muslim families who want to raise children in the light of the Quran — without losing their minds in the process. <a href="landing_page.html" style="color:#E8909A;font-weight:600;">My Muslim Homeschool</a></p>
+        </div>
+      </div>
+      
+    </div>
+    
+    <!-- Sidebar -->
+    <aside class="blog-sidebar">
+      
+      <!-- Free Course Opt-In -->
+      <div class="sidebar-widget sidebar-lead-magnet reveal">
+        <div class="slm-badge">🎁 FREE COURSE</div>
+        <h4>5 Days to a Calm Muslim Homeschool Morning</h4>
+        <p style="font-size:0.85rem;color:#666;margin-bottom:12px;">Get one actionable email per day for 5 days, delivered with love.</p>
+        <ul>
+          <li>Day 1: The 2-minute fix for chaotic mornings</li>
+          <li>Day 2: Wake up before your kids without burnout</li>
+          <li>Day 3: Fajr to First Lesson blueprint</li>
+          <li>Day 4: Get kids to cooperate — no threats</li>
+          <li>Day 5: The niyyah reset that changes everything</li>
+        </ul>
+        <form action="#" method="post">
+          <input type="text" name="name" placeholder="Your name" required>
+          <input type="email" name="email" placeholder="Your email" required>
+          <button type="submit" class="btn btn-primary">Get Free Access →</button>
+        </form>
+        <p class="slm-privacy">No spam. Unsubscribe anytime.</p>
+      </div>
+      
+      <!-- Products Widget -->
+      <div class="sidebar-widget reveal">
+        <h4>🛍️ Shop Products</h4>
+        <div style="padding:12px 0;border-bottom:1px solid rgba(168,203,189,0.1);">
+          <p style="font-size:0.9rem;margin-bottom:4px;"><strong>Morning Routine Playbook</strong></p>
+          <p style="font-size:0.85rem;color:#E8909A;font-weight:700;">$7</p>
+          <a href="landing_page.html#products" style="font-size:0.85rem;color:#A8CBBD;font-weight:600;">Learn more →</a>
+        </div>
+        <div style="padding:12px 0;border-bottom:1px solid rgba(168,203,189,0.1);">
+          <p style="font-size:0.9rem;margin-bottom:4px;"><strong>Homeschool Reset Workbook</strong></p>
+          <p style="font-size:0.85rem;color:#E8909A;font-weight:700;">$15</p>
+          <a href="landing_page.html#products" style="font-size:0.85rem;color:#A8CBBD;font-weight:600;">Learn more →</a>
+        </div>
+        <div style="padding:12px 0;border-bottom:1px solid rgba(168,203,189,0.1);">
+          <p style="font-size:0.9rem;margin-bottom:4px;"><strong>15 Prophet Story Scripts</strong></p>
+          <p style="font-size:0.85rem;color:#E8909A;font-weight:700;">$20</p>
+          <a href="landing_page.html#products" style="font-size:0.85rem;color:#A8CBBD;font-weight:600;">Learn more →</a>
+        </div>
+        <div style="padding:12px 0;">
+          <p style="font-size:0.9rem;margin-bottom:4px;"><strong>⭐ Complete Bundle</strong></p>
+          <p style="font-size:0.85rem;color:#E8909A;font-weight:700;">$35 <span style="color:#999;font-weight:400;text-decoration:line-through;">$42</span></p>
+          <a href="landing_page.html#products" style="font-size:0.85rem;color:#A8CBBD;font-weight:600;">Shop Bundle →</a>
+        </div>
+      </div>
+      
+      <!-- Related Posts -->
+      <div class="sidebar-widget reveal">
+        <h4>📖 You Might Also Like</h4>
+        <div class="related-post-item">
+          <a href="#" class="rp-title">The Complete Muslim Homeschool Curriculum Guide</a>
+          <div class="rp-meta">Coming soon</div>
+        </div>
+        <div class="related-post-item">
+          <a href="#" class="rp-title">How to Make Islamic Studies Your Child's Favorite Subject</a>
+          <div class="rp-meta">Coming soon</div>
+        </div>
+        <div class="related-post-item">
+          <a href="#" class="rp-title">When Homeschooling Gets Hard: A Letter to the Exhausted Mama</a>
+          <div class="rp-meta">Coming soon</div>
+        </div>
+        <div class="related-post-item">
+          <a href="#" class="rp-title">5 Du'as Every Homeschool Mom Needs in Her Pocket</a>
+          <div class="rp-meta">Coming soon</div>
+        </div>
+      </div>
+      
+    </aside>
+    
+  </div>
+</section>
+
+<!-- ===== NEWSLETTER SECTION ===== -->
+<section class="newsletter-section">
+  <div class="container">
+    <div class="newsletter-inner reveal" style="max-width:600px;margin:0 auto;text-align:center;">
+      <h3 style="font-size:1.5rem;color:#E8909A;font-family:'Georgia',serif;margin-bottom:8px;">Join 500+ Muslim Homeschool Mamas</h3>
+      <p style="font-size:0.98rem;color:#666;margin-bottom:24px;">Weekly encouragement, practical tips, and a community that gets you — delivered to your inbox.</p>
+      <form action="#" method="post" style="display:flex;gap:10px;max-width:450px;margin:0 auto;">
+        <input type="email" name="email" placeholder="Enter your email address" required style="flex:1;padding:14px 18px;border:2px solid rgba(168,203,189,0.3);border-radius:12px;font-family:'Calibri',sans-serif;font-size:0.95rem;color:#404040;background:#FFFFFF;outline:none;transition:border-color 0.3s ease;">
+        <button type="submit" class="btn btn-primary" style="flex-shrink:0;padding:14px 28px;">Join the Community →</button>
+      </form>
+      <p style="font-size:0.82rem;color:#aaa;margin-top:12px;">We respect your privacy. Unsubscribe at any time.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">My Muslim Homeschool</div>
+    <div class="footer-links">
+      <a href="landing_page.html">Home</a>
+      <a href="landing_page.html#products">Products</a>
+      <a href="#">Terms of Service</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Contact Us</a>
+    </div>
+    <div class="footer-copyright">
+      &copy; 2024 My Muslim Homeschool. All rights reserved. Made with du'a for every homeschool mama.
+    </div>
+  </div>
+</footer>
+
+<!-- ===== SCRIPTS ===== -->
+<script>
+(function() {
+  // Mobile menu toggle
+  const toggle = document.getElementById('mobileMenuToggle');
+  const nav = document.getElementById('headerNav');
+  
+  if (toggle && nav) {
+    toggle.addEventListener('click', function() {
+      this.classList.toggle('active');
+      nav.classList.toggle('mobile-open');
+    });
+    
+    nav.querySelectorAll('a').forEach(function(link) {
+      link.addEventListener('click', function() {
+        toggle.classList.remove('active');
+        nav.classList.remove('mobile-open');
+      });
+    });
+  }
+  
+  // Scroll reveal
+  const revealElements = document.querySelectorAll('.reveal');
+  function checkReveal() {
+    const windowHeight = window.innerHeight;
+    revealElements.forEach(function(el) {
+      const rect = el.getBoundingClientRect();
+      if (rect.top < windowHeight - 80) {
+        el.classList.add('visible');
+      }
+    });
+  }
+  window.addEventListener('load', checkReveal);
+  window.addEventListener('scroll', checkReveal);
+  checkReveal();
+  
+  // Sticky header shadow
+  const header = document.getElementById('header');
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > 50) {
+      header.style.boxShadow = '0 2px 20px rgba(0,0,0,0.04)';
+    } else {
+      header.style.boxShadow = 'none';
+    }
+  });
+})();
+</script>
+
+</body>
+</html>
