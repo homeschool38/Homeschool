@@ -194,6 +194,40 @@ nav {
   flex-direction:column; gap:12px; padding-top:90px; flex-shrink:0;
 }
 .hero-or span { display:block; font-size:2rem; color:var(--pink-light); line-height:0.8; }
+
+/* ===== BUNDLE BANNER (from original site) ===== */
+.bundle-banner {
+  background:linear-gradient(135deg,var(--sage) 0%,var(--sage-light) 100%);
+  padding:26px 24px; text-align:center;
+}
+.bundle-banner .bb-label {
+  font-size:1rem; font-weight:700; letter-spacing:0.14em;
+  text-transform:uppercase; color:var(--white); margin-bottom:10px;
+}
+.bundle-deal {
+  display:inline-flex; align-items:center; gap:14px;
+  background:rgba(255,255,255,0.18); border-radius:50px;
+  padding:10px 26px; flex-wrap:wrap; justify-content:center;
+}
+.bundle-deal .was { font-size:1rem; color:rgba(255,255,255,0.6); text-decoration:line-through; }
+.bundle-deal .now {
+  font-family:'Playfair Display',serif; font-size:2rem;
+  font-weight:600; color:var(--white); line-height:1;
+}
+.bundle-deal .save {
+  background:var(--yellow); color:var(--charcoal);
+  font-size:1rem; font-weight:700; padding:4px 12px;
+  border-radius:20px; letter-spacing:0.08em; text-transform:uppercase;
+}
+.bundle-btn {
+  display:inline-block; margin-top:14px;
+  background:var(--white); color:var(--sage);
+  font-size:1rem; font-weight:700; letter-spacing:0.1em;
+  text-transform:uppercase; text-decoration:none;
+  padding:12px 34px; border-radius:30px;
+  transition:background 0.2s,color 0.2s,transform 0.2s;
+}
+.bundle-btn:hover { background:var(--yellow); color:var(--charcoal); transform:translateY(-2px); }
 .mobile-menu-toggle { display:none; flex-direction:column; gap:5px; cursor:pointer; background:none; border:none; padding:4px; }
 .mobile-menu-toggle span { display:block; width:26px; height:2.5px; background:var(--charcoal); border-radius:2px; transition:all 0.3s ease; }
 .header-spacer { height:94px; }
@@ -576,6 +610,17 @@ footer a:hover { color:var(--white); }
 </a>
 </div>
 </section>
+
+<div class="bundle-banner">
+  <p class="bb-label">Best Value &mdash; Get All Three Together</p>
+  <div class="bundle-deal">
+    <span class="was">$42</span>
+    <span class="now">$35</span>
+    <span class="save">Save $7</span>
+  </div>
+  <br/>
+  <a class="bundle-btn" href="#bundle">Get the Complete Bundle</a>
+</div>
 
 <!-- ===== PAIN SECTION (from current site) ===== -->
 <section class="pain" id="pain">
