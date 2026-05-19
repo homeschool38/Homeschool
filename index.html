@@ -3,2128 +3,827 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>My Muslim Homeschool — A Homeschool That Feels Like Islam</title>
-<meta name="description" content="Practical digital resources for Muslim homeschool mothers. Morning routines, prophet stories, and homeschool planning tools built on Islamic values.">
+<title>My Muslim Homeschool — Faith-Filled Resources for the Muslim Homeschool Mama</title>
+<meta name="description" content="Digital resources for Muslim homeschool mothers: Morning Routine Playbook, Homeschool Reset Workbook, and 15 Prophet Story Scripts.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Georgia&family=Calibri&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&amp;family=Nunito:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
 <style>
-/* ===== RESET & BASE ===== */
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-html {
-  scroll-behavior: smooth;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+  --pink: #e8868a;
+  --pink-light: #f5c0c2;
+  --pink-pale: #fdf0f0;
+  --sage: #85b5a8;
+  --sage-light: #b8d5ce;
+  --sage-pale: #edf6f4;
+  --yellow: #e8c45a;
+  --yellow-pale: #fdf8e8;
+  --yellow-dark: #c9a83a;
+  --peach: #f0a882;
+  --peach-pale: #fdf3ee;
+  --charcoal: #2e2e2e;
+  --mid: #5a5252;
+  --light-text: #8a7f7f;
+  --cream: #fdf9f6;
+  --white: #ffffff;
+  --border: #edddd8;
 }
-
-body {
-  font-family: 'Calibri', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #404040;
-  background: #FFFFFF;
-  line-height: 1.7;
-  overflow-x: hidden;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-a { text-decoration: none; color: inherit; }
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 24px;
-}
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior: smooth; font-size:18px; }
+body { font-family:'Nunito',sans-serif; background:var(--cream); color:var(--charcoal); line-height:1.7; overflow-x:hidden; }
+img { max-width:100%; height:auto; display:block; }
+a { text-decoration:none; color:inherit; }
+.container { max-width:1100px; margin:0 auto; padding:0 24px; }
 
 /* ===== TYPOGRAPHY ===== */
-h1, h2, h3, h4, .brand-name, .cta-button, .testimonial-name {
-  font-family: 'Georgia', 'Times New Roman', Times, serif;
-  line-height: 1.3;
+h1, h2, h3, h4, .section-title, .nav-logo span, .product-info h3, .bundle-ribbon, .faq-q {
+  font-family:'Playfair Display',Georgia,'Times New Roman',serif;
+  line-height:1.3;
 }
+h1 { font-size:clamp(1.8rem,4.5vw,2.8rem); color:var(--charcoal); font-weight:600; }
+h2 { font-size:clamp(1.4rem,3.5vw,2.2rem); color:var(--charcoal); font-weight:400; margin-bottom:14px; }
+h2 em { color:var(--pink); font-style:italic; }
+h3 { font-size:clamp(1.15rem,2.2vw,1.5rem); color:var(--charcoal); margin-bottom:10px; }
+p { font-size:1rem; margin-bottom:16px; color:var(--mid); font-weight:300; }
 
-h1 {
-  font-size: clamp(2rem, 5vw, 3.5rem);
-  color: #E8909A;
-  letter-spacing: -0.01em;
+.section-label {
+  font-size:0.85rem; font-weight:700; letter-spacing:0.28em;
+  text-transform:uppercase; color:var(--sage); margin-bottom:12px;
 }
-
-h2 {
-  font-size: clamp(1.6rem, 3.5vw, 2.5rem);
-  color: #E8909A;
-  margin-bottom: 16px;
+.section-title {
+  font-size:clamp(1.4rem,3.5vw,2.2rem); font-weight:400;
+  color:var(--charcoal); line-height:1.3; margin-bottom:14px;
 }
-
-h3 {
-  font-size: clamp(1.2rem, 2.5vw, 1.6rem);
-  color: #404040;
-  margin-bottom: 12px;
-}
-
-.section-subtitle {
-  font-size: 1.15rem;
-  color: #A8CBBD;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  margin-bottom: 8px;
-  font-family: 'Georgia', 'Times New Roman', Times, serif;
-}
-
-p { margin-bottom: 16px; font-size: 1.05rem; }
-
-small { font-size: 0.9rem; }
+.section-title em { color:var(--pink); font-style:italic; }
 
 /* ===== BUTTONS ===== */
 .btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  font-family: 'Calibri', 'Segoe UI', sans-serif;
-  font-weight: 700;
-  font-size: 1.05rem;
-  padding: 16px 36px;
-  border-radius: 50px;
-  border: none;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  text-align: center;
-  letter-spacing: 0.02em;
-}
-
-.btn-primary {
-  background: #E8909A;
-  color: #FFFFFF;
-  box-shadow: 0 4px 15px rgba(232, 144, 154, 0.35);
-}
-
-.btn-primary:hover {
-  background: #d47a84;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(232, 144, 154, 0.45);
-}
-
-.btn-secondary {
-  background: transparent;
-  color: #E8909A;
-  border: 2px solid #E8909A;
-  box-shadow: none;
-}
-
-.btn-secondary:hover {
-  background: rgba(232, 144, 154, 0.08);
-  transform: translateY(-2px);
-}
-
-.btn-large {
-  padding: 20px 48px;
-  font-size: 1.2rem;
-  font-family: 'Georgia', 'Times New Roman', Times, serif;
-}
-
-.btn-gold {
-  background: #FDDF8D;
-  color: #404040;
-  box-shadow: 0 4px 15px rgba(253, 223, 141, 0.4);
-}
-
-.btn-gold:hover {
-  background: #f0d07a;
-  transform: translateY(-2px);
-}
-
-/* ===== STICKY HEADER ===== */
-.sticky-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000;
-  background: rgba(255, 255, 255, 0.97);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(168, 203, 189, 0.2);
-  transition: all 0.3s ease;
-}
-
-.header-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 14px 0;
-}
-
-.brand-name {
-  font-family: 'Georgia', 'Times New Roman', Times, serif;
-  font-size: 1.3rem;
-  color: #E8909A;
-  font-weight: bold;
-  letter-spacing: -0.01em;
-}
-
-.brand-name span {
-  color: #A8CBBD;
-}
-
-.header-nav {
-  display: flex;
-  gap: 28px;
-  align-items: center;
-}
-
-.header-nav a {
-  font-family: 'Calibri', 'Segoe UI', sans-serif;
-  font-size: 0.95rem;
-  color: #404040;
-  transition: color 0.3s ease;
-  position: relative;
-}
-
-.header-nav a::after {
-  content: '';
-  position: absolute;
-  bottom: -4px;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background: #E8909A;
-  transform: scaleX(0);
-  transition: transform 0.3s ease;
-}
-
-.header-nav a:hover {
-  color: #E8909A;
-}
-
-.header-nav a:hover::after {
-  transform: scaleX(1);
-}
-
-.header-nav .btn {
-  padding: 10px 24px;
-  font-size: 0.9rem;
-}
-
-.mobile-menu-toggle {
-  display: none;
-  flex-direction: column;
-  gap: 5px;
-  cursor: pointer;
-  background: none;
-  border: none;
-  padding: 4px;
-}
-
-.mobile-menu-toggle span {
-  display: block;
-  width: 26px;
-  height: 2.5px;
-  background: #404040;
-  border-radius: 2px;
-  transition: all 0.3s ease;
-}
-
-.header-spacer {
-  height: 70px;
-}
-
-/* ===== HERO SECTION ===== */
-.hero {
-  background: linear-gradient(135deg, #FFF9F5 0%, #FFF5F0 40%, #FEFCF7 100%);
-  padding: 60px 0 80px;
-  position: relative;
-  overflow: hidden;
-}
-
-.hero::before {
-  content: '';
-  position: absolute;
-  top: -30%;
-  right: -10%;
-  width: 600px;
-  height: 600px;
-  background: radial-gradient(circle, rgba(253, 223, 141, 0.15) 0%, transparent 70%);
-  border-radius: 50%;
-  pointer-events: none;
-}
-
-.hero::after {
-  content: '';
-  position: absolute;
-  bottom: -20%;
-  left: -5%;
-  width: 400px;
-  height: 400px;
-  background: radial-gradient(circle, rgba(168, 203, 189, 0.1) 0%, transparent 70%);
-  border-radius: 50%;
-  pointer-events: none;
-}
-
-.hero-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 50px;
-  align-items: center;
-  position: relative;
-  z-index: 1;
-}
-
-.hero-content {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.hero-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: rgba(253, 223, 141, 0.3);
-  color: #404040;
-  font-size: 0.85rem;
-  padding: 8px 16px;
-  border-radius: 50px;
-  font-weight: 600;
-  margin-bottom: 8px;
-  width: fit-content;
-}
-
-.hero p {
-  font-size: 1.15rem;
-  line-height: 1.7;
-  color: #555;
-}
-
-.hero-actions {
-  display: flex;
-  gap: 16px;
-  flex-wrap: wrap;
-  margin-top: 8px;
-}
-
-.hero-image-wrapper {
-  position: relative;
-}
-
-.hero-image-wrapper img {
-  width: 100%;
-  border-radius: 20px;
-  box-shadow: 0 20px 60px rgba(0,0,0,0.08);
-  transition: transform 0.6s ease;
-}
-
-.hero-image-wrapper:hover img {
-  transform: scale(1.02);
-}
-
-.hero-image-accent {
-  position: absolute;
-  bottom: -15px;
-  right: -15px;
-  width: 80px;
-  height: 80px;
-  background: #FDDF8D;
-  border-radius: 50%;
-  z-index: -1;
-  opacity: 0.4;
-}
-
-/* ===== PAIN SECTION ===== */
-.pain-section {
-  background: linear-gradient(180deg, #FFF9F5 0%, #FFFFFF 100%);
-  padding: 80px 0;
-  position: relative;
-}
-
-.pain-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
-  align-items: center;
-}
-
-.pain-text {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.pain-text h2 {
-  color: #E8909A;
-}
-
-.pain-text h3 {
-  font-size: 1.3rem;
-  color: #404040;
-  font-family: 'Georgia', 'Times New Roman', Times, serif;
-  margin-top: 24px;
-}
-
-.pain-text .emphasis {
-  font-size: 1.15rem;
-  font-weight: 600;
-  color: #A8CBBD;
-  font-family: 'Georgia', 'Times New Roman', Times, serif;
-}
-
-.whisper-list {
-  background: rgba(168, 203, 189, 0.08);
-  border-left: 4px solid #A8CBBD;
-  padding: 24px 28px;
-  border-radius: 0 12px 12px 0;
-  margin: 16px 0;
-}
-
-.whisper-list p {
-  font-style: italic;
-  color: #666;
-  margin-bottom: 8px;
-  font-size: 1.05rem;
-}
-
-.whisper-list p:last-child {
-  margin-bottom: 0;
-}
-
-.pain-image-placeholder {
-  background: linear-gradient(135deg, #A8CBBD 0%, #c4ddd0 100%);
-  border-radius: 20px;
-  padding: 80px 40px;
-  text-align: center;
-  min-height: 350px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: #FFFFFF;
-  position: relative;
-  overflow: hidden;
-}
-
-.pain-image-placeholder .icon {
-  font-size: 3rem;
-  margin-bottom: 16px;
-  opacity: 0.7;
-}
-
-.pain-image-placeholder p {
-  font-size: 0.95rem;
-  opacity: 0.8;
-  max-width: 220px;
-}
-
-.divider-teal {
-  width: 80px;
-  height: 3px;
-  background: #A8CBBD;
-  margin: 32px 0;
-  border-radius: 2px;
-}
-
-.divider-center {
-  margin: 40px auto;
-}
-
-.section-divider {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 16px;
-  padding: 60px 0 40px;
-}
-
-.section-divider .line {
-  flex: 1;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, #A8CBBD, transparent);
-}
-
-.section-divider .star {
-  color: #FDDF8D;
-  font-size: 1.5rem;
-}
-
-/* ===== SOLUTION SECTION ===== */
-.solution-section {
-  background: #FFFFFF;
-  padding: 80px 0;
-  text-align: center;
-}
-
-.solution-section h2 {
-  margin-bottom: 8px;
-}
-
-.solution-section .subtitle {
-  font-size: 1.1rem;
-  color: #666;
-  max-width: 650px;
-  margin: 0 auto 40px;
-  line-height: 1.7;
-}
-
-.solution-section .subtitle strong {
-  color: #E8909A;
-  font-weight: 700;
-}
-
-/* ===== PRODUCT CARDS ===== */
-.products-section {
-  background: linear-gradient(180deg, #FFFFFF 0%, #FFF9F5 100%);
-  padding: 80px 0;
-}
-
-.products-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 30px;
-}
-
-.product-card {
-  background: #FFFFFF;
-  border-radius: 20px;
-  padding: 36px 32px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-  border: 1px solid rgba(168, 203, 189, 0.15);
-  transition: all 0.4s ease;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  overflow: hidden;
-}
-
-.product-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 40px rgba(0,0,0,0.08);
-  border-color: rgba(232, 144, 154, 0.2);
-}
-
-.product-card .product-icon {
-  font-size: 2.5rem;
-  margin-bottom: 12px;
-}
-
-.product-card h3 {
-  font-family: 'Georgia', 'Times New Roman', Times, serif;
-  font-size: 1.25rem;
-  color: #404040;
-  margin-bottom: 4px;
-}
-
-.product-card .price {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #E8909A;
-  font-family: 'Georgia', 'Times New Roman', Times, serif;
-  margin-bottom: 16px;
-}
-
-.product-card .price .original {
-  font-size: 1rem;
-  color: #999;
-  text-decoration: line-through;
-  font-weight: normal;
-  font-family: 'Calibri', sans-serif;
-  margin-left: 8px;
-}
-
-.product-card .solves {
-  color: #A8CBBD;
-  font-weight: 600;
-  font-size: 0.95rem;
-  margin-bottom: 12px;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
-
-.product-card ul {
-  list-style: none;
-  margin-bottom: 24px;
-  flex: 1;
-}
-
-.product-card ul li {
-  padding: 6px 0 6px 24px;
-  position: relative;
-  font-size: 0.95rem;
-  line-height: 1.5;
-  color: #555;
-}
-
-.product-card ul li::before {
-  content: '✦';
-  position: absolute;
-  left: 0;
-  color: #FDDF8D;
-  font-size: 0.8rem;
-}
-
-.product-card .who-for {
-  font-size: 0.85rem;
-  color: #888;
-  font-style: italic;
-  margin-bottom: 20px;
-  border-top: 1px solid rgba(168, 203, 189, 0.2);
-  padding-top: 16px;
-}
-
-.product-card .btn {
-  width: 100%;
-  justify-content: center;
-  padding: 14px 28px;
-  font-size: 0.95rem;
-}
-
-/* ===== BUNDLE CARD (Full Width) ===== */
-.bundle-card {
-  grid-column: 1 / -1;
-  background: linear-gradient(135deg, #FFF9F5 0%, #FFF5F0 100%);
-  border: 2px solid #FDDF8D;
-  border-radius: 24px;
-  padding: 40px 36px;
-  position: relative;
-  overflow: hidden;
-}
-
-.bundle-card::before {
-  content: '';
-  position: absolute;
-  top: -50%;
-  right: -20%;
-  width: 300px;
-  height: 300px;
-  background: radial-gradient(circle, rgba(253, 223, 141, 0.15) 0%, transparent 70%);
-  border-radius: 50%;
-  pointer-events: none;
-}
-
-.best-value-badge {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  background: #FAB488;
-  color: #FFFFFF;
-  padding: 8px 18px;
-  border-radius: 50px;
-  font-size: 0.85rem;
-  font-weight: 700;
-  font-family: 'Georgia', 'Times New Roman', Times, serif;
-  letter-spacing: 0.03em;
-  box-shadow: 0 4px 12px rgba(250, 180, 136, 0.4);
-}
-
-.bundle-card .bundle-content {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-  align-items: center;
-}
-
-.bundle-card .bundle-left h3 {
-  font-size: 1.5rem;
-  color: #404040;
-  margin-bottom: 8px;
-}
-
-.bundle-card .bundle-left .bundle-price {
-  font-size: 2rem;
-  font-weight: bold;
-  color: #E8909A;
-  margin-bottom: 4px;
-}
-
-.bundle-savings {
-  display: inline-block;
-  background: #FDDF8D;
-  color: #404040;
-  padding: 6px 16px;
-  border-radius: 50px;
-  font-size: 0.95rem;
-  font-weight: 700;
-  margin-bottom: 16px;
-}
-
-.bundle-card .bundle-left ul {
-  list-style: none;
-  margin-bottom: 20px;
-}
-
-.bundle-card .bundle-left ul li {
-  padding: 4px 0 4px 24px;
-  position: relative;
-  font-size: 0.95rem;
-  color: #555;
-}
-
-.bundle-card .bundle-left ul li::before {
-  content: '✓';
-  position: absolute;
-  left: 0;
-  color: #A8CBBD;
-  font-weight: bold;
-}
-
-.bundle-card .bundle-right {
-  background: #FFFFFF;
-  border-radius: 16px;
-  padding: 24px;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.04);
-}
-
-.bundle-card .bundle-right .bundle-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 0;
-  border-bottom: 1px solid rgba(168, 203, 189, 0.15);
-}
-
-.bundle-card .bundle-right .bundle-item:last-child {
-  border-bottom: none;
-}
-
-.bundle-card .bundle-right .bundle-item .item-name {
-  font-weight: 600;
-  color: #404040;
-}
-
-.bundle-card .bundle-right .bundle-item .item-price {
-  color: #888;
-}
-
-.bundle-total {
-  margin-top: 16px;
-  padding-top: 16px;
-  border-top: 2px solid #FDDF8D;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.bundle-total .total-label {
-  font-weight: 700;
-  color: #404040;
-}
-
-.bundle-total .total-price {
-  font-size: 1.3rem;
-  font-weight: bold;
-  color: #E8909A;
-}
-
-.bundle-total .total-price .strikethrough {
-  font-size: 0.95rem;
-  color: #999;
-  text-decoration: line-through;
-  font-weight: normal;
-  margin-right: 8px;
-}
-
-/* ===== PRICE COMPARISON TABLE ===== */
-.comparison-section {
-  background: #FFFFFF;
-  padding: 40px 0 60px;
-}
-
-.comparison-table {
-  max-width: 600px;
-  margin: 0 auto;
-  background: #FFF9F5;
-  border-radius: 16px;
-  padding: 28px;
-  border: 1px solid rgba(168, 203, 189, 0.15);
-}
-
-.comparison-table .table-row {
-  display: flex;
-  justify-content: space-between;
-  padding: 12px 0;
-  border-bottom: 1px solid rgba(168, 203, 189, 0.15);
-}
-
-.comparison-table .table-row:last-child {
-  border-bottom: none;
-}
-
-.comparison-table .table-row.total-row {
-  border-top: 2px solid #FDDF8D;
-  margin-top: 8px;
-  padding-top: 16px;
-  font-weight: 700;
-}
-
-.comparison-table .table-row .label {
-  color: #404040;
-}
-
-.comparison-table .table-row .price {
-  color: #888;
-}
-
-.comparison-table .table-row .price .crossed {
-  text-decoration: line-through;
-  color: #E8909A;
-}
-
-.comparison-table .save-badge {
-  display: inline-block;
-  background: #FDDF8D;
-  color: #404040;
-  padding: 4px 14px;
-  border-radius: 50px;
-  font-size: 0.85rem;
-  font-weight: 700;
-  margin-top: 12px;
-}
+  display:inline-flex; align-items:center; gap:8px;
+  font-family:'Nunito',sans-serif; font-weight:700; font-size:1rem;
+  padding:13px 32px; border-radius:30px; border:none;
+  cursor:pointer; transition:all 0.2s ease; text-align:center;
+  letter-spacing:0.1em; text-transform:uppercase;
+}
+.btn-pink { background:var(--pink); color:var(--white); }
+.btn-pink:hover { background:var(--peach); transform:translateY(-2px); }
+.btn-sage { background:var(--sage); color:var(--white); }
+.btn-sage:hover { background:var(--sage-light); color:var(--charcoal); transform:translateY(-2px); }
+.btn-peach { background:var(--peach); color:var(--white); }
+.btn-peach:hover { background:#e08f6a; transform:translateY(-2px); }
+.btn-gold { background:var(--yellow); color:var(--charcoal); }
+.btn-gold:hover { background:var(--yellow-dark); color:var(--white); transform:translateY(-2px); }
+.btn-white { background:var(--white); color:var(--sage); }
+.btn-white:hover { background:var(--yellow); color:var(--charcoal); transform:translateY(-2px); }
+.btn-large { padding:16px 50px; font-size:1rem; box-shadow:0 4px 18px rgba(232,134,138,0.3); }
+
+/* ===== HEADER / NAV ===== */
+nav {
+  background:var(--white); border-bottom:2px solid var(--pink-light);
+  padding:12px 28px; display:flex; align-items:center;
+  justify-content:space-between; position:sticky; top:0; z-index:100;
+  box-shadow:0 2px 12px rgba(232,134,138,0.1);
+}
+.nav-logo { display:flex; align-items:center; gap:10px; }
+.nav-logo img { height:70px; width:70px; object-fit:contain; border-radius:50%; }
+.nav-logo span {
+  font-family:'Playfair Display',Georgia,'Times New Roman',serif;
+  font-size:1.6rem; color:var(--charcoal); line-height:1.25;
+}
+.nav-links { display:flex; align-items:center; gap:18px; }
+.nav-links a {
+  font-size:0.95rem; font-weight:600; letter-spacing:0.06em;
+  text-decoration:none; color:var(--mid); transition:color 0.2s;
+}
+.nav-links a:hover { color:var(--pink); }
+.nav-cta {
+  background:var(--pink); color:var(--white)!important;
+  padding:8px 22px; border-radius:30px; transition:background 0.2s!important;
+}
+.nav-cta:hover { background:var(--peach)!important; }
+.nav-icon { display:inline-flex; align-items:center; }
+.mobile-menu-toggle { display:none; flex-direction:column; gap:5px; cursor:pointer; background:none; border:none; padding:4px; }
+.mobile-menu-toggle span { display:block; width:26px; height:2.5px; background:var(--charcoal); border-radius:2px; transition:all 0.3s ease; }
+.header-spacer { height:94px; }
+
+/* ===== PAIN SECTION (short, from current site) ===== */
+.pain { background:var(--white); padding:68px 24px; text-align:center; }
+.pain-inner { max-width:600px; margin:0 auto; }
+.pain p { font-size:1rem; font-weight:300; color:var(--mid); margin-bottom:16px; }
+.hadith-strip {
+  background:var(--sage-pale); border-left:4px solid var(--sage);
+  padding:18px 24px; margin:28px 0; text-align:left; border-radius:0 12px 12px 0;
+}
+.hadith-strip p {
+  font-family:'Playfair Display',Georgia,'Times New Roman',serif;
+  font-style:italic; font-size:1.05rem; color:var(--charcoal); margin-bottom:6px;
+}
+.hadith-strip cite { font-size:0.9rem; color:var(--light-text); }
+
+/* ===== PRODUCTS SECTION ===== */
+.products { background:var(--cream); padding:72px 24px; }
+.products-inner { max-width:980px; margin:0 auto; }
+.products-header { text-align:center; margin-bottom:56px; }
+.product-section {
+  display:grid; grid-template-columns:1fr 1fr; gap:50px;
+  align-items:start; margin-bottom:60px; padding-bottom:60px;
+  border-bottom:2px dashed var(--border);
+}
+.product-section:last-child { border-bottom:none; margin-bottom:0; padding-bottom:0; }
+.product-section.rev { direction:rtl; }
+.product-section.rev>* { direction:ltr; }
+.product-img-wrap { width:100%; }
+.product-img-wrap img {
+  width:100%; border-radius:12px; box-shadow:0 4px 20px rgba(0,0,0,0.15);
+}
+.product-info { display:flex; flex-direction:column; }
+.product-tag {
+  display:inline-block; font-size:0.8rem; font-weight:700;
+  letter-spacing:0.18em; text-transform:uppercase;
+  padding:4px 14px; border-radius:20px; margin-bottom:14px; width:fit-content;
+}
+.tag-pink { background:var(--pink-pale); color:var(--pink); }
+.tag-sage { background:var(--sage-pale); color:var(--sage); }
+.tag-peach { background:var(--peach-pale); color:#c2763a; }
+.product-info h3 {
+  font-size:1.5rem; font-weight:400; color:var(--charcoal);
+  margin-bottom:4px; line-height:1.25;
+}
+.tagline { font-style:italic; color:var(--light-text); font-size:0.95rem; margin-bottom:18px; }
+.product-info>p { font-size:0.98rem; font-weight:300; color:var(--mid); margin-bottom:18px; line-height:1.7; }
+.feature-list { list-style:none; display:flex; flex-direction:column; gap:8px; margin-bottom:24px; }
+.feature-list li {
+  display:flex; align-items:flex-start; gap:9px;
+  font-size:0.95rem; color:var(--mid); font-weight:400;
+}
+.dot {
+  width:7px; height:7px; border-radius:50%;
+  flex-shrink:0; margin-top:7px;
+}
+.dot-pink { background:var(--pink); }
+.dot-sage { background:var(--sage); }
+.dot-peach { background:var(--peach); }
+.price-row { display:flex; align-items:center; gap:14px; margin-bottom:16px; }
+.price-big { font-family:'Playfair Display',Georgia,'Times New Roman',serif; font-size:2.2rem; font-weight:600; color:var(--charcoal); line-height:1; }
+.price-label { font-size:0.85rem; color:var(--light-text); font-weight:300; line-height:1.5; }
+
+/* ===== WHO IS THIS FOR ===== */
+.for-who { background:var(--white); padding:68px 24px; text-align:center; }
+.for-who-inner { max-width:620px; margin:0 auto; }
+.who-grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:30px; text-align:left; }
+.who-item {
+  background:var(--pink-pale); border-radius:12px;
+  padding:14px 16px; display:flex; align-items:flex-start;
+  gap:10px; font-size:0.95rem; color:var(--mid); font-weight:400;
+}
+.who-item .flower { color:var(--pink); font-size:1rem; flex-shrink:0; margin-top:1px; }
+
+/* ===== BUNDLE (from new site design) ===== */
+.bundle-section {
+  background:linear-gradient(135deg,var(--pink-pale) 0%,var(--yellow-pale) 55%,var(--sage-pale) 100%);
+  padding:72px 24px; text-align:center;
+}
+.bundle-inner { max-width:720px; margin:0 auto; }
+.bundle-card-new {
+  background:var(--white); border:2px solid var(--yellow); border-radius:24px;
+  padding:44px 36px; margin:36px 0; position:relative;
+  box-shadow:0 8px 40px rgba(232,134,138,0.11);
+}
+.bundle-ribbon {
+  position:absolute; top:-15px; left:50%; transform:translateX(-50%);
+  background:var(--pink); color:var(--white); font-size:0.85rem; font-weight:700;
+  letter-spacing:0.14em; text-transform:uppercase;
+  padding:5px 22px; border-radius:20px; white-space:nowrap;
+}
+.bundle-content { display:grid; grid-template-columns:1fr 1fr; gap:40px; align-items:center; text-align:left; }
+.bundle-left h3 { font-size:1.4rem; color:var(--charcoal); margin-bottom:8px; }
+.bundle-price { font-size:2rem; font-weight:bold; color:var(--pink); margin-bottom:8px; font-family:'Playfair Display',Georgia,'Times New Roman',serif; }
+.bundle-savings { display:inline-block; background:var(--yellow); color:var(--charcoal); padding:6px 16px; border-radius:50px; font-size:0.85rem; font-weight:700; margin-bottom:16px; }
+.bundle-left ul { list-style:none; margin-bottom:20px; }
+.bundle-left ul li { padding:4px 0 4px 24px; position:relative; font-size:0.93rem; color:var(--mid); }
+.bundle-left ul li::before { content:'✓'; position:absolute; left:0; color:var(--sage); font-weight:bold; }
+.bundle-right { background:var(--cream); border-radius:16px; padding:24px; }
+.bundle-item { display:flex; justify-content:space-between; align-items:center; padding:10px 0; border-bottom:1px dashed var(--border); }
+.bundle-item:last-child { border-bottom:none; }
+.bundle-item .item-name { font-weight:600; color:var(--charcoal); }
+.bundle-item .item-price { color:var(--light-text); }
+.bundle-total { margin-top:16px; padding-top:16px; border-top:2px solid var(--yellow); display:flex; justify-content:space-between; align-items:center; }
+.bundle-total .total-label { font-weight:700; color:var(--charcoal); }
+.bundle-total .total-price { font-size:1.3rem; font-weight:bold; color:var(--pink); }
+.bundle-total .total-price .strikethrough { font-size:0.9rem; color:var(--light-text); text-decoration:line-through; font-weight:normal; margin-right:8px; }
+.secure { font-size:0.85rem; color:var(--light-text); margin-top:14px; }
+
+/* ===== COMING SOON ===== */
+.coming-soon {
+  background:linear-gradient(135deg,var(--sage-pale) 0%,var(--white) 50%,var(--pink-pale) 100%);
+  padding:72px 24px; text-align:center;
+}
+.coming-soon-inner { max-width:550px; margin:0 auto; }
+.coming-badge {
+  display:inline-block; background:var(--peach); color:var(--white);
+  padding:6px 20px; border-radius:50px; font-size:0.8rem; font-weight:700;
+  letter-spacing:0.12em; text-transform:uppercase; margin-bottom:16px;
+  font-family:'Playfair Display',Georgia,'Times New Roman',serif;
+}
+.coming-soon h2 { color:var(--charcoal); }
+.coming-form { display:flex; gap:10px; max-width:450px; margin:28px auto 0; }
+.coming-form input[type="email"] {
+  flex:1; padding:13px 18px; border:2px solid var(--pink-light);
+  border-radius:12px; font-family:'Nunito',sans-serif; font-size:0.95rem;
+  color:var(--charcoal); background:var(--white); outline:none;
+  transition:border-color 0.3s ease;
+}
+.coming-form input:focus { border-color:var(--pink); }
+.coming-form input::placeholder { color:#bbb; }
+.coming-form .btn { flex-shrink:0; padding:13px 24px; font-size:0.9rem; }
 
 /* ===== TESTIMONIALS ===== */
-.testimonials-section {
-  background: linear-gradient(180deg, #FFF9F5 0%, #FFFFFF 100%);
-  padding: 80px 0;
-}
-
-.testimonials-section h2 {
-  text-align: center;
-  margin-bottom: 48px;
-}
-
-.testimonials-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-}
-
+.testimonials-section { background:var(--white); padding:80px 24px; }
+.testimonials-section h2 { text-align:center; margin-bottom:48px; }
+.testimonials-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:30px; max-width:980px; margin:0 auto; }
 .testimonial-card {
-  background: #FFFFFF;
-  border-radius: 20px;
-  padding: 32px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.04);
-  border: 1px solid rgba(168, 203, 189, 0.12);
-  transition: all 0.4s ease;
-  position: relative;
+  background:var(--cream); border-radius:20px; padding:32px;
+  box-shadow:0 4px 20px rgba(0,0,0,0.04);
+  border:1px solid var(--border); transition:all 0.4s ease; position:relative;
 }
-
-.testimonial-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 30px rgba(0,0,0,0.06);
-}
-
+.testimonial-card:hover { transform:translateY(-3px); box-shadow:0 8px 30px rgba(0,0,0,0.06); }
 .testimonial-card::before {
-  content: '"';
-  position: absolute;
-  top: 16px;
-  left: 20px;
-  font-size: 4rem;
-  color: rgba(232, 144, 154, 0.12);
-  font-family: 'Georgia', serif;
-  line-height: 1;
+  content:'"'; position:absolute; top:16px; left:20px;
+  font-size:4rem; color:rgba(232,134,138,0.15);
+  font-family:'Playfair Display',Georgia,'Times New Roman',serif; line-height:1;
 }
+.stars { color:var(--yellow); font-size:1rem; letter-spacing:2px; margin-bottom:16px; }
+.testimonial-card blockquote { font-size:0.95rem; line-height:1.7; color:var(--mid); margin-bottom:20px; font-style:normal; }
+.testimonial-card blockquote strong { color:var(--charcoal); }
+.testimonial-author { display:flex; flex-direction:column; gap:2px; padding-top:16px; border-top:1px solid var(--border); }
+.testimonial-author .name { font-weight:700; color:var(--charcoal); font-family:'Playfair Display',Georgia,'Times New Roman',serif; font-size:0.9rem; }
+.testimonial-author .location { font-size:0.8rem; color:var(--sage); font-style:italic; }
+.trust-badge { text-align:center; margin-top:48px; padding:20px; background:rgba(232,134,138,0.08); border-radius:12px; font-weight:600; color:var(--charcoal); font-size:0.95rem; max-width:500px; margin:48px auto 0; }
+.trust-badge span { color:var(--pink); }
 
-.stars {
-  color: #FDDF8D;
-  font-size: 1rem;
-  letter-spacing: 2px;
-  margin-bottom: 16px;
+/* ===== FAQ ===== */
+.faq { background:var(--cream); padding:64px 24px; }
+.faq-inner { max-width:600px; margin:0 auto; }
+.faq-inner h2 { text-align:center; margin-bottom:38px; }
+.faq-item { border-bottom:1px solid var(--border); padding:18px 0; }
+.faq-item:last-child { border-bottom:none; }
+.faq-q { font-size:1rem; font-weight:600; color:var(--charcoal); margin-bottom:7px; font-family:'Playfair Display',Georgia,'Times New Roman',serif; }
+.faq-a { font-size:0.95rem; font-weight:300; color:var(--mid); line-height:1.7; }
+
+/* ===== CLOSING ===== */
+.closing {
+  background:linear-gradient(135deg,var(--pink-pale) 0%,var(--sage-pale) 100%);
+  padding:76px 24px; text-align:center;
 }
-
-.testimonial-card blockquote {
-  font-size: 0.98rem;
-  line-height: 1.7;
-  color: #555;
-  margin-bottom: 20px;
-  font-style: normal;
+.closing-inner { max-width:500px; margin:0 auto; }
+.closing .dua {
+  font-family:'Playfair Display',Georgia,'Times New Roman',serif;
+  font-style:italic; font-size:1.05rem; color:var(--charcoal); line-height:1.9; margin-bottom:30px;
 }
+.closing p { font-size:1rem; font-weight:300; color:var(--mid); margin-bottom:30px; }
 
-.testimonial-card blockquote strong {
-  color: #404040;
+/* ===== LEAD MAGNET (MailerLite) ===== */
+.lead-magnet-wrap {
+  background:linear-gradient(135deg,var(--white) 0%,var(--pink-pale) 100%);
+  padding:60px 24px; text-align:center;
 }
-
-.testimonial-author {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-  padding-top: 16px;
-  border-top: 1px solid rgba(168, 203, 189, 0.15);
+.lead-magnet-inner { max-width:600px; margin:0 auto; }
+.lead-magnet-inner .lm-label {
+  color:var(--pink); font-size:0.8rem; letter-spacing:3px; text-transform:uppercase; margin-bottom:10px; font-weight:700;
 }
+.lead-magnet-inner h2 { font-size:clamp(1.3rem,3vw,1.8rem); color:var(--charcoal); margin-bottom:12px; }
+.lead-magnet-inner h2 em { color:var(--pink); font-style:italic; }
+.lead-magnet-inner>p { font-size:0.95rem; color:var(--mid); max-width:500px; margin:0 auto 24px; }
 
-.testimonial-author .name {
-  font-weight: 700;
-  color: #404040;
-  font-family: 'Georgia', 'Times New Roman', Times, serif;
-  font-size: 0.95rem;
-}
+/* MailerLite embed styles */
+#mlb2-41364102.ml-form-embedContainer { box-sizing:border-box; display:table; margin:0 auto; position:static; width:100%!important; }
+#mlb2-41364102.ml-form-embedContainer .ml-form-embedWrapper { background-color:white; border-width:0; border-color:transparent; border-radius:16px; border-style:solid; box-sizing:border-box; display:inline-block!important; margin:0; padding:0; position:relative; width:100%; }
+#mlb2-41364102.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody { padding:25px 25px 0 25px; }
+#mlb2-41364102.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent { display:none; }
+#mlb2-41364102.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input { background-color:#fff8f8!important; color:#333!important; border-color:var(--pink); border-radius:8px!important; border-style:solid!important; border-width:1px!important; font-family:'Nunito',sans-serif; font-size:15px!important; height:auto; line-height:21px!important; margin-bottom:0; margin-top:0; padding:12px 15px!important; width:100%!important; box-sizing:border-box!important; }
+#mlb2-41364102.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow { margin:0 0 12px 0; width:100%; }
+#mlb2-41364102.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow.ml-last-item { margin:0 0 12px 0; }
+#mlb2-41364102.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit { margin:0 0 20px 0; float:left; width:100%; }
+#mlb2-41364102.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit button { background:var(--pink)!important; border:none!important; border-radius:30px!important; box-shadow:none!important; color:#ffffff!important; cursor:pointer; font-family:'Nunito',sans-serif!important; font-size:15px!important; font-weight:700!important; letter-spacing:0.1em; text-transform:uppercase; line-height:21px!important; height:auto; padding:14px!important; width:100%!important; box-sizing:border-box!important; transition:background-color 0.2s; }
+#mlb2-41364102.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit button:hover { background:var(--peach)!important; }
+#mlb2-41364102.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit button.loading { display:none; }
+#mlb2-41364102.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody { padding:25px; }
+#mlb2-41364102.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent h4 { color:var(--charcoal); font-family:'Playfair Display',Georgia,'Times New Roman',serif; font-size:22px; font-weight:700; margin:0 0 10px 0; }
+#mlb2-41364102.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent p { color:var(--mid); font-family:'Nunito',sans-serif; font-size:15px; line-height:1.6; margin:0 0 10px 0; }
+.ml-form-recaptcha { margin-bottom:12px; }
+.ml-error input { border-color:red!important; }
+@media only screen and (max-width:400px) { .ml-form-embedWrapper { width:100%!important; } }
+.lead-magnet-inner .lm-footnote { font-size:0.8rem; color:var(--light-text); margin-top:12px; }
 
-.testimonial-author .location {
-  font-size: 0.85rem;
-  color: #A8CBBD;
-  font-style: italic;
-}
+/* ===== ABOUT (from new site) ===== */
+.about-section { background:var(--white); padding:80px 24px; }
+.about-grid { display:grid; grid-template-columns:1fr 1fr; gap:50px; align-items:start; max-width:980px; margin:0 auto; }
+.about-founder { background:var(--cream); border-radius:20px; padding:36px; }
+.about-founder .founder-icon { width:80px; height:80px; border-radius:50%; background:linear-gradient(135deg,var(--pink),var(--peach)); margin-bottom:20px; display:flex; align-items:center; justify-content:center; font-size:2.2rem; color:var(--white); }
+.about-founder h3 { font-family:'Playfair Display',Georgia,'Times New Roman',serif; margin-bottom:12px; }
+.about-founder p { font-size:0.95rem; color:var(--mid); line-height:1.7; }
+.about-founder .signoff { margin-top:16px; font-weight:600; color:var(--pink); font-family:'Playfair Display',Georgia,'Times New Roman',serif; font-size:1rem; }
+.about-right { display:flex; flex-direction:column; gap:24px; }
+.promise-card { background:var(--cream); border-radius:16px; padding:28px; border:1px solid var(--border); }
+.promise-card h3 { color:var(--sage); margin-bottom:16px; font-family:'Playfair Display',Georgia,'Times New Roman',serif; }
+.promise-list { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+.promise-item { display:flex; align-items:flex-start; gap:10px; font-size:0.92rem; color:var(--mid); }
+.promise-item .check { color:var(--sage); font-weight:bold; font-size:1rem; flex-shrink:0; }
+.guarantee-card { background:var(--cream); border-radius:16px; padding:28px; border:2px solid var(--yellow); text-align:center; }
+.guarantee-badge { display:inline-flex; align-items:center; gap:8px; background:var(--yellow); color:var(--charcoal); padding:6px 18px; border-radius:50px; font-size:0.85rem; font-weight:700; margin-bottom:12px; font-family:'Playfair Display',Georgia,'Times New Roman',serif; }
+.guarantee-card h3 { color:var(--charcoal); margin-bottom:8px; }
+.guarantee-card p { font-size:0.93rem; color:var(--mid); max-width:450px; margin:0 auto; }
 
-.trust-badge {
-  text-align: center;
-  margin-top: 48px;
-  padding: 20px;
-  background: rgba(253, 223, 141, 0.15);
-  border-radius: 12px;
-  font-weight: 600;
-  color: #404040;
-  font-size: 1rem;
-}
-
-.trust-badge span {
-  color: #E8909A;
-}
-
-/* ===== ABOUT / GUARANTEE ===== */
-.about-section {
-  background: #FFF9F5;
-  padding: 80px 0;
-}
-
-.about-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
-  align-items: start;
-}
-
-.about-founder {
-  background: #FFFFFF;
-  border-radius: 20px;
-  padding: 40px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.04);
-}
-
-.about-founder .founder-image-placeholder {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #E8909A 0%, #FAB488 100%);
-  margin-bottom: 24px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 3rem;
-  color: #FFFFFF;
-}
-
-.about-founder h3 {
-  margin-bottom: 16px;
-}
-
-.about-founder p {
-  font-size: 1rem;
-  color: #555;
-  line-height: 1.7;
-}
-
-.about-founder .signoff {
-  margin-top: 20px;
-  font-weight: 600;
-  color: #E8909A;
-  font-family: 'Georgia', 'Times New Roman', Times, serif;
-  font-size: 1.05rem;
-}
-
-.about-right {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-}
-
-.promise-card {
-  background: #FFFFFF;
-  border-radius: 16px;
-  padding: 32px;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.03);
-  border: 1px solid rgba(168, 203, 189, 0.12);
-}
-
-.promise-card h3 {
-  color: #A8CBBD;
-  margin-bottom: 20px;
-}
-
-.promise-list {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
-}
-
-.promise-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 12px;
-  font-size: 0.95rem;
-  color: #555;
-}
-
-.promise-item .check {
-  color: #A8CBBD;
-  font-weight: bold;
-  font-size: 1.1rem;
-  flex-shrink: 0;
-}
-
-.guarantee-card {
-  background: #FFFFFF;
-  border-radius: 16px;
-  padding: 32px;
-  border: 2px solid #FDDF8D;
-  text-align: center;
-  position: relative;
-}
-
-.guarantee-card .guarantee-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: #FDDF8D;
-  color: #404040;
-  padding: 8px 20px;
-  border-radius: 50px;
-  font-size: 0.9rem;
-  font-weight: 700;
-  margin-bottom: 16px;
-  font-family: 'Georgia', 'Times New Roman', Times, serif;
-}
-
-.guarantee-card h3 {
-  color: #404040;
-  margin-bottom: 12px;
-}
-
-.guarantee-card p {
-  font-size: 0.98rem;
-  color: #666;
-  max-width: 500px;
-  margin: 0 auto;
-}
-
-/* ===== FINAL CTA SECTION ===== */
+/* ===== FINAL CTA ===== */
 .final-cta {
-  background: linear-gradient(135deg, #2a3d38 0%, #3d544d 50%, #2a3d38 100%);
-  padding: 100px 0;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
+  background:linear-gradient(135deg,var(--charcoal) 0%,#3d3d3d 50%,var(--charcoal) 100%);
+  padding:80px 24px; text-align:center; position:relative; overflow:hidden;
 }
-
 .final-cta::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: radial-gradient(ellipse at center, rgba(253, 223, 141, 0.06) 0%, transparent 70%);
-  pointer-events: none;
+  content:''; position:absolute; top:0; left:0; right:0; bottom:0;
+  background:radial-gradient(ellipse at center,rgba(232,134,138,0.06) 0%,transparent 70%);
+  pointer-events:none;
 }
-
-.final-cta h2 {
-  color: #FFFFFF;
-  margin-bottom: 16px;
-}
-
-.final-cta .final-subtitle {
-  font-size: 1.2rem;
-  color: rgba(255,255,255,0.8);
-  max-width: 600px;
-  margin: 0 auto 40px;
-  line-height: 1.7;
-}
-
-.final-cta .final-subtitle strong {
-  color: #FDDF8D;
-}
-
-.final-cta .btn {
-  font-size: 1.15rem;
-  padding: 20px 48px;
-}
-
-.final-cta .btn:hover {
-  transform: translateY(-3px);
-}
-
-/* Compact product list in final CTA */
-.final-products {
-  display: flex;
-  justify-content: center;
-  gap: 24px;
-  flex-wrap: wrap;
-  margin: 48px 0 40px;
-}
-
+.final-cta h2 { color:var(--white); margin-bottom:16px; }
+.final-cta .final-subtitle { font-size:1.1rem; color:rgba(255,255,255,0.8); max-width:550px; margin:0 auto 32px; line-height:1.7; }
+.final-cta .final-subtitle strong { color:var(--yellow); }
+.final-products { display:flex; justify-content:center; gap:20px; flex-wrap:wrap; margin:36px 0 32px; }
 .final-product-item {
-  background: rgba(255,255,255,0.06);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255,255,255,0.1);
-  border-radius: 16px;
-  padding: 20px 24px;
-  min-width: 180px;
-  text-align: center;
-  transition: all 0.3s ease;
+  background:rgba(255,255,255,0.06); backdrop-filter:blur(10px);
+  border:1px solid rgba(255,255,255,0.1); border-radius:16px;
+  padding:18px 22px; min-width:160px; text-align:center; transition:all 0.3s ease;
 }
-
-.final-product-item:hover {
-  background: rgba(255,255,255,0.1);
-  transform: translateY(-2px);
-}
-
-.final-product-item .fp-name {
-  color: #FFFFFF;
-  font-weight: 600;
-  font-size: 0.95rem;
-  margin-bottom: 4px;
-  font-family: 'Georgia', 'Times New Roman', Times, serif;
-}
-
-.final-product-item .fp-price {
-  color: #FDDF8D;
-  font-weight: 700;
-  font-size: 1rem;
-}
-
-.final-product-item .fp-cta {
-  display: inline-block;
-  margin-top: 8px;
-  color: #E8909A;
-  font-size: 0.85rem;
-  font-weight: 600;
-  transition: color 0.3s ease;
-}
-
-.final-product-item .fp-cta:hover {
-  color: #F8A4A4;
-}
-
-.final-product-item.bundle-highlight {
-  border-color: #FDDF8D;
-  background: rgba(253, 223, 141, 0.08);
-}
-
-.final-message {
-  max-width: 650px;
-  margin: 48px auto 0;
-  padding-top: 40px;
-  border-top: 1px solid rgba(255,255,255,0.1);
-}
-
-.final-message h3 {
-  color: #FFFFFF;
-  font-family: 'Georgia', 'Times New Roman', Times, serif;
-  font-size: 1.2rem;
-  margin-bottom: 12px;
-}
-
-.final-message p {
-  color: rgba(255,255,255,0.7);
-  font-size: 1rem;
-  line-height: 1.8;
-}
-
-.final-message p strong {
-  color: #FFFFFF;
-}
+.final-product-item:hover { background:rgba(255,255,255,0.1); transform:translateY(-2px); }
+.final-product-item .fp-name { color:var(--white); font-weight:600; font-size:0.9rem; margin-bottom:4px; }
+.final-product-item .fp-price { color:var(--yellow); font-weight:700; font-size:0.95rem; }
+.final-product-item .fp-cta { display:inline-block; margin-top:6px; color:var(--pink); font-size:0.8rem; font-weight:600; transition:color 0.3s ease; }
+.final-product-item .fp-cta:hover { color:var(--pink-light); }
+.final-product-item.bundle-highlight { border-color:var(--yellow); background:rgba(232,196,90,0.08); }
+.final-message { max-width:550px; margin:40px auto 0; padding-top:32px; border-top:1px solid rgba(255,255,255,0.1); }
+.final-message h3 { color:var(--white); font-size:1.1rem; margin-bottom:12px; font-family:'Playfair Display',Georgia,'Times New Roman',serif; }
+.final-message p { color:rgba(255,255,255,0.7); font-size:0.95rem; line-height:1.8; }
+.final-message p strong { color:var(--white); }
 
 /* ===== FOOTER ===== */
-.site-footer {
-  background: #FFFFFF;
-  padding: 40px 0 32px;
-  border-top: 1px solid rgba(168, 203, 189, 0.15);
+footer {
+  background:var(--charcoal); color:rgba(255,255,255,0.45);
+  text-align:center; padding:24px; font-size:0.9rem; letter-spacing:0.05em;
 }
-
-.footer-inner {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 16px;
-  text-align: center;
-}
-
-.footer-brand {
-  font-family: 'Georgia', 'Times New Roman', Times, serif;
-  font-size: 1.1rem;
-  color: #E8909A;
-  font-weight: bold;
-}
-
-.footer-links {
-  display: flex;
-  gap: 24px;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.footer-links a {
-  font-size: 0.88rem;
-  color: #888;
-  transition: color 0.3s ease;
-}
-
-.footer-links a:hover {
-  color: #E8909A;
-}
-
-.footer-copyright {
-  font-size: 0.82rem;
-  color: #aaa;
-}
-
-/* ===== LEAD MAGNET SECTION ===== */
-.lead-magnet-section {
-  background: linear-gradient(135deg, #FFF9F5 0%, #FEFCF7 100%);
-  padding: 80px 0;
-}
-
-.lead-magnet-card {
-  max-width: 800px;
-  margin: 0 auto;
-  background: linear-gradient(135deg, #FFFDF5 0%, #FFF9ED 100%);
-  border: 2px solid #FDDF8D;
-  border-radius: 24px;
-  padding: 48px 44px;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-  box-shadow: 0 8px 30px rgba(253, 223, 141, 0.15);
-}
-
-.lead-magnet-card::before {
-  content: '';
-  position: absolute;
-  top: -60%;
-  right: -20%;
-  width: 400px;
-  height: 400px;
-  background: radial-gradient(circle, rgba(232, 144, 154, 0.06) 0%, transparent 70%);
-  border-radius: 50%;
-  pointer-events: none;
-}
-
-.lead-magnet-card .lm-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: #E8909A;
-  color: #FFFFFF;
-  padding: 8px 20px;
-  border-radius: 50px;
-  font-size: 0.85rem;
-  font-weight: 700;
-  font-family: 'Georgia', serif;
-  margin-bottom: 20px;
-}
-
-.lead-magnet-card h2 {
-  color: #404040;
-  margin-bottom: 12px;
-  font-size: clamp(1.4rem, 3vw, 2rem);
-}
-
-.lead-magnet-card .lm-subtitle {
-  font-size: 1.05rem;
-  color: #666;
-  max-width: 600px;
-  margin: 0 auto 28px;
-  line-height: 1.7;
-}
-
-.lead-magnet-card .lm-benefits {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px 30px;
-  text-align: left;
-  max-width: 580px;
-  margin: 0 auto 32px;
-}
-
-.lm-benefits .lm-benefit {
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
-  font-size: 0.95rem;
-  color: #555;
-  line-height: 1.5;
-}
-
-.lm-benefits .lm-benefit .lm-num {
-  flex-shrink: 0;
-  background: #FDDF8D;
-  color: #404040;
-  width: 22px;
-  height: 22px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.75rem;
-  font-weight: 700;
-  margin-top: 3px;
-}
-
-.lead-magnet-form {
-  max-width: 480px;
-  margin: 0 auto;
-}
-
-.lead-magnet-form .form-row {
-  display: flex;
-  gap: 12px;
-  margin-bottom: 12px;
-}
-
-.lead-magnet-form input[type="text"],
-.lead-magnet-form input[type="email"] {
-  flex: 1;
-  padding: 14px 18px;
-  border: 2px solid rgba(168, 203, 189, 0.3);
-  border-radius: 12px;
-  font-family: 'Calibri', sans-serif;
-  font-size: 0.95rem;
-  color: #404040;
-  background: #FFFFFF;
-  transition: border-color 0.3s ease;
-  outline: none;
-}
-
-.lead-magnet-form input[type="text"]:focus,
-.lead-magnet-form input[type="email"]:focus {
-  border-color: #E8909A;
-}
-
-.lead-magnet-form input::placeholder {
-  color: #bbb;
-}
-
-.lead-magnet-form .btn {
-  width: 100%;
-  justify-content: center;
-  margin-top: 8px;
-}
-
-.lead-magnet-form .privacy-note {
-  font-size: 0.82rem;
-  color: #aaa;
-  margin-top: 12px;
-  margin-bottom: 0;
-}
-
-/* ===== NEWSLETTER SECTION ===== */
-.newsletter-section {
-  background: linear-gradient(135deg, #FFF9F5 0%, #FFFFFF 100%);
-  padding: 60px 0;
-  border-top: 1px solid rgba(168, 203, 189, 0.15);
-}
-
-.newsletter-inner {
-  max-width: 600px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.newsletter-inner h3 {
-  font-size: 1.5rem;
-  color: #E8909A;
-  margin-bottom: 8px;
-  font-family: 'Georgia', serif;
-}
-
-.newsletter-inner .nl-subtitle {
-  font-size: 0.98rem;
-  color: #666;
-  margin-bottom: 24px;
-}
-
-.newsletter-inner .nl-benefits {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 12px 24px;
-  margin-bottom: 24px;
-}
-
-.newsletter-inner .nl-benefits span {
-  font-size: 0.9rem;
-  color: #555;
-}
-
-.newsletter-inner .nl-form {
-  display: flex;
-  gap: 10px;
-  max-width: 450px;
-  margin: 0 auto;
-}
-
-.newsletter-inner .nl-form input[type="email"] {
-  flex: 1;
-  padding: 14px 18px;
-  border: 2px solid rgba(168, 203, 189, 0.3);
-  border-radius: 12px;
-  font-family: 'Calibri', sans-serif;
-  font-size: 0.95rem;
-  color: #404040;
-  background: #FFFFFF;
-  outline: none;
-  transition: border-color 0.3s ease;
-}
-
-.newsletter-inner .nl-form input[type="email"]:focus {
-  border-color: #E8909A;
-}
-
-.newsletter-inner .nl-form input::placeholder {
-  color: #bbb;
-}
-
-.newsletter-inner .nl-form .btn {
-  flex-shrink: 0;
-  padding: 14px 28px;
-}
-
-.newsletter-inner .nl-privacy {
-  font-size: 0.82rem;
-  color: #aaa;
-  margin-top: 12px;
-}
+footer a { color:var(--pink-light); text-decoration:none; }
+footer a:hover { color:var(--white); }
 
 /* ===== RESPONSIVE ===== */
-@media (max-width: 1024px) {
-  .products-grid {
-    gap: 24px;
+@media(max-width:900px) {
+  .product-section { grid-template-columns:1fr; direction:ltr!important; }
+  .product-section.rev>* { direction:ltr; }
+  .testimonials-grid { grid-template-columns:1fr; }
+  .about-grid { grid-template-columns:1fr; gap:30px; }
+  .bundle-content { grid-template-columns:1fr; gap:24px; }
+  .promise-list { grid-template-columns:1fr; }
+  .who-grid { grid-template-columns:1fr; }
+  .coming-form { flex-direction:column; }
+  .nav-links .hide-mobile { display:none; }
+  .nav-logo img { height:50px; width:50px; }
+  .nav-logo span { font-size:1.2rem; }
+  nav { padding:10px 16px; }
+  .nav-links { display:none; }
+  .nav-links.mobile-open {
+    display:flex; flex-direction:column; position:absolute; top:100%; left:0; right:0;
+    background:var(--white); padding:20px 24px; gap:14px;
+    border-bottom:2px solid var(--pink-light); box-shadow:0 10px 30px rgba(0,0,0,0.05);
   }
-  
-  .bundle-card .bundle-content {
-    gap: 30px;
-  }
+  .mobile-menu-toggle { display:flex; }
+  .mobile-menu-toggle.active span:nth-child(1) { transform:rotate(45deg) translate(5px,6px); }
+  .mobile-menu-toggle.active span:nth-child(2) { opacity:0; }
+  .mobile-menu-toggle.active span:nth-child(3) { transform:rotate(-45deg) translate(5px,-6px); }
+  .header-spacer { height:70px; }
 }
 
-@media (max-width: 900px) {
-  .hero-grid {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-  
-  .hero-image-wrapper {
-    order: -1;
-  }
-  
-  .pain-grid {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-  
-  .about-grid {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-  
-  .testimonials-grid {
-    grid-template-columns: 1fr;
-    gap: 24px;
-  }
-  
-  .bundle-card .bundle-content {
-    grid-template-columns: 1fr;
-    gap: 24px;
-  }
-  
-  .promise-list {
-    grid-template-columns: 1fr;
-  }
-  
-  .header-nav {
-    display: none;
-  }
-  
-  .header-nav.mobile-open {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background: rgba(255,255,255,0.98);
-    backdrop-filter: blur(10px);
-    padding: 20px 24px;
-    gap: 16px;
-    border-bottom: 1px solid rgba(168, 203, 189, 0.15);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-  }
-  
-  .mobile-menu-toggle {
-    display: flex;
-  }
-  
-  .mobile-menu-toggle.active span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 6px);
-  }
-  
-  .mobile-menu-toggle.active span:nth-child(2) {
-    opacity: 0;
-  }
-  
-  .mobile-menu-toggle.active span:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -6px);
-  }
+@media(max-width:600px) {
+  .final-products { flex-direction:column; align-items:center; }
+  .final-product-item { width:100%; max-width:260px; }
 }
-
-@media (max-width: 768px) {
-  .products-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .bundle-card {
-    padding: 28px 24px;
-  }
-  
-  .best-value-badge {
-    position: relative;
-    top: auto;
-    right: auto;
-    display: inline-block;
-    margin-bottom: 16px;
-  }
-  
-  .hero-actions {
-    flex-direction: column;
-  }
-  
-  .hero-actions .btn {
-    width: 100%;
-    justify-content: center;
-  }
-  
-  .final-products {
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .final-product-item {
-    width: 100%;
-    max-width: 300px;
-  }
-  
-  .about-founder {
-    padding: 28px;
-  }
-  
-  .lead-magnet-card {
-    padding: 36px 24px;
-  }
-  
-  .lead-magnet-card .lm-benefits {
-    grid-template-columns: 1fr;
-  }
-  
-  .lead-magnet-form .form-row {
-    flex-direction: column;
-  }
-  
-  .newsletter-inner .nl-form {
-    flex-direction: column;
-    max-width: 100%;
-  }
-}
-
-@media (max-width: 480px) {
-  .container {
-    padding: 0 16px;
-  }
-  
-  h1 {
-    font-size: 1.8rem;
-  }
-  
-  .product-card {
-    padding: 28px 24px;
-  }
-  
-  .testimonial-card {
-    padding: 24px;
-  }
-  
-  .comparison-table {
-    padding: 20px;
-  }
-}
-
-/* ===== ANIMATIONS ===== */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-.animate-in {
-  animation: fadeInUp 0.6s ease forwards;
-}
-
-.delay-1 { animation-delay: 0.1s; }
-.delay-2 { animation-delay: 0.2s; }
-.delay-3 { animation-delay: 0.3s; }
-.delay-4 { animation-delay: 0.4s; }
-
-/* Scroll-triggered visibility (simple approach) */
-.reveal {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.6s ease;
-}
-
-.reveal.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* ===== UTILITY ===== */
-.text-center { text-align: center; }
-.mt-20 { margin-top: 20px; }
-.mt-40 { margin-top: 40px; }
-.mb-20 { margin-bottom: 20px; }
-.mb-40 { margin-bottom: 40px; }
 </style>
 </head>
 <body>
 
-<!-- ===== STICKY HEADER ===== -->
-<header class="sticky-header" id="header">
-  <div class="container header-inner">
-    <a href="#hero" class="brand-name">My Muslim <span>Homeschool</span></a>
-    <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-    <nav class="header-nav" id="headerNav">
-      <a href="#free-course">Free Course</a>
-      <a href="#products">Products</a>
-      <a href="#testimonials">Testimonials</a>
-      <a href="blog.html">Blog</a>
-      <a href="#about">About</a>
-      <a href="#final-cta" class="btn btn-primary" style="padding:10px 24px;font-size:0.9rem;">Shop Bundle →</a>
-    </nav>
+<!-- ===== NAV ===== -->
+<nav id="nav">
+  <div class="nav-logo">
+    <img src="https://darkred-kudu-245410.hostingersite.com/wp-content/uploads/2026/05/My-Muslim-Homeschool-Hub-logo-3.png" alt="My Muslim Homeschool">
+    <span>My Muslim<br>Homeschool</span>
   </div>
-</header>
+  <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="nav-links" id="navLinks">
+    <a class="hide-mobile" href="#products">Products</a>
+    <a class="hide-mobile" href="#playbook">Playbook</a>
+    <a class="hide-mobile" href="#workbook">Workbook</a>
+    <a class="hide-mobile" href="#scripts">Scripts</a>
+    <a class="nav-cta" href="#bundle">Bundle $35</a>
+    <a href="https://mymuslimhomeschool.com/cart" class="nav-icon" title="Cart" target="_blank">
+      <svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20">
+        <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
+        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+      </svg>
+    </a>
+    <a href="https://mymuslimhomeschool.com/my-account" class="nav-icon" title="My Account" target="_blank">
+      <svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20">
+        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+        <circle cx="12" cy="7" r="4"/>
+      </svg>
+    </a>
+  </div>
+</nav>
 
 <div class="header-spacer"></div>
 
-<!-- ===== HERO SECTION ===== -->
-<section class="hero" id="hero">
-  <div class="container hero-grid">
-    <div class="hero-content">
-      <div class="hero-badge">✨ Built for Muslim Homeschool Mamas</div>
-      <h1 class="animate-in">Finally. A Homeschool That Feels Like Islam.</h1>
-      <p class="animate-in delay-1"><strong>Stop Guessing. Start Building a Morning That Brings Barakah.</strong><br>
-      You Pulled Your Children Out for a Reason. Now Give Yourself the Tools to Follow Through.</p>
-      <div class="hero-actions animate-in delay-2">
-        <a href="#products" class="btn btn-primary">Explore the Toolkit →</a>
-        <a href="#testimonials" class="btn btn-secondary">See How It Works</a>
-      </div>
+<!-- ===== PAIN SECTION (from current site) ===== -->
+<section class="pain" id="pain">
+  <div class="pain-inner">
+    <p class="section-label">You're not alone</p>
+    <h2 class="section-title">Mornings are hard. Homeschool is hard.<br>These resources make it <em>easier.</em></h2>
+    <p>You want your children to grow up knowing their deen, but between chaotic mornings, stalled lesson plans, and the pressure to do it all, it can feel overwhelming before you even begin.</p>
+    <div class="hadith-strip">
+      <p>"Allah has put barakah in the early morning hours for my Ummah."</p>
+      <cite>— The Prophet (Tirmidhi)</cite>
     </div>
-    <div class="hero-image-wrapper animate-in delay-2">
-      <img src="hero-image.png" alt="Muslim mother homeschooling her children in a warm, sunlit home" loading="eager">
-      <div class="hero-image-accent"></div>
-    </div>
+    <p>These three resources work together to ground your mornings in faith, restart your homeschool with clarity, and give your children stories of the prophets that will stay with them for life — all without needing to be a scholar or a perfect teacher.</p>
   </div>
 </section>
 
-<!-- ===== PAIN / AGITATION SECTION ===== -->
-<section class="pain-section" id="pain">
-  <div class="container">
-    <div class="pain-grid">
-      <div class="pain-text">
-        <span class="section-subtitle">The Truth About Your Homeschool</span>
-        <h2>You Didn't Sign Up for This</h2>
-        <p>You imagined Quran verses at breakfast. Little hands reaching for Suhur. Children who couldn't wait to learn about the prophets.</p>
-        <p>Instead, you're staring at the clock at 9:47 AM wondering why no one is dressed yet.</p>
-        <p>And that voice — the one that whispers at 2 AM...</p>
-        <div class="whisper-list">
-          <p>"Am I ruining them?"</p>
-          <p>"Should I just put them back in school?"</p>
-          <p>"Other homeschool moms make it look so easy. What's wrong with me?"</p>
-        </div>
-        <div class="divider-teal"></div>
-        <p class="emphasis">You are not failing.</p>
-        <p>You are exhausted, isolated, and working without a map.</p>
-        <p>And that <strong>isn't the same thing.</strong></p>
-        
-        <h3>What You Actually Need Is Not More Motivation</h3>
-        <p>You've read the blogs. Joined the Facebook groups. Downloaded the freebies.</p>
-        <p>You know you should wake up before the kids. You know you should have a routine.</p>
-        <p>But knowing and <em>doing</em> are two different roads — and you're walking them alone.</p>
-        <p>What you need is a <strong>clear path from Fajr to first lesson</strong> that doesn't require you to become someone you're not.</p>
-        <p>A way to start each day with intention (niyyah) instead of chaos.</p>
-        <p>A reminder that you were <strong>chosen for this</strong> — and you have not been left without tools.</p>
-      </div>
-      <div class="pain-image-placeholder">
-        <div class="icon">🌙</div>
-        <p style="margin-top:12px;font-size:1.2rem;opacity:0.9;">Before sunrise, a mother prays for her children</p>
-        <p style="font-size:0.85rem;opacity:0.6;max-width:200px;">You are not alone in this journey</p>
-      </div>
+<!-- ===== PRODUCTS SECTION (from current site) ===== -->
+<section class="products" id="products">
+  <div class="products-inner">
+    <div class="products-header">
+      <p class="section-label">The Resources</p>
+      <h2 class="section-title">Three tools. One <em>beautiful</em> homeschool.</h2>
     </div>
-  </div>
-</section>
 
-<!-- ===== DIVIDER ===== -->
-<div class="section-divider">
-  <span class="line"></span>
-  <span class="star">✦</span>
-  <span class="line"></span>
-</div>
-
-<!-- ===== SOLUTION SECTION ===== -->
-<section class="solution-section" id="solution">
-  <div class="container">
-    <span class="section-subtitle">The My Muslim Homeschool System</span>
-    <h2>Three Tools. One Journey. A Homeschool Built on Barakah.</h2>
-    <p class="subtitle">
-      Introducing <strong>My Muslim Homeschool</strong> — practical, beautifully-designed digital resources made specifically for Muslim mothers who are doing this at home.<br>
-      No fluff. No secular curriculum. No guilt.<br>
-      Just wisdom, structure, and barakah — built for real mornings with real children.
-    </p>
-  </div>
-</section>
-
-<!-- ===== PRODUCT CARDS ===== -->
-<section class="products-section" id="products">
-  <div class="container">
-    <div class="products-grid">
-      
-      <!-- Product 1: Morning Routine Playbook -->
-      <div class="product-card reveal">
-        <div class="product-icon">🕌</div>
-        <h3>Morning Routine Playbook</h3>
-        <div class="price">$7</div>
-        <div class="solves">Solves: Chaotic Mornings</div>
-        <p style="font-size:0.95rem;color:#666;margin-bottom:12px;">Step-by-step guide from Fajr to first lesson, built for Muslim homeschool mamas.</p>
-        <ul>
-          <li>Step-by-step guide from Fajr to first lesson (even on hard days)</li>
-          <li>Sample schedules for different ages and family sizes</li>
-          <li>Printable morning tracker your kids can follow independently</li>
-          <li>Du'a cards to start the day with Allah's name on your lips</li>
-          <li>What to do when everything goes wrong (because it will)</li>
+    <!-- Product 1: Playbook -->
+    <div class="product-section" id="playbook">
+      <div class="product-img-wrap">
+        <img src="https://darkred-kudu-245410.hostingersite.com/wp-content/uploads/2026/05/Muslim-Moms-Morning-Routine-PLAYBOOK-COVER-PAGE.png" alt="Muslim Mom's Morning Routine Playbook">
+      </div>
+      <div class="product-info">
+        <span class="product-tag tag-pink">Resource 01</span>
+        <h3>Muslim Mom's Morning Routine Playbook</h3>
+        <p class="tagline">From Fajr to First Lesson</p>
+        <p>A step-by-step guide to building a morning rhythm rooted in your deen, from the moment you pray Fajr to the first lesson of the day. Fillable, printable, and designed for real homeschool life.</p>
+        <ul class="feature-list">
+          <li><span class="dot dot-pink"></span>The Mindset Reset — schedule vs. rhythm, why it matters</li>
+          <li><span class="dot dot-pink"></span>Building your Fajr Foundation &amp; the 5-Minute Mom Reset</li>
+          <li><span class="dot dot-pink"></span>Waking children gently with Sunnah-inspired intention</li>
+          <li><span class="dot dot-pink"></span>Morning adhkar for children as daily habit, not lesson</li>
+          <li><span class="dot dot-pink"></span>School start signals + Quran as the first lesson</li>
+          <li><span class="dot dot-pink"></span>Sample routines for small, large &amp; newborn-season families</li>
+          <li><span class="dot dot-pink"></span>Fillable Blueprint + printable Quick Reference Card</li>
         </ul>
-        <div class="who-for">For the mama who dread mornings.</div>
-        <a href="#" class="btn btn-primary">Get the Morning Routine Playbook — $7</a>
+        <div class="price-row">
+          <span class="price-big">$7</span>
+          <span class="price-label">Instant PDF download<br>Fillable &amp; printable</span>
+        </div>
+        <a class="btn btn-pink" href="https://mymuslimhomeschool.com/product/muslim-moms-morning-routine-playbook/" target="_blank">Get the Playbook — $7</a>
       </div>
-      
-      <!-- Product 2: Homeschool Reset Workbook -->
-      <div class="product-card reveal delay-1">
-        <div class="product-icon">📚</div>
+    </div>
+
+    <!-- Product 2: Workbook (reversed) -->
+    <div class="product-section rev" id="workbook">
+      <img src="https://darkred-kudu-245410.hostingersite.com/wp-content/uploads/2026/05/Homeschool-Reset-Workbook-Cover.png" alt="Homeschool Reset Workbook" style="width:100%;border-radius:12px;box-shadow:0 4px 20px rgba(0,0,0,0.15);">
+      <div class="product-info">
+        <span class="product-tag tag-sage">Resource 02</span>
         <h3>Homeschool Reset Workbook</h3>
-        <div class="price">$15</div>
-        <div class="solves">Solves: A Stalled Homeschool</div>
-        <p style="font-size:0.95rem;color:#666;margin-bottom:12px;">Fillable workbook to restart with clarity, niyyah and a real plan. No guilt, just wisdom.</p>
-        <ul>
-          <li>30-page fillable PDF workbook (print or use digitally)</li>
-          <li>Guided reflection on your niyyah and why you started</li>
-          <li>Step-by-step restart process — no guilt, no shame</li>
-          <li>Goal-setting worksheets designed for real life</li>
-          <li>Monthly and weekly planning pages that actually work</li>
-          <li>Identify what's been blocking you — and how to move forward</li>
+        <p class="tagline">Start Again With Clarity</p>
+        <p>A gentle, fillable companion for when your homeschool has stalled and you need a compassionate, structured way to begin again. No guilt — just wisdom, niyyah, and a clear plan forward.</p>
+        <ul class="feature-list">
+          <li><span class="dot dot-sage"></span>The Honest Audit — what happened &amp; what actually worked</li>
+          <li><span class="dot dot-sage"></span>Reconnecting With Your Why — create your Islamic mission statement</li>
+          <li><span class="dot dot-sage"></span>Clearing the Clutter — digital &amp; physical checklists</li>
+          <li><span class="dot dot-sage"></span>The Simple Restart Plan — 5 subjects &amp; two-week schedule</li>
+          <li><span class="dot dot-sage"></span>Building Momentum — Pause Plan &amp; weekly Friday Review</li>
+          <li><span class="dot dot-sage"></span>Support circle planner &amp; 30-day milestone section</li>
+          <li><span class="dot dot-sage"></span>Fillable Reset at a Glance page to pin where you teach</li>
         </ul>
-        <div class="who-for">For the mama who feels stuck.</div>
-        <a href="#" class="btn btn-primary">Get the Homeschool Reset Workbook — $15</a>
+        <div class="price-row">
+          <span class="price-big">$15</span>
+          <span class="price-label">Instant PDF download<br>Fillable &amp; printable</span>
+        </div>
+        <a class="btn btn-sage" href="https://mymuslimhomeschool.com/product/homeschool-reset-workbook/" target="_blank">Get the Workbook — $15</a>
       </div>
-      
-      <!-- Product 3: 15 Prophet Story Scripts -->
-      <div class="product-card reveal delay-2">
-        <div class="product-icon">📖</div>
-        <h3>15 Prophet Story Scripts</h3>
-        <div class="price">$20</div>
-        <div class="solves">Solves: Disconnected Islamic Studies</div>
-        <p style="font-size:0.95rem;color:#666;margin-bottom:12px;">113 pages of fully written, read-aloud prophet stories for ages 4-12, no prep needed.</p>
-        <ul>
-          <li>113 pages of fully written, read-aloud prophet story scripts</li>
-          <li>Stories covering Adam, Ibrahim, Yusuf, Musa, Muhammad (SAW) and more</li>
-          <li>Told in language your 4–12 year olds will love and remember</li>
-          <li>No prep needed — open and read aloud</li>
-          <li>Includes character descriptions and simple vocal cues</li>
-          <li>Bonus: relevant Quran verses and hadiths for deeper study</li>
+    </div>
+
+    <!-- Product 3: Scripts -->
+    <div class="product-section" id="scripts">
+      <div class="product-img-wrap">
+        <img src="https://darkred-kudu-245410.hostingersite.com/wp-content/uploads/2026/05/Open-Teach_-15-Complete-Prophet-Story-Scripts-for-the-Muslim-Homeschool-Mom-Cover-page.png" alt="Open &amp; Teach: 15 Prophet Story Scripts">
+      </div>
+      <div class="product-info">
+        <span class="product-tag tag-peach">Resource 03</span>
+        <h3>Open &amp; Teach: 15 Prophet Story Scripts</h3>
+        <p class="tagline">Stories That Stick — Ages 4 to 12</p>
+        <p>113 pages of ready-to-use storytelling scripts covering the lives of 15 prophets — from Adam (AS) to Muhammad (SAW). Pick it up, sit beside your child, and begin — with confidence and with love. No lesson prep needed.</p>
+        <ul class="feature-list">
+          <li><span class="dot dot-peach"></span>15 complete prophet stories — from Adam (AS) to Muhammad (SAW)</li>
+          <li><span class="dot dot-peach"></span>Fully written read-aloud scripts with built-in pause cues</li>
+          <li><span class="dot dot-peach"></span>Story Overview Cards, vocabulary, age guidance &amp; timing</li>
+          <li><span class="dot dot-peach"></span>Discussion questions for ages 4-7 and ages 8-12</li>
+          <li><span class="dot dot-peach"></span>Activity page per story + "What I Learned Today" box</li>
+          <li><span class="dot dot-peach"></span>One story per week = a complete 15-week Islamic Studies term</li>
+          <li><span class="dot dot-peach"></span>Warm, age-appropriate language — no teaching degree needed</li>
         </ul>
-        <div class="who-for">For the mama who wants her children to <strong>love</strong> the prophets.</div>
-        <a href="#" class="btn btn-primary">Get the 15 Prophet Story Scripts — $20</a>
+        <div class="price-row">
+          <span class="price-big">$20</span>
+          <span class="price-label">Instant PDF download<br>113 pages — Print or use digitally</span>
+        </div>
+        <a class="btn btn-peach" href="https://mymuslimhomeschool.com/product/open-teach-15-prophet-story-scripts/" target="_blank">Get the Scripts — $20</a>
       </div>
-      
-      <!-- Bundle Card (Full Width) -->
-      <div class="bundle-card reveal delay-3">
-        <div class="best-value-badge">⭐ BEST VALUE</div>
-        <div class="bundle-content">
-          <div class="bundle-left">
-            <h3>⭐ The Complete Bundle</h3>
-            <div class="bundle-price">$35</div>
-            <div class="bundle-savings">Save $7 — Your Complete Homeschool System</div>
-            <p style="font-size:0.95rem;color:#666;">Everything you need to transform your homeschool from chaotic to calm — with products that work together, grow with your children, and keep your niyyah at the center.</p>
-            <ul>
-              <li>Morning Routine Playbook ($7 value)</li>
-              <li>Homeschool Reset Workbook ($15 value)</li>
-              <li>15 Prophet Story Scripts ($20 value)</li>
-            </ul>
-            <div class="who-for" style="margin-bottom:20px;">For the mama who is all in. Who wants every tool available, without piecing it together.</div>
-            <a href="#" class="btn btn-gold" style="width:100%;justify-content:center;">Get the Complete Bundle — $35</a>
-          </div>
-          <div class="bundle-right">
-            <div class="bundle-item">
-              <span class="item-name">🕌 Morning Routine Playbook</span>
-              <span class="item-price">$7</span>
-            </div>
-            <div class="bundle-item">
-              <span class="item-name">📚 Homeschool Reset Workbook</span>
-              <span class="item-price">$15</span>
-            </div>
-            <div class="bundle-item">
-              <span class="item-name">📖 15 Prophet Story Scripts</span>
-              <span class="item-price">$20</span>
-            </div>
-            <div class="bundle-total">
-              <span class="total-label">Bundle Total</span>
-              <span class="total-price"><span class="strikethrough">$42</span> $35</span>
-            </div>
-            <div style="margin-top:12px;text-align:center;background:#FDDF8D;color:#404040;padding:8px;border-radius:8px;font-weight:700;font-size:0.9rem;">
-              🎉 You Save $7!
-            </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== WHO IS THIS FOR (from current site) ===== -->
+<section class="for-who">
+  <div class="for-who-inner">
+    <p class="section-label">Is this for me?</p>
+    <h2 class="section-title">This is for the sister who <em>keeps showing up</em></h2>
+    <div class="who-grid">
+      <div class="who-item"><span class="flower">🌸</span>Your mornings feel rushed &amp; ungrounded no matter what you try</div>
+      <div class="who-item"><span class="flower">🌸</span>You want your days to begin with Allah, not with chaos</div>
+      <div class="who-item"><span class="flower">🌸</span>You've restarted your homeschool &amp; need a fresh, gentle approach</div>
+      <div class="who-item"><span class="flower">🌸</span>You want your children to love the prophets, not just know their names</div>
+      <div class="who-item"><span class="flower">🌸</span>You're in a newborn, toddler or busy season &amp; need grace + guidance</div>
+      <div class="who-item"><span class="flower">🌸</span>You believe your home can be a place of light, love &amp; learning</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== BUNDLE (from new site design) ===== -->
+<section class="bundle-section" id="bundle">
+  <div class="bundle-inner">
+    <p class="section-label">Best Value</p>
+    <h2 class="section-title">Get all three <em>and save $7</em></h2>
+    <p style="color:var(--mid);font-weight:300;font-size:0.95rem;max-width:480px;margin:0 auto 24px;">Start your mornings right, reset your homeschool, and bring Prophet stories to life. Everything your homeschool needs, in one beautiful bundle.</p>
+    <div class="bundle-card-new">
+      <span class="bundle-ribbon">Complete Bundle — Best Value</span>
+      <div class="bundle-content">
+        <div class="bundle-left">
+          <h3>⭐ The Complete Bundle</h3>
+          <div class="bundle-price">$35</div>
+          <div class="bundle-savings">Save $7</div>
+          <ul>
+            <li>Morning Routine Playbook ($7 value)</li>
+            <li>Homeschool Reset Workbook ($15 value)</li>
+            <li>15 Prophet Story Scripts ($20 value)</li>
+            <li>Printable Quick Reference Cards — Included</li>
+            <li>Reset at a Glance Page — Included</li>
+          </ul>
+          <a class="btn btn-gold" href="https://mymuslimhomeschool.com/product/the-complete-muslim-homeschool-bundle/" target="_blank" style="display:inline-block;padding:13px 34px;font-size:0.9rem;">Get the Bundle — $35</a>
+        </div>
+        <div class="bundle-right">
+          <div class="bundle-item"><span class="item-name">🕌 Morning Routine Playbook</span><span class="item-price">$7</span></div>
+          <div class="bundle-item"><span class="item-name">📚 Homeschool Reset Workbook</span><span class="item-price">$15</span></div>
+          <div class="bundle-item"><span class="item-name">📖 15 Prophet Story Scripts</span><span class="item-price">$20</span></div>
+          <div class="bundle-item"><span class="item-name">📋 Quick Reference Cards</span><span class="item-price" style="color:var(--sage);">Included</span></div>
+          <div class="bundle-item"><span class="item-name">📌 Reset at a Glance Page</span><span class="item-price" style="color:var(--sage);">Included</span></div>
+          <div class="bundle-total">
+            <span class="total-label">Bundle Price</span>
+            <span class="total-price"><span class="strikethrough">$42</span> $35</span>
           </div>
         </div>
       </div>
-      
     </div>
+    <a class="btn btn-pink btn-large" href="https://mymuslimhomeschool.com/product/the-complete-muslim-homeschool-bundle/" target="_blank">Yes — I Want the Bundle for $35</a>
+    <p class="secure">🔒 Secure checkout — Instant PDF delivery — No account needed</p>
   </div>
 </section>
 
-<!-- ===== PRICE COMPARISON ===== -->
-<section class="comparison-section">
-  <div class="container">
-    <div class="comparison-table reveal">
-      <h3 style="text-align:center;margin-bottom:20px;color:#E8909A;">Compare & Save</h3>
-      <div class="table-row">
-        <span class="label">🕌 Morning Routine Playbook</span>
-        <span class="price">$7</span>
-      </div>
-      <div class="table-row">
-        <span class="label">📚 Homeschool Reset Workbook</span>
-        <span class="price">$15</span>
-      </div>
-      <div class="table-row">
-        <span class="label">📖 15 Prophet Story Scripts</span>
-        <span class="price">$20</span>
-      </div>
-      <div class="table-row">
-        <span class="label">Individual Total</span>
-        <span class="price"><span class="crossed">$42</span></span>
-      </div>
-      <div class="table-row total-row">
-        <span class="label">⭐ Complete Bundle</span>
-        <span class="price" style="color:#E8909A;font-weight:bold;">$35</span>
-      </div>
-      <div style="text-align:center;">
-        <span class="save-badge">🎉 Bundle & Save $7!</span>
-      </div>
-      <div style="text-align:center;margin-top:20px;">
-        <a href="#products" class="btn btn-gold" style="padding:14px 36px;">Get the Bundle — $35</a>
-      </div>
-    </div>
+<!-- ===== COMING SOON: 30-Day Course ===== -->
+<section class="coming-soon" id="coming-soon">
+  <div class="coming-soon-inner">
+    <span class="coming-badge">Coming Soon</span>
+    <h2>30-Day Homeschool Transformation Course</h2>
+    <p style="font-size:1rem;color:var(--mid);max-width:480px;margin:0 auto;">I'm currently recording this comprehensive course to help you transform your homeschool from chaotic to confident. Join the waitlist to be notified when it launches.</p>
+    <form class="coming-form" action="#" method="post">
+      <input type="email" name="email" placeholder="Enter your email" required>
+      <button type="submit" class="btn btn-pink" style="padding:13px 24px;font-size:0.9rem;">Join the Waitlist</button>
+    </form>
   </div>
 </section>
 
-<!-- ===== TESTIMONIALS ===== -->
+<!-- ===== TESTIMONIALS (from new site) ===== -->
 <section class="testimonials-section" id="testimonials">
-  <div class="container">
-    <span class="section-subtitle text-center">Real Mamas, Real Results</span>
-    <h2 class="text-center">What Muslim Homeschool Mamas Are Saying</h2>
-    
-    <div class="testimonials-grid">
-      <!-- Testimonial 1 -->
-      <div class="testimonial-card reveal">
-        <div class="stars">★★★★★</div>
-        <blockquote>
-          "I can't believe I'm saying this, but <strong>this morning was the easiest we've had in two years.</strong> My 6-year-old actually asked to do the Du'a card first. Me? I just sat there and cried — the good kind."
-        </blockquote>
-        <div class="testimonial-author">
-          <span class="name">— Fatima</span>
-          <span class="location">Mother of 3, UK</span>
-        </div>
-      </div>
-      
-      <!-- Testimonial 2 -->
-      <div class="testimonial-card reveal delay-1">
-        <div class="stars">★★★★★</div>
-        <blockquote>
-          "The prophet stories scripts saved our Quran time. Before, I was stumbling through, not sure what to say. Now my kids beg for 'story time.' Last week my daughter said, 'Mama, can we learn about Prophet Yunus tomorrow?' Heart. Melted."
-        </blockquote>
-        <div class="testimonial-author">
-          <span class="name">— Aisha</span>
-          <span class="location">Mother of 2, Canada</span>
-        </div>
-      </div>
-      
-      <!-- Testimonial 3 -->
-      <div class="testimonial-card reveal delay-2">
-        <div class="stars">★★★★★</div>
-        <blockquote>
-          "I bought the Reset Workbook on a Sunday when I was ready to throw in the towel. By Thursday, I had a plan. A real one. I still have it pinned to my wall. <strong>It gave me back my intention.</strong>"
-        </blockquote>
-        <div class="testimonial-author">
-          <span class="name">— Samira</span>
-          <span class="location">Mother of 4, Australia</span>
-        </div>
-      </div>
+  <p class="section-label" style="text-align:center;">Real Mamas, Real Results</p>
+  <h2>What Muslim Homeschool Mamas Are Saying</h2>
+  <div class="testimonials-grid">
+    <div class="testimonial-card">
+      <div class="stars">★★★★★</div>
+      <blockquote>"I can't believe I'm saying this, but <strong>this morning was the easiest we've had in two years.</strong> My 6-year-old actually asked to do the Du'a card first. Me? I just sat there and cried — the good kind."</blockquote>
+      <div class="testimonial-author"><span class="name">— Fatima</span><span class="location">Mother of 3, UK</span></div>
     </div>
-    
-    <div class="trust-badge reveal">
-      Join <span>500+</span> Muslim homeschool families who have found their rhythm with My Muslim Homeschool
+    <div class="testimonial-card">
+      <div class="stars">★★★★★</div>
+      <blockquote>"The prophet stories scripts saved our Quran time. Before, I was stumbling through, not sure what to say. Now my kids beg for 'story time.' Last week my daughter said, 'Mama, can we learn about Prophet Yunus tomorrow?' Heart. Melted."</blockquote>
+      <div class="testimonial-author"><span class="name">— Aisha</span><span class="location">Mother of 2, Canada</span></div>
+    </div>
+    <div class="testimonial-card">
+      <div class="stars">★★★★★</div>
+      <blockquote>"I bought the Reset Workbook on a Sunday when I was ready to throw in the towel. By Thursday, I had a plan. A real one. I still have it pinned to my wall. <strong>It gave me back my intention.</strong>"</blockquote>
+      <div class="testimonial-author"><span class="name">— Samira</span><span class="location">Mother of 4, Australia</span></div>
+    </div>
+  </div>
+  <div class="trust-badge">Join <span>500+</span> Muslim homeschool families who have found their rhythm with My Muslim Homeschool</div>
+</section>
+
+<!-- ===== FAQ (from current site) ===== -->
+<section class="faq" id="faq">
+  <div class="faq-inner">
+    <h2 class="section-title">Questions answered</h2>
+    <div class="faq-item">
+      <p class="faq-q">What format are the files?</p>
+      <p class="faq-a">All resources are delivered as PDFs. Fillable digitally in Adobe Acrobat or any PDF reader, and designed to be printed at home too.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">How do I receive my files after purchase?</p>
+      <p class="faq-a">Your download link is emailed to you immediately after checkout. No waiting, no shipping — access within minutes, in sha Allah.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">What age range are the Prophet Story Scripts for?</p>
+      <p class="faq-a">The scripts are written for ages 4 to 12, with separate discussion questions and activities for ages 4-7 and 8-12. Perfect for mixed-age homeschool families.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">Do I need any teaching experience to use the scripts?</p>
+      <p class="faq-a">Not at all. Every script is fully written with built-in pause cues — you simply pick it up and read aloud. No preparation, no lesson planning, no Arabic expertise needed.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">Will the Workbook and Playbook work for my homeschool style?</p>
+      <p class="faq-a">Yes, whether you're Charlotte Mason, classical, eclectic, or still figuring it out, the framework is flexible and faith-centred, not method-specific.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">Can I share these with friends or in a co-op?</p>
+      <p class="faq-a">These are licensed for your personal household use only. If a sister would love them, please send her this link instead, jazakAllahu khayran!</p>
     </div>
   </div>
 </section>
 
-<!-- ===== LEAD MAGNET / FREE COURSE SECTION ===== -->
-<section class="lead-magnet-section" id="free-course">
-  <div class="container">
-    <div class="lead-magnet-card reveal">
-      <div class="lm-badge">🎁 FREE 5-DAY EMAIL COURSE</div>
-      <h2>5 Days to a Calm Muslim Homeschool Morning (Even If Your Kids Won't Listen)</h2>
-      <p class="lm-subtitle">A free email course for Muslim mothers who want to transform chaotic mornings into moments of barakah — without forcing your kids or losing your mind.</p>
-      <div class="lm-benefits">
-        <div class="lm-benefit">
-          <span class="lm-num">1</span>
-          <span>The real reason your mornings fall apart (and the 2-minute fix)</span>
-        </div>
-        <div class="lm-benefit">
-          <span class="lm-num">2</span>
-          <span>How to wake up before your children without burning out</span>
-        </div>
-        <div class="lm-benefit">
-          <span class="lm-num">3</span>
-          <span>The "Fajr to First Lesson" blueprint that works for real families</span>
-        </div>
-        <div class="lm-benefit">
-          <span class="lm-num">4</span>
-          <span>How to get your kids to actually cooperate — without threats or bribes</span>
-        </div>
-        <div class="lm-benefit">
-          <span class="lm-num">5</span>
-          <span>The niyyah reset that will change everything</span>
-        </div>
-      </div>
-      <form class="lead-magnet-form" action="#" method="post">
-        <div class="form-row">
-          <input type="text" name="name" placeholder="Your name" required>
-          <input type="email" name="email" placeholder="Your email address" required>
-        </div>
-        <button type="submit" class="btn btn-primary">Get Free Access →</button>
-        <p class="privacy-note">We hate spam too. Only My Muslim Homeschool emails, and you can unsubscribe anytime.</p>
-      </form>
-    </div>
+<!-- ===== DU'A / CLOSING (from current site) ===== -->
+<section class="closing">
+  <div class="closing-inner">
+    <p class="dua">
+      "O Allah, bless us on this day of ours.<br>
+      Make it a day filled with Your remembrance,<br>
+      Your mercy, and ease upon our family.<br>
+      — Ameen"
+    </p>
+    <h2 class="section-title">Your homeschool can be filled with <em>barakah.</em></h2>
+    <p>You don't need a perfect morning or a perfect plan. You need intention, the right tools, and the grace to begin again. These three resources will walk you through all of it.</p>
+    <a class="btn btn-pink btn-large" href="https://mymuslimhomeschool.com/product/the-complete-muslim-homeschool-bundle/" target="_blank">Get the Complete Bundle — $35</a>
   </div>
 </section>
 
-<!-- ===== ABOUT / GUARANTEE ===== -->
-<section class="about-section" id="about">
-  <div class="container">
-    <div class="about-grid">
-      <div class="about-founder reveal">
-        <div class="founder-image-placeholder">💛</div>
-        <h3>Made by Someone Who Gets It</h3>
-        <p>I'm a Muslim mama just like you.</p>
-        <p>I pulled my children out of mainstream school because I wanted the Quran in their hearts before anything else. I wanted them to know who the prophets were — not from a textbook, but from stories that moved them.</p>
-        <p>But I won't pretend it was easy.</p>
-        <p>I have had mornings where no one was dressed by 10 AM. I have sat on the floor and cried (sometimes literally). I have wondered if I was the wrong person for this job.</p>
-        <p>So I built the tools I needed. And now I'm sharing them with you.</p>
-        <p class="signoff">Because you were chosen for this. And you don't have to do it alone.</p>
-      </div>
-      
-      <div class="about-right">
-        <!-- Promises -->
-        <div class="promise-card reveal">
-          <h3>Our Promise</h3>
-          <div class="promise-list">
-            <div class="promise-item">
-              <span class="check">✓</span>
-              <span>Built on Islamic values — no compromise on deen</span>
-            </div>
-            <div class="promise-item">
-              <span class="check">✓</span>
-              <span>Designed for real families — not theoretical perfection</span>
-            </div>
-            <div class="promise-item">
-              <span class="check">✓</span>
-              <span>Ready to use immediately — no prep, no complicated systems</span>
-            </div>
-            <div class="promise-item">
-              <span class="check">✓</span>
-              <span>Made with love — by a mother who has been exactly where you are</span>
+<!-- ===== FREE 5-DAY EMAIL COURSE (MailerLite from current site) ===== -->
+<section class="lead-magnet-wrap" id="free-course">
+  <div class="lead-magnet-inner">
+    <p class="lm-label">Not ready to purchase yet?</p>
+    <h2>Start with our FREE 5-Day Email Course</h2>
+    <p>Get 5 days of faith-centered homeschool guidance delivered straight to your inbox — completely free. Written by a Muslim homeschool mama, for sisters just like you.</p>
+
+    <!-- MailerLite Form from current site -->
+    <div id="mlb2-41364102" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-41364102">
+      <div class="ml-form-align-center">
+        <div class="ml-form-embedWrapper embedForm">
+          <div class="ml-form-embedBody ml-form-embedBodyDefault row-form">
+            <div class="ml-form-embedContent" style="display:none;"></div>
+            <form class="ml-block-form" action="https://assets.mailerlite.com/jsonp/2351886/forms/187569738288727653/subscribe" method="post" target="_blank">
+              <div class="ml-form-formContent">
+                <div class="ml-form-fieldRow">
+                  <div class="ml-field-group ml-field-name">
+                    <input class="form-control" type="text" name="fields[name]" placeholder="First Name" autocomplete="given-name" aria-label="name">
+                  </div>
+                </div>
+                <div class="ml-form-fieldRow ml-last-item">
+                  <div class="ml-field-group ml-field-email ml-validate-email ml-validate-required">
+                    <input class="form-control" type="email" name="fields[email]" placeholder="Email address" autocomplete="email" aria-required="true" aria-label="email">
+                  </div>
+                </div>
+              </div>
+              <div class="ml-form-recaptcha ml-validate-required" style="float:left;">
+                <style>.ml-form-recaptcha{margin-bottom:12px}.ml-form-recaptcha.ml-error iframe{border:solid 1px red}@media screen and (max-width:480px){.ml-form-recaptcha{width:220px!important}.g-recaptcha{transform:scale(0.78);-webkit-transform:scale(0.78);transform-origin:0 0;-webkit-transform-origin:0 0}}</style>
+                <script src="https://www.google.com/recaptcha/api.js"></script>
+                <div class="g-recaptcha" data-sitekey="6Lf1KHQUAAAAAFNKEX1hdSWCS3mRMv4FlFaNslaD"></div>
+              </div>
+              <input type="hidden" name="ml-submit" value="1">
+              <div class="ml-form-embedSubmit">
+                <button type="submit" class="primary">Yes, I'm ready to start!</button>
+                <button class="loading" style="display:none;" disabled="disabled" type="button"><div class="ml-form-embedSubmitLoad"></div><span class="sr-only">Loading...</span></button>
+              </div>
+              <input type="hidden" name="anticsrf" value="true">
+            </form>
+          </div>
+          <div class="ml-form-successBody row-success" style="display:none;">
+            <div class="ml-form-successContent">
+              <h4>JazakAllahu Khayran, sister!</h4>
+              <p>One last step — check your inbox now for a confirmation email and click the link inside to start your free course.</p>
+              <p><strong>Don't forget to check your spam folder!</strong></p>
             </div>
           </div>
         </div>
-        
-        <!-- Guarantee -->
-        <div class="guarantee-card reveal delay-1">
-          <div class="guarantee-badge">🛡️ 14-Day Money-Back Guarantee</div>
-          <h3>100% Satisfaction Guarantee</h3>
-          <p>If you open a product and it doesn't feel right for your family, email me within 14 days for a full refund. No questions, no judgment.</p>
-          <p style="margin-top:12px;">Your trust matters. I want you to feel confident trying these tools — because they work.</p>
+      </div>
+    </div>
+    <script>
+    function ml_webform_success_41364102(){var $=ml_jQuery||jQuery;$('.ml-subscribe-form-41364102 .row-success').show();$('.ml-subscribe-form-41364102 .row-form').hide();}
+    </script>
+    <script src="https://groot.mailerlite.com/js/w/webforms.min.js?vb397d78ebaa8a0f631d35384c46d781b" type="text/javascript"></script>
+    <script>fetch("https://assets.mailerlite.com/jsonp/2351886/forms/187569738288727653/takel");</script>
+    <!-- /MailerLite Form -->
+
+    <p class="lm-footnote">Free • Faith-Centered • Starts Immediately • No spam, ever</p>
+  </div>
+</section>
+
+<!-- ===== ABOUT (from new site) ===== -->
+<section class="about-section" id="about">
+  <div class="about-grid">
+    <div class="about-founder">
+      <div class="founder-icon">💛</div>
+      <h3>Made by Someone Who Gets It</h3>
+      <p>I'm a Muslim mama just like you.</p>
+      <p>I pulled my children out of mainstream school because I wanted the Quran in their hearts before anything else. I wanted them to know who the prophets were — not from a textbook, but from stories that moved them.</p>
+      <p>But I won't pretend it was easy. I have had mornings where no one was dressed by 10 AM. I have sat on the floor and cried (sometimes literally). I have wondered if I was the wrong person for this job.</p>
+      <p>So I built the tools I needed. And now I'm sharing them with you.</p>
+      <p class="signoff">Because you were chosen for this. And you don't have to do it alone.</p>
+    </div>
+    <div class="about-right">
+      <div class="promise-card">
+        <h3>Our Promise</h3>
+        <div class="promise-list">
+          <div class="promise-item"><span class="check">✓</span><span>Built on Islamic values — no compromise on deen</span></div>
+          <div class="promise-item"><span class="check">✓</span><span>Designed for real families — not theoretical perfection</span></div>
+          <div class="promise-item"><span class="check">✓</span><span>Ready to use immediately — no prep, no complicated systems</span></div>
+          <div class="promise-item"><span class="check">✓</span><span>Made with love — by a mother who has been exactly where you are</span></div>
         </div>
       </div>
+      <div class="guarantee-card">
+        <div class="guarantee-badge">🛡️ 14-Day Money-Back Guarantee</div>
+        <h3>100% Satisfaction Guarantee</h3>
+        <p>If you open a product and it doesn't feel right for your family, email me within 14 days for a full refund. No questions, no judgment.</p>
+        <p style="margin-top:10px;">Your trust matters. I want you to feel confident trying these tools — because they work.</p>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ===== FINAL CTA SECTION ===== -->
+<!-- ===== FINAL CTA (from new site) ===== -->
 <section class="final-cta" id="final-cta">
-  <div class="container">
-    <span class="section-subtitle" style="color:#A8CBBD;opacity:0.8;">You Already Have the Niyyah.</span>
-    <h2 style="font-size:clamp(1.8rem,4vw,2.8rem);">You Already Have the Niyyah.</h2>
-    <p class="final-subtitle">
-      You already pulled them out.<br>
-      You already decided that this life — this deen-centered, family-first, hard-as-heck beautiful life — was worth fighting for.<br><br>
-      <strong>Now give yourself the tools to finish what you started.</strong>
-    </p>
-    
-    <!-- Compact product listing -->
-    <div class="final-products">
-      <div class="final-product-item">
-        <div class="fp-name">Morning Routine Playbook</div>
-        <div class="fp-price">$7</div>
-        <a href="#" class="fp-cta">Get Started →</a>
-      </div>
-      <div class="final-product-item">
-        <div class="fp-name">Homeschool Reset Workbook</div>
-        <div class="fp-price">$15</div>
-        <a href="#" class="fp-cta">Get Started →</a>
-      </div>
-      <div class="final-product-item">
-        <div class="fp-name">15 Prophet Story Scripts</div>
-        <div class="fp-price">$20</div>
-        <a href="#" class="fp-cta">Get Started →</a>
-      </div>
-      <div class="final-product-item bundle-highlight">
-        <div class="fp-name">⭐ Complete Bundle</div>
-        <div class="fp-price">$35</div>
-        <a href="#" class="fp-cta" style="color:#FDDF8D;">Get the Bundle →</a>
-      </div>
+  <p class="section-label" style="color:var(--sage-light);opacity:0.8;">You Already Have the Niyyah.</p>
+  <h2 style="font-size:clamp(1.6rem,3.5vw,2.4rem);">You Already Have the Niyyah.</h2>
+  <p class="final-subtitle">
+    You already pulled them out.<br>
+    You already decided that this life — this deen-centered, family-first, hard-as-heck beautiful life — was worth fighting for.<br><br>
+    <strong>Now give yourself the tools to finish what you started.</strong>
+  </p>
+  <div class="final-products">
+    <div class="final-product-item">
+      <div class="fp-name">Morning Routine Playbook</div>
+      <div class="fp-price">$7</div>
+      <a href="https://mymuslimhomeschool.com/product/muslim-moms-morning-routine-playbook/" class="fp-cta" target="_blank">Get Started →</a>
     </div>
-    
-    <a href="#" class="btn btn-primary btn-large">Shop the Complete Bundle — $35</a>
-    
-    <div class="final-message">
-      <h3>A Message Before You Go</h3>
-      <p>
-        Every day you show up — even the messy ones, even the 9 AM and no one is dressed days — you are building something eternal.<br><br>
-        Your children will remember this.<br>
-        Not the schedule. Not the curriculum.<br>
-        <strong>You.</strong><br><br>
-        Your consistency. Your du'a over them. The way you refused to give up.<br><br>
-        So take a breath. Take the tool. And start again — with barakah this time.<br><br>
-        <strong>You are not behind. You are exactly where you need to be.</strong>
-      </p>
+    <div class="final-product-item">
+      <div class="fp-name">Homeschool Reset Workbook</div>
+      <div class="fp-price">$15</div>
+      <a href="https://mymuslimhomeschool.com/product/homeschool-reset-workbook/" class="fp-cta" target="_blank">Get Started →</a>
     </div>
+    <div class="final-product-item">
+      <div class="fp-name">15 Prophet Story Scripts</div>
+      <div class="fp-price">$20</div>
+      <a href="https://mymuslimhomeschool.com/product/open-teach-15-prophet-story-scripts/" class="fp-cta" target="_blank">Get Started →</a>
+    </div>
+    <div class="final-product-item bundle-highlight">
+      <div class="fp-name">⭐ Complete Bundle</div>
+      <div class="fp-price">$35</div>
+      <a href="https://mymuslimhomeschool.com/product/the-complete-muslim-homeschool-bundle/" class="fp-cta" style="color:var(--yellow);" target="_blank">Get the Bundle →</a>
+    </div>
+  </div>
+  <a href="https://mymuslimhomeschool.com/product/the-complete-muslim-homeschool-bundle/" class="btn btn-pink btn-large" target="_blank">Shop the Complete Bundle — $35</a>
+  <div class="final-message">
+    <h3>A Message Before You Go</h3>
+    <p>Every day you show up — even the messy ones, even the 9 AM and no one is dressed days — you are building something eternal.<br><br>Your children will remember this. Not the schedule. Not the curriculum. <strong>You.</strong><br><br>Your consistency. Your du'a over them. The way you refused to give up.<br><br>So take a breath. Take the tool. And start again — with barakah this time.<br><br><strong>You are not behind. You are exactly where you need to be.</strong></p>
   </div>
 </section>
 
-<!-- ===== NEWSLETTER SIGNUP SECTION ===== -->
-<section class="newsletter-section">
-  <div class="container">
-    <div class="newsletter-inner reveal">
-      <h3>Join 500+ Muslim Homeschool Mamas</h3>
-      <p class="nl-subtitle">Weekly encouragement, practical tips, and a community that gets you — delivered to your inbox.</p>
-      <div class="nl-benefits">
-        <span>✦ Weekly encouragement + tips</span>
-        <span>✦ Early access to new products</span>
-        <span>✦ Real conversations about raising Muslim kids at home</span>
-        <span>✦ No spam, unsubscribe anytime</span>
-      </div>
-      <form class="nl-form" action="#" method="post">
-        <input type="email" name="email" placeholder="Enter your email address" required>
-        <button type="submit" class="btn btn-primary" style="padding:14px 28px;">Join the Community →</button>
-      </form>
-      <p class="nl-privacy">We respect your privacy. Unsubscribe at any time.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ===== FOOTER ===== -->
-<footer class="site-footer">
-  <div class="container footer-inner">
-    <div class="footer-brand">My Muslim Homeschool</div>
-    <div class="footer-links">
-      <a href="#">Terms of Service</a>
-      <a href="#">Privacy Policy</a>
-      <a href="#">Contact Us</a>
-      <a href="#">FAQ</a>
-    </div>
-    <div class="footer-copyright">
-      &copy; 2024 My Muslim Homeschool. All rights reserved. Made with du'a for every homeschool mama.
-    </div>
-  </div>
+<!-- ===== FOOTER (from current site) ===== -->
+<footer>
+  <p>— My Muslim Homeschool — Questions? <a href="mailto:info@mymuslimhomeschool.com">info@mymuslimhomeschool.com</a> — All sales final on digital products — For personal use only</p>
 </footer>
 
-<!-- ===== SCROLL REVEAL SCRIPT ===== -->
+<!-- ===== SCRIPTS ===== -->
 <script>
-(function() {
-  // Mobile menu toggle
-  const toggle = document.getElementById('mobileMenuToggle');
-  const nav = document.getElementById('headerNav');
-  
-  if (toggle && nav) {
-    toggle.addEventListener('click', function() {
-      this.classList.toggle('active');
-      nav.classList.toggle('mobile-open');
-    });
-    
-    // Close menu when clicking a nav link
-    nav.querySelectorAll('a').forEach(function(link) {
-      link.addEventListener('click', function() {
-        toggle.classList.remove('active');
-        nav.classList.remove('mobile-open');
-      });
-    });
+(function(){
+  const t=document.getElementById('mobileMenuToggle');
+  const n=document.getElementById('navLinks');
+  if(t&&n){
+    t.addEventListener('click',function(){this.classList.toggle('active');n.classList.toggle('mobile-open');});
+    n.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){t.classList.remove('active');n.classList.remove('mobile-open');});});
   }
-  
-  // Scroll reveal for .reveal elements
-  const revealElements = document.querySelectorAll('.reveal');
-  
-  function checkReveal() {
-    const windowHeight = window.innerHeight;
-    const revealPoint = 100;
-    
-    revealElements.forEach(function(el) {
-      const rect = el.getBoundingClientRect();
-      if (rect.top < windowHeight - revealPoint) {
-        el.classList.add('visible');
-      }
-    });
-  }
-  
-  // Check on load and scroll
-  window.addEventListener('load', checkReveal);
-  window.addEventListener('scroll', checkReveal);
-  checkReveal();
-  
-  // Sticky header shadow on scroll
-  const header = document.getElementById('header');
-  window.addEventListener('scroll', function() {
-    if (window.scrollY > 50) {
-      header.style.borderBottomColor = 'rgba(168, 203, 189, 0.3)';
-      header.style.boxShadow = '0 2px 20px rgba(0,0,0,0.04)';
-    } else {
-      header.style.borderBottomColor = 'rgba(168, 203, 189, 0.2)';
-      header.style.boxShadow = 'none';
-    }
-  });
 })();
 </script>
 
