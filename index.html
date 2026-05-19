@@ -120,6 +120,80 @@ nav {
 }
 .nav-cta:hover { background:var(--peach)!important; }
 .nav-icon { display:inline-flex; align-items:center; }
+
+/* ===== HERO PRODUCT CATALOG (from current site) ===== */
+.hero {
+  background:linear-gradient(135deg,#fdf0f0 0%,#fdf8e8 50%,#edf6f4 100%);
+  padding:64px 24px 80px;
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+}
+.hero::before {
+  content:''; position:absolute; top:-80px; right:-80px;
+  width:320px; height:320px; border-radius:50%;
+  background:radial-gradient(circle,rgba(232,134,138,0.12),transparent 70%);
+}
+.hero::after {
+  content:''; position:absolute; bottom:-60px; left:-60px;
+  width:240px; height:240px; border-radius:50%;
+  background:radial-gradient(circle,rgba(133,181,168,0.15),transparent 70%);
+}
+.bismillah {
+  font-family:'Playfair Display',serif; font-style:italic; font-size:1rem;
+  color:var(--sage); letter-spacing:0.15em; margin-bottom:18px;
+}
+.hero h1 {
+  font-family:'Playfair Display',serif;
+  font-size:clamp(2rem,5.5vw,3.2rem); font-weight:600;
+  color:var(--charcoal); line-height:1.25; max-width:700px;
+  margin:0 auto 16px;
+}
+.hero h1 em { color:var(--pink); font-style:italic; }
+.hero-sub {
+  font-size:1.2rem; font-weight:300; color:var(--mid);
+  max-width:520px; margin:0 auto 48px;
+}
+.hero-products {
+  display:flex; gap:40px; justify-content:center;
+  flex-wrap:wrap; align-items:flex-start; padding:0 12px;
+}
+.hero-card {
+  background:var(--white); border:2.5px solid var(--pink-light);
+  border-radius:20px; padding:28px 22px 24px; width:340px;
+  text-align:center; box-shadow:0 6px 28px rgba(232,134,138,0.13);
+  transition:transform 0.25s,box-shadow 0.25s;
+  cursor:pointer; text-decoration:none; display:block;
+}
+.hero-card:hover {
+  transform:translateY(-6px); box-shadow:0 14px 40px rgba(232,134,138,0.22);
+}
+.hero-card img {
+  width:100%; height:340px; object-fit:cover;
+  border-radius:10px; margin-bottom:16px;
+  box-shadow:0 4px 14px rgba(0,0,0,0.12);
+}
+.hero-card .c-title {
+  font-family:'Playfair Display',serif; font-size:1.2rem;
+  color:var(--charcoal); margin-bottom:10px; line-height:1.35;
+}
+.hero-card .c-price {
+  font-size:2.4rem; font-weight:700;
+  color:var(--pink); line-height:1; margin-bottom:4px;
+}
+.hero-card .c-btn {
+  display:block; margin-top:14px;
+  background:var(--pink); color:var(--white);
+  font-size:1.1rem; font-weight:700; letter-spacing:0.1em;
+  text-transform:uppercase; text-decoration:none;
+  padding:14px 16px; border-radius:30px; transition:background 0.2s;
+}
+.hero-card .c-btn:hover { background:var(--peach); }
+.hero-or {
+  display:flex; align-items:center; justify-content:center;
+  flex-direction:column; gap:12px; padding-top:90px; flex-shrink:0;
+}
+.hero-or span { display:block; font-size:2rem; color:var(--pink-light); line-height:0.8; }
 .mobile-menu-toggle { display:none; flex-direction:column; gap:5px; cursor:pointer; background:none; border:none; padding:4px; }
 .mobile-menu-toggle span { display:block; width:26px; height:2.5px; background:var(--charcoal); border-radius:2px; transition:all 0.3s ease; }
 .header-spacer { height:94px; }
@@ -465,6 +539,43 @@ footer a:hover { color:var(--white); }
 </nav>
 
 <div class="header-spacer"></div>
+
+<!-- ===== HERO PRODUCT CATALOG SECTION ===== -->
+<section class="hero">
+<p class="bismillah">&mdash; bismillah ir-rahman ir-raheem &mdash;</p>
+<h1>Faith-Filled Resources for the<br/> <em>Muslim Homeschool Mama</em></h1>
+<p class="hero-sub">Three beautifully designed, ready-to-use digital resources to help you start with intention, reset with clarity, and bring Prophet stories to life.</p>
+<div class="hero-products">
+<a class="hero-card" href="#playbook">
+  <img alt="Morning Routine Playbook Cover" src="https://darkred-kudu-245410.hostingersite.com/wp-content/uploads/2026/05/Muslim-Moms-Morning-Routine-PLAYBOOK-COVER-PAGE.png"/>
+  <p class="c-title">Morning Routine Playbook</p>
+  <p class="c-price">$7</p>
+  <span class="c-btn">Learn More</span>
+</a>
+<div class="hero-or">
+  <span>&mdash;</span>
+  <span style="font-size:1rem;color:var(--sage);font-weight:700;letter-spacing:0.1em;text-transform:uppercase;">or</span>
+  <span>&mdash;</span>
+</div>
+<a class="hero-card" href="#workbook">
+  <img alt="Homeschool Reset Workbook Cover" src="https://darkred-kudu-245410.hostingersite.com/wp-content/uploads/2026/05/Homeschool-Reset-Workbook-Cover.png"/>
+  <p class="c-title">Homeschool Reset Workbook</p>
+  <p class="c-price">$15</p>
+  <span class="c-btn">Learn More</span>
+</a>
+<div class="hero-or">
+  <span>&mdash;</span>
+  <span style="font-size:1rem;color:var(--sage);font-weight:700;letter-spacing:0.1em;text-transform:uppercase;">or</span>
+  <span>&mdash;</span>
+</div>
+<a class="hero-card" href="#scripts">
+  <img alt="15 Prophet Story Scripts Cover" src="https://darkred-kudu-245410.hostingersite.com/wp-content/uploads/2026/05/Open-Teach_-15-Complete-Prophet-Story-Scripts-for-the-Muslim-Homeschool-Mom-Cover-page.png"/>
+  <p class="c-title">15 Prophet Story Scripts</p>
+  <p class="c-price">$20</p>
+  <span class="c-btn">Learn More</span>
+</a>
+</div>
+</section>
 
 <!-- ===== PAIN SECTION (from current site) ===== -->
 <section class="pain" id="pain">
