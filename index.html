@@ -889,8 +889,10 @@ footer a:hover { color:var(--white); }
     <span class="coming-badge">Coming Soon</span>
     <h2>30-Day Homeschool Transformation Course</h2>
     <p style="font-size:1rem;color:var(--mid);max-width:480px;margin:0 auto;">I'm currently recording this comprehensive course to help you transform your homeschool from chaotic to confident. Join the waitlist to be notified when it launches.</p>
-    <form class="coming-form" action="#" method="post">
-      <input type="email" name="email" placeholder="Enter your email" required>
+    <form class="coming-form" action="https://assets.mailerlite.com/jsonp/2351886/forms/187569738288727653/subscribe" method="post" target="_blank">
+      <input type="email" name="fields[email]" placeholder="Enter your email" required>
+      <input type="hidden" name="ml-submit" value="1">
+      <input type="hidden" name="anticsrf" value="true">
       <button type="submit" class="btn btn-pink" style="padding:13px 24px;font-size:0.9rem;">Join the Waitlist</button>
     </form>
   </div>
@@ -1015,11 +1017,13 @@ footer a:hover { color:var(--white); }
         <div class="lm-benefit"><span class="lm-num">4</span><span>How to get your kids to actually cooperate — without threats or bribes</span></div>
         <div class="lm-benefit"><span class="lm-num">5</span><span>The niyyah reset that will change everything</span></div>
       </div>
-      <form class="lead-magnet-form" action="#" method="post">
+      <form class="lead-magnet-form" action="https://assets.mailerlite.com/jsonp/2351886/forms/187569738288727653/subscribe" method="post" target="_blank">
         <div class="form-row">
-          <input type="text" name="name" placeholder="Your name" required>
-          <input type="email" name="email" placeholder="Your email address" required>
+          <input type="text" name="fields[name]" placeholder="Your name" required>
+          <input type="email" name="fields[email]" placeholder="Your email address" required>
         </div>
+        <input type="hidden" name="ml-submit" value="1">
+        <input type="hidden" name="anticsrf" value="true">
         <button type="submit" class="btn btn-gold" style="width:100%;justify-content:center;padding:14px 28px;">Get Free Access →</button>
         <p class="privacy-note">We hate spam too. Only My Muslim Homeschool emails, and you can unsubscribe anytime.</p>
       </form>
@@ -1078,5 +1082,9 @@ footer a:hover { color:var(--white); }
 })();
 </script>
 
+<script src="https://groot.mailerlite.com/js/w/webforms.min.js?vb397d78ebaa8a0f631d35384c46d781b" type="text/javascript"></script>
+<script>
+function ml_webform_success_41364102(){var $=ml_jQuery||jQuery;$('.ml-subscribe-form-41364102 .row-success').show();$('.ml-subscribe-form-41364102 .row-form').hide();}
+</script>
 </body>
 </html>
