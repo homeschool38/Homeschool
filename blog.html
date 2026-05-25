@@ -784,9 +784,9 @@ nav {
           <div class="dropdown">
             <a href="#products">Products <span class="dropdown-arrow">▼</span></a>
             <div class="dropdown-content">
-              <a href="#playbook">Playbook</a>
-              <a href="#workbook">Workbook</a>
-              <a href="#scripts">Scripts</a>
+              <a href="https://mymuslimhomeschool.com/product/muslim-moms-morning-routine-playbook/" target="_blank">Playbook</a>
+              <a href="https://mymuslimhomeschool.com/product/homeschool-reset-workbook/" target="_blank">Workbook</a>
+              <a href="https://mymuslimhomeschool.com/product/open-teach-15-prophet-story-scripts/" target="_blank">Scripts</a>
             </div>
           </div>
           <a href="blog.html">Blog</a>
@@ -930,21 +930,39 @@ nav {
       <!-- Related Posts -->
       <div class="sidebar-widget">
         <h4>📖 You Might Also Like</h4>
-        <div class="related-post-item">
-          <a href="#" class="rp-title">The Complete Muslim Homeschool Curriculum Guide</a>
-          <div class="rp-meta">Coming soon</div>
-        </div>
-        <div class="related-post-item">
-          <a href="#" class="rp-title">How to Make Islamic Studies Your Child's Favorite Subject</a>
-          <div class="rp-meta">Coming soon</div>
-        </div>
+        <div id="relatedPosts"></div>
+        <script>
+        // 📝 TO ADD A NEW POST: Just add one line below
+        var allPosts = [
+          {title:"The Muslim Homeschool Morning Routine That Actually Works", url:"post-morning-routine.html"},
+          {title:"Why Your Morning Routine Keeps Failing (And Why It's Not Your Fault)", url:"post-morning-failing.html"},
+          {title:'The 5-Step "Fajr to First Lesson" Blueprint (Copy This Today)', url:"post-fajr-blueprint.html"},
+          {title:"The Cooperation Secret Nobody Tells You", url:"post-cooperation-secret.html"},
+          {title:"When You've Lost the Niyyah — A Reset for Muslim Homeschool Mamas", url:"post-niyyah-reset.html"},
+          {title:"5 Signs Your Homeschool Needs a Reset (And How to Start Fresh)", url:"post-5-signs-reset.html"}
+        ];
+        // Get current page, pick 2 random different posts
+        var current = window.location.pathname.split('/').pop();
+        var choices = allPosts.filter(function(p){ return p.url != current; });
+        var picked = [];
+        for(var i=0; i<2 && choices.length > 0; i++){
+          var idx = Math.floor(Math.random() * choices.length);
+          picked.push(choices[idx]);
+          choices.splice(idx,1);
+        }
+        var html = '';
+        for(var i=0; i<picked.length; i++){
+          html += '<div class="related-post-item">';
+          html += '<a href="'+picked[i].url+'" class="rp-title">'+picked[i].title+'</a>';
+          html += '</div>';
+        }
+        document.getElementById('relatedPosts').innerHTML = html;
+        </script>
         <div class="related-post-item">
           <a href="#" class="rp-title">When Homeschooling Gets Hard: A Letter to the Exhausted Mama</a>
-          <div class="rp-meta">Coming soon</div>
         </div>
         <div class="related-post-item">
           <a href="#" class="rp-title">5 Du'as Every Homeschool Mom Needs in Her Pocket</a>
-          <div class="rp-meta">Coming soon</div>
         </div>
       </div>
       
