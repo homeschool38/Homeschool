@@ -102,13 +102,13 @@ nav {
 .dropdown-arrow { font-size:0.65rem; transition:transform 0.2s; }
 .dropdown:hover .dropdown-arrow { transform:rotate(180deg); }
 .dropdown-content {
-  display:none; position:absolute; top:100%; left:0; margin-top:8px;
+  display:none; position:absolute; top:100%; left:0; margin-top:0; padding-top:10px;
   background:var(--white); min-width:200px; border-radius:12px;
   box-shadow:0 8px 30px rgba(0,0,0,0.08); border:1px solid var(--border);
-  padding:8px 0; z-index:100;
+  z-index:100;
 }
 .dropdown-content a {
-  display:block; padding:10px 20px; font-size:0.95rem; font-family:'Nunito',sans-serif;
+  display:block; padding:10px 20px 10px 20px; font-size:0.95rem; font-family:'Nunito',sans-serif;
   color:var(--mid); transition:all 0.2s; white-space:nowrap;
 }
 .dropdown-content a:hover { background:var(--pink-pale); color:var(--pink); }
