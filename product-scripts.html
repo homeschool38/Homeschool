@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>15 Prophet Story Scripts — My Muslim Homeschool</title>
+<meta name="description" content="113 pages of fully written, read-aloud prophet stories for ages 4-12. No prep needed. Just $20.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Nunito:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --pink: #e8868a;
+  --pink-light: #f5c0c2;
+  --pink-pale: #fdf0f0;
+  --sage: #85b5a8;
+  --sage-light: #b8d5ce;
+  --sage-pale: #edf6f4;
+  --yellow: #e8c45a;
+  --yellow-pale: #fdf8e8;
+  --yellow-dark: #c9a83a;
+  --peach: #f0a882;
+  --peach-pale: #fdf3ee;
+  --charcoal: #2e2e2e;
+  --mid: #5a5252;
+  --light-text: #8a7f7f;
+  --cream: #fdf9f6;
+  --white: #ffffff;
+  --border: #edddd8;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior: smooth; font-size:18px; }
+body { font-family:'Nunito',sans-serif; background:var(--cream); color:var(--charcoal); line-height:1.7; overflow-x:hidden; }
+img { max-width:100%; height:auto; display:block; }
+a { text-decoration:none; color:inherit; }
+.container { max-width:1100px; margin:0 auto; padding:0 24px; }
+
+/* ===== TYPOGRAPHY ===== */
+h1, h2, h3, h4, .section-title, .nav-logo span, .product-info h3, .bundle-ribbon, .faq-q {
+  font-family:'Playfair Display',Georgia,'Times New Roman',serif;
+  line-height:1.3;
+}
+h1 { font-size:clamp(1.8rem,4.5vw,2.8rem); color:var(--charcoal); font-weight:600; }
+h2 { font-size:clamp(1.4rem,3.5vw,2.2rem); color:var(--charcoal); font-weight:400; margin-bottom:14px; }
+h2 em { color:var(--pink); font-style:italic; }
+h3 { font-size:clamp(1.15rem,2.2vw,1.5rem); color:var(--charcoal); margin-bottom:10px; }
+p { font-size:1rem; margin-bottom:16px; color:var(--mid); font-weight:300; }
+
+.section-label {
+  font-size:0.85rem; font-weight:700; letter-spacing:0.28em;
+  text-transform:uppercase; color:var(--sage); margin-bottom:12px;
+}
+.section-title {
+  font-size:clamp(1.4rem,3.5vw,2.2rem); font-weight:400;
+  color:var(--charcoal); line-height:1.3; margin-bottom:14px;
+}
+.section-title em { color:var(--pink); font-style:italic; }
+
+/* ===== BUTTONS ===== */
+.btn {
+  display:inline-flex; align-items:center; gap:8px;
+  font-family:'Nunito',sans-serif; font-weight:700; font-size:1rem;
+  padding:13px 32px; border-radius:30px; border:none;
+  cursor:pointer; transition:all 0.2s ease; text-align:center;
+  letter-spacing:0.1em; text-transform:uppercase;
+}
+.btn-pink { background:var(--pink); color:var(--white); }
+.btn-pink:hover { background:var(--peach); transform:translateY(-2px); }
+.btn-sage { background:var(--sage); color:var(--white); }
+.btn-sage:hover { background:var(--sage-light); color:var(--charcoal); transform:translateY(-2px); }
+.btn-peach { background:var(--peach); color:var(--white); }
+.btn-peach:hover { background:#e08f6a; transform:translateY(-2px); }
+.btn-gold { background:var(--yellow); color:var(--charcoal); }
+.btn-gold:hover { background:var(--yellow-dark); color:var(--white); transform:translateY(-2px); }
+.btn-white { background:var(--white); color:var(--sage); }
+.btn-white:hover { background:var(--yellow); color:var(--charcoal); transform:translateY(-2px); }
+.btn-large { padding:16px 50px; font-size:1rem; box-shadow:0 4px 18px rgba(232,134,138,0.3); }
+
+/* ===== HEADER / NAV ===== */
+nav {
+  background:var(--white); border-bottom:2px solid var(--pink-light);
+  padding:12px 28px; display:flex; align-items:center;
+  justify-content:space-between; position:sticky; top:0; z-index:100;
+  box-shadow:0 2px 12px rgba(232,134,138,0.1);
+}
+.nav-logo { display:flex; align-items:center; gap:10px; }
+.nav-logo img { height:70px; width:70px; object-fit:contain; border-radius:50%; }
+.nav-logo span {
+  font-family:'Playfair Display',Georgia,'Times New Roman',serif;
+  font-size:1.6rem; color:var(--charcoal); line-height:1.25;
+}
+.nav-links { display:flex; align-items:center; gap:18px; }
+.nav-links a {
+  font-size:0.95rem; font-weight:600; letter-spacing:0.06em;
+  text-decoration:none; color:var(--mid); transition:color 0.2s;
+}
+.nav-links a:hover { color:var(--pink); }
+
+/* Dropdown */
+.dropdown { position:relative; display:inline-flex; align-items:center; gap:4px; cursor:pointer; }
+.dropdown > a { display:flex; align-items:center; gap:4px; }
+.dropdown-arrow { font-size:0.65rem; transition:transform 0.2s; }
+.dropdown:hover .dropdown-arrow { transform:rotate(180deg); }
+.dropdown-content {
+  display:none; position:absolute; top:100%; left:0; margin-top:0; padding-top:10px;
+  background:var(--white); min-width:200px; border-radius:12px;
+  box-shadow:0 8px 30px rgba(0,0,0,0.08); border:1px solid var(--border);
+  z-index:100;
+}
+.dropdown-content a {
+  display:block; padding:10px 20px 10px 20px; font-size:0.95rem; font-family:'Nunito',sans-serif;
+  color:var(--mid); transition:all 0.2s; white-space:nowrap;
+}
+.dropdown-content a:hover { background:var(--pink-pale); color:var(--pink); }
+.dropdown:hover .dropdown-content { display:block; }
+
+.nav-cta {
+  background:var(--pink); color:var(--white)!important;
+  padding:8px 22px; border-radius:30px; transition:background 0.2s!important;
+}
+.nav-cta:hover { background:var(--peach)!important; }
+.nav-icon { display:inline-flex; align-items:center; }
+
+/* ===== HERO PRODUCT CATALOG (from current site) ===== */
+.hero {
+  background:linear-gradient(135deg,#fdf0f0 0%,#fdf8e8 50%,#edf6f4 100%);
+  padding:64px 24px 80px;
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+}
+.hero::before {
+  content:''; position:absolute; top:-80px; right:-80px;
+  width:320px; height:320px; border-radius:50%;
+  background:radial-gradient(circle,rgba(232,134,138,0.12),transparent 70%);
+}
+.hero::after {
+  content:''; position:absolute; bottom:-60px; left:-60px;
+  width:240px; height:240px; border-radius:50%;
+  background:radial-gradient(circle,rgba(133,181,168,0.15),transparent 70%);
+}
+.bismillah {
+  font-family:'Playfair Display',serif; font-style:italic; font-size:1rem;
+  color:var(--sage); letter-spacing:0.15em; margin-bottom:18px;
+}
+.hero h1 {
+  font-family:'Playfair Display',serif;
+  font-size:clamp(2rem,5.5vw,3.2rem); font-weight:600;
+  color:var(--charcoal); line-height:1.25; max-width:700px;
+  margin:0 auto 16px;
+}
+.hero h1 em { color:var(--pink); font-style:italic; }
+.hero-sub {
+  font-size:1.2rem; font-weight:300; color:var(--mid);
+  max-width:520px; margin:0 auto 48px;
+}
+.hero-products {
+  display:flex; gap:40px; justify-content:center;
+  flex-wrap:wrap; align-items:flex-start; padding:0 12px;
+}
+.hero-card {
+  background:var(--white); border:2.5px solid var(--pink-light);
+  border-radius:20px; padding:28px 22px 24px; width:340px;
+  text-align:center; box-shadow:0 6px 28px rgba(232,134,138,0.13);
+  transition:transform 0.25s,box-shadow 0.25s;
+  cursor:pointer; text-decoration:none; display:block;
+}
+.hero-card:hover {
+  transform:translateY(-6px); box-shadow:0 14px 40px rgba(232,134,138,0.22);
+}
+.hero-card img {
+  width:100%; height:340px; object-fit:cover;
+  border-radius:10px; margin-bottom:16px;
+  box-shadow:0 4px 14px rgba(0,0,0,0.12);
+}
+.hero-card .c-title {
+  font-family:'Playfair Display',serif; font-size:1.2rem;
+  color:var(--charcoal); margin-bottom:10px; line-height:1.35;
+}
+.hero-card .c-price {
+  font-size:2.4rem; font-weight:700;
+  color:var(--pink); line-height:1; margin-bottom:4px;
+}
+.hero-card .c-btn {
+  display:block; margin-top:14px;
+  background:var(--pink); color:var(--white);
+  font-size:1.1rem; font-weight:700; letter-spacing:0.1em;
+  text-transform:uppercase; text-decoration:none;
+  padding:14px 16px; border-radius:30px; transition:background 0.2s;
+}
+.hero-card .c-btn:hover { background:var(--peach); }
+.hero-or {
+  display:flex; align-items:center; justify-content:center;
+  flex-direction:column; gap:12px; padding-top:90px; flex-shrink:0;
+}
+.hero-or span { display:block; font-size:2rem; color:var(--pink-light); line-height:0.8; }
+
+/* ===== BUNDLE BANNER (from original site) ===== */
+.bundle-banner {
+  background:linear-gradient(135deg,var(--sage) 0%,var(--sage-light) 100%);
+  padding:26px 24px; text-align:center;
+}
+.bundle-banner .bb-label {
+  font-size:1rem; font-weight:700; letter-spacing:0.14em;
+  text-transform:uppercase; color:var(--white); margin-bottom:10px;
+}
+.bundle-deal {
+  display:inline-flex; align-items:center; gap:14px;
+  background:rgba(255,255,255,0.18); border-radius:50px;
+  padding:10px 26px; flex-wrap:wrap; justify-content:center;
+}
+.bundle-deal .was { font-size:1rem; color:rgba(255,255,255,0.6); text-decoration:line-through; }
+.bundle-deal .now {
+  font-family:'Playfair Display',serif; font-size:2rem;
+  font-weight:600; color:var(--white); line-height:1;
+}
+.bundle-deal .save {
+  background:var(--yellow); color:var(--charcoal);
+  font-size:1rem; font-weight:700; padding:4px 12px;
+  border-radius:20px; letter-spacing:0.08em; text-transform:uppercase;
+}
+.bundle-btn {
+  display:inline-block; margin-top:14px;
+  background:var(--white); color:var(--sage);
+  font-size:1rem; font-weight:700; letter-spacing:0.1em;
+  text-transform:uppercase; text-decoration:none;
+  padding:12px 34px; border-radius:30px;
+  transition:background 0.2s,color 0.2s,transform 0.2s;
+}
+.bundle-btn:hover { background:var(--yellow); color:var(--charcoal); transform:translateY(-2px); }
+.mobile-menu-toggle { display:none; flex-direction:column; gap:5px; cursor:pointer; background:none; border:none; padding:4px; }
+.mobile-menu-toggle span { display:block; width:26px; height:2.5px; background:var(--charcoal); border-radius:2px; transition:all 0.3s ease; }
+.header-spacer { height:94px; }
+
+/* ===== PAIN SECTION (short, from current site) ===== */
+.pain { background:var(--white); padding:68px 24px; text-align:center; }
+.pain-inner { max-width:600px; margin:0 auto; }
+.pain p { font-size:1rem; font-weight:300; color:var(--mid); margin-bottom:16px; }
+.hadith-strip {
+  background:var(--sage-pale); border-left:4px solid var(--sage);
+  padding:18px 24px; margin:28px 0; text-align:left; border-radius:0 12px 12px 0;
+}
+.hadith-strip p {
+  font-family:'Playfair Display',Georgia,'Times New Roman',serif;
+  font-style:italic; font-size:1.05rem; color:var(--charcoal); margin-bottom:6px;
+}
+.hadith-strip cite { font-size:0.9rem; color:var(--light-text); }
+
+/* ===== PRODUCTS SECTION ===== */
+.products { background:var(--cream); padding:72px 24px; }
+.products-inner { max-width:980px; margin:0 auto; }
+.products-header { text-align:center; margin-bottom:56px; }
+.product-section {
+  display:grid; grid-template-columns:1fr 1fr; gap:50px;
+  align-items:start; margin-bottom:60px; padding-bottom:60px;
+  border-bottom:2px dashed var(--border);
+}
+.product-section:last-child { border-bottom:none; margin-bottom:0; padding-bottom:0; }
+.product-section.rev { direction:rtl; }
+.product-section.rev>* { direction:ltr; }
+.product-img-wrap { width:100%; }
+.product-img-wrap img {
+  width:100%; border-radius:12px; box-shadow:0 4px 20px rgba(0,0,0,0.15);
+}
+.product-info { display:flex; flex-direction:column; }
+.product-tag {
+  display:inline-block; font-size:0.8rem; font-weight:700;
+  letter-spacing:0.18em; text-transform:uppercase;
+  padding:4px 14px; border-radius:20px; margin-bottom:14px; width:fit-content;
+}
+.tag-pink { background:var(--pink-pale); color:var(--pink); }
+.tag-sage { background:var(--sage-pale); color:var(--sage); }
+.tag-peach { background:var(--peach-pale); color:#c2763a; }
+.product-info h3 {
+  font-size:1.5rem; font-weight:400; color:var(--charcoal);
+  margin-bottom:4px; line-height:1.25;
+}
+.tagline { font-style:italic; color:var(--light-text); font-size:0.95rem; margin-bottom:18px; }
+.product-info>p { font-size:0.98rem; font-weight:300; color:var(--mid); margin-bottom:18px; line-height:1.7; }
+.feature-list { list-style:none; display:flex; flex-direction:column; gap:8px; margin-bottom:24px; }
+.feature-list li {
+  display:flex; align-items:flex-start; gap:9px;
+  font-size:0.95rem; color:var(--mid); font-weight:400;
+}
+.dot {
+  width:7px; height:7px; border-radius:50%;
+  flex-shrink:0; margin-top:7px;
+}
+.dot-pink { background:var(--pink); }
+.dot-sage { background:var(--sage); }
+.dot-peach { background:var(--peach); }
+.price-row { display:flex; align-items:center; gap:14px; margin-bottom:16px; }
+.price-big { font-family:'Playfair Display',Georgia,'Times New Roman',serif; font-size:2.2rem; font-weight:600; color:var(--charcoal); line-height:1; }
+.price-label { font-size:0.85rem; color:var(--light-text); font-weight:300; line-height:1.5; }
+
+/* ===== WHO IS THIS FOR ===== */
+.for-who { background:var(--white); padding:68px 24px; text-align:center; }
+.for-who-inner { max-width:1100px; margin:0 auto; }
+.who-grid { display:grid; grid-template-columns:1fr 1fr 1fr; gap:12px; margin-top:30px; text-align:left; }
+.who-item {
+  background:var(--pink-pale); border-radius:12px;
+  padding:14px 16px; display:flex; align-items:flex-start;
+  gap:10px; font-size:0.95rem; color:var(--mid); font-weight:400;
+}
+.who-item .flower { color:var(--pink); font-size:1rem; flex-shrink:0; margin-top:1px; }
+
+/* ===== BUNDLE (from new site design) ===== */
+.bundle-section {
+  background:linear-gradient(135deg,var(--pink-pale) 0%,var(--yellow-pale) 55%,var(--sage-pale) 100%);
+  padding:72px 24px; text-align:center;
+}
+.bundle-inner { max-width:720px; margin:0 auto; }
+.bundle-card-new {
+  background:var(--white); border:2px solid var(--yellow); border-radius:24px;
+  padding:44px 36px; margin:36px 0; position:relative;
+  box-shadow:0 8px 40px rgba(232,134,138,0.11);
+}
+.bundle-ribbon {
+  position:absolute; top:-15px; left:50%; transform:translateX(-50%);
+  background:var(--pink); color:var(--white); font-size:0.85rem; font-weight:700;
+  letter-spacing:0.14em; text-transform:uppercase;
+  padding:5px 22px; border-radius:20px; white-space:nowrap;
+}
+.bundle-content { display:grid; grid-template-columns:1fr 1fr; gap:40px; align-items:center; text-align:left; }
+.bundle-left h3 { font-size:1.4rem; color:var(--charcoal); margin-bottom:8px; }
+.bundle-price { font-size:2rem; font-weight:bold; color:var(--pink); margin-bottom:8px; font-family:'Playfair Display',Georgia,'Times New Roman',serif; }
+.bundle-savings { display:inline-block; background:var(--yellow); color:var(--charcoal); padding:6px 16px; border-radius:50px; font-size:0.85rem; font-weight:700; margin-bottom:16px; }
+.bundle-left ul { list-style:none; margin-bottom:20px; }
+.bundle-left ul li { padding:4px 0 4px 24px; position:relative; font-size:0.93rem; color:var(--mid); }
+.bundle-left ul li::before { content:'✓'; position:absolute; left:0; color:var(--sage); font-weight:bold; }
+.bundle-right { background:var(--cream); border-radius:16px; padding:24px; }
+.bundle-item { display:flex; justify-content:space-between; align-items:center; padding:10px 0; border-bottom:1px dashed var(--border); }
+.bundle-item:last-child { border-bottom:none; }
+.bundle-item .item-name { font-weight:600; color:var(--charcoal); }
+.bundle-item .item-price { color:var(--light-text); }
+.bundle-total { margin-top:16px; padding-top:16px; border-top:2px solid var(--yellow); display:flex; justify-content:space-between; align-items:center; }
+.bundle-total .total-label { font-weight:700; color:var(--charcoal); }
+.bundle-total .total-price { font-size:1.3rem; font-weight:bold; color:var(--pink); }
+.bundle-total .total-price .strikethrough { font-size:0.9rem; color:var(--light-text); text-decoration:line-through; font-weight:normal; margin-right:8px; }
+.secure { font-size:0.85rem; color:var(--light-text); margin-top:14px; }
+
+/* ===== COMING SOON ===== */
+.coming-soon {
+  background:linear-gradient(135deg,var(--sage-pale) 0%,var(--white) 50%,var(--pink-pale) 100%);
+  padding:72px 24px; text-align:center;
+}
+.coming-soon-inner { max-width:550px; margin:0 auto; }
+.coming-badge {
+  display:inline-block; background:var(--peach); color:var(--white);
+  padding:6px 20px; border-radius:50px; font-size:0.8rem; font-weight:700;
+  letter-spacing:0.12em; text-transform:uppercase; margin-bottom:16px;
+  font-family:'Playfair Display',Georgia,'Times New Roman',serif;
+}
+.coming-soon h2 { color:var(--charcoal); }
+.coming-form { display:flex; gap:10px; max-width:450px; margin:28px auto 0; }
+.coming-form input[type="email"] {
+  flex:1; padding:13px 18px; border:2px solid var(--pink-light);
+  border-radius:12px; font-family:'Nunito',sans-serif; font-size:0.95rem;
+  color:var(--charcoal); background:var(--white); outline:none;
+  transition:border-color 0.3s ease;
+}
+.coming-form input:focus { border-color:var(--pink); }
+.coming-form input::placeholder { color:#bbb; }
+.coming-form .btn { flex-shrink:0; padding:13px 24px; font-size:0.9rem; }
+
+/* ===== TESTIMONIALS ===== */
+.testimonials-section { background:var(--white); padding:80px 24px; }
+.testimonials-section h2 { text-align:center; margin-bottom:48px; }
+.testimonials-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:30px; max-width:980px; margin:0 auto; }
+.testimonial-card {
+  background:var(--cream); border-radius:20px; padding:32px;
+  box-shadow:0 4px 20px rgba(0,0,0,0.04);
+  border:1px solid var(--border); transition:all 0.4s ease; position:relative;
+}
+.testimonial-card:hover { transform:translateY(-3px); box-shadow:0 8px 30px rgba(0,0,0,0.06); }
+.testimonial-card::before {
+  content:'"'; position:absolute; top:16px; left:20px;
+  font-size:4rem; color:rgba(232,134,138,0.15);
+  font-family:'Playfair Display',Georgia,'Times New Roman',serif; line-height:1;
+}
+.stars { color:var(--yellow); font-size:1rem; letter-spacing:2px; margin-bottom:16px; }
+.testimonial-card blockquote { font-size:0.95rem; line-height:1.7; color:var(--mid); margin-bottom:20px; font-style:normal; }
+.testimonial-card blockquote strong { color:var(--charcoal); }
+.testimonial-author { display:flex; flex-direction:column; gap:2px; padding-top:16px; border-top:1px solid var(--border); }
+.testimonial-author .name { font-weight:700; color:var(--charcoal); font-family:'Playfair Display',Georgia,'Times New Roman',serif; font-size:0.9rem; }
+.testimonial-author .location { font-size:0.8rem; color:var(--sage); font-style:italic; }
+.trust-badge { text-align:center; margin-top:48px; padding:20px; background:rgba(232,134,138,0.08); border-radius:12px; font-weight:600; color:var(--charcoal); font-size:0.95rem; max-width:500px; margin:48px auto 0; }
+.trust-badge span { color:var(--pink); }
+
+/* ===== FAQ ===== */
+.faq { background:var(--cream); padding:64px 24px; }
+.faq-inner { max-width:900px; margin:0 auto; }
+.faq-inner h2 { text-align:center; margin-bottom:38px; }
+.faq-grid { display:grid; grid-template-columns:1fr 1fr; gap:0 40px; }
+.faq-item { border-bottom:1px solid var(--border); padding:18px 0; }
+.faq-item:last-child { border-bottom:none; }
+.faq-q { font-size:1rem; font-weight:600; color:var(--charcoal); margin-bottom:7px; font-family:'Playfair Display',Georgia,'Times New Roman',serif; }
+.faq-a { font-size:0.95rem; font-weight:300; color:var(--mid); line-height:1.7; }
+
+/* ===== CLOSING ===== */
+.closing {
+  background:linear-gradient(135deg,var(--pink-pale) 0%,var(--sage-pale) 100%);
+  padding:76px 24px; text-align:center;
+}
+.closing-inner { max-width:500px; margin:0 auto; }
+.closing .dua {
+  font-family:'Playfair Display',Georgia,'Times New Roman',serif;
+  font-style:italic; font-size:1.05rem; color:var(--charcoal); line-height:1.9; margin-bottom:30px;
+}
+.closing p { font-size:1rem; font-weight:300; color:var(--mid); margin-bottom:30px; }
+
+/* ===== LEAD MAGNET (MailerLite) ===== */
+.lead-magnet-wrap {
+  background:linear-gradient(135deg,var(--white) 0%,var(--pink-pale) 100%);
+  padding:60px 24px; text-align:center;
+}
+.lead-magnet-inner { max-width:600px; margin:0 auto; }
+.lead-magnet-inner .lm-label {
+  color:var(--pink); font-size:0.8rem; letter-spacing:3px; text-transform:uppercase; margin-bottom:10px; font-weight:700;
+}
+.lead-magnet-inner h2 { font-size:clamp(1.3rem,3vw,1.8rem); color:var(--charcoal); margin-bottom:12px; }
+.lead-magnet-inner h2 em { color:var(--pink); font-style:italic; }
+.lead-magnet-inner>p { font-size:0.95rem; color:var(--mid); max-width:500px; margin:0 auto 24px; }
+
+/* MailerLite embed styles */
+#mlb2-41364102.ml-form-embedContainer { box-sizing:border-box; display:table; margin:0 auto; position:static; width:100%!important; }
+#mlb2-41364102.ml-form-embedContainer .ml-form-embedWrapper { background-color:white; border-width:0; border-color:transparent; border-radius:16px; border-style:solid; box-sizing:border-box; display:inline-block!important; margin:0; padding:0; position:relative; width:100%; }
+#mlb2-41364102.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody { padding:25px 25px 0 25px; }
+#mlb2-41364102.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent { display:none; }
+#mlb2-41364102.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input { background-color:#fff8f8!important; color:#333!important; border-color:var(--pink); border-radius:8px!important; border-style:solid!important; border-width:1px!important; font-family:'Nunito',sans-serif; font-size:15px!important; height:auto; line-height:21px!important; margin-bottom:0; margin-top:0; padding:12px 15px!important; width:100%!important; box-sizing:border-box!important; }
+#mlb2-41364102.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow { margin:0 0 12px 0; width:100%; }
+#mlb2-41364102.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow.ml-last-item { margin:0 0 12px 0; }
+#mlb2-41364102.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit { margin:0 0 20px 0; float:left; width:100%; }
+#mlb2-41364102.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit button { background:var(--pink)!important; border:none!important; border-radius:30px!important; box-shadow:none!important; color:#ffffff!important; cursor:pointer; font-family:'Nunito',sans-serif!important; font-size:15px!important; font-weight:700!important; letter-spacing:0.1em; text-transform:uppercase; line-height:21px!important; height:auto; padding:14px!important; width:100%!important; box-sizing:border-box!important; transition:background-color 0.2s; }
+#mlb2-41364102.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit button:hover { background:var(--peach)!important; }
+#mlb2-41364102.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit button.loading { display:none; }
+#mlb2-41364102.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody { padding:25px; }
+#mlb2-41364102.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent h4 { color:var(--charcoal); font-family:'Playfair Display',Georgia,'Times New Roman',serif; font-size:22px; font-weight:700; margin:0 0 10px 0; }
+#mlb2-41364102.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent p { color:var(--mid); font-family:'Nunito',sans-serif; font-size:15px; line-height:1.6; margin:0 0 10px 0; }
+.ml-form-recaptcha { margin-bottom:12px; }
+.ml-error input { border-color:red!important; }
+@media only screen and (max-width:400px) { .ml-form-embedWrapper { width:100%!important; } }
+.lead-magnet-inner .lm-footnote { font-size:0.8rem; color:var(--light-text); margin-top:12px; }
+
+/* ===== ABOUT (from new site) ===== */
+.about-section { background:var(--white); padding:80px 24px; }
+
+/* ===== LEAD MAGNET / FREE COURSE (new design) ===== */
+.lead-magnet-section {
+  background: linear-gradient(135deg, #FFF9F5 0%, #FEFCF7 100%);
+  padding: 80px 24px;
+}
+.lead-magnet-card {
+  max-width: 800px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, #FFFDF5 0%, #FFF9ED 100%);
+  border: 2px solid var(--yellow);
+  border-radius: 24px;
+  padding: 48px 44px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(232,196,90,0.15);
+}
+.lead-magnet-card::before {
+  content:''; position:absolute; top:-60%; right:-20%;
+  width:400px; height:400px;
+  background: radial-gradient(circle, rgba(232,134,138,0.06) 0%, transparent 70%);
+  border-radius:50%; pointer-events:none;
+}
+.lead-magnet-card .lm-badge {
+  display:inline-flex; align-items:center; gap:8px;
+  background:var(--pink); color:var(--white);
+  padding:8px 20px; border-radius:50px;
+  font-size:0.85rem; font-weight:700;
+  font-family:'Playfair Display',serif; margin-bottom:20px;
+}
+.lead-magnet-card h2 { color:var(--charcoal); margin-bottom:12px; }
+.lead-magnet-card .lm-subtitle {
+  font-size:1.05rem; color:var(--mid);
+  max-width:600px; margin:0 auto 28px; line-height:1.7;
+}
+.lead-magnet-card .lm-benefits {
+  display:grid; grid-template-columns:1fr 1fr;
+  gap:12px 30px; text-align:left;
+  max-width:580px; margin:0 auto 32px;
+}
+.lm-benefits .lm-benefit {
+  display:flex; align-items:flex-start; gap:10px;
+  font-size:0.95rem; color:#555; line-height:1.5;
+}
+.lm-benefits .lm-benefit .lm-num {
+  flex-shrink:0; background:var(--yellow); color:var(--charcoal);
+  width:22px; height:22px; border-radius:50%;
+  display:flex; align-items:center; justify-content:center;
+  font-size:0.75rem; font-weight:700; margin-top:3px;
+}
+.lead-magnet-form { max-width:480px; margin:0 auto; }
+.lead-magnet-form .form-row { display:flex; gap:12px; margin-bottom:12px; }
+.lead-magnet-form input[type="text"],
+.lead-magnet-form input[type="email"] {
+  flex:1; padding:14px 18px;
+  border:2px solid rgba(133,181,168,0.3); border-radius:12px;
+  font-family:'Nunito',sans-serif; font-size:0.95rem;
+  color:var(--charcoal); background:var(--white);
+  transition:border-color 0.3s ease; outline:none;
+}
+.lead-magnet-form input:focus { border-color:var(--pink); }
+.lead-magnet-form input::placeholder { color:#bbb; }
+.lead-magnet-form .btn { width:100%; justify-content:center; margin-top:8px; }
+.lead-magnet-form .privacy-note { font-size:0.82rem; color:#aaa; margin-top:12px; }
+.about-grid { display:grid; grid-template-columns:1fr 1fr; gap:50px; align-items:start; max-width:980px; margin:0 auto; }
+.about-founder { background:var(--cream); border-radius:20px; padding:36px; }
+.about-founder .founder-image { width:120px; height:120px; border-radius:50%; margin-bottom:20px; display:block; object-fit:cover; }
+.about-founder h3 { font-family:'Playfair Display',Georgia,'Times New Roman',serif; margin-bottom:12px; }
+.about-founder p { font-size:0.95rem; color:var(--mid); line-height:1.7; }
+.about-founder .signoff { margin-top:16px; font-weight:600; color:var(--pink); font-family:'Playfair Display',Georgia,'Times New Roman',serif; font-size:1rem; }
+.about-right { display:flex; flex-direction:column; gap:24px; }
+.promise-card { background:var(--cream); border-radius:16px; padding:28px; border:1px solid var(--border); }
+.promise-card h3 { color:var(--sage); margin-bottom:16px; font-family:'Playfair Display',Georgia,'Times New Roman',serif; }
+.promise-list { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+.promise-item { display:flex; align-items:flex-start; gap:10px; font-size:0.92rem; color:var(--mid); }
+.promise-item .check { color:var(--sage); font-weight:bold; font-size:1rem; flex-shrink:0; }
+.guarantee-card { background:var(--cream); border-radius:16px; padding:28px; border:2px solid var(--yellow); text-align:center; }
+.guarantee-badge { display:inline-flex; align-items:center; gap:8px; background:var(--yellow); color:var(--charcoal); padding:6px 18px; border-radius:50px; font-size:0.85rem; font-weight:700; margin-bottom:12px; font-family:'Playfair Display',Georgia,'Times New Roman',serif; }
+.guarantee-card h3 { color:var(--charcoal); margin-bottom:8px; }
+.guarantee-card p { font-size:0.93rem; color:var(--mid); max-width:450px; margin:0 auto; }
+
+/* ===== FINAL CTA ===== */
+.final-cta {
+  background:linear-gradient(135deg,var(--charcoal) 0%,#3d3d3d 50%,var(--charcoal) 100%);
+  padding:80px 24px; text-align:center; position:relative; overflow:hidden;
+}
+.final-cta::before {
+  content:''; position:absolute; top:0; left:0; right:0; bottom:0;
+  background:radial-gradient(ellipse at center,rgba(232,134,138,0.06) 0%,transparent 70%);
+  pointer-events:none;
+}
+.final-cta h2 { color:var(--white); margin-bottom:16px; }
+.final-cta .final-subtitle { font-size:1.1rem; color:rgba(255,255,255,0.8); max-width:550px; margin:0 auto 32px; line-height:1.7; }
+.final-cta .final-subtitle strong { color:var(--yellow); }
+.final-products { display:flex; justify-content:center; gap:20px; flex-wrap:wrap; margin:36px 0 32px; }
+.final-product-item {
+  background:rgba(255,255,255,0.06); backdrop-filter:blur(10px);
+  border:1px solid rgba(255,255,255,0.1); border-radius:16px;
+  padding:18px 22px; min-width:160px; text-align:center; transition:all 0.3s ease;
+}
+.final-product-item:hover { background:rgba(255,255,255,0.1); transform:translateY(-2px); }
+.final-product-item .fp-name { color:var(--white); font-weight:600; font-size:0.9rem; margin-bottom:4px; }
+.final-product-item .fp-price { color:var(--yellow); font-weight:700; font-size:0.95rem; }
+.final-product-item .fp-cta { display:inline-block; margin-top:6px; color:var(--pink); font-size:0.8rem; font-weight:600; transition:color 0.3s ease; }
+.final-product-item .fp-cta:hover { color:var(--pink-light); }
+.final-product-item.bundle-highlight { border-color:var(--yellow); background:rgba(232,196,90,0.08); }
+.final-message { max-width:550px; margin:40px auto 0; padding-top:32px; border-top:1px solid rgba(255,255,255,0.1); }
+.final-message h3 { color:var(--white); font-size:1.1rem; margin-bottom:12px; font-family:'Playfair Display',Georgia,'Times New Roman',serif; }
+.final-message p { color:rgba(255,255,255,0.7); font-size:0.95rem; line-height:1.8; }
+.final-message p strong { color:var(--white); }
+
+/* ===== COURSE COMING SOON (in final CTA) ===== */
+.course-coming-soon { margin:36px auto 0; max-width:900px; }
+.course-coming-soon .ccs-badge {
+  display:inline-block; background:var(--yellow); color:var(--charcoal);
+  padding:6px 18px; border-radius:30px; font-size:0.8rem;
+  font-weight:700; letter-spacing:0.1em; text-transform:uppercase;
+  margin-bottom:16px;
+}
+.ccs-grid {
+  display:grid; grid-template-columns:1fr 1fr 1fr; gap:10px;
+}
+.ccs-item {
+  background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.08);
+  border-radius:12px; padding:14px 14px; text-align:left;
+  backdrop-filter:blur(4px); transition:all 0.2s;
+}
+.ccs-item:hover { background:rgba(255,255,255,0.1); transform:translateY(-2px); }
+.ccs-item .ccs-num {
+  display:inline-flex; align-items:center; justify-content:center;
+  width:20px; height:20px; border-radius:50%;
+  background:var(--yellow); color:var(--charcoal);
+  font-size:0.7rem; font-weight:700; margin-bottom:4px;
+}
+.ccs-item .ccs-label { display:block; font-weight:600; color:var(--white); font-size:0.85rem; margin:2px 0; }
+.ccs-item .ccs-desc { display:block; color:rgba(255,255,255,0.5); font-size:0.75rem; line-height:1.3; }
+
+/* ===== FOOTER ===== */
+footer {
+  background:var(--charcoal); color:rgba(255,255,255,0.45);
+  text-align:center; padding:24px; font-size:0.9rem; letter-spacing:0.05em;
+}
+footer a { color:var(--pink-light); text-decoration:none; }
+footer a:hover { color:var(--white); }
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:900px) {
+  .ccs-grid { grid-template-columns:1fr 1fr; }
+  .product-section { grid-template-columns:1fr; direction:ltr!important; }
+  .product-section.rev>* { direction:ltr; }
+  .testimonials-grid { grid-template-columns:1fr; }
+  .about-grid { grid-template-columns:1fr; gap:30px; }
+  .bundle-content { grid-template-columns:1fr; gap:24px; }
+  .promise-list { grid-template-columns:1fr; }
+  .who-grid { grid-template-columns:1fr 1fr; }
+  .faq-grid { grid-template-columns:1fr; }
+  .lead-magnet-card { padding:36px 24px; }
+  .lead-magnet-card .lm-benefits { grid-template-columns:1fr; }
+  .lead-magnet-form .form-row { flex-direction:column; }
+  .nav-links .hide-mobile { display:none; }
+  .nav-links .dropdown-content { display:none; position:static; box-shadow:none; background:transparent; padding:10px 0 10px 20px; border:none; }
+  .nav-links .dropdown-content a { color:var(--mid); font-size:0.95rem; padding:6px 0; display:block; }
+  .nav-links.mobile-open .dropdown-content { display:block; }
+  .nav-logo img { height:50px; width:50px; }
+  .nav-logo span { font-size:1.2rem; }
+  nav { padding:10px 16px; }
+  .nav-links { display:none; }
+  .nav-links.mobile-open {
+    display:flex; flex-direction:column; position:absolute; top:100%; left:0; right:0;
+    background:var(--white); padding:20px 24px; gap:14px;
+    border-bottom:2px solid var(--pink-light); box-shadow:0 10px 30px rgba(0,0,0,0.05);
+  }
+  .mobile-menu-toggle { display:flex; }
+  .mobile-menu-toggle.active span:nth-child(1) { transform:rotate(45deg) translate(5px,6px); }
+  .mobile-menu-toggle.active span:nth-child(2) { opacity:0; }
+  .mobile-menu-toggle.active span:nth-child(3) { transform:rotate(-45deg) translate(5px,-6px); }
+  .header-spacer { height:70px; }
+}
+
+@media(max-width:600px) {
+  .who-grid { grid-template-columns:1fr; }
+  .ccs-grid { grid-template-columns:1fr; }
+  .final-products { flex-direction:column; align-items:center; }
+  .final-product-item { width:100%; max-width:260px; }
+}
+</style>
+</head>
+<body>
+<nav id="nav">
+  <div class="nav-logo">
+    <img src="https://darkred-kudu-245410.hostingersite.com/wp-content/uploads/2026/05/My-Muslim-Homeschool-Hub-logo-3.png" alt="My Muslim Homeschool">
+    <span>My Muslim<br>Homeschool</span>
+  </div>
+  <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="nav-links" id="navLinks">
+          <a href="#free-course">Free Course</a>
+          <div class="dropdown">
+            <a href="#products">Products <span class="dropdown-arrow">▼</span></a>
+            <div class="dropdown-content">
+              <a href="https://mymuslimhomeschool.com/product/muslim-moms-morning-routine-playbook/" target="_blank">Playbook</a>
+              <a href="https://mymuslimhomeschool.com/product/homeschool-reset-workbook/" target="_blank">Workbook</a>
+              <a href="https://mymuslimhomeschool.com/product/open-teach-15-prophet-story-scripts/" target="_blank">Scripts</a>
+            </div>
+          </div>
+          <a href="blog.html">Blog</a>
+          <a href="#about">About</a>
+          <a class="nav-cta" href="#bundle">Bundle $35</a>
+    <a href="https://mymuslimhomeschool.com/cart" class="nav-icon" title="Cart" target="_blank" rel="noopener">
+      <svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20">
+        <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
+        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+      </svg>
+    </a>
+    <a href="https://mymuslimhomeschool.com/my-account" class="nav-icon" title="My Account" target="_blank">
+      <svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20">
+        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+        <circle cx="12" cy="7" r="4"/>
+      </svg>
+    </a>
+  </div>
+</nav>
+
+<div class="header-spacer"></div>
+
+<!-- ===== HERO ===== -->
+<section style="background:linear-gradient(135deg,#fdf3ee 0%,#fdf8e8 50%,#fff9f5 100%);padding:80px 24px;text-align:center;position:relative;overflow:hidden;">
+  <div style="max-width:900px;margin:0 auto;position:relative;z-index:1;">
+    <span style="display:inline-block;background:var(--peach);color:var(--white);padding:6px 18px;border-radius:30px;font-size:0.8rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:20px;">✨ Just $20</span>
+    <h1 style="font-size:clamp(1.8rem,5vw,3rem);color:var(--charcoal);margin-bottom:12px;">Open &amp; Teach: <br><em style="color:var(--peach);font-style:italic;">15 Prophet Story Scripts</em></h1>
+    <p style="font-size:1.15rem;color:var(--mid);max-width:600px;margin:0 auto 32px;font-weight:300;"><strong>113 pages</strong> of fully written, read-aloud prophet stories for ages 4-12. Pick it up, sit beside your child, and begin — <strong>no prep needed.</strong></p>
+    <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
+      <a href="#buy" class="btn btn-peach btn-large" style="box-shadow:0 4px 18px rgba(240,168,130,0.3);">Get the Scripts — $20</a>
+      <a href="#whats-inside" class="btn btn-white">See What's Inside ↓</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== AUTHOR INTRODUCTION ===== -->
+<section style="background:var(--white);padding:64px 24px;">
+  <div style="max-width:800px;margin:0 auto;display:grid;grid-template-columns:120px 1fr;gap:40px;align-items:center;">
+    <div>
+      <img src="https://darkred-kudu-245410.hostingersite.com/wp-content/uploads/2026/05/Haadiyah-Rahman.png" alt="Haadiyah Rahman" style="width:120px;height:120px;border-radius:50%;object-fit:cover;border:4px solid var(--peach-pale);">
+    </div>
+    <div>
+      <p style="font-size:0.85rem;color:var(--peach);font-weight:700;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:4px;">FROM THE FOUNDER</p>
+      <p style="font-size:1.05rem;color:var(--mid);line-height:1.7;">"I wrote these scripts because I wanted my children to <em>love</em> the prophets, not just know their names. Every story is written to be read aloud — with warmth, with feeling, and with built-in pauses so you never feel lost. This is Islamic studies made simple."</p>
+      <p style="font-weight:600;color:var(--charcoal);margin-top:8px;">— Haadiyah, Muslim Homeschool Mother of 8</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== WHAT'S INSIDE ===== -->
+<section id="whats-inside" style="background:var(--cream);padding:68px 24px;">
+  <div style="max-width:800px;margin:0 auto;">
+    <p class="section-label" style="text-align:center;">What's Inside</p>
+    <h2 style="text-align:center;margin-bottom:40px;">Stories That Stick — <em>Ages 4 to 12</em></h2>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+      <div style="background:var(--white);border-radius:16px;padding:24px;border:1px solid var(--border);">
+        <span style="display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;background:var(--peach-pale);color:var(--peach);font-weight:700;font-size:0.9rem;margin-bottom:10px;">1</span>
+        <h4 style="font-size:1.05rem;margin-bottom:6px;">15 Complete Stories</h4>
+        <p style="font-size:0.9rem;color:var(--mid);margin:0;">From Adam (AS) to Muhammad (SAW) — every major prophet covered.</p>
+      </div>
+      <div style="background:var(--white);border-radius:16px;padding:24px;border:1px solid var(--border);">
+        <span style="display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;background:var(--peach-pale);color:var(--peach);font-weight:700;font-size:0.9rem;margin-bottom:10px;">2</span>
+        <h4 style="font-size:1.05rem;margin-bottom:6px;">Fully Written Scripts</h4>
+        <p style="font-size:0.9rem;color:var(--mid);margin:0;">Read-aloud with built-in pause cues. No prep, no lesson planning.</p>
+      </div>
+      <div style="background:var(--white);border-radius:16px;padding:24px;border:1px solid var(--border);">
+        <span style="display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;background:var(--peach-pale);color:var(--peach);font-weight:700;font-size:0.9rem;margin-bottom:10px;">3</span>
+        <h4 style="font-size:1.05rem;margin-bottom:6px;">Age-Appropriate</h4>
+        <p style="font-size:0.9rem;color:var(--mid);margin:0;">Separate discussion questions for ages 4-7 and 8-12. Perfect for mixed-age families.</p>
+      </div>
+      <div style="background:var(--white);border-radius:16px;padding:24px;border:1px solid var(--border);">
+        <span style="display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;background:var(--peach-pale);color:var(--peach);font-weight:700;font-size:0.9rem;margin-bottom:10px;">4</span>
+        <h4 style="font-size:1.05rem;margin-bottom:6px;">Activity Pages</h4>
+        <p style="font-size:0.9rem;color:var(--mid);margin:0;">One activity per story plus a "What I Learned Today" reflection box.</p>
+      </div>
+      <div style="background:var(--white);border-radius:16px;padding:24px;border:1px solid var(--border);">
+        <span style="display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;background:var(--peach-pale);color:var(--peach);font-weight:700;font-size:0.9rem;margin-bottom:10px;">5</span>
+        <h4 style="font-size:1.05rem;margin-bottom:6px;">15-Week Term</h4>
+        <p style="font-size:0.9rem;color:var(--mid);margin:0;">One story per week = a complete Islamic Studies term. Done for you.</p>
+      </div>
+      <div style="background:var(--white);border-radius:16px;padding:24px;border:1px solid var(--border);">
+        <span style="display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;background:var(--peach-pale);color:var(--peach);font-weight:700;font-size:0.9rem;margin-bottom:10px;">6</span>
+        <h4 style="font-size:1.05rem;margin-bottom:6px;">Quran Verses &amp; Hadiths</h4>
+        <p style="font-size:0.9rem;color:var(--mid);margin:0;">Bonus verses and hadiths for deeper study included with each story.</p>
+      </div>
+    </div>
+    <div style="background:var(--peach-pale);border-radius:16px;padding:24px;margin-top:24px;border:2px solid var(--peach);text-align:center;">
+      <p style="font-weight:600;color:var(--charcoal);font-size:1rem;">🎁 Bonus: Story Overview Cards &amp; Vocabulary list included</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PROPHETS LIST ===== -->
+<section style="background:var(--white);padding:68px 24px;">
+  <div style="max-width:700px;margin:0 auto;text-align:center;">
+    <span class="section-label">The 15 Prophets Covered</span>
+    <h2>From <em>Adam (AS)</em> to <em>Muhammad (SAW)</em></h2>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-top:32px;">
+      <div style="background:var(--cream);border-radius:10px;padding:14px;font-weight:600;color:var(--charcoal);font-size:0.95rem;">1. Adam (AS)</div>
+      <div style="background:var(--cream);border-radius:10px;padding:14px;font-weight:600;color:var(--charcoal);font-size:0.95rem;">2. Nuh (AS)</div>
+      <div style="background:var(--cream);border-radius:10px;padding:14px;font-weight:600;color:var(--charcoal);font-size:0.95rem;">3. Ibrahim (AS)</div>
+      <div style="background:var(--cream);border-radius:10px;padding:14px;font-weight:600;color:var(--charcoal);font-size:0.95rem;">4. Ismail (AS)</div>
+      <div style="background:var(--cream);border-radius:10px;padding:14px;font-weight:600;color:var(--charcoal);font-size:0.95rem;">5. Yaqub (AS)</div>
+      <div style="background:var(--cream);border-radius:10px;padding:14px;font-weight:600;color:var(--charcoal);font-size:0.95rem;">6. Yusuf (AS)</div>
+      <div style="background:var(--cream);border-radius:10px;padding:14px;font-weight:600;color:var(--charcoal);font-size:0.95rem;">7. Ayyub (AS)</div>
+      <div style="background:var(--cream);border-radius:10px;padding:14px;font-weight:600;color:var(--charcoal);font-size:0.95rem;">8. Musa (AS)</div>
+      <div style="background:var(--cream);border-radius:10px;padding:14px;font-weight:600;color:var(--charcoal);font-size:0.95rem;">9. Harun (AS)</div>
+      <div style="background:var(--cream);border-radius:10px;padding:14px;font-weight:600;color:var(--charcoal);font-size:0.95rem;">10. Dawud (AS)</div>
+      <div style="background:var(--cream);border-radius:10px;padding:14px;font-weight:600;color:var(--charcoal);font-size:0.95rem;">11. Sulayman (AS)</div>
+      <div style="background:var(--cream);border-radius:10px;padding:14px;font-weight:600;color:var(--charcoal);font-size:0.95rem;">12. Yunus (AS)</div>
+      <div style="background:var(--cream);border-radius:10px;padding:14px;font-weight:600;color:var(--charcoal);font-size:0.95rem;">13. Zakariyya (AS)</div>
+      <div style="background:var(--cream);border-radius:10px;padding:14px;font-weight:600;color:var(--charcoal);font-size:0.95rem;">14. Isa (AS)</div>
+      <div style="background:var(--peach-pale);border-radius:10px;padding:14px;font-weight:600;color:var(--peach);font-size:0.95rem;border:1px solid var(--peach);">15. Muhammad (SAW)</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== WHY THIS WORKS ===== -->
+<section style="background:var(--cream);padding:68px 24px;">
+  <div style="max-width:700px;margin:0 auto;text-align:center;">
+    <span class="section-label">Why Mamas Love It</span>
+    <h2>Islamic Studies, <em>Made Simple</em></h2>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px;margin-top:40px;text-align:left;">
+      <div style="text-align:center;">
+        <span style="font-size:2rem;display:block;margin-bottom:8px;">📖</span>
+        <h4 style="font-size:1rem;margin-bottom:6px;">No Prep</h4>
+        <p style="font-size:0.85rem;color:var(--mid);margin:0;">Open the book and read. That's it.</p>
+      </div>
+      <div style="text-align:center;">
+        <span style="font-size:2rem;display:block;margin-bottom:8px;">👶👧</span>
+        <h4 style="font-size:1rem;margin-bottom:6px;">Multi-Age</h4>
+        <p style="font-size:0.85rem;color:var(--mid);margin:0;">Works for ages 4-12 with differentiated questions.</p>
+      </div>
+      <div style="text-align:center;">
+        <span style="font-size:2rem;display:block;margin-bottom:8px;">💬</span>
+        <h4 style="font-size:1rem;margin-bottom:6px;">Discussion Ready</h4>
+        <p style="font-size:0.85rem;color:var(--mid);margin:0;">Each story has built-in conversation starters.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TESTIMONIAL ===== -->
+<section style="background:var(--white);padding:68px 24px;">
+  <div style="max-width:600px;margin:0 auto;text-align:center;">
+    <div style="background:var(--cream);border-radius:20px;padding:36px;box-shadow:0 4px 20px rgba(0,0,0,0.04);">
+      <span style="color:var(--yellow);font-size:1.2rem;letter-spacing:4px;display:block;margin-bottom:16px;">★★★★★</span>
+      <p style="font-style:italic;font-size:1.05rem;color:var(--mid);line-height:1.7;margin-bottom:20px;">"The prophet stories scripts saved our Quran time. Before, I was stumbling through, not sure what to say. Now my kids beg for 'story time.' Last week my daughter said, 'Mama, can we learn about Prophet Yunus tomorrow?' Heart melted."</p>
+      <p style="font-weight:600;color:var(--charcoal);margin-bottom:2px;">— Aisha</p>
+      <p style="font-size:0.85rem;color:var(--sage);">Mother of 2, Canada</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== BUY SECTION ===== -->
+<section id="buy" style="background:linear-gradient(135deg,var(--peach-pale) 0%,var(--cream) 100%);padding:80px 24px;text-align:center;">
+  <div style="max-width:500px;margin:0 auto;">
+    <span class="section-label">Start Teaching Today</span>
+    <h2>Get the 15 Prophet Story Scripts</h2>
+    <div style="background:var(--white);border-radius:24px;padding:40px;border:2px solid var(--peach);margin:32px 0;">
+      <span style="font-size:0.85rem;color:var(--mid);text-transform:uppercase;letter-spacing:0.1em;">Price</span>
+      <div style="font-size:3rem;font-weight:700;color:var(--peach);font-family:'Playfair Display',serif;line-height:1.1;margin:8px 0;">$20</div>
+      <ul style="list-style:none;text-align:left;margin:24px 0;">
+        <li style="padding:8px 0 8px 28px;position:relative;font-size:0.95rem;color:var(--mid);">✓ 113 pages — Instant PDF download</li>
+        <li style="padding:8px 0 8px 28px;position:relative;font-size:0.95rem;color:var(--mid);">✓ 15 complete prophet stories</li>
+        <li style="padding:8px 0 8px 28px;position:relative;font-size:0.95rem;color:var(--mid);">✓ Discussion questions for two age groups</li>
+        <li style="padding:8px 0 8px 28px;position:relative;font-size:0.95rem;color:var(--mid);">✓ Bonus: Quran verses, hadiths &amp; activity pages</li>
+      </ul>
+      <a href="https://mymuslimhomeschool.com/product/open-teach-15-prophet-story-scripts/" class="btn btn-peach btn-large" target="_blank" style="width:100%;justify-content:center;">Get the Scripts — $20</a>
+    </div>
+    <div style="background:var(--yellow);color:var(--charcoal);border-radius:16px;padding:20px;">
+      <p style="font-weight:700;margin-bottom:4px;">💡 Love it? Check out the <a href="https://mymuslimhomeschool.com/product/the-complete-muslim-homeschool-bundle/" style="color:var(--charcoal);text-decoration:underline;">Complete Bundle</a></p>
+      <p style="font-size:0.9rem;margin:0;">Get all 3 resources for $35 (save $7)</p>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--white);padding:40px 24px;text-align:center;">
+  <p style="font-size:0.85rem;color:var(--light-text);margin:0;">Secure checkout — Instant delivery — 14-Day Money-Back Guarantee</p>
+</section>
+
+<footer>
+  <p>— My Muslim Homeschool — Questions? <a href="mailto:info@mymuslimhomeschool.com">info@mymuslimhomeschool.com</a> — All sales final on digital products — For personal use only</p>
+</footer>
+<script>
+(function() {
+  const toggle = document.getElementById('mobileMenuToggle');
+  const nav = document.getElementById('navLinks');
+  if (toggle && nav) {
+    toggle.addEventListener('click', function() {
+      this.classList.toggle('active');
+      nav.classList.toggle('mobile-open');
+    });
+    nav.querySelectorAll('a').forEach(function(link) {
+      link.addEventListener('click', function() {
+        toggle.classList.remove('active');
+        nav.classList.remove('mobile-open');
+      });
+    });
+  }
+})();
+</script>
+</body>
+</html>
