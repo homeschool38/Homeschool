@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,15 +32,122 @@
     color: var(--text-dark);
     line-height: 1.7;
   }
-
-  /* HEADER */
-  .site-header {
+  /* ===== SHARED SITE NAV ===== */
+  nav {
     background: var(--warm-white);
-    padding: 16px 24px;
-    text-align: center;
-    border-bottom: 1px solid var(--pink-light);
+    border-bottom: 2px solid var(--pink-light);
+    padding: 12px 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 12px rgba(232,160,160,0.12);
   }
-  .site-header img { height: 70px; }
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+  }
+  .nav-logo img {
+    height: 70px;
+    width: 70px;
+    object-fit: contain;
+    border-radius: 50%;
+  }
+  .nav-logo span {
+    font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+    font-size: 1.6rem;
+    color: var(--text-dark);
+    line-height: 1.25;
+  }
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+  }
+  .nav-links a {
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-decoration: none;
+    color: var(--text-mid);
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--pink-dark); }
+  .dropdown {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    cursor: pointer;
+  }
+  .dropdown > a {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  .dropdown-arrow {
+    font-size: 0.65rem;
+    transition: transform 0.2s;
+  }
+  .dropdown:hover .dropdown-arrow { transform: rotate(180deg); }
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding-top: 10px;
+    background: var(--warm-white);
+    min-width: 230px;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+    border: 1px solid var(--pink-light);
+    z-index: 100;
+  }
+  .dropdown-content a {
+    display: block;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    color: var(--text-mid);
+    transition: all 0.2s;
+    white-space: nowrap;
+  }
+  .dropdown-content a:hover {
+    background: var(--cream);
+    color: var(--pink-dark);
+  }
+  .dropdown:hover .dropdown-content { display: block; }
+  .nav-cta {
+    background: var(--pink-dark);
+    color: white !important;
+    padding: 8px 22px;
+    border-radius: 30px;
+  }
+  .nav-cta:hover {
+    background: #B55A5A !important;
+    color: white !important;
+  }
+  .mobile-menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 4px;
+  }
+  .mobile-menu-toggle span {
+    display: block;
+    width: 26px;
+    height: 2.5px;
+    background: var(--text-dark);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  }
+
 
   /* HERO */
   .hero {
@@ -460,6 +568,38 @@
   footer a { color: rgba(255,255,255,0.8); text-decoration: none; }
 
   @media (max-width: 640px) {
+
+    nav { padding: 10px 16px; }
+    .nav-logo img { height: 50px; width: 50px; }
+    .nav-logo span { font-size: 1.2rem; }
+    .nav-links { display: none; }
+    .nav-links.mobile-open {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: var(--warm-white);
+      padding: 20px 24px;
+      gap: 14px;
+      border-bottom: 2px solid var(--pink-light);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    }
+    .nav-links .dropdown-content {
+      display: none;
+      position: static;
+      box-shadow: none;
+      background: transparent;
+      padding: 10px 0 10px 20px;
+      border: none;
+    }
+    .nav-links.mobile-open .dropdown-content { display: block; }
+    .mobile-menu-toggle { display: flex; }
+    .mobile-menu-toggle.active span:nth-child(1) { transform: rotate(45deg) translate(5px,6px); }
+    .mobile-menu-toggle.active span:nth-child(2) { opacity: 0; }
+    .mobile-menu-toggle.active span:nth-child(3) { transform: rotate(-45deg) translate(5px,-6px); }
+
     .author-inner { grid-template-columns: 1fr; }
     .author-avatar { margin: 0 auto; }
     .hero-price-box { flex-direction: column; gap: 8px; }
@@ -468,10 +608,33 @@
 </head>
 <body>
 
-<!-- HEADER -->
-<header class="site-header">
-  <a href="/"><img src="My_Muslim_Homeschool_Hub_-_logo___3_.png" alt="My Muslim Homeschool" /></a>
-</header>
+<nav id="nav">
+  <a class="nav-logo" href="index.html" aria-label="My Muslim Homeschool home">
+    <img src="images/logo/logo.png" alt="My Muslim Homeschool">
+    <span>My Muslim<br>Homeschool</span>
+  </a>
+  <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="nav-links" id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="index.html#free-course">Free Course</a>
+    <div class="dropdown">
+      <a href="index.html#products">Shop <span class="dropdown-arrow">▼</span></a>
+      <div class="dropdown-content">
+        <a href="product-playbook.html">Morning Routine Playbook</a>
+        <a href="product-workbook.html">Homeschool Reset Workbook</a>
+        <a href="product-scripts.html">Prophet Story Scripts</a>
+        <a href="product-screenfree.html">Screen-Free Challenge Cards</a>
+        <a href="product-bundle.html">Complete Bundle</a>
+      </div>
+    </div>
+    <a href="blog.html">Blog</a>
+    <a href="index.html#about">About</a>
+    <a href="homeschool-course-landing.html">Course</a>
+    <a class="nav-cta" href="product-bundle.html">Bundle $35</a>
+  </div>
+</nav>
 
 <!-- HERO -->
 <section class="hero">
@@ -665,7 +828,7 @@
 <section class="author-section">
   <div class="author-inner">
     <div class="author-avatar" style="background:none;border:none;">
-      <img src="https://darkred-kudu-245410.hostingersite.com/wp-content/uploads/2026/05/Haadiyah-Rahman.png" alt="Haadiyah Rahman" style="width:160px;height:160px;border-radius:50%;object-fit:cover;border:4px solid var(--pink);">
+      <img src="images/about/haadiyah-rahman.png" alt="Haadiyah Rahman" style="width:160px;height:160px;border-radius:50%;object-fit:cover;border:4px solid var(--pink);">
     </div>
     <div>
       <div class="section-tag">Meet Your Guide</div>
@@ -756,7 +919,7 @@
     <div class="price-tag">One-time payment<br>Lifetime access + all bonuses</div>
   </div>
   <br>
-  <a href="#" class="cta-btn">Get Instant Access — $97</a>
+  <a href="#buy" class="cta-btn">Get Instant Access — $97</a>
   <div style="margin-top:16px;">
     <span class="guarantee-badge">✦ 30-Day Satisfaction Guarantee</span>
   </div>
@@ -765,9 +928,29 @@
 
 <!-- FOOTER -->
 <footer>
-  <p style="margin-bottom:8px;"><a href="/">My Muslim Homeschool</a> &nbsp;·&nbsp; <a href="/shop.html">Shop</a> &nbsp;·&nbsp; <a href="mailto:digitalhijrahjourney@gmail.com">Contact</a></p>
+  <p style="margin-bottom:8px;"><a href="index.html">My Muslim Homeschool</a> &nbsp;·&nbsp; <a href="index.html#products">Shop</a> &nbsp;·&nbsp; <a href="mailto:info@mymuslimhomeschool.com">Contact</a></p>
   <p>© 2025 My Muslim Homeschool. All rights reserved.</p>
 </footer>
+
+
+<script>
+(function() {
+  const toggle = document.getElementById('mobileMenuToggle');
+  const nav = document.getElementById('navLinks');
+  if (toggle && nav) {
+    toggle.addEventListener('click', function() {
+      this.classList.toggle('active');
+      nav.classList.toggle('mobile-open');
+    });
+    nav.querySelectorAll('a').forEach(function(link) {
+      link.addEventListener('click', function() {
+        toggle.classList.remove('active');
+        nav.classList.remove('mobile-open');
+      });
+    });
+  }
+})();
+</script>
 
 </body>
 </html>
