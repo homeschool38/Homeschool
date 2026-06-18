@@ -1,5 +1,4 @@
-<?php
-$config = require __DIR__ . '/square-config.php';
+$config = require __DIR__ . '/../../Private/square-config.php';
 
 if (
   empty($config['access_token']) ||
