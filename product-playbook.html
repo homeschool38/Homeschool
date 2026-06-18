@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -646,7 +647,7 @@ footer a:hover { color:var(--white); }
     <a href="index.html">Home</a>
     <a href="index.html#free-course">Free Course</a>
     <div class="dropdown">
-      <a href="index.html#products">Shop <span class="dropdown-arrow">▼</span></a>
+      <a href="shop.html">Shop <span class="dropdown-arrow">▼</span></a>
       <div class="dropdown-content">
         <a href="product-playbook.html">Morning Routine Playbook</a>
         <a href="product-workbook.html">Homeschool Reset Workbook</a>
@@ -658,7 +659,7 @@ footer a:hover { color:var(--white); }
     <a href="blog.html">Blog</a>
     <a href="index.html#about">About</a>
     <a href="homeschool-course-landing.html">Course</a>
-    <a class="nav-cta" href="product-bundle.html">Bundle $35</a>
+    <a class="nav-cta" href="bundle-checkout.html">Bundle $35</a>
   </div>
 </nav>
 
@@ -785,10 +786,10 @@ footer a:hover { color:var(--white); }
         <li style="padding:8px 0 8px 28px;position:relative;font-size:0.95rem;color:var(--mid);">✓ Bonus du'a cards included</li>
         <li style="padding:8px 0 8px 28px;position:relative;font-size:0.95rem;color:var(--mid);">✓ Lifetime access</li>
       </ul>
-      <a href="https://square.link/u/DpLKK2Gs" class="btn btn-pink btn-large" target="_blank" style="width:100%;justify-content:center;">Get the Playbook — $7</a>
+      <button type="button" class="btn btn-pink btn-large" data-product-id="playbook" style="width:100%;justify-content:center;">Add Playbook to Cart — $7</button>
     </div>
     <div style="background:var(--yellow);color:var(--charcoal);border-radius:16px;padding:20px;">
-      <p style="font-weight:700;margin-bottom:4px;">💡 Love it? Check out the <a href="product-bundle.html" style="color:var(--charcoal);text-decoration:underline;">Complete Bundle</a></p>
+      <p style="font-weight:700;margin-bottom:4px;">💡 Love it? Check out the <a href="bundle-checkout.html" style="color:var(--charcoal);text-decoration:underline;">Complete Bundle</a></p>
       <p style="font-size:0.9rem;margin:0;">Get all 3 resources for $35 (save $7)</p>
     </div>
   </div>
@@ -801,6 +802,7 @@ footer a:hover { color:var(--white); }
 <footer>
   <p>— My Muslim Homeschool — Questions? <a href="mailto:info@mymuslimhomeschool.com">info@mymuslimhomeschool.com</a> — All sales final on digital products — For personal use only</p>
 </footer>
+<script src="assets/cart.js"></script>
 <script>
 (function() {
   const toggle = document.getElementById('mobileMenuToggle');
