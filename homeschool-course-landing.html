@@ -1,5 +1,6 @@
 
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -129,6 +130,22 @@
   .nav-cta:hover {
     background: #B55A5A !important;
     color: white !important;
+  }
+.nav-cart-link {
+    display:inline-flex; align-items:center; justify-content:center; gap:6px;
+    background:var(--cream); color:var(--text-dark)!important;
+    border:1px solid var(--pink-light); border-radius:999px;
+    padding:7px 12px; line-height:1; font-weight:700;
+  }
+  .nav-cart-link:hover {
+    background:var(--pink-light);
+    color:var(--pink-dark)!important;
+  }
+  .nav-cart-link .mmh-cart-count {
+    display:inline-flex; align-items:center; justify-content:center;
+    min-width:18px; height:18px; padding:0 5px;
+    border-radius:999px; background:var(--pink-dark); color:white;
+    font-size:0.72rem; font-weight:800; line-height:1;
   }
   .mobile-menu-toggle {
     display: none;
@@ -620,7 +637,7 @@
     <a href="index.html">Home</a>
     <a href="index.html#free-course">Free Course</a>
     <div class="dropdown">
-      <a href="index.html#products">Shop <span class="dropdown-arrow">▼</span></a>
+      <a href="shop.html">Shop <span class="dropdown-arrow">▼</span></a>
       <div class="dropdown-content">
         <a href="product-playbook.html">Morning Routine Playbook</a>
         <a href="product-workbook.html">Homeschool Reset Workbook</a>
@@ -632,7 +649,8 @@
     <a href="blog.html">Blog</a>
     <a href="index.html#about">About</a>
     <a href="homeschool-course-landing.html">Course</a>
-    <a class="nav-cta" href="product-bundle.html">Bundle $35</a>
+    <a class="nav-cta" href="bundle-checkout.html">Bundle $35</a>
+    <a class="nav-cart-link" href="cart.html" aria-label="View cart">🛒 <span class="mmh-cart-count">0</span></a>
   </div>
 </nav>
 
@@ -928,11 +946,12 @@
 
 <!-- FOOTER -->
 <footer>
-  <p style="margin-bottom:8px;"><a href="index.html">My Muslim Homeschool</a> &nbsp;·&nbsp; <a href="index.html#products">Shop</a> &nbsp;·&nbsp; <a href="mailto:info@mymuslimhomeschool.com">Contact</a></p>
+  <p style="margin-bottom:8px;"><a href="index.html">My Muslim Homeschool</a> &nbsp;·&nbsp; <a href="shop.html">Shop</a> &nbsp;·&nbsp; <a href="mailto:info@mymuslimhomeschool.com">Contact</a></p>
   <p>© 2025 My Muslim Homeschool. All rights reserved.</p>
 </footer>
 
 
+<script src="assets/cart.js"></script>
 <script>
 (function() {
   const toggle = document.getElementById('mobileMenuToggle');
