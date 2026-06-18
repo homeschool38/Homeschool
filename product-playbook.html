@@ -121,6 +121,19 @@ nav {
   padding:8px 22px; border-radius:30px; transition:background 0.2s!important;
 }
 .nav-cta:hover { background:var(--peach)!important; }
+.nav-cart-link {
+  display:inline-flex; align-items:center; justify-content:center; gap:6px;
+  background:var(--cream); color:var(--charcoal)!important;
+  border:1px solid var(--border); border-radius:999px;
+  padding:7px 12px; line-height:1; font-weight:700;
+}
+.nav-cart-link:hover { background:var(--pink-pale); color:var(--pink)!important; }
+.nav-cart-link .mmh-cart-count {
+  display:inline-flex; align-items:center; justify-content:center;
+  min-width:18px; height:18px; padding:0 5px;
+  border-radius:999px; background:var(--pink); color:var(--white);
+  font-size:0.72rem; font-weight:800; line-height:1;
+}
 .nav-icon { display:inline-flex; align-items:center; }
 
 /* ===== HERO PRODUCT CATALOG (from current site) ===== */
@@ -659,6 +672,7 @@ footer a:hover { color:var(--white); }
     <a href="blog.html">Blog</a>
     <a href="index.html#about">About</a>
     <a href="homeschool-course-landing.html">Course</a>
+    <a class="nav-cart-link" href="cart.html" aria-label="View cart">🛒 <span class="mmh-cart-count">0</span></a>
     <a class="nav-cta" href="bundle-checkout.html">Bundle $35</a>
   </div>
 </nav>
@@ -672,7 +686,7 @@ footer a:hover { color:var(--white); }
     <h1 style="font-size:clamp(1.8rem,5vw,3rem);color:var(--charcoal);margin-bottom:12px;">Muslim Mom's <br><em style="color:var(--pink);font-style:italic;">Morning Routine Playbook</em></h1>
     <p style="font-size:1.15rem;color:var(--mid);max-width:600px;margin:0 auto 32px;font-weight:300;">A step-by-step guide from <strong>Fajr to First Lesson</strong> — built specifically for Muslim homeschool mamas who want calm, barakah-filled mornings.</p>
     <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
-      <a href="#buy" class="btn btn-pink btn-large">Get the Playbook — $7</a>
+      <button type="button" class="btn btn-pink btn-large" data-product-id="playbook">Get the Playbook — $7</button>
       <a href="#whats-inside" class="btn btn-white">See What's Inside ↓</a>
     </div>
   </div>
