@@ -12,17 +12,24 @@ if (
 }
 
 $payload = [
-  'idempotency_key' => uniqid('mmh_test_', true),
-  'quick_pay' => [
-    'name' => 'My Muslim Homeschool $1 Checkout Test',
-    'price_money' => [
-      'amount' => 100,
-      'currency' => 'USD'
-    ],
-    'location_id' => $config['location_id']
+  'idempotency_key' => uniqid('mmh_bundle_', true),
+  'order' => [
+    'location_id' => $config['location_id'],
+    'line_items' => [
+      [
+        'name' => 'The Complete Muslim Homeschool Bundle',
+        'quantity' => '1',
+        'catalog_object_id' => 'HQZTBMUV5WIYRM7PER3KVZKW',
+        'base_price_money' => [
+          'amount' => 3500,
+          'currency' => 'USD'
+        ]
+      ]
+    ]
   ],
   'checkout_options' => [
-    'redirect_url' => 'https://mymuslimhomeschool.com/checkout-success.html'
+    'redirect_url' => 'https://mymuslimhomeschool.com/checkout-success.html',
+    'ask_for_shipping_address' => false
   ]
 ];
 
