@@ -65,6 +65,19 @@ nav {
 .nav-links a:hover { color:var(--pink); }
 .nav-cta { background:var(--pink); color:var(--white)!important; padding:8px 22px; border-radius:30px; }
 .nav-cta:hover { background:var(--peach)!important; color:var(--white)!important; }
+.nav-cart-link {
+  display:inline-flex; align-items:center; justify-content:center; gap:6px;
+  background:var(--cream); color:var(--charcoal)!important;
+  border:1px solid var(--border); border-radius:999px;
+  padding:7px 12px; line-height:1; font-weight:700;
+}
+.nav-cart-link:hover { background:var(--pink-pale); color:var(--pink)!important; }
+.nav-cart-link .mmh-cart-count {
+  display:inline-flex; align-items:center; justify-content:center;
+  min-width:18px; height:18px; padding:0 5px;
+  border-radius:999px; background:var(--pink); color:var(--white);
+  font-size:0.72rem; font-weight:800; line-height:1;
+}
 .mobile-menu-toggle { display:none; flex-direction:column; gap:5px; cursor:pointer; background:none; border:none; padding:4px; }
 .mobile-menu-toggle span { display:block; width:26px; height:2.5px; background:var(--charcoal); border-radius:2px; transition:all 0.3s ease; }
 
@@ -330,6 +343,7 @@ footer a { color:var(--pink-light); }
     <a href="index.html#about">About</a>
     <a href="homeschool-course-landing.html">Course</a>
     <a class="nav-cta" href="bundle-checkout.html">Bundle $35</a>
+    <a class="nav-cart-link" href="cart.html" aria-label="View cart">🛒 <span class="mmh-cart-count">0</span></a>
   </div>
 </nav>
 
