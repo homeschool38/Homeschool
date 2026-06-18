@@ -1,3 +1,4 @@
+<?php
 $config = require __DIR__ . '/../../Private/square-config.php';
 
 if (
