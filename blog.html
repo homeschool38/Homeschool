@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -167,6 +168,19 @@ nav {
   padding:8px 22px; border-radius:30px; transition:background 0.2s!important;
 }
 .nav-cta:hover { background:var(--peach)!important; }
+.nav-cart-link {
+  display:inline-flex; align-items:center; justify-content:center; gap:6px;
+  background:var(--cream); color:var(--charcoal)!important;
+  border:1px solid var(--border); border-radius:999px;
+  padding:7px 12px; line-height:1; font-weight:700;
+}
+.nav-cart-link:hover { background:var(--pink-pale); color:var(--pink)!important; }
+.nav-cart-link .mmh-cart-count {
+  display:inline-flex; align-items:center; justify-content:center;
+  min-width:18px; height:18px; padding:0 5px;
+  border-radius:999px; background:var(--pink); color:var(--white);
+  font-size:0.72rem; font-weight:800; line-height:1;
+}
 .nav-icon { display:inline-flex; align-items:center; }
 .mobile-menu-toggle { display:none; flex-direction:column; gap:5px; cursor:pointer; background:none; border:none; padding:4px; }
 .mobile-menu-toggle span { display:block; width:26px; height:2.5px; background:var(--charcoal); border-radius:2px; transition:all 0.3s ease; }
@@ -784,19 +798,20 @@ nav {
     <a href="index.html">Home</a>
     <a href="index.html#free-course">Free Course</a>
     <div class="dropdown">
-      <a href="index.html#products">Shop <span class="dropdown-arrow">▼</span></a>
+      <a href="shop.html">Shop <span class="dropdown-arrow">▼</span></a>
       <div class="dropdown-content">
-        <a href="index.html#playbook">Morning Routine Playbook</a>
-        <a href="index.html#workbook">Homeschool Reset Workbook</a>
-        <a href="index.html#scripts">Prophet Story Scripts</a>
-        <a href="index.html#screenfree">Screen-Free Challenge Cards</a>
-        <a href="index.html#bundle">Complete Bundle</a>
+        <a href="product-playbook.html">Morning Routine Playbook</a>
+        <a href="product-workbook.html">Homeschool Reset Workbook</a>
+        <a href="product-scripts.html">Prophet Story Scripts</a>
+        <a href="product-screenfree.html">Screen-Free Challenge Cards</a>
+        <a href="product-bundle.html">Complete Bundle</a>
       </div>
     </div>
     <a href="blog.html">Blog</a>
     <a href="index.html#about">About</a>
-    <a href="index.html#coming-soon">Course</a>
-    <a class="nav-cta" href="https://square.link/u/dcEEFiBw" target="_blank" rel="noopener">Bundle $35</a>
+    <a href="homeschool-course-landing.html">Course</a>
+    <a class="nav-cta" href="bundle-checkout.html">Bundle $35</a>
+    <a class="nav-cart-link" href="cart.html" aria-label="View cart">🛒 <span class="mmh-cart-count">0</span></a>
   </div>
 </nav>
 
@@ -901,22 +916,22 @@ nav {
         <div style="padding:12px 0;border-bottom:1px solid rgba(168,203,189,0.1);">
           <p style="font-size:0.9rem;margin-bottom:4px;"><strong>Morning Routine Playbook</strong></p>
           <p style="font-size:0.85rem;color:#E8909A;font-weight:700;">$7</p>
-          <a href="index.html#products" style="font-size:0.85rem;color:#A8CBBD;font-weight:600;">Learn more →</a>
+          <a href="product-playbook.html" style="font-size:0.85rem;color:#A8CBBD;font-weight:600;">View product →</a>
         </div>
         <div style="padding:12px 0;border-bottom:1px solid rgba(168,203,189,0.1);">
           <p style="font-size:0.9rem;margin-bottom:4px;"><strong>Homeschool Reset Workbook</strong></p>
           <p style="font-size:0.85rem;color:#E8909A;font-weight:700;">$15</p>
-          <a href="index.html#products" style="font-size:0.85rem;color:#A8CBBD;font-weight:600;">Learn more →</a>
+          <a href="product-workbook.html" style="font-size:0.85rem;color:#A8CBBD;font-weight:600;">View product →</a>
         </div>
         <div style="padding:12px 0;border-bottom:1px solid rgba(168,203,189,0.1);">
           <p style="font-size:0.9rem;margin-bottom:4px;"><strong>15 Prophet Story Scripts</strong></p>
           <p style="font-size:0.85rem;color:#E8909A;font-weight:700;">$20</p>
-          <a href="index.html#products" style="font-size:0.85rem;color:#A8CBBD;font-weight:600;">Learn more →</a>
+          <a href="product-scripts.html" style="font-size:0.85rem;color:#A8CBBD;font-weight:600;">View product →</a>
         </div>
         <div style="padding:12px 0;">
           <p style="font-size:0.9rem;margin-bottom:4px;"><strong>⭐ Complete Bundle</strong></p>
           <p style="font-size:0.85rem;color:#E8909A;font-weight:700;">$35 <span style="color:#999;font-weight:400;text-decoration:line-through;">$42</span></p>
-          <a href="index.html#products" style="font-size:0.85rem;color:#A8CBBD;font-weight:600;">Shop Bundle →</a>
+          <a href="bundle-checkout.html" style="font-size:0.85rem;color:#A8CBBD;font-weight:600;">Shop Bundle →</a>
         </div>
       </div>
       
@@ -966,6 +981,7 @@ nav {
 <footer>
   <p>— My Muslim Homeschool — Questions? <a href="mailto:info@mymuslimhomeschool.com">info@mymuslimhomeschool.com</a> — All sales final on digital products — For personal use only</p>
 </footer>
+<script src="assets/cart.js"></script>
 <script>
 (function() {
   const toggle = document.getElementById('mobileMenuToggle');
