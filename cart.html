@@ -1,0 +1,528 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Cart | My Muslim Homeschool</title>
+<meta name="description" content="Review your My Muslim Homeschool cart and continue to secure checkout.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Nunito:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --pink: #e8868a;
+  --pink-light: #f5c0c2;
+  --pink-pale: #fdf0f0;
+  --sage: #85b5a8;
+  --sage-light: #b8d5ce;
+  --sage-pale: #edf6f4;
+  --yellow: #e8c45a;
+  --yellow-pale: #fdf8e8;
+  --peach: #f0a882;
+  --charcoal: #2e2e2e;
+  --mid: #5a5252;
+  --light-text: #8a7f7f;
+  --cream: #fdf9f6;
+  --white: #ffffff;
+  --border: #edddd8;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; font-size:18px; }
+body {
+  font-family:'Nunito',sans-serif;
+  background:linear-gradient(135deg,var(--pink-pale) 0%,var(--yellow-pale) 50%,var(--sage-pale) 100%);
+  color:var(--charcoal);
+  line-height:1.65;
+  min-height:100vh;
+}
+img { max-width:100%; height:auto; display:block; }
+a { color:inherit; text-decoration:none; }
+.container { max-width:1080px; margin:0 auto; padding:0 24px; }
+h1,h2,h3,.nav-logo span {
+  font-family:'Playfair Display',Georgia,'Times New Roman',serif;
+  line-height:1.25;
+}
+p { color:var(--mid); font-weight:300; }
+
+nav {
+  background:rgba(255,255,255,0.96);
+  border-bottom:2px solid var(--pink-light);
+  padding:12px 28px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  position:sticky;
+  top:0;
+  z-index:100;
+  box-shadow:0 2px 12px rgba(232,134,138,0.1);
+}
+.nav-logo { display:flex; align-items:center; gap:10px; }
+.nav-logo img { height:62px; width:62px; object-fit:contain; border-radius:50%; }
+.nav-logo span { font-size:1.45rem; color:var(--charcoal); line-height:1.18; }
+.nav-links { display:flex; align-items:center; gap:18px; }
+.nav-links a { font-size:0.95rem; font-weight:700; letter-spacing:0.04em; color:var(--mid); transition:color 0.2s; }
+.nav-links a:hover { color:var(--pink); }
+.nav-cta { background:var(--pink); color:var(--white)!important; padding:8px 22px; border-radius:30px; }
+.nav-cta:hover { background:var(--peach)!important; color:var(--white)!important; }
+.mobile-menu-toggle { display:none; flex-direction:column; gap:5px; cursor:pointer; background:none; border:none; padding:4px; }
+.mobile-menu-toggle span { display:block; width:26px; height:2.5px; background:var(--charcoal); border-radius:2px; transition:all 0.3s ease; }
+
+.hero {
+  text-align:center;
+  padding:58px 0 28px;
+}
+.hero .label {
+  font-family:'Playfair Display',Georgia,serif;
+  color:var(--sage);
+  letter-spacing:0.16em;
+  text-transform:uppercase;
+  font-size:0.88rem;
+  font-weight:700;
+  margin-bottom:12px;
+}
+.hero h1 {
+  font-size:clamp(2rem,5vw,3.2rem);
+  font-weight:600;
+  margin-bottom:12px;
+}
+.hero h1 em { color:var(--pink); font-style:italic; }
+.hero p { max-width:620px; margin:0 auto; font-size:1.05rem; }
+
+.cart-layout {
+  display:grid;
+  grid-template-columns:minmax(0,1fr) 370px;
+  gap:28px;
+  align-items:start;
+  padding:28px 0 72px;
+}
+.panel {
+  background:rgba(255,255,255,0.96);
+  border:1px solid var(--border);
+  border-radius:24px;
+  box-shadow:0 12px 40px rgba(98,67,53,0.09);
+}
+.cart-panel { padding:28px; }
+.summary-panel {
+  padding:26px;
+  position:sticky;
+  top:102px;
+}
+.cart-empty {
+  text-align:center;
+  padding:46px 22px;
+}
+.cart-empty .icon {
+  font-size:3rem;
+  margin-bottom:16px;
+}
+.cart-empty h2 { font-size:1.7rem; margin-bottom:10px; }
+.cart-empty p { max-width:460px; margin:0 auto 22px; }
+
+.cart-item {
+  display:grid;
+  grid-template-columns:92px 1fr auto;
+  gap:18px;
+  align-items:center;
+  padding:18px 0;
+  border-bottom:1px solid var(--border);
+}
+.cart-item:first-child { padding-top:0; }
+.cart-item:last-child { border-bottom:none; }
+.cart-item img {
+  width:92px;
+  height:92px;
+  object-fit:cover;
+  border-radius:14px;
+  background:var(--cream);
+  box-shadow:0 6px 16px rgba(0,0,0,0.08);
+}
+.item-info h3 {
+  font-size:1.1rem;
+  margin-bottom:4px;
+}
+.item-info p {
+  font-size:0.88rem;
+  margin-bottom:10px;
+}
+.item-controls {
+  display:flex;
+  align-items:center;
+  gap:10px;
+  flex-wrap:wrap;
+}
+.qty {
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  background:var(--cream);
+  border:1px solid var(--border);
+  border-radius:999px;
+  padding:6px 10px;
+}
+.qty button {
+  width:26px;
+  height:26px;
+  border:none;
+  border-radius:50%;
+  background:var(--white);
+  color:var(--charcoal);
+  cursor:pointer;
+  font-weight:900;
+}
+.qty span { min-width:18px; text-align:center; font-weight:800; }
+.remove {
+  border:none;
+  background:transparent;
+  color:var(--pink);
+  cursor:pointer;
+  font-weight:800;
+  font-family:'Nunito',sans-serif;
+}
+.item-price {
+  text-align:right;
+  font-weight:900;
+  color:var(--charcoal);
+  white-space:nowrap;
+}
+
+.summary-panel h2 { font-size:1.45rem; margin-bottom:18px; }
+.summary-line {
+  display:flex;
+  justify-content:space-between;
+  gap:18px;
+  padding:12px 0;
+  border-bottom:1px solid var(--border);
+  color:var(--mid);
+  font-size:0.95rem;
+}
+.summary-total {
+  display:flex;
+  justify-content:space-between;
+  align-items:baseline;
+  margin:20px 0;
+}
+.summary-total span:first-child {
+  font-weight:900;
+  color:var(--charcoal);
+}
+.summary-total .amount {
+  font-size:2rem;
+  color:var(--pink);
+  font-weight:900;
+  font-family:'Playfair Display',Georgia,serif;
+}
+.btn {
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:100%;
+  min-height:50px;
+  border:none;
+  border-radius:999px;
+  padding:14px 22px;
+  font-size:0.92rem;
+  font-weight:900;
+  letter-spacing:0.08em;
+  text-transform:uppercase;
+  cursor:pointer;
+  transition:all 0.2s ease;
+  font-family:'Nunito',sans-serif;
+  text-align:center;
+}
+.btn-pink {
+  background:var(--pink);
+  color:var(--white);
+  box-shadow:0 10px 24px rgba(232,134,138,0.28);
+}
+.btn-pink:hover { background:var(--peach); transform:translateY(-2px); }
+.btn-secondary {
+  margin-top:12px;
+  background:var(--white);
+  color:var(--mid);
+  border:1px solid var(--border);
+  box-shadow:none;
+}
+.btn-secondary:hover { background:var(--yellow-pale); color:var(--charcoal); }
+.trust-list {
+  display:grid;
+  gap:8px;
+  margin:18px 0 0;
+  color:var(--light-text);
+  font-size:0.88rem;
+}
+.notice {
+  margin-top:16px;
+  background:var(--yellow-pale);
+  border:1px solid rgba(232,196,90,0.42);
+  border-radius:14px;
+  padding:14px;
+  color:var(--mid);
+  font-size:0.86rem;
+  line-height:1.5;
+}
+.checkout-form { margin:0; }
+
+footer {
+  background:var(--charcoal);
+  color:rgba(255,255,255,0.55);
+  text-align:center;
+  padding:22px;
+  font-size:0.85rem;
+}
+footer a { color:var(--pink-light); }
+
+@media(max-width:900px) {
+  .cart-layout { grid-template-columns:1fr; }
+  .summary-panel { position:static; }
+}
+@media(max-width:720px) {
+  nav { padding:10px 16px; }
+  .nav-logo img { height:50px; width:50px; }
+  .nav-logo span { font-size:1.15rem; }
+  .nav-links { display:none; }
+  .nav-links.mobile-open {
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    position:absolute;
+    top:100%;
+    left:0;
+    right:0;
+    background:var(--white);
+    padding:20px 24px;
+    gap:14px;
+    border-bottom:2px solid var(--pink-light);
+    box-shadow:0 10px 30px rgba(0,0,0,0.05);
+  }
+  .mobile-menu-toggle { display:flex; }
+  .mobile-menu-toggle.active span:nth-child(1) { transform:rotate(45deg) translate(5px,6px); }
+  .mobile-menu-toggle.active span:nth-child(2) { opacity:0; }
+  .mobile-menu-toggle.active span:nth-child(3) { transform:rotate(-45deg) translate(5px,-6px); }
+  .cart-item {
+    grid-template-columns:74px 1fr;
+  }
+  .cart-item img {
+    width:74px;
+    height:74px;
+  }
+  .item-price {
+    grid-column:2;
+    text-align:left;
+  }
+}
+</style>
+</head>
+<body>
+<nav id="nav">
+  <a class="nav-logo" href="index.html" aria-label="My Muslim Homeschool home">
+    <img src="images/logo/logo.png" alt="My Muslim Homeschool">
+    <span>My Muslim<br>Homeschool</span>
+  </a>
+  <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="nav-links" id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="index.html#free-course">Free Course</a>
+    <a href="shop.html">Shop</a>
+    <a href="blog.html">Blog</a>
+    <a href="index.html#about">About</a>
+    <a href="homeschool-course-landing.html">Course</a>
+    <a class="nav-cta" href="bundle-checkout.html">Bundle $35</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="container">
+    <p class="label">Review your order</p>
+    <h1>Your <em>Cart</em></h1>
+    <p>Review your digital resources, continue shopping, or proceed to secure Square checkout.</p>
+  </div>
+</header>
+
+<main class="container cart-layout">
+  <section class="panel cart-panel" id="cartItems">
+    <!-- Cart renders here -->
+  </section>
+
+  <aside class="panel summary-panel">
+    <h2>Order summary</h2>
+    <div id="summaryLines"></div>
+    <div class="summary-total">
+      <span>Total</span>
+      <span class="amount" id="summaryTotal">$0.00</span>
+    </div>
+
+    <form class="checkout-form" id="squareCheckoutForm" action="api/create-checkout.php" method="post">
+      <input type="hidden" name="cart" id="cartPayload" value="">
+      <button type="submit" class="btn btn-pink" id="checkoutButton">Proceed to Secure Checkout</button>
+    </form>
+
+    <a class="btn btn-secondary" href="shop.html">Continue Shopping</a>
+
+    <div class="trust-list">
+      <span>🔒 Secure checkout through Square</span>
+      <span>📩 Digital files delivered by email</span>
+      <span>🍎 Apple Pay on eligible Apple devices</span>
+      <span>✨ Google Pay on eligible browsers</span>
+    </div>
+
+    <div class="notice">
+      Digital resources are delivered by email after checkout. Make sure the email entered at Square checkout is correct.
+    </div>
+  </aside>
+</main>
+
+<footer>
+  <p>— My Muslim Homeschool — Questions? <a href="mailto:info@mymuslimhomeschool.com">info@mymuslimhomeschool.com</a></p>
+</footer>
+
+<script src="assets/cart.js"></script>
+<script>
+(function(){
+  const toggle = document.getElementById('mobileMenuToggle');
+  const nav = document.getElementById('navLinks');
+
+  if(toggle && nav){
+    toggle.addEventListener('click', function(){
+      this.classList.toggle('active');
+      nav.classList.toggle('mobile-open');
+    });
+    nav.querySelectorAll('a').forEach(function(link){
+      link.addEventListener('click', function(){
+        toggle.classList.remove('active');
+        nav.classList.remove('mobile-open');
+      });
+    });
+  }
+
+  const cartItems = document.getElementById('cartItems');
+  const summaryLines = document.getElementById('summaryLines');
+  const summaryTotal = document.getElementById('summaryTotal');
+  const cartPayload = document.getElementById('cartPayload');
+  const checkoutButton = document.getElementById('checkoutButton');
+  const checkoutForm = document.getElementById('squareCheckoutForm');
+
+  function productNote(id){
+    const notes = {
+      bundle: 'Complete digital bundle',
+      playbook: 'Instant PDF download',
+      workbook: 'Instant PDF download',
+      scripts: 'Instant PDF download',
+      screenfree: 'Instant PDF download'
+    };
+    return notes[id] || 'Digital resource';
+  }
+
+  function renderCart(){
+    if(!window.MMH_CART) return;
+
+    const cart = window.MMH_CART.read();
+    const totalCents = window.MMH_CART.totalCents();
+
+    cartPayload.value = JSON.stringify(cart);
+    summaryTotal.textContent = window.MMH_CART.formatMoney(totalCents);
+
+    if(cart.length === 0){
+      cartItems.innerHTML = `
+        <div class="cart-empty">
+          <div class="icon">🛒</div>
+          <h2>Your cart is empty</h2>
+          <p>Add the Complete Bundle or browse the shop to choose the resources that fit your homeschool right now.</p>
+          <a class="btn btn-pink" href="shop.html">Browse Products</a>
+        </div>
+      `;
+      summaryLines.innerHTML = '<div class="summary-line"><span>No items yet</span><strong>$0.00</strong></div>';
+      checkoutButton.disabled = true;
+      checkoutButton.style.opacity = '0.55';
+      checkoutButton.style.cursor = 'not-allowed';
+      return;
+    }
+
+    checkoutButton.disabled = false;
+    checkoutButton.style.opacity = '1';
+    checkoutButton.style.cursor = 'pointer';
+
+    cartItems.innerHTML = cart.map(function(item){
+      const product = window.MMH_CART.products[item.id] || item;
+      const qty = Number(item.quantity || 1);
+      const lineTotal = Number(item.priceCents || 0) * qty;
+
+      return `
+        <article class="cart-item">
+          <img src="${item.image}" alt="${item.name}">
+          <div class="item-info">
+            <h3>${item.name}</h3>
+            <p>${productNote(item.id)}</p>
+            <div class="item-controls">
+              <div class="qty" aria-label="Quantity">
+                <button type="button" data-qty-minus="${item.id}" aria-label="Decrease quantity">−</button>
+                <span>${qty}</span>
+                <button type="button" data-qty-plus="${item.id}" aria-label="Increase quantity">+</button>
+              </div>
+              <button type="button" class="remove" data-remove="${item.id}">Remove</button>
+            </div>
+          </div>
+          <div class="item-price">${window.MMH_CART.formatMoney(lineTotal)}</div>
+        </article>
+      `;
+    }).join('');
+
+    summaryLines.innerHTML = cart.map(function(item){
+      const qty = Number(item.quantity || 1);
+      const lineTotal = Number(item.priceCents || 0) * qty;
+      return `
+        <div class="summary-line">
+          <span>${item.name}${qty > 1 ? ' × ' + qty : ''}</span>
+          <strong>${window.MMH_CART.formatMoney(lineTotal)}</strong>
+        </div>
+      `;
+    }).join('');
+
+    document.querySelectorAll('[data-remove]').forEach(function(btn){
+      btn.addEventListener('click', function(){
+        window.MMH_CART.remove(btn.getAttribute('data-remove'));
+      });
+    });
+
+    document.querySelectorAll('[data-qty-minus]').forEach(function(btn){
+      btn.addEventListener('click', function(){
+        const id = btn.getAttribute('data-qty-minus');
+        const item = window.MMH_CART.read().find(function(cartItem){ return cartItem.id === id; });
+        if(item){
+          const nextQty = Math.max(1, Number(item.quantity || 1) - 1);
+          window.MMH_CART.setQuantity(id, nextQty);
+        }
+      });
+    });
+
+    document.querySelectorAll('[data-qty-plus]').forEach(function(btn){
+      btn.addEventListener('click', function(){
+        const id = btn.getAttribute('data-qty-plus');
+        const item = window.MMH_CART.read().find(function(cartItem){ return cartItem.id === id; });
+        if(item){
+          window.MMH_CART.setQuantity(id, Number(item.quantity || 1) + 1);
+        }
+      });
+    });
+  }
+
+  checkoutForm.addEventListener('submit', function(event){
+    const cart = window.MMH_CART ? window.MMH_CART.read() : [];
+    if(cart.length === 0){
+      event.preventDefault();
+      alert('Your cart is empty.');
+      return;
+    }
+    cartPayload.value = JSON.stringify(cart);
+  });
+
+  window.MMH_RENDER_CART_PAGE = renderCart;
+
+  document.addEventListener('DOMContentLoaded', renderCart);
+  setTimeout(renderCart, 50);
+})();
+</script>
+</body>
+</html>
