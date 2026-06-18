@@ -337,11 +337,9 @@ footer a { color:var(--pink-light); }
     <div id="addonsSummary"></div>
     <div class="summary-total"><span>Total</span><span class="amount" id="totalAmount">$35.00</span></div>
 
-    <form id="checkoutForm" action="api/create-checkout.php" method="post">
-      <input type="hidden" name="products[]" value="bundle">
-      <input type="hidden" name="addons" id="addonsField" value="">
-      <button type="submit" class="btn btn-pink">Add Bundle to Cart</button>
-    </form>
+    <button type="button" class="btn btn-pink" data-product-id="bundle">
+  Add Bundle to Cart
+</button>
 
     <a href="product-bundle.html" class="btn btn-secondary">Read the full product page</a>
 
@@ -427,5 +425,6 @@ footer a { color:var(--pink-light); }
   updateCart();
 })();
 </script>
+  <script src="assets/cart.js"></script>
 </body>
 </html>
