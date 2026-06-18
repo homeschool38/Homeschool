@@ -1,0 +1,431 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Complete Bundle Checkout | My Muslim Homeschool</title>
+<meta name="description" content="Review the Complete Muslim Homeschool Bundle, add helpful extras, and continue to secure checkout.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Nunito:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --pink: #e8868a;
+  --pink-light: #f5c0c2;
+  --pink-pale: #fdf0f0;
+  --sage: #85b5a8;
+  --sage-light: #b8d5ce;
+  --sage-pale: #edf6f4;
+  --yellow: #e8c45a;
+  --yellow-pale: #fdf8e8;
+  --yellow-dark: #c9a83a;
+  --peach: #f0a882;
+  --peach-pale: #fdf3ee;
+  --charcoal: #2e2e2e;
+  --mid: #5a5252;
+  --light-text: #8a7f7f;
+  --cream: #fdf9f6;
+  --white: #ffffff;
+  --border: #edddd8;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; font-size:18px; }
+body { font-family:'Nunito',sans-serif; background:linear-gradient(135deg,var(--pink-pale) 0%,var(--yellow-pale) 48%,var(--sage-pale) 100%); color:var(--charcoal); line-height:1.65; overflow-x:hidden; }
+img { max-width:100%; height:auto; display:block; }
+a { color:inherit; text-decoration:none; }
+.container { max-width:1160px; margin:0 auto; padding:0 24px; }
+h1,h2,h3,.nav-logo span,.eyebrow { font-family:'Playfair Display',Georgia,'Times New Roman',serif; line-height:1.25; }
+p { color:var(--mid); font-weight:300; }
+
+nav {
+  background:rgba(255,255,255,0.96);
+  border-bottom:2px solid var(--pink-light);
+  padding:12px 28px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  position:sticky;
+  top:0;
+  z-index:100;
+  box-shadow:0 2px 12px rgba(232,134,138,0.1);
+}
+.nav-logo { display:flex; align-items:center; gap:10px; }
+.nav-logo img { height:62px; width:62px; object-fit:contain; border-radius:50%; }
+.nav-logo span { font-size:1.45rem; color:var(--charcoal); line-height:1.18; }
+.nav-links { display:flex; align-items:center; gap:18px; }
+.nav-links a { font-size:0.95rem; font-weight:700; letter-spacing:0.04em; color:var(--mid); transition:color 0.2s; }
+.nav-links a:hover { color:var(--pink); }
+.nav-cta { background:var(--pink); color:var(--white)!important; padding:8px 22px; border-radius:30px; }
+.nav-cta:hover { background:var(--peach)!important; color:var(--white)!important; }
+.mobile-menu-toggle { display:none; flex-direction:column; gap:5px; cursor:pointer; background:none; border:none; padding:4px; }
+.mobile-menu-toggle span { display:block; width:26px; height:2.5px; background:var(--charcoal); border-radius:2px; transition:all 0.3s ease; }
+
+.checkout-hero { padding:54px 0 28px; text-align:center; position:relative; }
+.eyebrow { color:var(--sage); letter-spacing:0.16em; text-transform:uppercase; font-size:0.88rem; font-weight:700; margin-bottom:12px; }
+.checkout-hero h1 { font-size:clamp(2rem,5vw,3.4rem); font-weight:600; max-width:800px; margin:0 auto 12px; }
+.checkout-hero h1 em { color:var(--pink); font-style:italic; }
+.checkout-hero p { font-size:1.08rem; max-width:650px; margin:0 auto; }
+
+.checkout-layout {
+  display:grid;
+  grid-template-columns:minmax(0,1.1fr) 420px;
+  gap:28px;
+  align-items:start;
+  padding:28px 0 70px;
+}
+.panel {
+  background:rgba(255,255,255,0.96);
+  border:1px solid var(--border);
+  border-radius:24px;
+  box-shadow:0 12px 40px rgba(98,67,53,0.09);
+}
+.bundle-panel { padding:30px; }
+.product-top { display:grid; grid-template-columns:170px 1fr; gap:24px; align-items:center; }
+.product-top img { border-radius:14px; box-shadow:0 8px 22px rgba(0,0,0,0.12); background:var(--cream); }
+.badge {
+  display:inline-flex;
+  width:max-content;
+  align-items:center;
+  gap:6px;
+  background:var(--yellow);
+  color:var(--charcoal);
+  font-size:0.78rem;
+  font-weight:800;
+  letter-spacing:0.08em;
+  text-transform:uppercase;
+  padding:5px 12px;
+  border-radius:999px;
+  margin-bottom:10px;
+}
+.product-copy h2 { font-size:1.75rem; margin-bottom:8px; }
+.price-row { display:flex; align-items:baseline; gap:12px; margin:10px 0 14px; }
+.price { color:var(--pink); font-family:'Playfair Display',serif; font-size:2.5rem; font-weight:700; line-height:1; }
+.compare { color:var(--light-text); text-decoration:line-through; font-size:1.05rem; }
+.save { color:var(--sage); font-weight:800; font-size:0.95rem; }
+.check-list { list-style:none; display:grid; grid-template-columns:1fr 1fr; gap:10px 18px; margin:28px 0 8px; }
+.check-list li { color:var(--mid); font-size:0.96rem; padding-left:28px; position:relative; }
+.check-list li::before { content:'✓'; position:absolute; left:0; top:0; color:var(--sage); font-weight:900; }
+
+.upsell-section { margin-top:24px; padding-top:26px; border-top:1px dashed var(--border); }
+.upsell-section h3 { font-size:1.45rem; margin-bottom:6px; }
+.upsell-section .intro { margin-bottom:18px; }
+.upsell-grid { display:grid; gap:14px; }
+.upsell-card {
+  display:grid;
+  grid-template-columns:74px 1fr auto;
+  gap:16px;
+  align-items:center;
+  border:2px solid var(--border);
+  border-radius:18px;
+  padding:14px;
+  background:var(--cream);
+  transition:all 0.2s ease;
+  cursor:pointer;
+}
+.upsell-card:hover, .upsell-card.selected {
+  border-color:var(--sage);
+  background:var(--sage-pale);
+  transform:translateY(-1px);
+}
+.upsell-card img { width:74px; height:74px; object-fit:cover; border-radius:12px; background:#fff; }
+.upsell-card h4 { font-size:1rem; margin-bottom:2px; color:var(--charcoal); }
+.upsell-card p { font-size:0.84rem; line-height:1.4; margin:0; }
+.upsell-card .upsell-price { color:var(--pink); font-weight:900; white-space:nowrap; }
+.upsell-card input { width:21px; height:21px; accent-color:var(--sage); margin-left:10px; }
+
+.summary-panel {
+  position:sticky;
+  top:102px;
+  padding:26px;
+}
+.summary-panel h2 { font-size:1.5rem; margin-bottom:18px; }
+.summary-line {
+  display:flex;
+  justify-content:space-between;
+  gap:18px;
+  padding:12px 0;
+  border-bottom:1px solid var(--border);
+  color:var(--mid);
+  font-size:0.95rem;
+}
+.summary-line strong { color:var(--charcoal); }
+.summary-total {
+  display:flex;
+  justify-content:space-between;
+  align-items:baseline;
+  margin:18px 0;
+  padding-top:8px;
+}
+.summary-total span:first-child { font-weight:900; color:var(--charcoal); }
+.summary-total .amount { font-size:2rem; color:var(--pink); font-weight:900; font-family:'Playfair Display',serif; }
+.btn {
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  width:100%;
+  border:none;
+  border-radius:999px;
+  padding:16px 24px;
+  font-size:0.95rem;
+  font-weight:900;
+  letter-spacing:0.08em;
+  text-transform:uppercase;
+  cursor:pointer;
+  transition:all 0.2s ease;
+  font-family:'Nunito',sans-serif;
+}
+.btn-pink { background:var(--pink); color:var(--white); box-shadow:0 10px 24px rgba(232,134,138,0.28); }
+.btn-pink:hover { background:var(--peach); transform:translateY(-2px); }
+.btn-secondary { margin-top:12px; background:var(--white); color:var(--mid); border:1px solid var(--border); box-shadow:none; }
+.btn-secondary:hover { background:var(--yellow-pale); color:var(--charcoal); }
+.trust-list { display:grid; gap:8px; margin:18px 0 0; color:var(--light-text); font-size:0.88rem; }
+.guarantee {
+  margin-top:18px;
+  padding:14px;
+  border-radius:14px;
+  background:var(--yellow-pale);
+  border:1px solid rgba(232,196,90,0.45);
+  font-size:0.88rem;
+  color:var(--mid);
+}
+.guarantee strong { color:var(--charcoal); }
+.notice {
+  margin-top:18px;
+  font-size:0.82rem;
+  color:var(--light-text);
+  text-align:center;
+  line-height:1.5;
+}
+footer {
+  background:var(--charcoal);
+  color:rgba(255,255,255,0.55);
+  text-align:center;
+  padding:22px;
+  font-size:0.85rem;
+}
+footer a { color:var(--pink-light); }
+
+@media(max-width:940px) {
+  .checkout-layout { grid-template-columns:1fr; }
+  .summary-panel { position:static; }
+}
+@media(max-width:760px) {
+  nav { padding:10px 16px; }
+  .nav-logo img { height:50px; width:50px; }
+  .nav-logo span { font-size:1.15rem; }
+  .nav-links { display:none; }
+  .nav-links.mobile-open {
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    position:absolute;
+    top:100%;
+    left:0;
+    right:0;
+    background:var(--white);
+    padding:20px 24px;
+    gap:14px;
+    border-bottom:2px solid var(--pink-light);
+    box-shadow:0 10px 30px rgba(0,0,0,0.05);
+  }
+  .mobile-menu-toggle { display:flex; }
+  .mobile-menu-toggle.active span:nth-child(1) { transform:rotate(45deg) translate(5px,6px); }
+  .mobile-menu-toggle.active span:nth-child(2) { opacity:0; }
+  .mobile-menu-toggle.active span:nth-child(3) { transform:rotate(-45deg) translate(5px,-6px); }
+  .product-top { grid-template-columns:1fr; text-align:center; }
+  .product-top img { max-width:230px; margin:0 auto; }
+  .badge { margin-left:auto; margin-right:auto; }
+  .price-row { justify-content:center; flex-wrap:wrap; }
+  .check-list { grid-template-columns:1fr; }
+  .upsell-card { grid-template-columns:62px 1fr; }
+  .upsell-card img { width:62px; height:62px; }
+  .upsell-card .upsell-price { grid-column:2; }
+  .upsell-card input { grid-column:1; grid-row:2; margin:0 auto; }
+}
+</style>
+</head>
+<body>
+<nav id="nav">
+  <a class="nav-logo" href="index.html" aria-label="My Muslim Homeschool home">
+    <img src="images/logo/logo.png" alt="My Muslim Homeschool">
+    <span>My Muslim<br>Homeschool</span>
+  </a>
+  <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="nav-links" id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="index.html#free-course">Free Course</a>
+    <a href="product-bundle.html">Shop</a>
+    <a href="blog.html">Blog</a>
+    <a href="index.html#about">About</a>
+    <a href="homeschool-course-landing.html">Course</a>
+    <a class="nav-cta" href="bundle-checkout.html">Bundle $35</a>
+  </div>
+</nav>
+
+<header class="checkout-hero">
+  <div class="container">
+    <p class="eyebrow">Complete your order</p>
+    <h1>Add the Complete Bundle to your cart <em>with one gentle click.</em></h1>
+    <p>Review what is included, choose any helpful add-ons, then continue to secure Square checkout. Your PDFs are delivered by email after purchase.</p>
+  </div>
+</header>
+
+<main class="container checkout-layout">
+  <section class="panel bundle-panel">
+    <div class="product-top">
+      <img src="images/products/complete-bundle.png" alt="The Complete Muslim Homeschool Bundle">
+      <div class="product-copy">
+        <span class="badge">Best value • Save $7</span>
+        <h2>The Complete Muslim Homeschool Bundle</h2>
+        <p>Everything you need to start, reset, and teach in your Islamic homeschool — all in one place, at one price.</p>
+        <div class="price-row">
+          <span class="price">$35</span>
+          <span class="compare">$42</span>
+          <span class="save">Save $7 today</span>
+        </div>
+      </div>
+    </div>
+
+    <ul class="check-list">
+      <li>Morning Routine Playbook</li>
+      <li>Homeschool Reset Workbook</li>
+      <li>15 Prophet Story Scripts</li>
+      <li>Quick Reference Card bonus</li>
+      <li>Reset at a Glance bonus</li>
+      <li>Instant PDF email delivery</li>
+    </ul>
+
+    <section class="upsell-section">
+      <h3>You may also like</h3>
+      <p class="intro">These are optional. Add one now if it would make your homeschool rhythm easier.</p>
+
+      <div class="upsell-grid">
+        <label class="upsell-card" data-product="screenfree" data-price="999">
+          <img src="images/products/screen-free-challenge-cards.png" alt="100 Screen-Free Challenge Cards">
+          <div>
+            <h4>100 Screen-Free Challenge Cards</h4>
+            <p>A jar-ready activity set for meaningful, screen-free Muslim family days.</p>
+          </div>
+          <div style="display:flex;align-items:center;gap:8px;">
+            <span class="upsell-price">$9.99</span>
+            <input type="checkbox" name="addons[]" value="screenfree">
+          </div>
+        </label>
+
+        <label class="upsell-card" data-product="coursewaitlist" data-price="0">
+          <img src="images/products/morning-routine-playbook.png" alt="Free email course">
+          <div>
+            <h4>Free 5-Day Morning Course</h4>
+            <p>Join the free email course for calmer Muslim homeschool mornings.</p>
+          </div>
+          <div style="display:flex;align-items:center;gap:8px;">
+            <span class="upsell-price">Free</span>
+            <input type="checkbox" name="addons[]" value="coursewaitlist">
+          </div>
+        </label>
+      </div>
+    </section>
+  </section>
+
+  <aside class="panel summary-panel">
+    <h2>Your cart</h2>
+    <div class="summary-line"><span>The Complete Bundle</span><strong>$35.00</strong></div>
+    <div id="addonsSummary"></div>
+    <div class="summary-total"><span>Total</span><span class="amount" id="totalAmount">$35.00</span></div>
+
+    <form id="checkoutForm" action="api/create-checkout.php" method="post">
+      <input type="hidden" name="products[]" value="bundle">
+      <input type="hidden" name="addons" id="addonsField" value="">
+      <button type="submit" class="btn btn-pink">Continue to Secure Checkout</button>
+    </form>
+
+    <a href="product-bundle.html" class="btn btn-secondary">Read the full product page</a>
+
+    <div class="trust-list">
+      <span>🔒 Secure checkout through Square</span>
+      <span>📩 Digital files delivered by email</span>
+      <span>🍎 Apple Pay appears on eligible Apple devices</span>
+      <span>✨ Google Pay appears on eligible browsers</span>
+    </div>
+
+    <div class="guarantee">
+      <strong>Made for real Muslim homeschool days.</strong> Open it, print it, use it digitally, or tuck the pages into your planning binder. Everything is designed to be simple, gentle, and ready when you are.
+    </div>
+
+    <p class="notice">The optional add-ons on this page are ready for the cart flow. The checkout API needs the next update before add-ons are charged.</p>
+  </aside>
+</main>
+
+<footer>
+  <p>— My Muslim Homeschool — Questions? <a href="mailto:info@mymuslimhomeschool.com">info@mymuslimhomeschool.com</a></p>
+</footer>
+
+<script>
+(function(){
+  const toggle = document.getElementById('mobileMenuToggle');
+  const nav = document.getElementById('navLinks');
+  if(toggle && nav){
+    toggle.addEventListener('click', function(){
+      this.classList.toggle('active');
+      nav.classList.toggle('mobile-open');
+    });
+    nav.querySelectorAll('a').forEach(function(link){
+      link.addEventListener('click', function(){
+        toggle.classList.remove('active');
+        nav.classList.remove('mobile-open');
+      });
+    });
+  }
+
+  const cards = Array.from(document.querySelectorAll('.upsell-card'));
+  const summary = document.getElementById('addonsSummary');
+  const total = document.getElementById('totalAmount');
+  const addonsField = document.getElementById('addonsField');
+
+  const addonData = {
+    screenfree: { name: 'Screen-Free Challenge Cards', price: 999, display: '$9.99' },
+    coursewaitlist: { name: 'Free 5-Day Morning Course', price: 0, display: 'Free' }
+  };
+
+  function money(cents){
+    return '$' + (cents / 100).toFixed(2);
+  }
+
+  function updateCart(){
+    let selected = [];
+    let cents = 3500;
+
+    cards.forEach(function(card){
+      const input = card.querySelector('input[type="checkbox"]');
+      const id = input.value;
+      if(input.checked){
+        selected.push(id);
+        cents += addonData[id].price;
+        card.classList.add('selected');
+      } else {
+        card.classList.remove('selected');
+      }
+    });
+
+    summary.innerHTML = selected.map(function(id){
+      return '<div class="summary-line"><span>' + addonData[id].name + '</span><strong>' + addonData[id].display + '</strong></div>';
+    }).join('');
+
+    total.textContent = money(cents);
+    addonsField.value = selected.join(',');
+  }
+
+  cards.forEach(function(card){
+    const input = card.querySelector('input[type="checkbox"]');
+    input.addEventListener('change', updateCart);
+  });
+
+  updateCart();
+})();
+</script>
+</body>
+</html>
