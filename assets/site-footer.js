@@ -117,7 +117,7 @@
       <div class="site-footer-inner">
         <div class="site-footer-brand">
           <a class="site-footer-logo" href="/" aria-label="My Muslim Homeschool home">
-            <img src="/images/logo/logo.png" alt="My Muslim Homeschool logo">
+            <img src="images/logo/My Muslim Homeschool Hub -  White logo.png" alt="My Muslim Homeschool logo">
             <span>My Muslim<br>Homeschool</span>
           </a>
           <p class="site-footer-tagline">
