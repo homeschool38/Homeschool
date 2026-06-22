@@ -35,39 +35,8 @@
 <body>
 <a class="skip" href="#main">Skip to content</a>
 
-<nav id="nav">
-  <a class="logo" href="/" aria-label="My Muslim Homeschool home">
-    <img src="images/logo/logo.png" alt="My Muslim Homeschool logo">
-    <span class="logo-text">My Muslim<br>Homeschool</span>
-  </a>
-
-  <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
-    <span></span>
-    <span></span>
-    <span></span>
-  </button>
-
-  <div class="nav-links" id="navLinks">
-    <a href="/">Home</a>
-    <a href="/#free-course">Free Course</a>
-
-    <div class="dropdown">
-      <a href="/shop.html">Shop <span class="dropdown-arrow">▼</span></a>
-      <div class="dropdown-content">
-        <a href="/product-playbook.html">Morning Routine Playbook</a>
-        <a href="/product-workbook.html">Homeschool Reset Workbook</a>
-        <a href="/product-scripts.html">Prophet Story Scripts</a>
-        <a href="/product-screenfree.html">Screen-Free Challenge Cards</a>
-        <a href="/product-bundle.html">Complete Bundle</a>
-      </div>
-    </div>
-
-    <a href="/blog.html">Blog</a>
-    <a href="/#about">About</a>
-    <a href="/homeschool-course-landing.html">Course</a>
-    <a class="nav-cta" href="/bundle-checkout.html">Bundle $35</a>
-  </div>
-</nav>
+<div id="site-nav"></div>
+<script src="/assets/site-nav.js"></script>
 
 <main id="main">
 <section class="hero"><div class="container"><p class="bismillah">— bismillah ir-rahman ir-raheem —</p><h1>Islamic Studies Homeschool Curriculum Ideas</h1><p class="sub">A simple structure for teaching Islamic studies at home without turning the deen into dry worksheets.</p><a class="btn btn-pink" href="/bundle-checkout.html">Get the Complete Bundle</a></div></section>
@@ -83,25 +52,8 @@
 <div class="faq-item"><h3>Are Prophet stories enough for Islamic studies?</h3><p>They are a powerful foundation, but add Quran, du’a, manners, worship practice, and age-appropriate daily-life lessons.</p></div></div></div></section>
 <section class="cta"><div class="container"><h2 class="section-title">Start with one simple, faith-filled step.</h2><p>Use the bundle to reset your rhythm, teach with less prep, and give your children meaningful Islamic learning at home.</p><a class="btn btn-gold" href="/bundle-checkout.html">Get the Complete Bundle — $35</a></div></section>
 </main>
-<footer class="footer">— My Muslim Homeschool — Questions? <a href="mailto:info@mymuslimhomeschool.com">info@mymuslimhomeschool.com</a> — Digital resources for personal household use only</footer>
+<div id="site-footer"></div>
+<script src="/assets/site-footer.js"></script>
 
-<script>
-(function(){
-  const toggle = document.getElementById('mobileMenuToggle');
-  const navLinks = document.getElementById('navLinks');
-  if (toggle && navLinks) {
-    toggle.addEventListener('click', function(){
-      toggle.classList.toggle('active');
-      navLinks.classList.toggle('mobile-open');
-    });
-    navLinks.querySelectorAll('a').forEach(function(link){
-      link.addEventListener('click', function(){
-        toggle.classList.remove('active');
-        navLinks.classList.remove('mobile-open');
-      });
-    });
-  }
-})();
-</script>
 </body>
 </html>
