@@ -1203,6 +1203,194 @@ footer a:hover { color:var(--white); }
   }
 }
 
+
+/* ===== NEW BEST VALUE BUNDLE STRIP ===== */
+.best-value-section {
+  width: 100%;
+  background: #fffdf8;
+  padding: 18px clamp(20px, 2.4vw, 46px) 34px;
+}
+
+.best-value-card {
+  width: 100%;
+  min-height: 176px;
+  display: grid;
+  grid-template-columns: minmax(280px, 34%) 1fr auto;
+  align-items: center;
+  gap: clamp(26px, 4vw, 72px);
+  background: rgba(255, 255, 255, 0.92);
+  border: 1.5px solid #ead7c8;
+  border-radius: 18px;
+  box-shadow: 0 12px 28px rgba(38,55,51,0.055);
+  overflow: hidden;
+  padding: 0 clamp(28px, 3.4vw, 58px) 0 0;
+}
+
+.best-value-image {
+  height: 100%;
+  min-height: 176px;
+  overflow: hidden;
+}
+
+.best-value-image img {
+  width: 100%;
+  height: 100%;
+  min-height: 176px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.best-value-copy {
+  padding: 24px 0;
+}
+
+.best-value-kicker {
+  display: block;
+  color: #d99a12;
+  font-size: 0.86rem;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin: 0 0 8px;
+}
+
+.best-value-copy h2 {
+  font-family: 'Playfair Display', Georgia, serif;
+  color: #214f4a;
+  font-size: clamp(1.45rem, 2vw, 2.15rem);
+  font-weight: 500;
+  line-height: 1.1;
+  margin: 0 0 8px;
+}
+
+.best-value-copy p {
+  color: #373737;
+  font-size: 0.96rem;
+  line-height: 1.45;
+  font-weight: 600;
+  margin: 0 0 14px;
+}
+
+.best-value-points {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(180px, 1fr));
+  gap: 8px 30px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.best-value-points li {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #285f59;
+  font-size: 0.88rem;
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+.best-value-points li::before {
+  content: '⊙';
+  color: #9aa787;
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.best-value-action {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  min-width: 230px;
+}
+
+.best-value-btn {
+  min-width: 220px;
+  min-height: 58px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background: #285f59;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 900;
+  line-height: 1;
+  box-shadow: 0 10px 22px rgba(40,95,89,0.18);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.best-value-btn:hover {
+  background: #214f4a;
+  transform: translateY(-2px);
+  box-shadow: 0 14px 26px rgba(40,95,89,0.22);
+}
+
+.best-value-meta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  color: #df7164;
+  font-size: 0.78rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.best-value-meta span + span::before {
+  content: '•';
+  color: #d3a747;
+  margin-right: 14px;
+}
+
+@media (max-width: 980px) {
+  .best-value-card {
+    grid-template-columns: 1fr;
+    padding: 0 24px 28px;
+    gap: 18px;
+  }
+
+  .best-value-image {
+    margin: 0 -24px;
+    min-height: 220px;
+  }
+
+  .best-value-image img {
+    min-height: 220px;
+  }
+
+  .best-value-copy {
+    padding: 0;
+    text-align: center;
+  }
+
+  .best-value-points {
+    max-width: 560px;
+    margin: 0 auto;
+    text-align: left;
+  }
+
+  .best-value-action {
+    width: 100%;
+  }
+}
+
+@media (max-width: 620px) {
+  .best-value-section {
+    padding: 16px 18px 30px;
+  }
+
+  .best-value-points {
+    grid-template-columns: 1fr;
+  }
+
+  .best-value-btn {
+    width: 100%;
+  }
+}
+
 </style>
 
 <script type="application/ld+json">
@@ -1474,63 +1662,33 @@ footer a:hover { color:var(--white); }
   </div>
 </section>
 
-<!-- ===== WHO IS THIS FOR (from current site) ===== -->
-<section class="for-who">
-  <div class="for-who-inner">
-    <p class="section-label">Is this for me?</p>
-    <h2 class="section-title">This is for the sister who <em>keeps showing up</em></h2>
-    <div class="who-grid">
-      <div class="who-item"><span class="flower">🌸</span>Your mornings feel rushed &amp; ungrounded no matter what you try</div>
-      <div class="who-item"><span class="flower">🌸</span>You want your days to begin with Allah, not with chaos</div>
-      <div class="who-item"><span class="flower">🌸</span>You've restarted your homeschool &amp; need a fresh, gentle approach</div>
-      <div class="who-item"><span class="flower">🌸</span>You want your children to love the prophets, not just know their names</div>
-      <div class="who-item"><span class="flower">🌸</span>You're in a newborn, toddler or busy season &amp; need grace + guidance</div>
-      <div class="who-item"><span class="flower">🌸</span>You believe your home can be a place of light, love &amp; learning</div>
-      <div class="who-item"><span class="flower">🌸</span>You want your homeschool to feel like worship, not just school at home</div>
-      <div class="who-item"><span class="flower">🌸</span>You're tired of comparing your journey to everyone else's highlight reel</div>
-      <div class="who-item"><span class="flower">🌸</span>You know Allah chose you for this, even when it feels hard</div>
-      <div class="who-item"><span class="flower">🌸</span>You want screen-free activities that still feel meaningful and rooted in deen</div>
+<!-- ===== BEST VALUE SECTION ===== -->
+<section class="best-value-section" id="bundle">
+  <div class="best-value-card">
+    <div class="best-value-image">
+      <img src="images/home/Best value.png" alt="Complete Homeschool Bundle preview with printable Islamic homeschool resources">
     </div>
-  </div>
-</section>
 
-<!-- ===== BUNDLE (from new site design) ===== -->
-<section class="bundle-section" id="bundle">
-  <div class="bundle-inner">
-    <p class="section-label">Best Value</p>
-    <h2 class="section-title">Get all three <em>and save $7</em></h2>
-    <p style="color:var(--mid);font-weight:300;font-size:0.95rem;max-width:480px;margin:0 auto 24px;">Start your mornings right, reset your homeschool, and bring Prophet stories to life. Everything your homeschool needs, in one beautiful bundle.</p>
-    <div class="bundle-card-new">
-      <span class="bundle-ribbon">Complete Bundle — Best Value</span>
-      <div class="bundle-content">
-        <div class="bundle-left">
-          <h3>⭐ The Complete Bundle</h3>
-          <div class="bundle-price">$35</div>
-          <div class="bundle-savings">Save $7</div>
-          <ul>
-            <li>Morning Routine Playbook ($7 value)</li>
-            <li>Homeschool Reset Workbook ($15 value)</li>
-            <li>15 Prophet Story Scripts ($20 value)</li>
-            <li>Printable Quick Reference Cards — Included</li>
-            <li>Reset at a Glance Page — Included</li>
-          </ul>
-          <a class="btn btn-gold" href="/bundle-checkout.html" style="display:inline-block;padding:13px 34px;font-size:0.9rem;">Get the Bundle — $35</a>
-        </div>
-        <div class="bundle-right">
-          <div class="bundle-item"><span class="item-name">🕌 Morning Routine Playbook</span><span class="item-price">$7</span></div>
-          <div class="bundle-item"><span class="item-name">📚 Homeschool Reset Workbook</span><span class="item-price">$15</span></div>
-          <div class="bundle-item"><span class="item-name">📖 15 Prophet Story Scripts</span><span class="item-price">$20</span></div>
-          <div class="bundle-item"><span class="item-name">📋 Quick Reference Cards</span><span class="item-price" style="color:var(--sage);">Included</span></div>
-          <div class="bundle-item"><span class="item-name">📌 Reset at a Glance Page</span><span class="item-price" style="color:var(--sage);">Included</span></div>
-          <div class="bundle-total">
-            <span class="total-label">Bundle Price</span>
-            <span class="total-price"><span class="strikethrough">$42</span> $35</span>
-          </div>
-        </div>
+    <div class="best-value-copy">
+      <span class="best-value-kicker">Best Value</span>
+      <h2>Complete Homeschool Bundle</h2>
+      <p>Best for getting started with your homeschool rhythm.</p>
+
+      <ul class="best-value-points">
+        <li>Planning tools</li>
+        <li>Islamic studies</li>
+        <li>Save time, stay organized, and feel confident.</li>
+        <li>Activities &amp; more</li>
+      </ul>
+    </div>
+
+    <div class="best-value-action">
+      <a class="best-value-btn" href="/bundle-checkout.html">Get the Bundle Now</a>
+      <div class="best-value-meta">
+        <span>Instant Download</span>
+        <span>Great Value</span>
       </div>
     </div>
-    <a class="btn btn-pink btn-large" href="/bundle-checkout.html">Yes — I Want the Bundle for $35</a>
-    <p class="secure">🔒 Secure checkout — Instant PDF delivery — No account needed</p>
   </div>
 </section>
 
