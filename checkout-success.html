@@ -32,10 +32,16 @@
         radial-gradient(circle at top left, rgba(238, 207, 197, 0.45), transparent 32rem),
         radial-gradient(circle at bottom right, rgba(156, 175, 136, 0.28), transparent 34rem),
         var(--cream);
+    }
+
+    a { color: inherit; }
+
+    .success-wrap {
+      min-height: calc(100vh - 260px);
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 28px;
+      padding: 56px 28px;
     }
 
     .card {
@@ -151,29 +157,37 @@
   </style>
 </head>
 <body>
-  <main class="card">
-    <img class="logo" src="images/logo/logo.png" alt="My Muslim Homeschool" />
-    <div class="badge" aria-hidden="true">✓</div>
+  <div id="site-nav"></div>
+  <script src="/assets/site-nav.js"></script>
 
-    <h1>Order received!</h1>
+  <div class="success-wrap">
+    <main class="card">
+      <img class="logo" src="images/logo/logo.png" alt="My Muslim Homeschool" />
+      <div class="badge" aria-hidden="true">✓</div>
 
-    <p class="subtitle">
-      Thank you for your purchase. Your digital download email should arrive shortly at the email address used during checkout.
-    </p>
+      <h1>Order received!</h1>
 
-    <div class="notice">
-      <strong>Next step:</strong> Check your inbox for an email from My Muslim Homeschool with your download link. If you do not see it within a few minutes, check your spam, promotions, or updates folder.
-    </div>
+      <p class="subtitle">
+        Thank you for your purchase. Your digital download email should arrive shortly at the email address used during checkout.
+      </p>
 
-    <div class="actions">
-      <a class="button primary" href="index.html#products">Back to Shop</a>
-      <a class="button secondary" href="blog.html">Read the Blog</a>
-    </div>
+      <div class="notice">
+        <strong>Next step:</strong> Check your inbox for an email from My Muslim Homeschool with your download link. If you do not see it within a few minutes, check your spam, promotions, or updates folder.
+      </div>
 
-    <p class="fine-print">
-      Need help? Email <a href="mailto:info@mymuslimhomeschool.com">info@mymuslimhomeschool.com</a>
-      and include the name and email used at checkout.
-    </p>
-  </main>
+      <div class="actions">
+        <a class="button primary" href="shop.html">Back to Shop</a>
+        <a class="button secondary" href="blog.html">Read the Blog</a>
+      </div>
+
+      <p class="fine-print">
+        Need help? Email <a href="mailto:info@mymuslimhomeschool.com">info@mymuslimhomeschool.com</a>
+        and include the name and email used at checkout.
+      </p>
+    </main>
+  </div>
+
+  <div id="site-footer"></div>
+  <script src="/assets/site-footer.js"></script>
 </body>
 </html>
