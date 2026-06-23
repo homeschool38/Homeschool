@@ -125,7 +125,11 @@ p { color: var(--muted); }
   min-height: clamp(620px, 42vw, 780px);
   display: flex;
   align-items: center;
-  background: #fffaf3 url('images/home/Hero Image.png') center top / cover no-repeat;
+  background-color: #fffaf3;
+  background-image: url('images/home/Hero Image.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: auto 118%;
   overflow: hidden;
 }
 .hero .container {
@@ -330,7 +334,7 @@ p { color: var(--muted); }
 .final-cta p { color: rgba(255,255,255,.84); max-width: 680px; margin: 16px auto 28px; }
 
 @media (max-width: 1120px) {
-  .hero { min-height: 560px; background-position: 62% top; }
+  .hero { min-height: 560px; background-position: center center; background-size: auto 120%; }
   .hero .container { padding-left: 28px; }
   .hero::after { background: linear-gradient(90deg, rgba(255,250,243,.94) 0%, rgba(255,250,243,.76) 46%, rgba(255,250,243,.20) 100%); }
   .hero-actions { flex-wrap: wrap; }
