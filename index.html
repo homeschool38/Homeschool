@@ -1,7 +1,6 @@
 
 
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -907,6 +906,171 @@ footer a:hover { color:var(--white); }
   }
 }
 
+
+
+/* ===== NEW SHOP BY CATEGORY SECTION ===== */
+.shop-category-section {
+  width: 100%;
+  background: #fffdf8;
+  padding: 26px clamp(18px, 3vw, 44px) 34px;
+}
+
+.shop-category-inner {
+  width: 100%;
+  max-width: 1420px;
+  margin: 0 auto;
+}
+
+.home-section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin: 0 0 20px;
+  text-align: center;
+}
+
+.home-section-heading::before,
+.home-section-heading::after {
+  content: '';
+  width: 70px;
+  height: 1px;
+  background: #d3a747;
+  opacity: 0.7;
+}
+
+.home-section-heading h2 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(1.65rem, 2.4vw, 2.45rem);
+  line-height: 1;
+  font-weight: 500;
+  color: #214f4a;
+  margin: 0;
+  position: relative;
+}
+
+.home-section-heading h2::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -13px;
+  width: 42px;
+  height: 12px;
+  transform: translateX(-50%);
+  background: radial-gradient(circle at center, #d3a747 0 3px, transparent 4px),
+              linear-gradient(90deg, transparent 0 8px, #d3a747 8px 34px, transparent 34px 42px);
+  opacity: 0.85;
+}
+
+.shop-category-grid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(120px, 1fr));
+  gap: 18px;
+  margin-top: 30px;
+}
+
+.shop-category-card {
+  min-height: 166px;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1.5px solid #ead7c8;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(38, 55, 51, 0.045);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 13px;
+  padding: 18px 10px 16px;
+  text-align: center;
+  position: relative;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.shop-category-card:hover {
+  transform: translateY(-3px);
+  border-color: #d3a747;
+  box-shadow: 0 14px 30px rgba(38, 55, 51, 0.09);
+}
+
+.shop-category-icon {
+  width: 78px;
+  height: 78px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.shop-category-icon img {
+  width: 78px;
+  height: 78px;
+  object-fit: contain;
+}
+
+.shop-category-card span {
+  display: block;
+  color: #252525;
+  font-size: 0.95rem;
+  line-height: 1.18;
+  font-weight: 800;
+  max-width: 130px;
+}
+
+.category-coming-soon {
+  position: absolute;
+  left: 50%;
+  bottom: 9px;
+  transform: translateX(-50%);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 88px;
+  height: 18px;
+  padding: 0 10px;
+  border-radius: 999px;
+  background: #d99a12;
+  color: #fff;
+  font-size: 0.56rem;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+@media (max-width: 1180px) {
+  .shop-category-grid {
+    grid-template-columns: repeat(4, minmax(130px, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .shop-category-section {
+    padding: 28px 18px 32px;
+  }
+
+  .home-section-heading::before,
+  .home-section-heading::after {
+    width: 38px;
+  }
+
+  .shop-category-grid {
+    grid-template-columns: repeat(2, minmax(130px, 1fr));
+    gap: 14px;
+  }
+
+  .shop-category-card {
+    min-height: 156px;
+  }
+
+  .shop-category-icon,
+  .shop-category-icon img {
+    width: 70px;
+    height: 70px;
+  }
+}
+
 </style>
 
 <script type="application/ld+json">
@@ -1043,6 +1207,70 @@ footer a:hover { color:var(--white); }
     <div class="home-promise-item">
       <img src="images/home/Made for muslims.png" alt="" aria-hidden="true">
       <span>Made for Muslim Families</span>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- ===== SHOP BY CATEGORY SECTION ===== -->
+<section class="shop-category-section" id="shop-by-category">
+  <div class="shop-category-inner">
+    <div class="home-section-heading">
+      <h2>Shop by Category</h2>
+    </div>
+
+    <div class="shop-category-grid">
+      <a class="shop-category-card" href="/shop.html#homeschool-planning">
+        <div class="shop-category-icon">
+          <img src="images/home/Muslim Homeschool resources.png" alt="" aria-hidden="true">
+        </div>
+        <span>Homeschool<br>Planning</span>
+      </a>
+
+      <a class="shop-category-card" href="/shop.html#prophet-stories">
+        <div class="shop-category-icon">
+          <img src="images/home/Prophet Stories.png" alt="" aria-hidden="true">
+        </div>
+        <span>Prophet<br>Stories</span>
+      </a>
+
+      <a class="shop-category-card" href="/shop.html#screen-free-activities">
+        <div class="shop-category-icon">
+          <img src="images/home/Screen- Free Activities.png" alt="" aria-hidden="true">
+        </div>
+        <span>Screen-Free<br>Activities</span>
+      </a>
+
+      <a class="shop-category-card" href="/shop.html#islamic-studies">
+        <div class="shop-category-icon">
+          <img src="images/home/Islamic Studies.png" alt="" aria-hidden="true">
+        </div>
+        <span>Islamic<br>Studies</span>
+      </a>
+
+      <a class="shop-category-card" href="/shop.html#names-of-allah">
+        <div class="shop-category-icon">
+          <img src="images/home/Names of Allah for Kids.png" alt="" aria-hidden="true">
+        </div>
+        <span>Names of<br>Allah</span>
+        <em class="category-coming-soon">Coming Soon</em>
+      </a>
+
+      <a class="shop-category-card" href="/shop.html#reading-language-arts">
+        <div class="shop-category-icon">
+          <img src="images/home/Reading and Language Arts.png" alt="" aria-hidden="true">
+        </div>
+        <span>Reading &amp;<br>Language Arts</span>
+        <em class="category-coming-soon">Coming Soon</em>
+      </a>
+
+      <a class="shop-category-card" href="/shop.html#bundles">
+        <div class="shop-category-icon">
+          <img src="images/home/Bundles.png" alt="" aria-hidden="true">
+        </div>
+        <span>Bundles</span>
+      </a>
     </div>
   </div>
 </section>
