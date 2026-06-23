@@ -1,6 +1,7 @@
 
 
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -1200,6 +1201,269 @@ footer a:hover { color:var(--white); }
 
   .featured-resource-card {
     min-height: auto;
+  }
+}
+
+
+/* ===== FULL WIDTH + MOBILE SAFETY OVERRIDES =====
+   These overrides only adjust layout width/responsiveness for the remaining
+   homepage sections. They do not change copy, links, images, nav, or footer.
+*/
+
+.for-who,
+.bundle-section,
+.coming-soon,
+.testimonials-section,
+.faq,
+.closing,
+.about-section,
+.lead-magnet-section,
+.final-cta {
+  width: 100%;
+  max-width: none;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: clamp(20px, 4vw, 72px);
+  padding-right: clamp(20px, 4vw, 72px);
+}
+
+.for-who-inner,
+.bundle-inner,
+.coming-soon-inner,
+.faq-inner,
+.closing-inner,
+.about-grid,
+.lead-magnet-section > .container,
+.course-coming-soon,
+.final-message {
+  width: 100%;
+  max-width: 1500px !important;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pain,
+.products,
+.lead-magnet-wrap {
+  width: 100%;
+  max-width: none;
+  padding-left: clamp(20px, 4vw, 72px);
+  padding-right: clamp(20px, 4vw, 72px);
+}
+
+.pain-inner,
+.products-inner,
+.lead-magnet-inner {
+  width: 100%;
+  max-width: 1500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.who-grid {
+  width: 100%;
+  grid-template-columns: repeat(5, minmax(180px, 1fr));
+  gap: clamp(14px, 1.4vw, 24px);
+}
+
+.bundle-inner {
+  max-width: 1500px !important;
+}
+
+.bundle-card-new {
+  width: 100%;
+}
+
+.bundle-content {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+}
+
+.coming-soon-inner {
+  max-width: 980px !important;
+}
+
+.testimonials-grid {
+  width: 100%;
+  max-width: 1500px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(20px, 2vw, 36px);
+}
+
+.faq-inner {
+  max-width: 1300px !important;
+}
+
+.faq-grid {
+  width: 100%;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 clamp(28px, 4vw, 72px);
+}
+
+.about-grid {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: clamp(28px, 4vw, 70px);
+  align-items: stretch;
+}
+
+.about-founder,
+.promise-card,
+.guarantee-card,
+.lead-magnet-card,
+.testimonial-card {
+  width: 100%;
+}
+
+.lead-magnet-section > .container {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.lead-magnet-card {
+  max-width: 1200px;
+}
+
+.lead-magnet-card .lm-benefits {
+  max-width: 980px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.lead-magnet-form {
+  max-width: 760px;
+}
+
+.final-cta > h2,
+.final-cta > .final-subtitle,
+.final-cta > .course-coming-soon,
+.final-cta > .final-message {
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ccs-grid {
+  width: 100%;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(12px, 1.3vw, 20px);
+}
+
+@media (max-width: 1180px) {
+  .who-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .ccs-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 900px) {
+  .for-who,
+  .bundle-section,
+  .coming-soon,
+  .testimonials-section,
+  .faq,
+  .closing,
+  .about-section,
+  .lead-magnet-section,
+  .final-cta,
+  .pain,
+  .products,
+  .lead-magnet-wrap {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+
+  .who-grid,
+  .testimonials-grid,
+  .faq-grid,
+  .about-grid,
+  .bundle-content,
+  .lead-magnet-card .lm-benefits {
+    grid-template-columns: 1fr;
+  }
+
+  .coming-form,
+  .lead-magnet-form .form-row {
+    width: 100%;
+    max-width: none;
+    flex-direction: column;
+  }
+
+  .coming-form input[type="email"],
+  .coming-form .btn,
+  .lead-magnet-form input[type="text"],
+  .lead-magnet-form input[type="email"],
+  .lead-magnet-form .btn {
+    width: 100%;
+  }
+
+  .ccs-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .btn,
+  .btn-large {
+    max-width: 100%;
+    justify-content: center;
+    white-space: normal;
+    text-align: center;
+  }
+}
+
+@media (max-width: 620px) {
+  .for-who,
+  .bundle-section,
+  .coming-soon,
+  .testimonials-section,
+  .faq,
+  .closing,
+  .about-section,
+  .lead-magnet-section,
+  .final-cta,
+  .pain,
+  .products,
+  .lead-magnet-wrap {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .who-grid,
+  .ccs-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bundle-card-new,
+  .lead-magnet-card,
+  .about-founder,
+  .promise-card,
+  .guarantee-card,
+  .testimonial-card {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .bundle-ribbon {
+    max-width: calc(100vw - 48px);
+    white-space: normal;
+    text-align: center;
+  }
+
+  .bundle-item,
+  .bundle-total {
+    gap: 12px;
+  }
+
+  .bundle-item .item-name {
+    padding-right: 8px;
+  }
+
+  .faq-item {
+    text-align: left;
+  }
+
+  .final-cta {
+    text-align: center;
   }
 }
 
