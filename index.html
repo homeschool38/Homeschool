@@ -667,6 +667,7 @@ footer a:hover { color:var(--white); }
   width: 100%;
   background: #fffdf8;
   padding: 0 0 28px;
+  margin-top: 0;
   overflow: hidden;
   position: relative;
 }
@@ -732,24 +733,28 @@ footer a:hover { color:var(--white); }
 .home-hero-actions {
   display: flex;
   align-items: center;
-  gap: 18px;
-  flex-wrap: wrap;
+  gap: 14px;
+  flex-wrap: nowrap;
 }
 
 .hero-btn {
-  min-height: 62px;
+  min-height: 72px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 14px;
+  gap: 12px;
   border-radius: 8px;
-  padding: 0 26px;
-  font-size: 0.94rem;
+  padding: 0 20px;
+  font-size: 0.95rem;
   font-weight: 800;
   line-height: 1;
   box-shadow: 0 8px 18px rgba(37, 37, 37, 0.08);
   border: 1px solid rgba(35, 79, 74, 0.14);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hero-btn span {
+  white-space: nowrap;
 }
 
 .hero-btn:hover {
@@ -758,8 +763,8 @@ footer a:hover { color:var(--white); }
 }
 
 .hero-btn img {
-  width: 34px;
-  height: 34px;
+  width: 68px;
+  height: 68px;
   object-fit: contain;
   flex: 0 0 auto;
 }
@@ -793,16 +798,22 @@ footer a:hover { color:var(--white); }
   display: inline-flex;
   align-items: center;
   gap: 11px;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   font-weight: 800;
   color: #214f4a;
   white-space: nowrap;
 }
 
 .home-promise-item img {
-  width: 38px;
-  height: 38px;
+  width: 76px;
+  height: 76px;
   object-fit: contain;
+}
+
+
+/* Remove the old nav spacer so the hero touches the menu area. */
+.header-spacer {
+  height: 0 !important;
 }
 
 @media (max-width: 1180px) {
@@ -864,8 +875,8 @@ footer a:hover { color:var(--white); }
   }
 
   .hero-btn img {
-    width: 32px;
-    height: 32px;
+    width: 56px;
+    height: 56px;
   }
 
   .home-hero-image,
@@ -886,8 +897,8 @@ footer a:hover { color:var(--white); }
   }
 
   .home-promise-item img {
-    width: 34px;
-    height: 34px;
+    width: 62px;
+    height: 62px;
   }
 }
 
