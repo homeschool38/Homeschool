@@ -37,6 +37,51 @@ $catalog = [
     'amount' => 999,
     'variation_id' => 'F5ZY4GB2GMO7WI6DTLUUIVEX',
   ],
+  'ar-rahman-discovery-pack' => [
+    'name' => 'Ar-Raḥmān Discovery Pack',
+    'amount' => 1000,
+    'variation_id' => 'DPIMRPRUITF6A22QSMBBQDH6',
+  ],
+  'ar-rahman-child-workbook' => [
+    'name' => 'Ar-Raḥmān Child Workbook',
+    'amount' => 500,
+    'variation_id' => '3SEUYXOIIIPKZL74GW2JZFGJ',
+  ],
+  'ar-rahman-parent-guide' => [
+    'name' => 'Ar-Raḥmān Parent Guide',
+    'amount' => 500,
+    'variation_id' => '4T326QR2O5DFRQFJWIBFAP4M',
+  ],
+  'ar-rahim-discovery-pack' => [
+    'name' => 'Ar-Raḥīm Discovery Pack',
+    'amount' => 1000,
+    'variation_id' => 'NQJIK4ETADU4C37WTJHAYUF7',
+  ],
+  'ar-rahim-child-workbook' => [
+    'name' => 'Ar-Raḥīm Child Workbook',
+    'amount' => 500,
+    'variation_id' => 'AQZXYAUT6PAETXKVLL6DYG6F',
+  ],
+  'ar-rahim-parent-guide' => [
+    'name' => 'Ar-Raḥīm Parent Guide',
+    'amount' => 500,
+    'variation_id' => 'YPUBETDZ6D4IPYXAZSV36B2U',
+  ],
+  'as-salam-discovery-pack' => [
+    'name' => 'As-Salām Discovery Pack',
+    'amount' => 1000,
+    'variation_id' => 'M5U4BYKSX6XQCF5BWKOPFTN7',
+  ],
+  'as-salam-child-workbook' => [
+    'name' => 'As-Salām Child Workbook',
+    'amount' => 500,
+    'variation_id' => 'SNXSI64GRBVZVALOOOIPN3Z6',
+  ],
+  'as-salam-parent-guide' => [
+    'name' => 'As-Salām Parent Guide',
+    'amount' => 500,
+    'variation_id' => 'AQS4PUDH4XZ6FW23J35I4ZDU',
+  ],
 ];
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
