@@ -1,11 +1,12 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>99 Names of Allah for Kids | My Muslim Homeschool</title>
-<meta name="description" content="A growing printable 99 Names of Allah collection for Muslim children, with child workbooks, parent guides, Qur'an and Sunnah proof, real-life reflection, and hands-on activities.">
+<meta name="description" content="Help your child know Allah's Beautiful Names, not just memorize them. Printable 99 Names of Allah Discovery Packs plus a free guide for teaching one Name in a week.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Nunito:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -43,7 +44,7 @@ body {
 }
 img { max-width:100%; height:auto; display:block; }
 a { color:inherit; text-decoration:none; }
-.container { max-width:1160px; margin:0 auto; padding:0 24px; }
+.container { width:100%; max-width:none; margin:0 auto; padding:0 clamp(18px,4vw,72px); }
 h1,h2,h3,h4,.label,.nav-logo span {
   font-family:'Playfair Display',Georgia,'Times New Roman',serif;
   line-height:1.25;
@@ -109,7 +110,7 @@ nav {
 }
 .hero h1 em { color:var(--pink); font-style:italic; }
 .hero p {
-  max-width:760px;
+  max-width:980px;
   margin:0 auto;
   font-size:1.12rem;
 }
@@ -161,8 +162,9 @@ nav {
   display:grid;
   grid-template-columns:1.02fr 0.98fr;
   gap:30px;
-  align-items:start;
+  align-items:stretch;
 }
+.intro-grid > article { height:100%; }
 .intro-card,
 .method-card,
 .future-card,
@@ -172,6 +174,11 @@ nav {
   border-radius:26px;
   padding:30px;
   box-shadow:0 12px 36px rgba(98,67,53,0.07);
+}
+.intro-card,
+.method-card {
+  display:flex;
+  flex-direction:column;
 }
 .intro-card h2,
 .method-card h2,
@@ -209,15 +216,21 @@ nav {
   grid-template-columns:repeat(2,1fr);
   gap:12px;
   margin-top:18px;
+  flex:1;
+  align-content:stretch;
 }
 .pill {
   background:var(--sage-pale);
   border:1px solid rgba(133,181,168,0.35);
   border-radius:18px;
-  padding:14px;
+  padding:13px 14px;
   color:var(--mid);
   font-weight:800;
   text-align:center;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  min-height:54px;
 }
 
 .section-head {
@@ -230,7 +243,7 @@ nav {
   margin-bottom:10px;
 }
 .section-head h2 em { color:var(--pink); font-style:italic; }
-.section-head p { max-width:720px; margin:0 auto; }
+.section-head p { max-width:920px; margin:0 auto; }
 
 .available-section { padding:42px 0 36px; }
 .name-product {
@@ -357,16 +370,18 @@ nav {
   display:grid;
   grid-template-columns:repeat(3,1fr);
   gap:12px;
-  margin-top:20px;
+  margin-top:18px;
+  align-items:start;
 }
 .buy-card {
   border:1px solid var(--border);
   background:var(--cream);
   border-radius:18px;
-  padding:16px;
+  padding:14px 16px 16px;
   display:flex;
   flex-direction:column;
-  gap:10px;
+  gap:9px;
+  align-self:start;
 }
 .buy-card strong {
   display:block;
@@ -386,6 +401,104 @@ nav {
   padding-right:14px;
   font-size:0.76rem;
   min-height:44px;
+  margin-top:2px;
+}
+
+
+.progress-section { padding:32px 0 20px; }
+.progress-card {
+  background:var(--white);
+  border:1px solid var(--border);
+  border-radius:28px;
+  padding:28px;
+  box-shadow:0 12px 36px rgba(98,67,53,0.07);
+  display:grid;
+  grid-template-columns:0.9fr 1.1fr;
+  gap:24px;
+  align-items:center;
+}
+.progress-number {
+  font-family:'Playfair Display',Georgia,serif;
+  font-size:clamp(2.25rem,6vw,4.5rem);
+  color:var(--pink);
+  line-height:1;
+  font-weight:700;
+}
+.progress-bar {
+  height:14px;
+  background:var(--pink-pale);
+  border-radius:999px;
+  overflow:hidden;
+  border:1px solid rgba(232,134,138,0.2);
+  margin:14px 0 10px;
+}
+.progress-fill {
+  display:block;
+  width:9.1%;
+  height:100%;
+  background:linear-gradient(90deg,var(--pink),var(--sage));
+  border-radius:999px;
+}
+.progress-card strong { color:var(--charcoal); }
+.optin-section { padding:34px 0 46px; }
+.optin-card {
+  background:linear-gradient(135deg,var(--teal-pale),var(--yellow-pale));
+  border:1px solid rgba(36,123,123,0.18);
+  border-radius:30px;
+  padding:30px;
+  box-shadow:0 14px 44px rgba(98,67,53,0.08);
+  display:grid;
+  grid-template-columns:1fr 0.9fr;
+  gap:26px;
+  align-items:center;
+}
+.optin-card h2 {
+  font-size:clamp(1.6rem,3.4vw,2.45rem);
+  font-weight:500;
+  margin-bottom:10px;
+}
+.optin-card h2 em { color:var(--pink); font-style:italic; }
+.optin-placeholder {
+  background:var(--white);
+  border:2px dashed rgba(36,123,123,0.35);
+  border-radius:22px;
+  padding:22px;
+  text-align:center;
+}
+.optin-placeholder strong { display:block; margin-bottom:8px; color:var(--charcoal); }
+.optin-placeholder p { font-size:0.92rem; }
+.offer-note {
+  background:var(--yellow-pale);
+  border:1px solid rgba(232,196,90,0.42);
+  border-radius:18px;
+  padding:14px 16px;
+  color:var(--mid);
+  font-weight:700;
+  margin-top:16px;
+}
+.buy-card.featured {
+  background:var(--white);
+  border:2px solid var(--pink-light);
+  box-shadow:0 8px 20px rgba(232,134,138,0.12);
+}
+.buy-card.featured::before {
+  content:'Best choice';
+  display:inline-flex;
+  width:max-content;
+  background:var(--pink-pale);
+  color:var(--pink);
+  border-radius:999px;
+  padding:3px 9px;
+  font-size:0.66rem;
+  font-weight:900;
+  letter-spacing:0.08em;
+  text-transform:uppercase;
+}
+.name-copy .microcopy {
+  color:var(--light-text);
+  font-size:0.88rem;
+  font-weight:700;
+  margin-top:6px;
 }
 
 .coming-section {
@@ -427,10 +540,10 @@ nav {
 .future-card {
   background:linear-gradient(135deg,var(--white),var(--yellow-pale));
   text-align:center;
-  max-width:920px;
+  width:100%;
   margin:0 auto;
 }
-.future-card p { max-width:790px; margin:0 auto 10px; }
+.future-card p { max-width:980px; margin:0 auto 10px; }
 .future-card p:last-child { margin-bottom:0; }
 .faq-grid {
   display:grid;
@@ -477,6 +590,8 @@ footer a { color:var(--pink-light); }
   .carousel { max-width:520px; margin:0 auto; }
   .buy-grid { grid-template-columns:1fr; }
   .coming-grid { grid-template-columns:repeat(2,1fr); }
+  .progress-card,
+  .optin-card { grid-template-columns:1fr; }
 }
 @media(max-width:720px) {
   nav { padding:10px 16px; }
@@ -520,11 +635,11 @@ footer a { color:var(--pink-light); }
 <header class="hero">
   <div class="container">
     <p class="label">The 99 Names Discovery Journal</p>
-    <h1>99 Names of Allah <em>for Kids</em></h1>
-    <p>A growing printable Islamic learning collection for Muslim children, with child workbooks and parent guides designed to help families learn Allah's Beautiful Names through Qur'an, Sunnah, reflection, real-life lessons, and hands-on activities.</p>
+    <h1>Help Your Child Know Allah’s Beautiful Names, <em>Not Just Memorize Them</em></h1>
+    <p>Start with the available printable Discovery Packs from Collection 1 — a 33-Name study being released one Name at a time for Muslim homeschool families.</p>
     <div class="hero-actions">
       <a class="btn btn-pink" href="#available-names">Shop Available Names</a>
-      <a class="btn btn-secondary" href="#coming-soon">See What's Coming Next</a>
+      <a class="btn btn-secondary" href="#free-lesson">Get the Free Guide</a>
     </div>
   </div>
 </header>
@@ -533,28 +648,76 @@ footer a { color:var(--pink-light); }
   <div class="container intro-grid">
     <article class="intro-card">
       <p class="label">More than memorization</p>
-      <h2>A gentle way to help children <em>know Allah</em>.</h2>
-      <p>Each Name is designed as a complete mini-study. Children learn the meaning of the Name, see proof from the Qur'an and Sunnah, connect the lesson to everyday life, and practice through reflection, writing, activities, du'a, and family discussion.</p>
+      <h2>You don’t need another worksheet your child <em>rushes through</em>.</h2>
+      <p>You want your child to understand what Allah’s Names mean, connect them to real life, use them in du‘ā, and remember Allah in their worries, gratitude, and everyday choices.</p>
+      <p class="offer-note">That is why each Name is built as a complete mini-study — not a single coloring page.</p>
       <ul class="check-list">
         <li>Child workbook pages made for printable, screen-free learning</li>
-        <li>Parent guide pages with deeper teaching support</li>
-        <li>Real-life stories without magic, fantasy, or make-believe</li>
-        <li>Activities for younger children and older kids</li>
+        <li>Parent guide pages so you know what to say and how to guide the discussion</li>
+        <li>Qur’an and Sunnah proof so each lesson is rooted in Islamic sources</li>
+        <li>Real-life stories without magic, fantasy, talking animals, or make-believe</li>
       </ul>
     </article>
 
     <article class="method-card">
-      <p class="label">What's inside each Name</p>
-      <h2>A repeatable structure that can grow to <em>99 Names</em>.</h2>
+      <p class="label">What’s inside each Name</p>
+      <h2>A repeatable structure that can grow into <em>Collection 1</em>.</h2>
       <div class="pill-grid">
-        <div class="pill">Qur'an proof</div>
+        <div class="pill">Simple meaning</div>
+        <div class="pill">Qur’an proof</div>
         <div class="pill">Sunnah proof</div>
         <div class="pill">Real-life story</div>
         <div class="pill">Reflection pages</div>
         <div class="pill">Hands-on activity</div>
+        <div class="pill">Vocabulary words</div>
+        <div class="pill">Du‘ā practice</div>
         <div class="pill">Family challenge</div>
-        <div class="pill">Du'a practice</div>
+        <div class="pill">Copywork practice</div>
+        <div class="pill">Discussion prompts</div>
+        <div class="pill">Age-flexible activities</div>
         <div class="pill">Parent teaching notes</div>
+        <div class="pill">Weekly lesson rhythm</div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="progress-section">
+  <div class="container">
+    <article class="progress-card">
+      <div>
+        <p class="label">Collection 1 progress</p>
+        <div class="progress-number">3 of 33</div>
+        <div class="progress-bar" aria-label="3 of 33 Names available"><span class="progress-fill"></span></div>
+        <p><strong>Available now:</strong> Ar-Raḥmān, Ar-Raḥīm, and As-Salām.</p>
+      </div>
+      <div>
+        <h2>Collection 1 is being released one Name at a time.</h2>
+        <p>Start with the available Discovery Packs today. New Names are being added regularly, in shā’ Allāh, until the first 33-Name collection is complete.</p>
+        <p class="offer-note">Honest framing matters: this is not a half-finished product pretending to be complete. It is a growing collection you can begin using now.</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="optin-section" id="free-lesson">
+  <div class="container">
+    <article class="optin-card">
+      <div>
+        <p class="label">Free parent guide</p>
+        <h2>Get the Free <em>One-Name-a-Week Guide</em></h2>
+        <p>Not ready to purchase yet? Download a small planning guide that shows you how to teach one Name of Allah over a simple 5-day homeschool rhythm — without giving away one of the paid Discovery Packs.</p>
+        <ul class="check-list">
+          <li>A simple 5-day weekly rhythm</li>
+          <li>What to teach each day</li>
+          <li>Questions to ask your child</li>
+          <li>How to connect the Name to du‘ā and daily life</li>
+        </ul>
+      </div>
+      <div class="optin-placeholder">
+        <strong>MailerLite guide form goes here</strong>
+        <p>After you create the embedded MailerLite form for the free One-Name-a-Week Guide, paste the embed code in this box. We’ll connect it in the next step.</p>
+        <!-- MAILERLITE FORM EMBED FOR FREE ONE-NAME-A-WEEK GUIDE GOES HERE -->
       </div>
     </article>
   </div>
@@ -563,9 +726,9 @@ footer a { color:var(--pink-light); }
 <section class="available-section" id="available-names">
   <div class="container">
     <div class="section-head">
-      <p class="label">Book 1: Mercy, Love & Care</p>
-      <h2>Available Names <em>right now</em></h2>
-      <p>Start with one Name at a time. Each Name is sold as a full Discovery Pack, or as separate child and parent resources.</p>
+      <p class="label">Collection 1: Mercy, Love & Care</p>
+      <h2>Available Discovery Packs <em>right now</em></h2>
+      <p>Start with one Name at a time. The Discovery Pack is the best choice because it includes both the child workbook and the parent guide.</p>
     </div>
 
     <article class="name-product" id="ar-rahman">
@@ -585,7 +748,7 @@ footer a { color:var(--pink-light); }
       </div>
 
       <div class="name-copy">
-        <span class="kicker">Book 1: Mercy, Love & Care</span>
+        <span class="kicker">Collection 1: Mercy, Love & Care</span>
         <h3>Ar-Raḥmān</h3>
         <p class="name-meaning">The Most Merciful</p>
         <p>A gentle printable study that helps children understand Allah's wide mercy through Qur'an, Sunnah, reflection, real-life learning, and hands-on activities.</p>
@@ -603,7 +766,7 @@ footer a { color:var(--pink-light); }
           </ul>
         </div>
         <div class="buy-grid">
-          <div class="buy-card">
+          <div class="buy-card featured">
             <strong>Discovery Pack</strong>
             <span class="buy-price">$10</span>
             <button type="button" class="btn btn-pink" data-product-id="ar-rahman-discovery-pack">Add Pack</button>
@@ -629,7 +792,7 @@ footer a { color:var(--pink-light); }
         </div>
         <div class="carousel-thumbs" aria-label="Ar-Raḥīm preview images">
           <button type="button" class="carousel-thumb active" data-carousel-src="images/products/Ar-Rahim Bundle image v1.png"><img src="images/products/Ar-Rahim Bundle image v1.png" alt="Ar-Raḥīm Discovery Pack bundle cover with child workbook and parent guide"></button>
-          <button type="button" class="carousel-thumb" data-carousel-src="images/ar-rahim/ar-rahim-welcome-to-this-workbook.png"><img src="images/ar-rahim/ar-rahim-welcome-to-this-workbook.png" alt="alt="Ar-Raḥīm child workbook welcome page preview"></button>
+          <button type="button" class="carousel-thumb" data-carousel-src="images/ar-rahim/ar-rahim-welcome-to-this-workbook.png"><img src="images/ar-rahim/ar-rahim-welcome-to-this-workbook.png" alt="Ar-Raḥīm child workbook welcome page preview"></button>
           <button type="button" class="carousel-thumb" data-carousel-src="images/ar-rahim/ar-rahim-quran-proof.png"><img src="images/ar-rahim/ar-rahim-quran-proof.png" alt="Ar-Raḥīm Qur’an proof workbook page preview"></button>
           <button type="button" class="carousel-thumb" data-carousel-src="images/ar-rahim/ar-rahim-sunnah-proof.png"><img src="images/ar-rahim/ar-rahim-sunnah-proof.png" alt="Ar-Raḥīm Sunnah proof workbook page preview"></button>
           <button type="button" class="carousel-thumb" data-carousel-src="images/ar-rahim/ar-rahim-handle-questions.png"><img src="images/ar-rahim/ar-rahim-handle-questions.png" alt="Ar-Raḥīm handle questions parent guide page preview"></button>
@@ -639,7 +802,7 @@ footer a { color:var(--pink-light); }
       </div>
 
       <div class="name-copy">
-        <span class="kicker">Book 1: Mercy, Love & Care</span>
+        <span class="kicker">Collection 1: Mercy, Love & Care</span>
         <h3>Ar-Raḥīm</h3>
         <p class="name-meaning">The Especially Merciful</p>
         <p>A printable study that helps children understand Allah's special mercy for the believers through simple teaching, reflection, story, du'a, and activities.</p>
@@ -657,7 +820,7 @@ footer a { color:var(--pink-light); }
           </ul>
         </div>
         <div class="buy-grid">
-          <div class="buy-card">
+          <div class="buy-card featured">
             <strong>Discovery Pack</strong>
             <span class="buy-price">$10</span>
             <button type="button" class="btn btn-pink" data-product-id="ar-rahim-discovery-pack">Add Pack</button>
@@ -693,7 +856,7 @@ footer a { color:var(--pink-light); }
       </div>
 
       <div class="name-copy">
-        <span class="kicker">Book 1: Mercy, Love & Care</span>
+        <span class="kicker">Collection 1: Mercy, Love & Care</span>
         <h3>As-Salām</h3>
         <p class="name-meaning">The Source of Peace and Safety</p>
         <p>A printable study that teaches children that true peace and safety come from Allah, with parent support for explaining the Name clearly and deeply.</p>
@@ -711,7 +874,7 @@ footer a { color:var(--pink-light); }
           </ul>
         </div>
         <div class="buy-grid">
-          <div class="buy-card">
+          <div class="buy-card featured">
             <strong>Discovery Pack</strong>
             <span class="buy-price">$10</span>
             <button type="button" class="btn btn-pink" data-product-id="as-salam-discovery-pack">Add Pack</button>
@@ -736,8 +899,8 @@ footer a { color:var(--pink-light); }
   <div class="container">
     <div class="section-head">
       <p class="label">Coming next, in shā' Allāh</p>
-      <h2>New Names are being added <em>weekly</em></h2>
-      <p>This collection is being built with long-term growth in mind. These are the next six Names planned for Book 1.</p>
+      <h2>The next Names in <em>Collection 1</em></h2>
+      <p>These are the next six Names planned for the first 33-Name collection. As each one is finished, it can be added as a new Discovery Pack without redesigning the whole page.</p>
     </div>
 
     <div class="coming-grid">
@@ -754,10 +917,10 @@ footer a { color:var(--pink-light); }
 <section class="future-section">
   <div class="container">
     <article class="future-card">
-      <p class="label">A gentle reminder for mothers</p>
-      <h2>You are not just teaching a lesson. You are helping your child <em>know Allah</em>.</h2>
-      <p>When a child learns the Names of Allah, they are learning Who to turn to when they are afraid, Who provides for them, Who forgives them, Who sees them, and Who loves mercy. These small lessons can become lifelong anchors in their heart.</p>
-      <p>Start with one Name. Read it together. Talk about it during the day. Use it in du‘ā. Let your child see that Islam is not only something we study — it is something we live, love, and return to again and again.</p>
+      <p class="label">Why this is being released carefully</p>
+      <h2>Each Name deserves more than a rushed worksheet.</h2>
+      <p>Collection 1 is being built one Name at a time because every study includes child pages, parent guidance, Qur’an and Sunnah proof, reflection, vocabulary, du‘ā, activities, and family discussion.</p>
+      <p>I would rather release thoughtful, useful studies that help children know Allah than rush all 33 Names into shallow pages.</p>
     </article>
   </div>
 </section>
@@ -780,11 +943,19 @@ footer a { color:var(--pink-light); }
       </article>
       <article class="faq-item">
         <h3>Do I need the Parent Guide?</h3>
-        <p>The Parent Guide is strongly recommended if you want deeper explanations, teaching cautions, Qur'an and Sunnah references, and discussion support.</p>
+        <p>Yes, if you want the full experience. The Parent Guide gives you deeper explanations, teaching cautions, Qur’an and Sunnah references, and discussion support.</p>
+      </article>
+      <article class="faq-item">
+        <h3>Why are only a few Names available?</h3>
+        <p>Collection 1 is being released one Name at a time until the first 33 Names are complete, in shā’ Allāh. You can begin with the available Names now.</p>
       </article>
       <article class="faq-item">
         <h3>Are these physical books?</h3>
         <p>No. These are digital printable resources delivered by email after checkout, so you can print the pages you need at home.</p>
+      </article>
+      <article class="faq-item">
+        <h3>Can I try before buying?</h3>
+        <p>Yes. Download the free One-Name-a-Week Guide to see how one Name can be taught gently across a homeschool week before purchasing a Discovery Pack.</p>
       </article>
     </div>
   </div>
@@ -793,8 +964,11 @@ footer a { color:var(--pink-light); }
 <section class="cta-section">
   <div class="container">
     <h2>Begin with one Beautiful Name.</h2>
-    <p>Choose a Discovery Pack for the complete lesson, or purchase the child workbook and parent guide separately.</p>
-    <a class="btn btn-pink" href="#available-names">Shop Available Names</a>
+    <p>Choose a Discovery Pack for the complete child workbook and parent guide, or download the free One-Name-a-Week Guide first.</p>
+    <div class="hero-actions">
+      <a class="btn btn-pink" href="#available-names">Shop Available Names</a>
+      <a class="btn btn-secondary" href="#free-lesson">Get the Free Guide</a>
+    </div>
   </div>
 </section>
 
