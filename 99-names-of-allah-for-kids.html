@@ -1,0 +1,834 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>99 Names of Allah for Kids | My Muslim Homeschool</title>
+<meta name="description" content="A growing printable 99 Names of Allah collection for Muslim children, with child workbooks, parent guides, Qur'an and Sunnah proof, real-life reflection, and hands-on activities.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Nunito:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root {
+  --pink: #e8868a;
+  --pink-light: #f5c0c2;
+  --pink-pale: #fdf0f0;
+  --sage: #85b5a8;
+  --sage-dark: #5f9284;
+  --sage-light: #b8d5ce;
+  --sage-pale: #edf6f4;
+  --yellow: #e8c45a;
+  --yellow-pale: #fdf8e8;
+  --yellow-dark: #c9a83a;
+  --peach: #f0a882;
+  --peach-pale: #fdf3ee;
+  --teal: #247b7b;
+  --teal-pale: #e8f5f5;
+  --charcoal: #2e2e2e;
+  --mid: #5a5252;
+  --light-text: #8a7f7f;
+  --cream: #fdf9f6;
+  --white: #ffffff;
+  --border: #edddd8;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; font-size:18px; }
+body {
+  font-family:'Nunito',sans-serif;
+  background:var(--cream);
+  color:var(--charcoal);
+  line-height:1.65;
+  overflow-x:hidden;
+}
+img { max-width:100%; height:auto; display:block; }
+a { color:inherit; text-decoration:none; }
+.container { max-width:1160px; margin:0 auto; padding:0 24px; }
+h1,h2,h3,h4,.label,.nav-logo span {
+  font-family:'Playfair Display',Georgia,'Times New Roman',serif;
+  line-height:1.25;
+}
+p { color:var(--mid); font-weight:300; }
+
+nav {
+  background:rgba(255,255,255,0.96);
+  border-bottom:2px solid var(--pink-light);
+  padding:12px 28px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  position:sticky;
+  top:0;
+  z-index:100;
+  box-shadow:0 2px 12px rgba(232,134,138,0.1);
+}
+.nav-logo { display:flex; align-items:center; gap:10px; }
+.nav-logo img { height:62px; width:62px; object-fit:contain; border-radius:50%; }
+.nav-logo span { font-size:1.45rem; color:var(--charcoal); line-height:1.18; }
+.nav-links { display:flex; align-items:center; gap:18px; }
+.nav-links a { font-size:0.95rem; font-weight:700; letter-spacing:0.04em; color:var(--mid); transition:color 0.2s; }
+.nav-links a:hover { color:var(--pink); }
+.nav-cta { background:var(--pink); color:var(--white)!important; padding:8px 22px; border-radius:30px; }
+.nav-cta:hover { background:var(--peach)!important; color:var(--white)!important; }
+.nav-cart-link {
+  display:inline-flex; align-items:center; justify-content:center; gap:6px;
+  background:var(--cream); color:var(--charcoal)!important;
+  border:1px solid var(--border); border-radius:999px;
+  padding:7px 12px; line-height:1; font-weight:700;
+}
+.nav-cart-link:hover { background:var(--pink-pale); color:var(--pink)!important; }
+.nav-cart-link .mmh-cart-count {
+  display:inline-flex; align-items:center; justify-content:center;
+  min-width:18px; height:18px; padding:0 5px;
+  border-radius:999px; background:var(--pink); color:var(--white);
+  font-size:0.72rem; font-weight:800; line-height:1;
+}
+.mobile-menu-toggle { display:none; flex-direction:column; gap:5px; cursor:pointer; background:none; border:none; padding:4px; }
+.mobile-menu-toggle span { display:block; width:26px; height:2.5px; background:var(--charcoal); border-radius:2px; transition:all 0.3s ease; }
+
+.hero {
+  background:
+    radial-gradient(circle at 18% 18%, rgba(232,196,90,0.25), transparent 28%),
+    radial-gradient(circle at 82% 20%, rgba(133,181,168,0.28), transparent 30%),
+    linear-gradient(135deg,var(--pink-pale) 0%,var(--yellow-pale) 48%,var(--sage-pale) 100%);
+  padding:76px 0 60px;
+  text-align:center;
+}
+.label {
+  color:var(--sage-dark);
+  letter-spacing:0.16em;
+  text-transform:uppercase;
+  font-size:0.88rem;
+  font-weight:700;
+  margin-bottom:12px;
+}
+.hero h1 {
+  font-size:clamp(2.25rem,6vw,4rem);
+  font-weight:600;
+  margin-bottom:14px;
+}
+.hero h1 em { color:var(--pink); font-style:italic; }
+.hero p {
+  max-width:760px;
+  margin:0 auto;
+  font-size:1.12rem;
+}
+.hero-actions {
+  display:flex;
+  justify-content:center;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-top:26px;
+}
+.btn {
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:48px;
+  border:none;
+  border-radius:999px;
+  padding:13px 24px;
+  font-size:0.88rem;
+  font-weight:900;
+  letter-spacing:0.08em;
+  text-transform:uppercase;
+  cursor:pointer;
+  transition:all 0.2s ease;
+  font-family:'Nunito',sans-serif;
+  text-align:center;
+}
+.btn-pink {
+  background:var(--pink);
+  color:var(--white);
+  box-shadow:0 10px 24px rgba(232,134,138,0.26);
+}
+.btn-pink:hover { background:var(--peach); transform:translateY(-2px); }
+.btn-secondary {
+  background:var(--white);
+  color:var(--mid);
+  border:1px solid var(--border);
+}
+.btn-secondary:hover { background:var(--yellow-pale); color:var(--charcoal); }
+.btn-sage {
+  background:var(--sage);
+  color:var(--white);
+  box-shadow:0 10px 24px rgba(133,181,168,0.26);
+}
+.btn-sage:hover { background:var(--sage-dark); transform:translateY(-2px); }
+
+.intro-section { padding:58px 0 26px; }
+.intro-grid {
+  display:grid;
+  grid-template-columns:1.02fr 0.98fr;
+  gap:30px;
+  align-items:start;
+}
+.intro-card,
+.method-card,
+.future-card,
+.faq-card {
+  background:var(--white);
+  border:1px solid var(--border);
+  border-radius:26px;
+  padding:30px;
+  box-shadow:0 12px 36px rgba(98,67,53,0.07);
+}
+.intro-card h2,
+.method-card h2,
+.future-card h2,
+.faq-card h2 {
+  font-size:clamp(1.55rem,3vw,2.25rem);
+  font-weight:500;
+  margin-bottom:12px;
+}
+.intro-card h2 em,
+.method-card h2 em,
+.future-card h2 em,
+.faq-card h2 em { color:var(--pink); font-style:italic; }
+.check-list {
+  list-style:none;
+  display:grid;
+  gap:10px;
+  margin-top:18px;
+}
+.check-list li {
+  color:var(--mid);
+  padding-left:30px;
+  position:relative;
+}
+.check-list li::before {
+  content:'✓';
+  position:absolute;
+  left:0;
+  top:0;
+  color:var(--sage);
+  font-weight:900;
+}
+.pill-grid {
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:12px;
+  margin-top:18px;
+}
+.pill {
+  background:var(--sage-pale);
+  border:1px solid rgba(133,181,168,0.35);
+  border-radius:18px;
+  padding:14px;
+  color:var(--mid);
+  font-weight:800;
+  text-align:center;
+}
+
+.section-head {
+  text-align:center;
+  margin-bottom:34px;
+}
+.section-head h2 {
+  font-size:clamp(1.7rem,4vw,2.75rem);
+  font-weight:500;
+  margin-bottom:10px;
+}
+.section-head h2 em { color:var(--pink); font-style:italic; }
+.section-head p { max-width:720px; margin:0 auto; }
+
+.available-section { padding:42px 0 36px; }
+.name-product {
+  background:var(--white);
+  border:1px solid var(--border);
+  border-radius:30px;
+  padding:26px;
+  box-shadow:0 14px 44px rgba(98,67,53,0.08);
+  display:grid;
+  grid-template-columns:minmax(0,0.92fr) minmax(0,1.08fr);
+  gap:30px;
+  align-items:start;
+  margin-bottom:30px;
+}
+.carousel {
+  background:linear-gradient(135deg,var(--pink-pale),var(--sage-pale));
+  border-radius:24px;
+  padding:18px;
+}
+.carousel-main {
+  background:var(--cream);
+  border-radius:18px;
+  padding:12px;
+  box-shadow:0 8px 24px rgba(0,0,0,0.10);
+}
+.carousel-main img {
+  width:100%;
+  aspect-ratio:0.78/1;
+  object-fit:cover;
+  border-radius:14px;
+}
+.carousel-thumbs {
+  display:grid;
+  grid-template-columns:repeat(6,1fr);
+  gap:8px;
+  margin-top:12px;
+}
+.carousel-thumb {
+  border:2px solid transparent;
+  border-radius:12px;
+  padding:0;
+  overflow:hidden;
+  background:var(--white);
+  cursor:pointer;
+  opacity:0.78;
+  transition:all 0.2s ease;
+}
+.carousel-thumb:hover,
+.carousel-thumb.active {
+  opacity:1;
+  border-color:var(--pink);
+  transform:translateY(-1px);
+}
+.carousel-thumb img {
+  width:100%;
+  aspect-ratio:1/1;
+  object-fit:cover;
+}
+.preview-note {
+  margin-top:10px;
+  color:var(--light-text);
+  font-size:0.82rem;
+  text-align:center;
+  font-weight:700;
+}
+.name-copy .kicker {
+  display:inline-flex;
+  align-items:center;
+  width:max-content;
+  max-width:100%;
+  background:var(--yellow-pale);
+  color:var(--yellow-dark);
+  border:1px solid rgba(232,196,90,0.42);
+  border-radius:999px;
+  padding:5px 12px;
+  font-size:0.75rem;
+  font-weight:900;
+  letter-spacing:0.08em;
+  text-transform:uppercase;
+  margin-bottom:12px;
+}
+.name-copy h3 {
+  font-size:clamp(1.65rem,3vw,2.55rem);
+  margin-bottom:4px;
+}
+.name-meaning {
+  color:var(--teal);
+  font-family:'Playfair Display',Georgia,serif;
+  font-size:1.25rem;
+  margin-bottom:12px;
+  font-weight:700;
+}
+.included-box {
+  background:var(--sage-pale);
+  border:1px solid rgba(133,181,168,0.35);
+  border-radius:20px;
+  padding:18px;
+  margin:18px 0;
+}
+.included-box h4 {
+  font-size:1.1rem;
+  margin-bottom:10px;
+}
+.included-list {
+  list-style:none;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:8px 14px;
+}
+.included-list li {
+  color:var(--mid);
+  font-size:0.92rem;
+  padding-left:24px;
+  position:relative;
+}
+.included-list li::before {
+  content:'•';
+  position:absolute;
+  left:8px;
+  color:var(--pink);
+  font-weight:900;
+}
+.buy-grid {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:12px;
+  margin-top:20px;
+}
+.buy-card {
+  border:1px solid var(--border);
+  background:var(--cream);
+  border-radius:18px;
+  padding:16px;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+.buy-card strong {
+  display:block;
+  line-height:1.25;
+  color:var(--charcoal);
+}
+.buy-price {
+  color:var(--pink);
+  font-family:'Playfair Display',Georgia,serif;
+  font-weight:700;
+  font-size:1.6rem;
+  line-height:1;
+}
+.buy-card .btn {
+  width:100%;
+  padding-left:14px;
+  padding-right:14px;
+  font-size:0.76rem;
+  min-height:44px;
+}
+
+.coming-section {
+  padding:46px 0 34px;
+  background:linear-gradient(135deg,var(--sage-pale),var(--yellow-pale));
+}
+.coming-grid {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:16px;
+}
+.coming-card {
+  background:rgba(255,255,255,0.92);
+  border:1px solid var(--border);
+  border-radius:22px;
+  padding:22px;
+  box-shadow:0 8px 26px rgba(98,67,53,0.06);
+}
+.coming-card span {
+  display:inline-flex;
+  background:var(--pink-pale);
+  color:var(--pink);
+  border-radius:999px;
+  padding:4px 10px;
+  font-weight:900;
+  font-size:0.72rem;
+  letter-spacing:0.08em;
+  text-transform:uppercase;
+  margin-bottom:10px;
+}
+.coming-card h3 {
+  font-size:1.35rem;
+  margin-bottom:6px;
+}
+.coming-card p { font-size:0.94rem; }
+
+.future-section,
+.faq-section { padding:52px 0; }
+.future-card {
+  background:linear-gradient(135deg,var(--white),var(--yellow-pale));
+  text-align:center;
+}
+.future-card p { max-width:780px; margin:0 auto; }
+.faq-grid {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:16px;
+  margin-top:24px;
+}
+.faq-item {
+  background:var(--white);
+  border:1px solid var(--border);
+  border-radius:20px;
+  padding:20px;
+}
+.faq-item h3 {
+  font-size:1.1rem;
+  margin-bottom:6px;
+}
+.faq-item p { font-size:0.94rem; }
+
+.cta-section {
+  padding:56px 0 70px;
+  text-align:center;
+  background:linear-gradient(135deg,var(--pink-pale),var(--sage-pale));
+}
+.cta-section h2 {
+  font-size:clamp(1.75rem,4vw,2.75rem);
+  margin-bottom:10px;
+  font-weight:500;
+}
+.cta-section p { max-width:700px; margin:0 auto 24px; }
+
+footer {
+  background:var(--charcoal);
+  color:rgba(255,255,255,0.55);
+  text-align:center;
+  padding:22px;
+  font-size:0.85rem;
+}
+footer a { color:var(--pink-light); }
+
+@media(max-width:1020px) {
+  .intro-grid,
+  .name-product { grid-template-columns:1fr; }
+  .carousel { max-width:520px; margin:0 auto; }
+  .buy-grid { grid-template-columns:1fr; }
+  .coming-grid { grid-template-columns:repeat(2,1fr); }
+}
+@media(max-width:720px) {
+  nav { padding:10px 16px; }
+  .nav-logo img { height:50px; width:50px; }
+  .nav-logo span { font-size:1.15rem; }
+  .nav-links { display:none; }
+  .nav-links.mobile-open {
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    position:absolute;
+    top:100%;
+    left:0;
+    right:0;
+    background:var(--white);
+    padding:20px 24px;
+    gap:14px;
+    border-bottom:2px solid var(--pink-light);
+    box-shadow:0 10px 30px rgba(0,0,0,0.05);
+  }
+  .mobile-menu-toggle { display:flex; }
+  .mobile-menu-toggle.active span:nth-child(1) { transform:rotate(45deg) translate(5px,6px); }
+  .mobile-menu-toggle.active span:nth-child(2) { opacity:0; }
+  .mobile-menu-toggle.active span:nth-child(3) { transform:rotate(-45deg) translate(5px,-6px); }
+  .hero { padding:58px 0 44px; }
+  .hero-actions .btn { width:100%; }
+  .pill-grid,
+  .included-list,
+  .coming-grid,
+  .faq-grid { grid-template-columns:1fr; }
+  .name-product { padding:18px; border-radius:24px; }
+  .carousel-thumbs { gap:6px; }
+  .container { padding:0 18px; }
+}
+</style>
+</head>
+<body>
+<div id="site-nav"></div>
+<script src="/assets/site-nav.js"></script>
+
+<header class="hero">
+  <div class="container">
+    <p class="label">The 99 Names Discovery Journal</p>
+    <h1>99 Names of Allah <em>for Kids</em></h1>
+    <p>A growing printable Islamic learning collection for Muslim children, with child workbooks and parent guides designed to help families learn Allah's Beautiful Names through Qur'an, Sunnah, reflection, real-life lessons, and hands-on activities.</p>
+    <div class="hero-actions">
+      <a class="btn btn-pink" href="#available-names">Shop Available Names</a>
+      <a class="btn btn-secondary" href="#coming-soon">See What's Coming Next</a>
+    </div>
+  </div>
+</header>
+
+<section class="intro-section">
+  <div class="container intro-grid">
+    <article class="intro-card">
+      <p class="label">More than memorization</p>
+      <h2>A gentle way to help children <em>know Allah</em>.</h2>
+      <p>Each Name is designed as a complete mini-study. Children learn the meaning of the Name, see proof from the Qur'an and Sunnah, connect the lesson to everyday life, and practice through reflection, writing, activities, du'a, and family discussion.</p>
+      <ul class="check-list">
+        <li>Child workbook pages made for printable, screen-free learning</li>
+        <li>Parent guide pages with deeper teaching support</li>
+        <li>Real-life stories without magic, fantasy, or make-believe</li>
+        <li>Activities for younger children and older kids</li>
+      </ul>
+    </article>
+
+    <article class="method-card">
+      <p class="label">What's inside each Name</p>
+      <h2>A repeatable structure that can grow to <em>99 Names</em>.</h2>
+      <div class="pill-grid">
+        <div class="pill">Qur'an proof</div>
+        <div class="pill">Sunnah proof</div>
+        <div class="pill">Real-life story</div>
+        <div class="pill">Reflection pages</div>
+        <div class="pill">Hands-on activity</div>
+        <div class="pill">Family challenge</div>
+        <div class="pill">Du'a practice</div>
+        <div class="pill">Parent teaching notes</div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="available-section" id="available-names">
+  <div class="container">
+    <div class="section-head">
+      <p class="label">Book 1: Mercy, Love & Care</p>
+      <h2>Available Names <em>right now</em></h2>
+      <p>Start with one Name at a time. Each Name is sold as a full Discovery Pack, or as separate child and parent resources.</p>
+    </div>
+
+    <article class="name-product" id="ar-rahman">
+      <div class="carousel" data-carousel>
+        <div class="carousel-main">
+          <img src="images/products/Ar-Rahman Bundle image.png" alt="Ar-Raḥmān Discovery Pack preview" data-carousel-main>
+        </div>
+        <div class="carousel-thumbs" aria-label="Ar-Raḥmān preview images">
+          <button type="button" class="carousel-thumb active" data-carousel-src="images/products/Ar-Rahman Bundle image.png"><img src="images/products/Ar-Rahman Bundle image.png" alt="Ar-Raḥmān preview 1"></button>
+          <button type="button" class="carousel-thumb" data-carousel-src="images/products/Ar-Rahman Bundle image.png"><img src="images/products/Ar-Rahman Bundle image.png" alt="Ar-Raḥmān preview 2"></button>
+          <button type="button" class="carousel-thumb" data-carousel-src="images/products/Ar-Rahman Bundle image.png"><img src="images/products/Ar-Rahman Bundle image.png" alt="Ar-Raḥmān preview 3"></button>
+          <button type="button" class="carousel-thumb" data-carousel-src="images/products/Ar-Rahman Bundle image.png"><img src="images/products/Ar-Rahman Bundle image.png" alt="Ar-Raḥmān preview 4"></button>
+          <button type="button" class="carousel-thumb" data-carousel-src="images/products/Ar-Rahman Bundle image.png"><img src="images/products/Ar-Rahman Bundle image.png" alt="Ar-Raḥmān preview 5"></button>
+          <button type="button" class="carousel-thumb" data-carousel-src="images/products/Ar-Rahman Bundle image.png"><img src="images/products/Ar-Rahman Bundle image.png" alt="Ar-Raḥmān preview 6"></button>
+        </div>
+        <p class="preview-note">Temporary carousel: cover image repeated until preview images are added.</p>
+      </div>
+
+      <div class="name-copy">
+        <span class="kicker">Book 1: Mercy, Love & Care</span>
+        <h3>Ar-Raḥmān</h3>
+        <p class="name-meaning">The Most Merciful</p>
+        <p>A gentle printable study that helps children understand Allah's wide mercy through Qur'an, Sunnah, reflection, real-life learning, and hands-on activities.</p>
+        <div class="included-box">
+          <h4>What this Name includes</h4>
+          <ul class="included-list">
+            <li>Child workbook</li>
+            <li>Parent guide</li>
+            <li>Qur'an and Sunnah proof</li>
+            <li>Real-life story</li>
+            <li>Reflection prompts</li>
+            <li>Hands-on activities</li>
+            <li>Vocabulary and du'a</li>
+            <li>Family challenge</li>
+          </ul>
+        </div>
+        <div class="buy-grid">
+          <div class="buy-card">
+            <strong>Discovery Pack</strong>
+            <span class="buy-price">$10</span>
+            <button type="button" class="btn btn-pink" data-product-id="ar-rahman-discovery-pack">Add Pack</button>
+          </div>
+          <div class="buy-card">
+            <strong>Child Workbook</strong>
+            <span class="buy-price">$5</span>
+            <button type="button" class="btn btn-sage" data-product-id="ar-rahman-child-workbook">Add Workbook</button>
+          </div>
+          <div class="buy-card">
+            <strong>Parent Guide</strong>
+            <span class="buy-price">$5</span>
+            <button type="button" class="btn btn-secondary" data-product-id="ar-rahman-parent-guide">Add Guide</button>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="name-product" id="ar-rahim">
+      <div class="carousel" data-carousel>
+        <div class="carousel-main">
+          <img src="images/products/Ar-Rahim Bundle image v1.png" alt="Ar-Raḥīm Discovery Pack preview" data-carousel-main>
+        </div>
+        <div class="carousel-thumbs" aria-label="Ar-Raḥīm preview images">
+          <button type="button" class="carousel-thumb active" data-carousel-src="images/products/Ar-Rahim Bundle image v1.png"><img src="images/products/Ar-Rahim Bundle image v1.png" alt="Ar-Raḥīm preview 1"></button>
+          <button type="button" class="carousel-thumb" data-carousel-src="images/products/Ar-Rahim Bundle image v1.png"><img src="images/products/Ar-Rahim Bundle image v1.png" alt="Ar-Raḥīm preview 2"></button>
+          <button type="button" class="carousel-thumb" data-carousel-src="images/products/Ar-Rahim Bundle image v1.png"><img src="images/products/Ar-Rahim Bundle image v1.png" alt="Ar-Raḥīm preview 3"></button>
+          <button type="button" class="carousel-thumb" data-carousel-src="images/products/Ar-Rahim Bundle image v1.png"><img src="images/products/Ar-Rahim Bundle image v1.png" alt="Ar-Raḥīm preview 4"></button>
+          <button type="button" class="carousel-thumb" data-carousel-src="images/products/Ar-Rahim Bundle image v1.png"><img src="images/products/Ar-Rahim Bundle image v1.png" alt="Ar-Raḥīm preview 5"></button>
+          <button type="button" class="carousel-thumb" data-carousel-src="images/products/Ar-Rahim Bundle image v1.png"><img src="images/products/Ar-Rahim Bundle image v1.png" alt="Ar-Raḥīm preview 6"></button>
+        </div>
+        <p class="preview-note">Temporary carousel: cover image repeated until preview images are added.</p>
+      </div>
+
+      <div class="name-copy">
+        <span class="kicker">Book 1: Mercy, Love & Care</span>
+        <h3>Ar-Raḥīm</h3>
+        <p class="name-meaning">The Especially Merciful</p>
+        <p>A printable study that helps children understand Allah's special mercy for the believers through simple teaching, reflection, story, du'a, and activities.</p>
+        <div class="included-box">
+          <h4>What this Name includes</h4>
+          <ul class="included-list">
+            <li>Child workbook</li>
+            <li>Parent guide</li>
+            <li>Qur'an and Sunnah proof</li>
+            <li>Real-life story</li>
+            <li>Reflection prompts</li>
+            <li>Hands-on activities</li>
+            <li>Vocabulary and du'a</li>
+            <li>Family challenge</li>
+          </ul>
+        </div>
+        <div class="buy-grid">
+          <div class="buy-card">
+            <strong>Discovery Pack</strong>
+            <span class="buy-price">$10</span>
+            <button type="button" class="btn btn-pink" data-product-id="ar-rahim-discovery-pack">Add Pack</button>
+          </div>
+          <div class="buy-card">
+            <strong>Child Workbook</strong>
+            <span class="buy-price">$5</span>
+            <button type="button" class="btn btn-sage" data-product-id="ar-rahim-child-workbook">Add Workbook</button>
+          </div>
+          <div class="buy-card">
+            <strong>Parent Guide</strong>
+            <span class="buy-price">$5</span>
+            <button type="button" class="btn btn-secondary" data-product-id="ar-rahim-parent-guide">Add Guide</button>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="name-product" id="as-salam">
+      <div class="carousel" data-carousel>
+        <div class="carousel-main">
+          <img src="images/products/As-Salam Bundle image 2.png" alt="As-Salām Discovery Pack preview" data-carousel-main>
+        </div>
+        <div class="carousel-thumbs" aria-label="As-Salām preview images">
+          <button type="button" class="carousel-thumb active" data-carousel-src="images/products/As-Salam Bundle image 2.png"><img src="images/products/As-Salam Bundle image 2.png" alt="As-Salām preview 1"></button>
+          <button type="button" class="carousel-thumb" data-carousel-src="images/products/As-Salam Bundle image 2.png"><img src="images/products/As-Salam Bundle image 2.png" alt="As-Salām preview 2"></button>
+          <button type="button" class="carousel-thumb" data-carousel-src="images/products/As-Salam Bundle image 2.png"><img src="images/products/As-Salam Bundle image 2.png" alt="As-Salām preview 3"></button>
+          <button type="button" class="carousel-thumb" data-carousel-src="images/products/As-Salam Bundle image 2.png"><img src="images/products/As-Salam Bundle image 2.png" alt="As-Salām preview 4"></button>
+          <button type="button" class="carousel-thumb" data-carousel-src="images/products/As-Salam Bundle image 2.png"><img src="images/products/As-Salam Bundle image 2.png" alt="As-Salām preview 5"></button>
+          <button type="button" class="carousel-thumb" data-carousel-src="images/products/As-Salam Bundle image 2.png"><img src="images/products/As-Salam Bundle image 2.png" alt="As-Salām preview 6"></button>
+        </div>
+        <p class="preview-note">Temporary carousel: cover image repeated until preview images are added.</p>
+      </div>
+
+      <div class="name-copy">
+        <span class="kicker">Book 1: Mercy, Love & Care</span>
+        <h3>As-Salām</h3>
+        <p class="name-meaning">The Source of Peace and Safety</p>
+        <p>A printable study that teaches children that true peace and safety come from Allah, with parent support for explaining the Name clearly and deeply.</p>
+        <div class="included-box">
+          <h4>What this Name includes</h4>
+          <ul class="included-list">
+            <li>Child workbook</li>
+            <li>Parent guide</li>
+            <li>Qur'an and Sunnah proof</li>
+            <li>Real-life story</li>
+            <li>Reflection prompts</li>
+            <li>Hands-on activities</li>
+            <li>Vocabulary and du'a</li>
+            <li>Family challenge</li>
+          </ul>
+        </div>
+        <div class="buy-grid">
+          <div class="buy-card">
+            <strong>Discovery Pack</strong>
+            <span class="buy-price">$10</span>
+            <button type="button" class="btn btn-pink" data-product-id="as-salam-discovery-pack">Add Pack</button>
+          </div>
+          <div class="buy-card">
+            <strong>Child Workbook</strong>
+            <span class="buy-price">$5</span>
+            <button type="button" class="btn btn-sage" data-product-id="as-salam-child-workbook">Add Workbook</button>
+          </div>
+          <div class="buy-card">
+            <strong>Parent Guide</strong>
+            <span class="buy-price">$5</span>
+            <button type="button" class="btn btn-secondary" data-product-id="as-salam-parent-guide">Add Guide</button>
+          </div>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="coming-section" id="coming-soon">
+  <div class="container">
+    <div class="section-head">
+      <p class="label">Coming next, in shā' Allāh</p>
+      <h2>New Names are being added <em>weekly</em></h2>
+      <p>This collection is being built with long-term growth in mind. These are the next six Names planned for Book 1.</p>
+    </div>
+
+    <div class="coming-grid">
+      <article class="coming-card"><span>Coming soon</span><h3>Al-Mu'min</h3><p>The Giver of Safety and Faith</p></article>
+      <article class="coming-card"><span>Coming soon</span><h3>Al-Laṭīf</h3><p>The Most Gentle</p></article>
+      <article class="coming-card"><span>Coming soon</span><h3>Al-Ḥalīm</h3><p>The Most Forbearing</p></article>
+      <article class="coming-card"><span>Coming soon</span><h3>Al-Ghafūr</h3><p>The Most Forgiving</p></article>
+      <article class="coming-card"><span>Coming soon</span><h3>Al-Wahhāb</h3><p>The Giver of Gifts</p></article>
+      <article class="coming-card"><span>Coming soon</span><h3>Ar-Razzāq</h3><p>The Provider</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="note-section">
+  <div class="container">
+    <div class="note-card">
+      <p class="label">A gentle reminder for mothers</p>
+      <h2>You are not just teaching a lesson. You are helping your child know Allah.</h2>
+      <p>When a child learns the Names of Allah, they are learning Who to turn to when they are afraid, Who provides for them, Who forgives them, Who sees them, and Who loves mercy. These small lessons can become lifelong anchors in their heart.</p>
+      <p>Start with one Name. Read it together. Talk about it during the day. Use it in du‘ā. Let your child see that Islam is not only something we study — it is something we live, love, and return to again and again.</p>
+    </div>
+  </div>
+</section>
+
+<section class="faq-section">
+  <div class="container">
+    <div class="section-head">
+      <p class="label">Common questions</p>
+      <h2>Before you choose a <em>Name</em></h2>
+    </div>
+
+    <div class="faq-grid">
+      <article class="faq-item">
+        <h3>What age is this for?</h3>
+        <p>The child workbook is designed for young learners with parent support, with activities that can stretch for older children through reflection, copywork, and discussion.</p>
+      </article>
+      <article class="faq-item">
+        <h3>What is the Discovery Pack?</h3>
+        <p>The Discovery Pack includes both the Child Workbook and Parent Guide for one Name, so your child has printable pages and you have teaching support.</p>
+      </article>
+      <article class="faq-item">
+        <h3>Do I need the Parent Guide?</h3>
+        <p>The Parent Guide is strongly recommended if you want deeper explanations, teaching cautions, Qur'an and Sunnah references, and discussion support.</p>
+      </article>
+      <article class="faq-item">
+        <h3>Are these physical books?</h3>
+        <p>No. These are digital printable resources delivered by email after checkout, so you can print the pages you need at home.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="container">
+    <h2>Begin with one Beautiful Name.</h2>
+    <p>Choose a Discovery Pack for the complete lesson, or purchase the child workbook and parent guide separately.</p>
+    <a class="btn btn-pink" href="#available-names">Shop Available Names</a>
+  </div>
+</section>
+
+<div id="site-footer"></div>
+<script src="/assets/site-footer.js"></script>
+<script src="assets/cart.js"></script>
+<script>
+(function(){
+  function setupCarousel(carousel){
+    const main = carousel.querySelector('[data-carousel-main]');
+    const thumbs = carousel.querySelectorAll('[data-carousel-src]');
+
+    if(!main || thumbs.length === 0) return;
+
+    thumbs.forEach(function(thumb){
+      thumb.addEventListener('click', function(){
+        const nextSrc = thumb.getAttribute('data-carousel-src');
+        const img = thumb.querySelector('img');
+
+        if(nextSrc){
+          main.src = nextSrc;
+        }
+
+        if(img && img.alt){
+          main.alt = img.alt;
+        }
+
+        thumbs.forEach(function(item){ item.classList.remove('active'); });
+        thumb.classList.add('active');
+      });
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', function(){
+    document.querySelectorAll('[data-carousel]').forEach(setupCarousel);
+  });
+})();
+</script>
+</body>
+</html>
