@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -398,52 +399,70 @@ h2 em {
 .name-mini-card h3 { font-size: 1rem; margin-bottom: 3px; }
 .name-mini-card p { font-size: 0.78rem; margin: 0; line-height: 1.35; }
 
-/* ===== EMOTIONAL FIT ===== */
-.who-feature {
+/* ===== CURRENT AVATAR / MOTHERHOOD FIT ===== */
+.mother-section {
   display: grid;
-  grid-template-columns: minmax(280px, 0.85fr) minmax(0, 1.15fr);
-  gap: clamp(26px, 4vw, 58px);
+  grid-template-columns: minmax(0, 1.05fr) minmax(360px, 0.95fr);
+  gap: clamp(34px, 5vw, 76px);
   align-items: center;
   margin-top: 34px;
-  text-align: left;
 }
 
-.who-image-card {
-  background: var(--white);
-  border: 1px solid var(--border);
-  border-radius: 28px;
-  padding: 14px;
-  box-shadow: var(--shadow);
+.mother-copy {
+  max-width: 790px;
 }
 
-.who-image-card img {
-  width: 100%;
-  aspect-ratio: 16 / 10;
-  object-fit: cover;
-  object-position: center;
-  border-radius: 22px;
+.mother-intro {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  max-width: 720px;
+  margin-bottom: 28px;
 }
 
-.who-grid {
+.mother-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 16px;
+  gap: 14px;
+  margin: 28px 0 30px;
 }
 
-.who-item {
-  background: var(--pink-pale);
+.mother-item {
+  background: linear-gradient(135deg, var(--pink-pale), #fffaf8);
   border: 1px solid rgba(232, 134, 138, 0.18);
-  border-radius: 16px;
-  padding: 18px;
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
+  border-radius: 18px;
+  padding: 18px 18px 18px 46px;
   color: var(--mid);
-  font-size: 0.88rem;
-  line-height: 1.48;
-  font-weight: 500;
+  font-size: 0.94rem;
+  line-height: 1.55;
+  font-weight: 600;
+  position: relative;
+  box-shadow: 0 8px 22px rgba(70, 50, 42, 0.035);
 }
-.who-item .flower { color: var(--pink); flex: 0 0 auto; }
+
+.mother-item::before {
+  content: '♡';
+  position: absolute;
+  left: 18px;
+  top: 18px;
+  color: var(--pink);
+  font-weight: 900;
+}
+
+.mother-image-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 30px;
+  padding: 14px;
+  box-shadow: 0 18px 46px rgba(70, 50, 42, 0.09);
+}
+
+.mother-image-card img {
+  width: 100%;
+  border-radius: 22px;
+  aspect-ratio: 1.18 / 1;
+  object-fit: cover;
+  object-position: center;
+}
 
 /* ===== BUNDLE ===== */
 .bundle-card {
@@ -558,13 +577,33 @@ footer a { color: var(--pink-light); }
 @media (max-width: 1240px) {
   .featured-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .shop-category-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
-  .who-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .course-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
 
 @media (max-width: 980px) {
-  .who-feature { grid-template-columns: 1fr; text-align: center; }
-  .who-feature .who-grid { text-align: left; }
+  .mother-section {
+    grid-template-columns: 1fr;
+  }
+
+  .mother-copy {
+    max-width: none;
+    text-align: center;
+  }
+
+  .mother-intro {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .mother-grid {
+    grid-template-columns: 1fr;
+    text-align: left;
+  }
+
+  .mother-image-card {
+    max-width: 760px;
+    margin: 0 auto;
+  }
   .home-hero-inner { min-height: auto; display: flex; flex-direction: column; }
   .home-hero-image { position: relative; order: 2; min-height: 360px; }
   .home-hero-image img { min-height: 360px; object-position: center right; }
@@ -585,7 +624,7 @@ footer a { color: var(--pink-light); }
   .home-hero-promise-row { align-items: flex-start; justify-content: flex-start; padding: 22px 28px 6px; }
   .home-promise-item { width: calc(50% - 14px); white-space: normal; font-size: 0.82rem; }
   .home-promise-item img { width: 62px; height: 62px; }
-  .shop-category-grid, .featured-grid, .who-grid, .course-grid { grid-template-columns: 1fr; }
+  .shop-category-grid, .featured-grid, .mother-grid, .course-grid { grid-template-columns: 1fr; }
   .names-mini-grid { grid-template-columns: 1fr; }
   .name-mini-card img { aspect-ratio: 1.2 / 1; }
   .free-form-row { flex-direction: column; }
@@ -793,30 +832,34 @@ footer a { color: var(--pink-light); }
 </section>
 
 <section class="section section-white" id="for-moms">
-  <div class="inner">
-    <div class="center">
-      <p class="section-label">Is this for me?</p>
-      <h2 class="section-title">This is for the sister who <em>keeps showing up.</em></h2>
-      <p class="section-intro">For the Muslim mother trying to build a home filled with learning, remembrance, and barakah — even when the days feel messy.</p>
+  <div class="inner mother-section">
+    <div class="mother-copy">
+      <p class="section-label">Is this for my family?</p>
+      <h2 class="section-title">For the mother raising children with <em>faith, beauty, and purpose.</em></h2>
+      <p class="mother-intro">
+        My Muslim Homeschool is for the Muslim mom who wants her children to love Islam, not just complete another worksheet. These resources are made to help you bring Qur'an, Sunnah, adab, reflection, and meaningful screen-free learning into your home in a gentle and beautiful way.
+      </p>
+
+      <div class="mother-grid">
+        <div class="mother-item">You want your children to know Allah and love His beautiful Names</div>
+        <div class="mother-item">You want Islamic learning to feel warm, natural, and connected to real life</div>
+        <div class="mother-item">You want screen-free resources that still feel thoughtful and beautiful</div>
+        <div class="mother-item">You want Prophet stories, du'a, adab, and Islamic studies woven into your homeschool</div>
+        <div class="mother-item">You want printables that are ready to use, but still rich in meaning</div>
+        <div class="mother-item">You want your home to be filled with remembrance, learning, and barakah</div>
+      </div>
+
+      <a class="btn btn-pink" href="/shop.html">Shop Faith-Filled Resources</a>
     </div>
 
-    <div class="who-feature">
-      <div class="who-image-card">
-        <img src="images/home/cozy-study-time-with-family.png" alt="Muslim mother gently homeschooling her children at the table with printable worksheets" loading="lazy" width="1672" height="941">
-      </div>
-
-      <div class="who-grid">
-        <div class="who-item"><span class="flower">🌸</span>Your mornings feel rushed and ungrounded no matter what you try</div>
-        <div class="who-item"><span class="flower">🌸</span>You want your days to begin with Allah, not with chaos</div>
-        <div class="who-item"><span class="flower">🌸</span>You've restarted your homeschool and need a fresh, gentle approach</div>
-        <div class="who-item"><span class="flower">🌸</span>You want your children to love the prophets, not just know their names</div>
-        <div class="who-item"><span class="flower">🌸</span>You want your children to love Allah and know His beautiful Names</div>
-        <div class="who-item"><span class="flower">🌸</span>You believe your home can be a place of light, love, and learning</div>
-        <div class="who-item"><span class="flower">🌸</span>You want your homeschool to feel like worship, not just school at home</div>
-        <div class="who-item"><span class="flower">🌸</span>You're tired of comparing your journey to everyone else's highlight reel</div>
-        <div class="who-item"><span class="flower">🌸</span>You know Allah chose you for this, even when it feels hard</div>
-        <div class="who-item"><span class="flower">🌸</span>You want screen-free activities that still feel meaningful and rooted in deen</div>
-      </div>
+    <div class="mother-image-card">
+      <img
+        src="images/home/cozy-study-time-with-family.png"
+        alt="Muslim mother teaching her children with printable Islamic homeschool resources"
+        loading="lazy"
+        width="1672"
+        height="941"
+      >
     </div>
   </div>
 </section>
