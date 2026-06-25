@@ -1,5 +1,6 @@
 
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -314,6 +315,60 @@ footer {
 }
 footer a { color:var(--pink-light); }
 
+.names-section {
+  padding:8px 0 84px;
+}
+.names-intro {
+  background:var(--white);
+  border:1px solid var(--border);
+  border-radius:28px;
+  padding:30px;
+  margin-bottom:26px;
+  box-shadow:0 12px 36px rgba(98,67,53,0.07);
+  text-align:center;
+}
+.names-intro h2 {
+  font-size:clamp(1.65rem,3.8vw,2.55rem);
+  font-weight:500;
+  margin-bottom:10px;
+}
+.names-intro h2 em { color:var(--pink); font-style:italic; }
+.names-intro p { max-width:760px; margin:0 auto; }
+.name-group {
+  margin-top:28px;
+}
+.name-group-head {
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-end;
+  gap:18px;
+  margin-bottom:16px;
+  padding:0 4px;
+}
+.name-group-head h3 {
+  font-size:clamp(1.35rem,2.8vw,2rem);
+  font-weight:500;
+}
+.name-group-head p {
+  font-size:0.94rem;
+  max-width:520px;
+}
+.name-product-grid {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+.name-product-grid .product-card img {
+  aspect-ratio:1/1.28;
+  object-fit:cover;
+}
+@media(max-width:900px) {
+  .name-product-grid { grid-template-columns:1fr; }
+  .name-group-head { display:block; }
+  .name-group-head p { margin-top:6px; }
+}
+
+
 @media(max-width:1040px) {
   .product-grid { grid-template-columns:repeat(2,1fr); }
 }
@@ -464,6 +519,176 @@ footer a { color:var(--pink-light); }
     </div>
   </div>
 </section>
+
+<section class="names-section">
+  <div class="container">
+    <div class="names-intro">
+      <p class="label">99 Names of Allah Discovery Journal</p>
+      <h2>Book 1: <em>Mercy, Love &amp; Care</em></h2>
+      <p>Choose a full Discovery Pack, or purchase the child workbook and parent guide separately. Each printable resource is designed for Muslim homeschool families who want meaningful, age-appropriate Islamic learning at home.</p>
+    </div>
+
+    <div class="name-group">
+      <div class="name-group-head">
+        <h3>Ar-Raḥmān</h3>
+        <p>The Most Merciful — helping children recognize Allah’s wide mercy through Qur’an, Sunnah, reflection, and hands-on activities.</p>
+      </div>
+      <div class="name-product-grid">
+        <article class="product-card">
+          <div class="image-wrap">
+            <img src="images/products/Ar-Rahman Bundle image.png" alt="Ar-Raḥmān Discovery Pack">
+          </div>
+          <div class="product-body">
+            <span class="tag">Discovery Pack</span>
+            <h3>Ar-Raḥmān Discovery Pack</h3>
+            <p>Includes the child workbook and parent guide together for a complete family lesson on Ar-Raḥmān.</p>
+            <div class="product-footer">
+              <div class="product-price">$10</div>
+              <button type="button" class="btn btn-pink" data-product-id="ar-rahman-discovery-pack">Add to Cart</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="image-wrap">
+            <img src="images/products/Ar-Rahman Child workbook Cover image.png" alt="Ar-Raḥmān Child Workbook">
+          </div>
+          <div class="product-body">
+            <span class="tag">Child Workbook</span>
+            <h3>Ar-Raḥmān Child Workbook</h3>
+            <p>Printable workbook pages for children with proof, story, comprehension, reflection, activities, vocabulary, and du‘ā.</p>
+            <div class="product-footer">
+              <div class="product-price">$5</div>
+              <button type="button" class="btn btn-pink" data-product-id="ar-rahman-child-workbook">Add to Cart</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="image-wrap">
+            <img src="images/products/Ar-Rahman Parent workbook cover image.png" alt="Ar-Raḥmān Parent Guide">
+          </div>
+          <div class="product-body">
+            <span class="tag">Parent Guide</span>
+            <h3>Ar-Raḥmān Parent Guide</h3>
+            <p>Parent teaching support with deeper explanation, evidence, discussion help, and practical lesson guidance.</p>
+            <div class="product-footer">
+              <div class="product-price">$5</div>
+              <button type="button" class="btn btn-pink" data-product-id="ar-rahman-parent-guide">Add to Cart</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <div class="name-group">
+      <div class="name-group-head">
+        <h3>Ar-Raḥīm</h3>
+        <p>The Especially Merciful — helping children understand Allah’s special mercy for the believers with warmth and hope.</p>
+      </div>
+      <div class="name-product-grid">
+        <article class="product-card">
+          <div class="image-wrap">
+            <img src="images/products/Ar-Rahim Bundle image v1.png" alt="Ar-Raḥīm Discovery Pack">
+          </div>
+          <div class="product-body">
+            <span class="tag">Discovery Pack</span>
+            <h3>Ar-Raḥīm Discovery Pack</h3>
+            <p>Includes the child workbook and parent guide together for a complete family lesson on Ar-Raḥīm.</p>
+            <div class="product-footer">
+              <div class="product-price">$10</div>
+              <button type="button" class="btn btn-pink" data-product-id="ar-rahim-discovery-pack">Add to Cart</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="image-wrap">
+            <img src="images/products/Ar-Rahim Child workbook cover image.png" alt="Ar-Raḥīm Child Workbook">
+          </div>
+          <div class="product-body">
+            <span class="tag">Child Workbook</span>
+            <h3>Ar-Raḥīm Child Workbook</h3>
+            <p>Printable workbook pages for children with proof, story, comprehension, reflection, activities, vocabulary, and du‘ā.</p>
+            <div class="product-footer">
+              <div class="product-price">$5</div>
+              <button type="button" class="btn btn-pink" data-product-id="ar-rahim-child-workbook">Add to Cart</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="image-wrap">
+            <img src="images/products/Ar-Rahim Parent guide cover image.png" alt="Ar-Raḥīm Parent Guide">
+          </div>
+          <div class="product-body">
+            <span class="tag">Parent Guide</span>
+            <h3>Ar-Raḥīm Parent Guide</h3>
+            <p>Parent teaching support with deeper explanation, evidence, discussion help, and practical lesson guidance.</p>
+            <div class="product-footer">
+              <div class="product-price">$5</div>
+              <button type="button" class="btn btn-pink" data-product-id="ar-rahim-parent-guide">Add to Cart</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <div class="name-group">
+      <div class="name-group-head">
+        <h3>As-Salām</h3>
+        <p>The Source of Peace and Safety — teaching children that true peace comes from Allah and leads to safe words, gentle actions, and trust in Him.</p>
+      </div>
+      <div class="name-product-grid">
+        <article class="product-card">
+          <div class="image-wrap">
+            <img src="images/products/As-Salam Bundle image 2.png" alt="As-Salām Discovery Pack">
+          </div>
+          <div class="product-body">
+            <span class="tag">Discovery Pack</span>
+            <h3>As-Salām Discovery Pack</h3>
+            <p>Includes the child workbook and parent guide together for a complete family lesson on As-Salām.</p>
+            <div class="product-footer">
+              <div class="product-price">$10</div>
+              <button type="button" class="btn btn-pink" data-product-id="as-salam-discovery-pack">Add to Cart</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="image-wrap">
+            <img src="images/products/As-Salam Child workbook cover image.png" alt="As-Salām Child Workbook">
+          </div>
+          <div class="product-body">
+            <span class="tag">Child Workbook</span>
+            <h3>As-Salām Child Workbook</h3>
+            <p>Printable workbook pages for children with proof, story, comprehension, reflection, activities, vocabulary, and du‘ā.</p>
+            <div class="product-footer">
+              <div class="product-price">$5</div>
+              <button type="button" class="btn btn-pink" data-product-id="as-salam-child-workbook">Add to Cart</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="image-wrap">
+            <img src="images/products/AS-Salam Parent workbook cover Image.png" alt="As-Salām Parent Guide">
+          </div>
+          <div class="product-body">
+            <span class="tag">Parent Guide</span>
+            <h3>As-Salām Parent Guide</h3>
+            <p>Parent teaching support with deeper explanation, evidence, discussion help, and practical lesson guidance.</p>
+            <div class="product-footer">
+              <div class="product-price">$5</div>
+              <button type="button" class="btn btn-pink" data-product-id="as-salam-parent-guide">Add to Cart</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
 
 <div id="site-footer"></div>
 <script src="/assets/site-footer.js"></script>
