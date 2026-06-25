@@ -261,6 +261,7 @@
           <a href="/shop.html">Shop <span class="site-dropdown-arrow">▼</span></a>
           <div class="site-dropdown-content">
             <a href="/shop.html">All Products</a>
+            <a href="/99-names-of-allah-for-kids.html">99 Names of Allah for Kids</a>
             <a href="/product-bundle.html">Homeschool Bundle</a>
             <a href="/product-playbook.html">Morning Routine Playbook</a>
             <a href="/product-workbook.html">Homeschool Reset Workbook</a>
