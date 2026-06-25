@@ -458,15 +458,14 @@ nav {
   margin-bottom:10px;
 }
 .optin-card h2 em { color:var(--pink); font-style:italic; }
-.optin-placeholder {
+.optin-form {
   background:var(--white);
-  border:2px dashed rgba(36,123,123,0.35);
+  border:1px solid var(--border);
   border-radius:22px;
-  padding:22px;
-  text-align:center;
+  padding:18px;
+  box-shadow:0 10px 28px rgba(98,67,53,0.06);
 }
-.optin-placeholder strong { display:block; margin-bottom:8px; color:var(--charcoal); }
-.optin-placeholder p { font-size:0.92rem; }
+.optin-form .ml-embedded { width:100%; }
 .offer-note {
   background:var(--yellow-pale);
   border:1px solid rgba(232,196,90,0.42);
@@ -627,6 +626,16 @@ footer a { color:var(--pink-light); }
   .container { padding:0 18px; }
 }
 </style>
+<!-- MailerLite Universal -->
+<script>
+    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+    .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+    n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+    (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+    ml('account', '2351886');
+</script>
+<!-- End MailerLite Universal -->
+
 </head>
 <body>
 <div id="site-nav"></div>
@@ -714,10 +723,8 @@ footer a { color:var(--pink-light); }
           <li>How to connect the Name to du‘ā and daily life</li>
         </ul>
       </div>
-      <div class="optin-placeholder">
-        <strong>MailerLite guide form goes here</strong>
-        <p>After you create the embedded MailerLite form for the free One-Name-a-Week Guide, paste the embed code in this box. We’ll connect it in the next step.</p>
-        <!-- MAILERLITE FORM EMBED FOR FREE ONE-NAME-A-WEEK GUIDE GOES HERE -->
+      <div class="optin-form">
+        <div class="ml-embedded" data-form="ngFmlB"></div>
       </div>
     </article>
   </div>
