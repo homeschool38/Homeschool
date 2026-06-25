@@ -399,12 +399,37 @@ h2 em {
 .name-mini-card p { font-size: 0.78rem; margin: 0; line-height: 1.35; }
 
 /* ===== EMOTIONAL FIT ===== */
+.who-feature {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.85fr) minmax(0, 1.15fr);
+  gap: clamp(26px, 4vw, 58px);
+  align-items: center;
+  margin-top: 34px;
+  text-align: left;
+}
+
+.who-image-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 28px;
+  padding: 14px;
+  box-shadow: var(--shadow);
+}
+
+.who-image-card img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 22px;
+}
+
 .who-grid {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 16px;
-  margin-top: 34px;
 }
+
 .who-item {
   background: var(--pink-pale);
   border: 1px solid rgba(232, 134, 138, 0.18);
@@ -538,6 +563,8 @@ footer a { color: var(--pink-light); }
 }
 
 @media (max-width: 980px) {
+  .who-feature { grid-template-columns: 1fr; text-align: center; }
+  .who-feature .who-grid { text-align: left; }
   .home-hero-inner { min-height: auto; display: flex; flex-direction: column; }
   .home-hero-image { position: relative; order: 2; min-height: 360px; }
   .home-hero-image img { min-height: 360px; object-position: center right; }
@@ -766,20 +793,30 @@ footer a { color: var(--pink-light); }
 </section>
 
 <section class="section section-white" id="for-moms">
-  <div class="inner center">
-    <p class="section-label">Is this for me?</p>
-    <h2 class="section-title">This is for the sister who <em>keeps showing up.</em></h2>
-    <div class="who-grid">
-      <div class="who-item"><span class="flower">🌸</span>Your mornings feel rushed and ungrounded no matter what you try</div>
-      <div class="who-item"><span class="flower">🌸</span>You want your days to begin with Allah, not with chaos</div>
-      <div class="who-item"><span class="flower">🌸</span>You've restarted your homeschool and need a fresh, gentle approach</div>
-      <div class="who-item"><span class="flower">🌸</span>You want your children to love the prophets, not just know their names</div>
-      <div class="who-item"><span class="flower">🌸</span>You want your children to love Allah and know His beautiful Names</div>
-      <div class="who-item"><span class="flower">🌸</span>You believe your home can be a place of light, love, and learning</div>
-      <div class="who-item"><span class="flower">🌸</span>You want your homeschool to feel like worship, not just school at home</div>
-      <div class="who-item"><span class="flower">🌸</span>You're tired of comparing your journey to everyone else's highlight reel</div>
-      <div class="who-item"><span class="flower">🌸</span>You know Allah chose you for this, even when it feels hard</div>
-      <div class="who-item"><span class="flower">🌸</span>You want screen-free activities that still feel meaningful and rooted in deen</div>
+  <div class="inner">
+    <div class="center">
+      <p class="section-label">Is this for me?</p>
+      <h2 class="section-title">This is for the sister who <em>keeps showing up.</em></h2>
+      <p class="section-intro">For the Muslim mother trying to build a home filled with learning, remembrance, and barakah — even when the days feel messy.</p>
+    </div>
+
+    <div class="who-feature">
+      <div class="who-image-card">
+        <img src="images/home/cozy-study-time-with-family.png" alt="Muslim mother gently homeschooling her children at the table with printable worksheets" loading="lazy" width="1672" height="941">
+      </div>
+
+      <div class="who-grid">
+        <div class="who-item"><span class="flower">🌸</span>Your mornings feel rushed and ungrounded no matter what you try</div>
+        <div class="who-item"><span class="flower">🌸</span>You want your days to begin with Allah, not with chaos</div>
+        <div class="who-item"><span class="flower">🌸</span>You've restarted your homeschool and need a fresh, gentle approach</div>
+        <div class="who-item"><span class="flower">🌸</span>You want your children to love the prophets, not just know their names</div>
+        <div class="who-item"><span class="flower">🌸</span>You want your children to love Allah and know His beautiful Names</div>
+        <div class="who-item"><span class="flower">🌸</span>You believe your home can be a place of light, love, and learning</div>
+        <div class="who-item"><span class="flower">🌸</span>You want your homeschool to feel like worship, not just school at home</div>
+        <div class="who-item"><span class="flower">🌸</span>You're tired of comparing your journey to everyone else's highlight reel</div>
+        <div class="who-item"><span class="flower">🌸</span>You know Allah chose you for this, even when it feels hard</div>
+        <div class="who-item"><span class="flower">🌸</span>You want screen-free activities that still feel meaningful and rooted in deen</div>
+      </div>
     </div>
   </div>
 </section>
