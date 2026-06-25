@@ -389,7 +389,7 @@ nav {
 }
 
 .coming-section {
-  padding:46px 0 34px;
+  padding:46px 0 76px;
   background:linear-gradient(135deg,var(--sage-pale),var(--yellow-pale));
 }
 .coming-grid {
@@ -422,13 +422,16 @@ nav {
 }
 .coming-card p { font-size:0.94rem; }
 
-.future-section,
+.future-section { padding:76px 0 54px; }
 .faq-section { padding:52px 0; }
 .future-card {
   background:linear-gradient(135deg,var(--white),var(--yellow-pale));
   text-align:center;
+  max-width:920px;
+  margin:0 auto;
 }
-.future-card p { max-width:780px; margin:0 auto; }
+.future-card p { max-width:790px; margin:0 auto 10px; }
+.future-card p:last-child { margin-bottom:0; }
 .faq-grid {
   display:grid;
   grid-template-columns:1fr 1fr;
@@ -748,14 +751,14 @@ footer a { color:var(--pink-light); }
   </div>
 </section>
 
-<section class="note-section">
+<section class="future-section">
   <div class="container">
-    <div class="note-card">
+    <article class="future-card">
       <p class="label">A gentle reminder for mothers</p>
-      <h2>You are not just teaching a lesson. You are helping your child know Allah.</h2>
+      <h2>You are not just teaching a lesson. You are helping your child <em>know Allah</em>.</h2>
       <p>When a child learns the Names of Allah, they are learning Who to turn to when they are afraid, Who provides for them, Who forgives them, Who sees them, and Who loves mercy. These small lessons can become lifelong anchors in their heart.</p>
       <p>Start with one Name. Read it together. Talk about it during the day. Use it in du‘ā. Let your child see that Islam is not only something we study — it is something we live, love, and return to again and again.</p>
-    </div>
+    </article>
   </div>
 </section>
 
