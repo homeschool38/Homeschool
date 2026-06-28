@@ -60,23 +60,23 @@
       id: "ar-rahman-discovery-pack",
       name: "Ar-Raḥmān Discovery Pack",
       priceCents: 1000,
-      priceLabel: "$10.00",
+      priceLabel: "$18.00",
       image: "images/products/Ar-Rahman Bundle image.png",
       checkoutName: "Ar-Raḥmān Discovery Pack"
     },
     "ar-rahman-child-workbook": {
       id: "ar-rahman-child-workbook",
       name: "Ar-Raḥmān Child Workbook",
-      priceCents: 500,
-      priceLabel: "$5.00",
+      priceCents: 1000,
+      priceLabel: "$10.00",
       image: "images/products/Ar-Rahman Child workbook Cover image.png",
       checkoutName: "Ar-Raḥmān Child Workbook"
     },
     "ar-rahman-parent-guide": {
       id: "ar-rahman-parent-guide",
       name: "Ar-Raḥmān Parent Guide",
-      priceCents: 500,
-      priceLabel: "$5.00",
+      priceCents: 1000,
+      priceLabel: "$10.00",
       image: "images/products/Ar-Rahman Parent workbook cover image.png",
       checkoutName: "Ar-Raḥmān Parent Guide"
     },
@@ -84,23 +84,23 @@
       id: "ar-rahim-discovery-pack",
       name: "Ar-Raḥīm Discovery Pack",
       priceCents: 1000,
-      priceLabel: "$10.00",
+      priceLabel: "$18.00",
       image: "images/products/Ar-Rahim Bundle image v1.png",
       checkoutName: "Ar-Raḥīm Discovery Pack"
     },
     "ar-rahim-child-workbook": {
       id: "ar-rahim-child-workbook",
       name: "Ar-Raḥīm Child Workbook",
-      priceCents: 500,
-      priceLabel: "$5.00",
+      priceCents: 1000,
+      priceLabel: "$10.00",
       image: "images/products/Ar-Rahim Child workbook cover image.png",
       checkoutName: "Ar-Raḥīm Child Workbook"
     },
     "ar-rahim-parent-guide": {
       id: "ar-rahim-parent-guide",
       name: "Ar-Raḥīm Parent Guide",
-      priceCents: 500,
-      priceLabel: "$5.00",
+      priceCents: 1000,
+      priceLabel: "$10.00",
       image: "images/products/Ar-Rahim Parent guide cover image.png",
       checkoutName: "Ar-Raḥīm Parent Guide"
     },
@@ -108,23 +108,23 @@
       id: "as-salam-discovery-pack",
       name: "As-Salām Discovery Pack",
       priceCents: 1000,
-      priceLabel: "$10.00",
+      priceLabel: "$18.00",
       image: "images/products/As-Salam Bundle image 2.png",
       checkoutName: "As-Salām Discovery Pack"
     },
     "as-salam-child-workbook": {
       id: "as-salam-child-workbook",
       name: "As-Salām Child Workbook",
-      priceCents: 500,
-      priceLabel: "$5.00",
+      priceCents: 1000,
+      priceLabel: "$10.00",
       image: "images/products/As-Salam Child workbook cover image.png",
       checkoutName: "As-Salām Child Workbook"
     },
     "as-salam-parent-guide": {
       id: "as-salam-parent-guide",
       name: "As-Salām Parent Guide",
-      priceCents: 500,
-      priceLabel: "$5.00",
+      priceCents: 1000,
+      priceLabel: "$10.00",
       image: "images/products/AS-Salam Parent workbook cover Image.png",
       checkoutName: "As-Salām Parent Guide"
     }
