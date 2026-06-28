@@ -59,7 +59,7 @@
     "ar-rahman-discovery-pack": {
       id: "ar-rahman-discovery-pack",
       name: "Ar-Raḥmān Discovery Pack",
-      priceCents: 1000,
+      priceCents: 1800,
       priceLabel: "$18.00",
       image: "images/products/Ar-Rahman Bundle image.png",
       checkoutName: "Ar-Raḥmān Discovery Pack"
@@ -83,7 +83,7 @@
     "ar-rahim-discovery-pack": {
       id: "ar-rahim-discovery-pack",
       name: "Ar-Raḥīm Discovery Pack",
-      priceCents: 1000,
+      priceCents: 1800,
       priceLabel: "$18.00",
       image: "images/products/Ar-Rahim Bundle image v1.png",
       checkoutName: "Ar-Raḥīm Discovery Pack"
@@ -107,7 +107,7 @@
     "as-salam-discovery-pack": {
       id: "as-salam-discovery-pack",
       name: "As-Salām Discovery Pack",
-      priceCents: 1000,
+      priceCents: 1800,
       priceLabel: "$18.00",
       image: "images/products/As-Salam Bundle image 2.png",
       checkoutName: "As-Salām Discovery Pack"
