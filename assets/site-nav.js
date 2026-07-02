@@ -263,11 +263,12 @@
             <a href="/shop.html">All Products</a>
             <a href="/99-names-of-allah-for-kids.html">99 Names of Allah for Kids</a>
             <a href="/product-bundle.html">Homeschool Bundle</a>
-            <a href="/product-playbook.html">Morning Routine Playbook</a>
-            <a href="/product-workbook.html">Homeschool Reset Workbook</a>
+            <a href="/halal-haram-sunnah-foods.html">Halal, Haram &amp; Sunnah Foods</a>
             <a href="/product-scripts.html">Prophet Story Scripts</a>
             <a href="/product-screenfree.html">Screen-Free Challenge Cards</a>
-          </div>
+            <a href="/product-playbook.html">Morning Routine Playbook</a>
+            <a href="/product-workbook.html">Homeschool Reset Workbook</a>
+            </div>
         </div>
 
         <a href="/blog.html">Blog</a>
