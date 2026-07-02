@@ -1,4 +1,3 @@
-
 /*
   My Muslim Homeschool shared cart
 
@@ -127,6 +126,33 @@
       priceLabel: "$10.00",
       image: "images/products/AS-Salam Parent workbook cover Image.png",
       checkoutName: "As-Salām Parent Guide"
+    },
+    "halal-haram-sunnah-foods-child-workbook": {
+      id: "halal-haram-sunnah-foods-child-workbook",
+      name: "Halal, Haram & Sunnah Foods - Child Workbook",
+      priceCents: 800,
+      priceLabel: "$8.00",
+      image: "images/products/halal-haram-sunnah-foods/halal-haram-sunnah-foods-child-workbook-cover.png",
+      checkoutName: "Halal, Haram & Sunnah Foods - Child Workbook",
+      squareVariationId: "RRLY4TNLG77AG7L37T2OAKWB"
+    },
+    "halal-haram-sunnah-foods-parent-guide": {
+      id: "halal-haram-sunnah-foods-parent-guide",
+      name: "Halal, Haram & Sunnah Foods - Parent Teaching Guide",
+      priceCents: 800,
+      priceLabel: "$8.00",
+      image: "images/products/halal-haram-sunnah-foods/halal-haram-sunnah-foods-parent-guide-cover.png",
+      checkoutName: "Halal, Haram & Sunnah Foods - Parent Teaching Guide",
+      squareVariationId: "SIDUVOOK73ZEXHOCEACPADRE"
+    },
+    "halal-haram-sunnah-foods-complete-bundle": {
+      id: "halal-haram-sunnah-foods-complete-bundle",
+      name: "Halal, Haram & Sunnah Foods - Complete Bundle",
+      priceCents: 1200,
+      priceLabel: "$12.00",
+      image: "images/products/halal-haram-sunnah-foods/halal-haram-sunnah-foods-bundle.png",
+      checkoutName: "Halal, Haram & Sunnah Foods - Complete Bundle",
+      squareVariationId: "X27ZPO22JYCXVMI33JM2AFME"
     }
   };
 
