@@ -148,8 +148,8 @@
     "halal-haram-sunnah-foods-complete-bundle": {
       id: "halal-haram-sunnah-foods-complete-bundle",
       name: "Halal, Haram & Sunnah Foods - Complete Bundle",
-      priceCents: 1200,
-      priceLabel: "$12.00",
+      priceCents: 1400,
+      priceLabel: "$14.00",
       image: "images/products/halal-haram-sunnah-foods/halal-haram-sunnah-foods-bundle.png",
       checkoutName: "Halal, Haram & Sunnah Foods - Complete Bundle",
       squareVariationId: "X27ZPO22JYCXVMI33JM2AFME"
