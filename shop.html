@@ -12,7 +12,355 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Nunito:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-<style>
+<!-- ============================================================
+     STRUCTURED DATA FOR SHOP PAGE
+     Paste this entire block into shop.html just before </head>
+     ============================================================ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "My Muslim Homeschool Shop",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "item": {
+        "@type": "Product",
+        "name": "The Complete Muslim Homeschool Bundle",
+        "image": "https://mymuslimhomeschool.com/images/products/complete-bundle.png",
+        "description": "Start your mornings with barakah, reset your homeschool rhythm, and bring Prophet stories to life. Includes the Morning Routine Playbook, Homeschool Reset Workbook, 15 Prophet Story Scripts, and bonus quick-reference pages.",
+        "brand": { "@type": "Brand", "name": "My Muslim Homeschool" },
+        "url": "https://mymuslimhomeschool.com/bundle-checkout.html",
+        "offers": {
+          "@type": "Offer",
+          "price": "35.00",
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock",
+          "url": "https://mymuslimhomeschool.com/bundle-checkout.html"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "item": {
+        "@type": "Product",
+        "name": "Morning Routine Playbook",
+        "image": "https://mymuslimhomeschool.com/images/products/morning-routine-playbook.png",
+        "description": "From Fajr to first lesson — build a gentle, repeatable rhythm for calmer homeschool mornings.",
+        "brand": { "@type": "Brand", "name": "My Muslim Homeschool" },
+        "url": "https://mymuslimhomeschool.com/product-playbook.html",
+        "offers": {
+          "@type": "Offer",
+          "price": "7.00",
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock",
+          "url": "https://mymuslimhomeschool.com/product-playbook.html"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "item": {
+        "@type": "Product",
+        "name": "Homeschool Reset Workbook",
+        "image": "https://mymuslimhomeschool.com/images/products/homeschool-reset-workbook.png",
+        "description": "A fillable workbook to help you restart with niyyah, clarity, and a plan that actually fits your life.",
+        "brand": { "@type": "Brand", "name": "My Muslim Homeschool" },
+        "url": "https://mymuslimhomeschool.com/product-workbook.html",
+        "offers": {
+          "@type": "Offer",
+          "price": "15.00",
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock",
+          "url": "https://mymuslimhomeschool.com/product-workbook.html"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "item": {
+        "@type": "Product",
+        "name": "Open & Teach: 15 Prophet Story Scripts",
+        "image": "https://mymuslimhomeschool.com/images/products/prophet-story-scripts.png",
+        "description": "Ready-to-read Prophet stories for ages 4–12, with discussion prompts and activities included.",
+        "brand": { "@type": "Brand", "name": "My Muslim Homeschool" },
+        "url": "https://mymuslimhomeschool.com/product-scripts.html",
+        "offers": {
+          "@type": "Offer",
+          "price": "20.00",
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock",
+          "url": "https://mymuslimhomeschool.com/product-scripts.html"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 5,
+      "item": {
+        "@type": "Product",
+        "name": "100 Screen-Free Challenge Cards",
+        "image": "https://mymuslimhomeschool.com/images/products/screen-free-challenge-cards.png",
+        "description": "Printable activity cards for meaningful Muslim family days without screens, stress, or overplanning.",
+        "brand": { "@type": "Brand", "name": "My Muslim Homeschool" },
+        "url": "https://mymuslimhomeschool.com/product-screenfree.html",
+        "offers": {
+          "@type": "Offer",
+          "price": "9.99",
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock",
+          "url": "https://mymuslimhomeschool.com/product-screenfree.html"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 6,
+      "item": {
+        "@type": "Product",
+        "name": "Halal, Haram & Sunnah Foods Complete Bundle",
+        "image": "https://mymuslimhomeschool.com/images/products/halal-haram-sunnah-foods/halal-haram-sunnah-foods-bundle.png",
+        "description": "Complete Islamic food study unit including the Child Workbook, Parent Teaching Guide, Sorting Cards, bonus coloring pages, activities, answer key, and Sources Used page.",
+        "brand": { "@type": "Brand", "name": "My Muslim Homeschool" },
+        "url": "https://mymuslimhomeschool.com/halal-haram-sunnah-foods.html",
+        "offers": {
+          "@type": "Offer",
+          "price": "14.00",
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock",
+          "url": "https://mymuslimhomeschool.com/halal-haram-sunnah-foods.html"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 7,
+      "item": {
+        "@type": "Product",
+        "name": "Halal, Haram & Sunnah Foods Child Workbook",
+        "image": "https://mymuslimhomeschool.com/images/products/halal-haram-sunnah-foods/halal-haram-sunnah-foods-child-workbook-cover.png",
+        "description": "Printable child lessons and activities for learning halal food basics, foods to avoid, check-first foods, and Sunnah eating manners.",
+        "brand": { "@type": "Brand", "name": "My Muslim Homeschool" },
+        "url": "https://mymuslimhomeschool.com/halal-haram-sunnah-foods.html",
+        "offers": {
+          "@type": "Offer",
+          "price": "8.00",
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock",
+          "url": "https://mymuslimhomeschool.com/halal-haram-sunnah-foods.html"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 8,
+      "item": {
+        "@type": "Product",
+        "name": "Halal, Haram & Sunnah Foods Parent Teaching Guide",
+        "image": "https://mymuslimhomeschool.com/images/products/halal-haram-sunnah-foods/halal-haram-sunnah-foods-parent-guide-cover.png",
+        "description": "Teaching notes, discussion help, caution notes, Qur'an and hadith references, and parent support for careful halal food teaching.",
+        "brand": { "@type": "Brand", "name": "My Muslim Homeschool" },
+        "url": "https://mymuslimhomeschool.com/halal-haram-sunnah-foods.html",
+        "offers": {
+          "@type": "Offer",
+          "price": "8.00",
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock",
+          "url": "https://mymuslimhomeschool.com/halal-haram-sunnah-foods.html"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 9,
+      "item": {
+        "@type": "Product",
+        "name": "Ar-Rahman Discovery Pack",
+        "image": "https://mymuslimhomeschool.com/images/products/Ar-Rahman%20Bundle%20image.png",
+        "description": "Child workbook and parent guide together for a complete family lesson on Ar-Rahman, The Most Merciful. Part of the 99 Names of Allah Discovery Journal, Book 1: Mercy, Love & Care.",
+        "brand": { "@type": "Brand", "name": "My Muslim Homeschool" },
+        "url": "https://mymuslimhomeschool.com/shop.html",
+        "offers": {
+          "@type": "Offer",
+          "price": "18.00",
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock",
+          "url": "https://mymuslimhomeschool.com/shop.html"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 10,
+      "item": {
+        "@type": "Product",
+        "name": "Ar-Rahman Child Workbook",
+        "image": "https://mymuslimhomeschool.com/images/products/Ar-Rahman%20Child%20workbook%20Cover%20image.png",
+        "description": "Printable workbook pages for children with proof, story, comprehension, reflection, activities, vocabulary, and du'a — teaching the Name Ar-Rahman.",
+        "brand": { "@type": "Brand", "name": "My Muslim Homeschool" },
+        "url": "https://mymuslimhomeschool.com/shop.html",
+        "offers": {
+          "@type": "Offer",
+          "price": "10.00",
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock",
+          "url": "https://mymuslimhomeschool.com/shop.html"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 11,
+      "item": {
+        "@type": "Product",
+        "name": "Ar-Rahman Parent Guide",
+        "image": "https://mymuslimhomeschool.com/images/products/Ar-Rahman%20Parent%20workbook%20cover%20image.png",
+        "description": "Parent teaching support with deeper explanation, evidence, discussion help, and practical lesson guidance for teaching Ar-Rahman.",
+        "brand": { "@type": "Brand", "name": "My Muslim Homeschool" },
+        "url": "https://mymuslimhomeschool.com/shop.html",
+        "offers": {
+          "@type": "Offer",
+          "price": "10.00",
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock",
+          "url": "https://mymuslimhomeschool.com/shop.html"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 12,
+      "item": {
+        "@type": "Product",
+        "name": "Ar-Rahim Discovery Pack",
+        "image": "https://mymuslimhomeschool.com/images/products/Ar-Rahim%20Bundle%20image%20v1.png",
+        "description": "Child workbook and parent guide together for a complete family lesson on Ar-Rahim, The Especially Merciful. Part of the 99 Names of Allah Discovery Journal, Book 1: Mercy, Love & Care.",
+        "brand": { "@type": "Brand", "name": "My Muslim Homeschool" },
+        "url": "https://mymuslimhomeschool.com/shop.html",
+        "offers": {
+          "@type": "Offer",
+          "price": "18.00",
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock",
+          "url": "https://mymuslimhomeschool.com/shop.html"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 13,
+      "item": {
+        "@type": "Product",
+        "name": "Ar-Rahim Child Workbook",
+        "image": "https://mymuslimhomeschool.com/images/products/Ar-Rahim%20Child%20workbook%20cover%20image.png",
+        "description": "Printable workbook pages for children with proof, story, comprehension, reflection, activities, vocabulary, and du'a — teaching the Name Ar-Rahim.",
+        "brand": { "@type": "Brand", "name": "My Muslim Homeschool" },
+        "url": "https://mymuslimhomeschool.com/shop.html",
+        "offers": {
+          "@type": "Offer",
+          "price": "10.00",
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock",
+          "url": "https://mymuslimhomeschool.com/shop.html"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 14,
+      "item": {
+        "@type": "Product",
+        "name": "Ar-Rahim Parent Guide",
+        "image": "https://mymuslimhomeschool.com/images/products/Ar-Rahim%20Parent%20guide%20cover%20image.png",
+        "description": "Parent teaching support with deeper explanation, evidence, discussion help, and practical lesson guidance for teaching Ar-Rahim.",
+        "brand": { "@type": "Brand", "name": "My Muslim Homeschool" },
+        "url": "https://mymuslimhomeschool.com/shop.html",
+        "offers": {
+          "@type": "Offer",
+          "price": "10.00",
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock",
+          "url": "https://mymuslimhomeschool.com/shop.html"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 15,
+      "item": {
+        "@type": "Product",
+        "name": "As-Salam Discovery Pack",
+        "image": "https://mymuslimhomeschool.com/images/products/As-Salam%20Bundle%20image%202.png",
+        "description": "Child workbook and parent guide together for a complete family lesson on As-Salam, The Source of Peace and Safety. Part of the 99 Names of Allah Discovery Journal, Book 1: Mercy, Love & Care.",
+        "brand": { "@type": "Brand", "name": "My Muslim Homeschool" },
+        "url": "https://mymuslimhomeschool.com/shop.html",
+        "offers": {
+          "@type": "Offer",
+          "price": "18.00",
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock",
+          "url": "https://mymuslimhomeschool.com/shop.html"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 16,
+      "item": {
+        "@type": "Product",
+        "name": "As-Salam Child Workbook",
+        "image": "https://mymuslimhomeschool.com/images/products/As-Salam%20Child%20workbook%20cover%20image.png",
+        "description": "Printable workbook pages for children with proof, story, comprehension, reflection, activities, vocabulary, and du'a — teaching the Name As-Salam.",
+        "brand": { "@type": "Brand", "name": "My Muslim Homeschool" },
+        "url": "https://mymuslimhomeschool.com/shop.html",
+        "offers": {
+          "@type": "Offer",
+          "price": "10.00",
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock",
+          "url": "https://mymuslimhomeschool.com/shop.html"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 17,
+      "item": {
+        "@type": "Product",
+        "name": "As-Salam Parent Guide",
+        "image": "https://mymuslimhomeschool.com/images/products/AS-Salam%20Parent%20workbook%20cover%20Image.png",
+        "description": "Parent teaching support with deeper explanation, evidence, discussion help, and practical lesson guidance for teaching As-Salam.",
+        "brand": { "@type": "Brand", "name": "My Muslim Homeschool" },
+        "url": "https://mymuslimhomeschool.com/shop.html",
+        "offers": {
+          "@type": "Offer",
+          "price": "10.00",
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock",
+          "url": "https://mymuslimhomeschool.com/shop.html"
+        }
+      }
+    }
+  ]
+}
+</script>
+
+<!-- Breadcrumb schema — helps Google show "Home > Shop" in results -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://mymuslimhomeschool.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Shop", "item": "https://mymuslimhomeschool.com/shop.html" }
+  ]
+}
+</script>
+  <style>
 :root {
   --pink: #e8868a;
   --pink-light: #f5c0c2;
