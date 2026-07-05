@@ -127,6 +127,78 @@
       image: "images/products/AS-Salam Parent workbook cover Image.png",
       checkoutName: "As-Salām Parent Guide"
     },
+        "al-halim-discovery-pack": {
+      id: "al-halim-discovery-pack",
+      name: "Al-Ḥalīm Discovery Pack",
+      priceCents: 1800,
+      priceLabel: "$18.00",
+      image: "images/al-halim/al-halim-bundle-image.png",
+      checkoutName: "Al-Ḥalīm Discovery Pack"
+    },
+    "al-halim-child-workbook": {
+      id: "al-halim-child-workbook",
+      name: "Al-Ḥalīm Child Workbook",
+      priceCents: 1000,
+      priceLabel: "$10.00",
+      image: "images/al-halim/al-halim-meet-the-name.png",
+      checkoutName: "Al-Ḥalīm Child Workbook"
+    },
+    "al-halim-parent-guide": {
+      id: "al-halim-parent-guide",
+      name: "Al-Ḥalīm Parent Guide",
+      priceCents: 1000,
+      priceLabel: "$10.00",
+      image: "images/al-halim/al-halim-scholarly-explanation-1.png",
+      checkoutName: "Al-Ḥalīm Parent Guide"
+    },
+    "al-latif-discovery-pack": {
+      id: "al-latif-discovery-pack",
+      name: "Al-Laṭīf Discovery Pack",
+      priceCents: 1800,
+      priceLabel: "$18.00",
+      image: "images/al-latif/al-latif-bundle-image.png",
+      checkoutName: "Al-Laṭīf Discovery Pack"
+    },
+    "al-latif-child-workbook": {
+      id: "al-latif-child-workbook",
+      name: "Al-Laṭīf Child Workbook",
+      priceCents: 1000,
+      priceLabel: "$10.00",
+      image: "images/al-latif/al-latif-meet-the-name.png",
+      checkoutName: "Al-Laṭīf Child Workbook"
+    },
+    "al-latif-parent-guide": {
+      id: "al-latif-parent-guide",
+      name: "Al-Laṭīf Parent Guide",
+      priceCents: 1000,
+      priceLabel: "$10.00",
+      image: "images/al-latif/al-latif-understanding-more.png",
+      checkoutName: "Al-Laṭīf Parent Guide"
+    },
+    "al-mumin-discovery-pack": {
+      id: "al-mumin-discovery-pack",
+      name: "Al-Mu’min Discovery Pack",
+      priceCents: 1800,
+      priceLabel: "$18.00",
+      image: "images/al-mumin/al-mumin-bundle-image.png",
+      checkoutName: "Al-Mu’min Discovery Pack"
+    },
+    "al-mumin-child-workbook": {
+      id: "al-mumin-child-workbook",
+      name: "Al-Mu’min Child Workbook",
+      priceCents: 1000,
+      priceLabel: "$10.00",
+      image: "images/al-mumin/al-mumin-what-does-it-mean.png",
+      checkoutName: "Al-Mu’min Child Workbook"
+    },
+    "al-mumin-parent-guide": {
+      id: "al-mumin-parent-guide",
+      name: "Al-Mu’min Parent Guide",
+      priceCents: 1000,
+      priceLabel: "$10.00",
+      image: "images/al-mumin/al-mumin-teaching-ages-8-to-12.png",
+      checkoutName: "Al-Mu’min Parent Guide"
+    },
     "halal-haram-sunnah-foods-child-workbook": {
       id: "halal-haram-sunnah-foods-child-workbook",
       name: "Halal, Haram & Sunnah Foods - Child Workbook",
