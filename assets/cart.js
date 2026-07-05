@@ -119,7 +119,7 @@
       image: "images/products/As-Salam Child workbook cover image.png",
       checkoutName: "As-Salām Child Workbook"
     },
-    "as-salam-parent-guide": {
+     "as-salam-parent-guide": {
       id: "as-salam-parent-guide",
       name: "As-Salām Parent Guide",
       priceCents: 1000,
@@ -127,7 +127,7 @@
       image: "images/products/AS-Salam Parent workbook cover Image.png",
       checkoutName: "As-Salām Parent Guide"
     },
-        "al-halim-discovery-pack": {
+    "al-halim-discovery-pack": {
       id: "al-halim-discovery-pack",
       name: "Al-Ḥalīm Discovery Pack",
       priceCents: 1800,
