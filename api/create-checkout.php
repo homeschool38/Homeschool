@@ -37,6 +37,7 @@ $catalog = [
     'amount' => 999,
     'variation_id' => 'F5ZY4GB2GMO7WI6DTLUUIVEX',
   ],
+
   'ar-rahman-discovery-pack' => [
     'name' => 'Ar-Raḥmān Discovery Pack',
     'amount' => 1000,
@@ -81,6 +82,68 @@ $catalog = [
     'name' => 'As-Salām Parent Guide',
     'amount' => 500,
     'variation_id' => 'AQS4PUDH4XZ6FW23J35I4ZDU',
+  ],
+
+  'al-halim-discovery-pack' => [
+    'name' => 'Al-Ḥalīm Discovery Pack',
+    'amount' => 1800,
+    'variation_id' => 'Q53SIDVNB77NLZQWUCFT3MTR',
+  ],
+  'al-halim-child-workbook' => [
+    'name' => 'Al-Ḥalīm Child Workbook',
+    'amount' => 1000,
+    'variation_id' => '6D7HFBDYHDZZTAMTVPSSDKNE',
+  ],
+  'al-halim-parent-guide' => [
+    'name' => 'Al-Ḥalīm Parent Guide',
+    'amount' => 1000,
+    'variation_id' => 'DXGQPS5C37HCU7YWH7NBLXEB',
+  ],
+  'al-latif-discovery-pack' => [
+    'name' => 'Al-Laṭīf Discovery Pack',
+    'amount' => 1800,
+    'variation_id' => 'BVQQMNPFF5YM3E7V7QUFXGSC',
+  ],
+  'al-latif-child-workbook' => [
+    'name' => 'Al-Laṭīf Child Workbook',
+    'amount' => 1000,
+    'variation_id' => 'K5NE2C6JJCZW7A66I2BEFPGD',
+  ],
+  'al-latif-parent-guide' => [
+    'name' => 'Al-Laṭīf Parent Guide',
+    'amount' => 1000,
+    'variation_id' => 'U7XPESGCGIZ4VLGIJMA6I46G',
+  ],
+  'al-mumin-discovery-pack' => [
+    'name' => 'Al-Mu’min Discovery Pack',
+    'amount' => 1800,
+    'variation_id' => 'TRVXC7DJVRKHNLOPG6RLDBOB',
+  ],
+  'al-mumin-child-workbook' => [
+    'name' => 'Al-Mu’min Child Workbook',
+    'amount' => 1000,
+    'variation_id' => 'RVYBRMA5GRHSUQ2CU3LKPEOR',
+  ],
+  'al-mumin-parent-guide' => [
+    'name' => 'Al-Mu’min Parent Guide',
+    'amount' => 1000,
+    'variation_id' => 'XJ7ECZXYVTU2DLNXBFZMPWNG',
+  ],
+
+  'halal-haram-sunnah-foods-child-workbook' => [
+    'name' => 'Halal, Haram & Sunnah Foods - Child Workbook',
+    'amount' => 800,
+    'variation_id' => 'RRLY4TNLG77AG7L37T2OAKWB',
+  ],
+  'halal-haram-sunnah-foods-parent-guide' => [
+    'name' => 'Halal, Haram & Sunnah Foods - Parent Teaching Guide',
+    'amount' => 800,
+    'variation_id' => 'SIDUVOOK73ZEXHOCEACPADRE',
+  ],
+  'halal-haram-sunnah-foods-complete-bundle' => [
+    'name' => 'Halal, Haram & Sunnah Foods - Complete Bundle',
+    'amount' => 1400,
+    'variation_id' => 'X27ZPO22JYCXVMI33JM2AFME',
   ],
 ];
 
