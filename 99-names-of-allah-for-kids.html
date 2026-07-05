@@ -1,6 +1,8 @@
 
 
 
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -656,6 +658,18 @@ footer a { color:var(--pink-light); }
 .guarantee-strip h2 { font-size:clamp(1.45rem,2.8vw,2rem); font-weight:500; }
 .guarantee-strip h2 em { color:var(--pink); font-style:italic; }
 
+
+.name-copy,
+.carousel,
+.buy-card {
+  min-width:0;
+}
+
+.name-product > .carousel,
+.name-product > .name-copy {
+  min-width:0;
+}
+
 @media(max-width:1020px) {
 
   .story-grid,
@@ -703,7 +717,8 @@ footer a { color:var(--pink-light); }
   .coming-grid,
   .faq-grid { grid-template-columns:1fr; }
   .name-product { padding:18px; border-radius:24px; }
-  .carousel-thumbs { gap:6px; }
+  .carousel-thumbs { grid-template-columns:repeat(3,1fr); gap:8px; }
+  .buy-card .btn { width:100%; }
   .container { padding:0 18px; }
 }
 </style>
@@ -1055,7 +1070,10 @@ footer a { color:var(--pink-light); }
             <span class="buy-price">$10</span>
             <button type="button" class="btn btn-secondary" data-product-id="as-salam-parent-guide">Add Guide</button>
           </div>
-    
+        </div>
+      </div>
+    </article>
+
     <article class="name-product" id="al-halim">
       <div class="carousel" data-carousel>
         <div class="carousel-main">
@@ -1212,9 +1230,6 @@ footer a { color:var(--pink-light); }
             <button type="button" class="btn btn-secondary" data-product-id="al-mumin-parent-guide">Add Guide</button>
           </div>
         </div>
-      </div>
-    </article>
-    </div>
       </div>
     </article>
   </div>
