@@ -20,6 +20,10 @@
         --border: #edddd8;
       }
 
+      html {
+        scroll-padding-top: 110px;
+      }
+
       .site-nav {
         background: var(--white);
         border-bottom: 2px solid var(--pink-light);
@@ -27,9 +31,12 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        position: sticky;
+        position: fixed;
         top: 0;
-        z-index: 1000;
+        left: 0;
+        right: 0;
+        width: 100%;
+        z-index: 9999;
         box-shadow: 0 2px 12px rgba(232,134,138,0.1);
       }
 
@@ -107,7 +114,7 @@
         border-radius: 12px;
         box-shadow: 0 8px 30px rgba(0,0,0,0.08);
         border: 1px solid var(--border);
-        z-index: 1001;
+        z-index: 10000;
       }
 
       .site-dropdown-content a {
@@ -164,6 +171,10 @@
       }
 
       @media (max-width: 900px) {
+        html {
+          scroll-padding-top: 84px;
+        }
+
         .site-nav {
           padding: 10px 16px;
         }
@@ -198,6 +209,9 @@
           gap: 14px;
           border-bottom: 2px solid var(--pink-light);
           box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+          z-index: 10000;
+          max-height: calc(100vh - 70px);
+          overflow-y: auto;
         }
 
         .site-dropdown {
@@ -268,7 +282,7 @@
             <a href="/product-screenfree.html">Screen-Free Challenge Cards</a>
             <a href="/product-playbook.html">Morning Routine Playbook</a>
             <a href="/product-workbook.html">Homeschool Reset Workbook</a>
-            </div>
+          </div>
         </div>
 
         <a href="/blog.html">Blog</a>
