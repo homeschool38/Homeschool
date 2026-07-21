@@ -110,7 +110,7 @@
         left: 0;
         padding-top: 10px;
         background: var(--white);
-        min-width: 250px;
+        min-width: 280px;
         border-radius: 12px;
         box-shadow: 0 8px 30px rgba(0,0,0,0.08);
         border: 1px solid var(--border);
@@ -272,9 +272,13 @@
         <a href="/#free-course">Free Resources</a>
 
         <div class="site-dropdown">
-          <a href="/shop.html">Shop <span class="site-dropdown-arrow">▼</span></a>
+          <a href="/shop.html">
+            Shop <span class="site-dropdown-arrow">▼</span>
+          </a>
+
           <div class="site-dropdown-content">
             <a href="/shop.html">All Products</a>
+            <a href="/dollars-deen-decisions.html">Dollars, Deen &amp; Decisions</a>
             <a href="/halal-haram-sunnah-foods.html">Halal, Haram &amp; Sunnah Foods</a>
             <a href="/99-names-of-allah-for-kids.html">99 Names of Allah for Kids</a>
             <a href="/product-bundle.html">Homeschool Bundle</a>
