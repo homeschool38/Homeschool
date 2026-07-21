@@ -119,7 +119,7 @@
       image: "images/products/As-Salam Child workbook cover image.png",
       checkoutName: "As-Salām Child Workbook"
     },
-     "as-salam-parent-guide": {
+    "as-salam-parent-guide": {
       id: "as-salam-parent-guide",
       name: "As-Salām Parent Guide",
       priceCents: 1000,
@@ -225,6 +225,42 @@
       image: "images/products/halal-haram-sunnah-foods/halal-haram-sunnah-foods-bundle.png",
       checkoutName: "Halal, Haram & Sunnah Foods - Complete Bundle",
       squareVariationId: "X27ZPO22JYCXVMI33JM2AFME"
+    },
+    "dollars-deen-decisions-child-workbook": {
+      id: "dollars-deen-decisions-child-workbook",
+      name: "Dollars, Deen & Decisions - Child Workbook",
+      priceCents: 3000,
+      priceLabel: "$30.00",
+      image: "images/products/dollars-deen-decisions/dollars-deen-decisions-child-workbook-cover.png",
+      checkoutName: "Dollars, Deen & Decisions - Child Workbook",
+      squareVariationId: "H6YUSMY4N44ZRRDDPHHV4VGP"
+    },
+    "dollars-deen-decisions-complete-curriculum-bundle": {
+      id: "dollars-deen-decisions-complete-curriculum-bundle",
+      name: "Dollars, Deen & Decisions - Complete Curriculum Bundle",
+      priceCents: 7000,
+      priceLabel: "$70.00",
+      image: "images/products/dollars-deen-decisions/dollars-deen-decisions-complete-curriculum-bundle.png",
+      checkoutName: "Dollars, Deen & Decisions - Complete Curriculum Bundle",
+      squareVariationId: "4DC57B53ZDSBUWWAZGTVDJGF"
+    },
+    "dollars-deen-decisions-parent-teaching-guide": {
+      id: "dollars-deen-decisions-parent-teaching-guide",
+      name: "Dollars, Deen & Decisions - Parent Teaching Guide",
+      priceCents: 3000,
+      priceLabel: "$30.00",
+      image: "images/products/dollars-deen-decisions/dollars-deen-decisions-parent-teaching-guide-cover.png",
+      checkoutName: "Dollars, Deen & Decisions - Parent Teaching Guide",
+      squareVariationId: "3IYJNQ32525X3ACHQ7O5PRS2"
+    },
+    "dollars-deen-decisions-money-budget-game-pack": {
+      id: "dollars-deen-decisions-money-budget-game-pack",
+      name: "Dollars, Deen & Decisions - Printable Money & Budget Game Pack",
+      priceCents: 2000,
+      priceLabel: "$20.00",
+      image: "images/products/dollars-deen-decisions/dollars-deen-decisions-game-pack-cover.png",
+      checkoutName: "Dollars, Deen & Decisions - Printable Money & Budget Game Pack",
+      squareVariationId: "1UXDRSQ457D5O7N67VVMKJT7"
     }
   };
 
@@ -263,7 +299,8 @@
     });
 
     if (existing) {
-      existing.quantity = Number(existing.quantity || 1) + Number(quantity || 1);
+      existing.quantity =
+        Number(existing.quantity || 1) + Number(quantity || 1);
     } else {
       cart.push({
         id: product.id,
@@ -310,7 +347,10 @@
 
   function getCartTotalCents() {
     return readCart().reduce(function (sum, item) {
-      return sum + Number(item.priceCents || 0) * Number(item.quantity || 1);
+      return (
+        sum +
+        Number(item.priceCents || 0) * Number(item.quantity || 1)
+      );
     }, 0);
   }
 
@@ -466,7 +506,9 @@
     icon.className = "mmh-cart-icon";
     icon.href = "cart.html";
     icon.setAttribute("aria-label", "View cart");
-    icon.innerHTML = `<span aria-hidden="true">🛒</span><span class="mmh-cart-count">0</span>`;
+    icon.innerHTML =
+      `<span aria-hidden="true">🛒</span>` +
+      `<span class="mmh-cart-count">0</span>`;
 
     document.body.appendChild(icon);
     updateCartCount();
@@ -497,13 +539,22 @@
         <div class="mmh-popup-actions">
           <a class="mmh-review-cart" href="cart.html">Review Cart</a>
           <a class="mmh-continue-shopping" href="shop.html">Continue Shopping</a>
-          <button type="button" class="mmh-continue-shopping" data-mmh-close-popup>Stay Here</button>
+          <button
+            type="button"
+            class="mmh-continue-shopping"
+            data-mmh-close-popup
+          >
+            Stay Here
+          </button>
         </div>
       </div>
     `;
 
     popup.addEventListener("click", function (event) {
-      if (event.target === popup || event.target.hasAttribute("data-mmh-close-popup")) {
+      if (
+        event.target === popup ||
+        event.target.hasAttribute("data-mmh-close-popup")
+      ) {
         closeCartPopup();
       }
     });
