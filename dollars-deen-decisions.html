@@ -93,17 +93,18 @@ p{color:var(--mid);font-weight:400}
 .included-list li{color:var(--mid);font-size:.92rem;padding-left:24px;position:relative}
 .included-list li::before{content:'•';position:absolute;left:8px;color:var(--gold);font-weight:900}
 .buy-grid{display:grid;grid-template-columns:1fr;gap:14px;margin-top:20px}
-.buy-card{border:1px solid var(--border);background:var(--cream);border-radius:20px;padding:18px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:14px 20px;align-items:center}
+.buy-card{border:1px solid var(--border);background:var(--cream);border-radius:20px;padding:22px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:18px 24px;align-items:start}
 .buy-card-copy{min-width:0}
 .buy-card strong{display:block;line-height:1.25;color:var(--charcoal);font-size:1.03rem;margin-bottom:5px}
-.buy-card small{display:block;color:var(--light);font-weight:700;line-height:1.45}
-.buy-card ul{list-style:none;display:flex;flex-wrap:wrap;gap:6px 14px;margin-top:9px}
-.buy-card li{color:var(--mid);font-size:.79rem;font-weight:700;position:relative;padding-left:15px}
+.buy-card small{display:block;color:var(--mid);font-weight:600;line-height:1.62;font-size:.88rem}
+.buy-card ul{list-style:none;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px 16px;margin-top:12px}
+.buy-card li{color:var(--mid);font-size:.8rem;font-weight:700;position:relative;padding-left:15px;line-height:1.4}
 .buy-card li::before{content:'✓';position:absolute;left:0;color:var(--emerald);font-weight:900}
-.buy-card-action{display:flex;flex-direction:column;align-items:flex-end;gap:9px;min-width:190px}
+.buy-card-action{display:flex;flex-direction:column;align-items:flex-end;gap:10px;min-width:190px;position:sticky;top:118px}
 .buy-price{color:var(--emerald);font-family:'Playfair Display',Georgia,serif;font-weight:700;font-size:1.8rem;line-height:1}
 .buy-card .btn{width:100%;padding-left:18px;padding-right:18px;font-size:.72rem;min-height:44px;white-space:nowrap}
-.buy-card.featured{background:var(--white);border:2px solid var(--gold);box-shadow:0 10px 24px rgba(212,167,44,.16);padding:20px}
+.buy-card.featured{background:var(--white);border:2px solid var(--gold);box-shadow:0 10px 24px rgba(212,167,44,.16);padding:24px}
+.buy-extra{margin-top:12px;padding:10px 12px;background:rgba(255,255,255,.72);border-left:3px solid var(--sage);border-radius:8px;color:var(--mid);font-size:.82rem;line-height:1.5}.buy-extra strong{display:inline;font-size:inherit;color:var(--emerald-dark);margin:0}
 .buy-card.featured .buy-card-copy::before{content:'Best value — save $10';display:inline-flex;width:max-content;background:var(--gold-pale);color:var(--gold-dark);border-radius:999px;padding:4px 10px;font-size:.66rem;font-weight:900;letter-spacing:.07em;text-transform:uppercase;margin-bottom:8px}
 .details-section{padding:34px 0 42px}
 .details-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
@@ -123,6 +124,7 @@ p{color:var(--mid);font-weight:400}
 .cta-section h2{font-size:clamp(1.75rem,4vw,2.75rem);margin-bottom:10px;font-weight:500}
 .cta-section p{max-width:800px;margin:0 auto 24px}
 @media(max-width:1020px){.hero-grid,.intro-grid,.product-panel,.age-card{grid-template-columns:1fr}.hero-actions{justify-content:flex-start}.carousel{max-width:590px;margin:0 auto}.details-grid{grid-template-columns:1fr}}
+@media(max-width:900px){.buy-card ul{grid-template-columns:1fr}.buy-card-action{position:static}}
 @media(max-width:760px){.hero{padding:58px 0 44px}.hero-actions .btn{width:100%}.pill-grid,.included-list,.faq-grid{grid-template-columns:1fr}.product-panel{padding:18px;border-radius:24px}.carousel-thumbs{grid-template-columns:repeat(5,1fr);gap:6px}.container{padding:0 18px}.buy-card{grid-template-columns:1fr}.buy-card-action{align-items:stretch;min-width:0}.buy-card .btn{white-space:normal}.buy-price{text-align:left}}
 </style>
 <script type="application/ld+json">
@@ -251,12 +253,19 @@ p{color:var(--mid);font-weight:400}
           <div class="buy-card featured">
             <div class="buy-card-copy">
               <strong>Complete Curriculum Bundle</strong>
-              <small>Get the full three-part curriculum so the child lessons, parent teaching support, and hands-on practice work together as one complete system.</small>
+              <small>
+                Choose the complete bundle when you want the child lessons, parent teaching support, and hands-on practice to work together as one full curriculum. The Child Workbook introduces each money topic through reflection, written activities, budgeting practice, and real-life scenarios. The Parent Teaching Guide explains what to teach, how to discuss sensitive topics carefully, which workbook pages to use, and which game-pack activity supports the lesson. The Game Pack then gives children repeated practice through sorting, shopping, budgeting, planning, and household decision-making activities.
+              </small>
+              <p class="buy-extra"><strong>Best for:</strong> Families who want a complete open-and-teach Islamic financial literacy program rather than separate worksheets.</p>
               <ul>
-                <li>110-page Child Workbook</li>
-                <li>126-page Parent Teaching Guide</li>
-                <li>118-page Game Pack</li>
-                <li>Save $10</li>
+                <li>354 total printable curriculum pages</li>
+                <li>Ten connected financial-literacy units</li>
+                <li>Weekly and daily teaching plans</li>
+                <li>Workbook activities and final project</li>
+                <li>Parent answers, cautions, and discussion help</li>
+                <li>Games, budget mats, cards, and trackers</li>
+                <li>Separate PDF files for flexible printing</li>
+                <li>Save $10 compared with buying separately</li>
               </ul>
             </div>
             <div class="buy-card-action">
@@ -268,12 +277,19 @@ p{color:var(--mid);font-weight:400}
           <div class="buy-card">
             <div class="buy-card-copy">
               <strong>Child Workbook</strong>
-              <small>A complete student workbook with ten units covering amanah, halal earning, needs and wants, budgeting, bills, saving, giving, debt, riba awareness, and careful decision-making.</small>
+              <small>
+                This 110-page student workbook leads children through ten carefully sequenced units beginning with money as an amanah from Allah. Children explore halal earning, needs and wants, avoiding waste, budgeting, paying bills, saving, giving, debt, riba awareness, and responsible financial decision-making. The workbook does not simply ask children to memorize definitions. It gives them realistic choices to evaluate, budgets to build, household responsibilities to consider, and guided reflections that connect money habits to gratitude, honesty, patience, generosity, and self-control.
+              </small>
+              <p class="buy-extra"><strong>Best for:</strong> Independent learners, guided parent-and-child lessons, or families that already feel confident teaching the topics.</p>
               <ul>
-                <li>110 printable pages</li>
-                <li>Reflection and written activities</li>
-                <li>Budgeting and household challenges</li>
-                <li>Final money-plan project</li>
+                <li>110 printable student pages</li>
+                <li>Ten complete learning units</li>
+                <li>Reflection and written-response activities</li>
+                <li>Needs, wants, and waste practice</li>
+                <li>Budgeting and bill-paying challenges</li>
+                <li>Saving, giving, debt, and riba scenarios</li>
+                <li>Household decision-making practice</li>
+                <li>Final Islamic money-plan project</li>
               </ul>
             </div>
             <div class="buy-card-action">
@@ -285,12 +301,19 @@ p{color:var(--mid);font-weight:400}
           <div class="buy-card">
             <div class="buy-card-copy">
               <strong>Parent Teaching Guide</strong>
-              <small>An open-and-teach guide that helps parents explain each topic carefully, connect lessons to Qur’an and Sunnah, avoid common teaching mistakes, and guide discussion without overwhelming children.</small>
+              <small>
+                This 126-page open-and-teach guide helps parents present each topic with clarity and care. It explains the main lesson, gives Qur’an and authentic Sunnah connections, identifies what children need to understand, and warns against common teaching mistakes. Parents receive a ten-week teaching rhythm, daily lesson plans, discussion prompts, workbook connections, game-pack recommendations, answer guidance, sample responses, and age-appropriate language for difficult topics such as debt, borrowing, and riba. The guide is designed to reduce preparation while helping parents teach confidently without turning the curriculum into a fatwa course or overwhelming children with adult financial problems.
+              </small>
+              <p class="buy-extra"><strong>Best for:</strong> Parents who want exact teaching support, careful wording, lesson pacing, and clear connections between every curriculum component.</p>
               <ul>
-                <li>126 printable pages</li>
-                <li>Ten-week teaching rhythm</li>
-                <li>Daily plans and discussion prompts</li>
-                <li>Answers, cautions, and game connections</li>
+                <li>126 printable parent pages</li>
+                <li>Ten-week suggested teaching rhythm</li>
+                <li>Daily open-and-teach lesson plans</li>
+                <li>Qur’an and authentic hadith references</li>
+                <li>Discussion prompts and teaching scripts</li>
+                <li>Workbook page and activity connections</li>
+                <li>Game-pack recommendations by lesson</li>
+                <li>Answers, cautions, and sample responses</li>
               </ul>
             </div>
             <div class="buy-card-action">
@@ -302,12 +325,19 @@ p{color:var(--mid);font-weight:400}
           <div class="buy-card">
             <div class="buy-card-copy">
               <strong>Printable Money &amp; Budget Game Pack</strong>
-              <small>A large hands-on resource pack that turns financial ideas into practical play, sorting, budgeting, planning, and real-life decision practice.</small>
+              <small>
+                This 118-page hands-on pack turns financial ideas into practical learning. Children can sort choices, build budgets, plan purchases, compare needs and wants, practice giving and saving, identify warning signs in money agreements, and experience the consequences of household decisions through play. The pack includes printable learning money, budget mats, trackers, challenge boards, sorting cards, shopping activities, mini-business planning, riba red-flag practice, and a full household-budget simulation. It is designed to help children apply what they learned instead of only reading about it.
+              </small>
+              <p class="buy-extra"><strong>Best for:</strong> Hands-on learners, siblings learning together, review days, co-op use within the household license, and children who understand concepts better through practice.</p>
               <ul>
-                <li>118 printable pages</li>
-                <li>Learning money and budget mats</li>
-                <li>Cards, trackers, and shopping challenges</li>
-                <li>Riba red flags and household-budget game</li>
+                <li>118 printable activity pages</li>
+                <li>Learning money and budget tools</li>
+                <li>Give, Save, and Spend activities</li>
+                <li>Needs, wants, and waste sorting</li>
+                <li>Shopping Cart Challenge</li>
+                <li>Mini-business planning activities</li>
+                <li>Riba red-flag sorting cards</li>
+                <li>Run-the-Household budget game</li>
               </ul>
             </div>
             <div class="buy-card-action">
@@ -315,7 +345,7 @@ p{color:var(--mid);font-weight:400}
               <button type="button" class="btn btn-secondary" data-product-id="dollars-deen-decisions-money-budget-game-pack">Add Game Pack</button>
             </div>
           </div>
-        </div>
+        </div>        </div>
       </div>
     </article>
   </div>
