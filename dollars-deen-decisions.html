@@ -106,9 +106,26 @@ p{color:var(--mid);font-weight:400}
 .buy-card.featured{background:var(--white);border:2px solid var(--gold);box-shadow:0 10px 24px rgba(212,167,44,.16);padding:24px}
 .buy-extra{margin-top:12px;padding:10px 12px;background:rgba(255,255,255,.72);border-left:3px solid var(--sage);border-radius:8px;color:var(--mid);font-size:.82rem;line-height:1.5}.buy-extra strong{display:inline;font-size:inherit;color:var(--emerald-dark);margin:0}
 .buy-card.featured .buy-card-copy::before{content:'Best value — save $10';display:inline-flex;width:max-content;background:var(--gold-pale);color:var(--gold-dark);border-radius:999px;padding:4px 10px;font-size:.66rem;font-weight:900;letter-spacing:.07em;text-transform:uppercase;margin-bottom:8px}
+.product-stack{display:grid;gap:26px}
+.product-panel.reverse .carousel{order:2}
+.product-panel.reverse .product-copy{order:1}
+.product-copy .product-label{display:inline-flex;width:max-content;max-width:100%;background:var(--sage-pale);color:var(--emerald-dark);border:1px solid rgba(140,171,127,.35);border-radius:999px;padding:4px 11px;font-size:.7rem;font-weight:900;letter-spacing:.08em;text-transform:uppercase;margin-bottom:10px}
+.product-copy .long-description{margin-top:14px}
+.product-bestfor{margin-top:14px;padding:14px 16px;background:#fffaf1;border:1px solid #ead9a8;border-radius:16px;color:var(--mid);font-size:.92rem;line-height:1.6}
+.product-bestfor strong{color:var(--emerald-dark)}
+.feature-grid{list-style:none;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px 16px;margin:18px 0 0}
+.feature-grid li{color:var(--mid);font-size:.88rem;font-weight:700;position:relative;padding-left:18px;line-height:1.45}
+.feature-grid li::before{content:'✓';position:absolute;left:0;color:var(--emerald);font-weight:900}
+.product-purchase{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;margin-top:22px;padding-top:18px;border-top:1px solid var(--border)}
+.product-purchase .btn{min-width:220px}
+.product-price-wrap{display:flex;flex-direction:column;gap:4px}
+.product-price-wrap small{color:var(--light);font-size:.82rem;font-weight:700;letter-spacing:.03em}
+.preview-note{margin-top:10px;font-size:.88rem;color:var(--light)}
 .details-section{padding:34px 0 42px}
 .details-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.detail-card{background:var(--white);border:1px solid var(--border);border-radius:24px;padding:24px;box-shadow:0 10px 30px rgba(57,77,66,.06);display:flex;flex-direction:column;align-items:center;text-align:left}\n.detail-card img{width:min(100%,230px);height:auto;display:block;border-radius:16px;box-shadow:0 12px 28px rgba(57,77,66,.12);margin:0 auto 18px}\n.detail-card-caption{width:100%}
+.detail-card{background:var(--white);border:1px solid var(--border);border-radius:24px;padding:24px;box-shadow:0 10px 30px rgba(57,77,66,.06);display:flex;flex-direction:column;align-items:center;text-align:left}
+.detail-card img{width:min(100%,230px);height:auto;display:block;border-radius:16px;box-shadow:0 12px 28px rgba(57,77,66,.12);margin:0 auto 18px}
+.detail-card-caption{width:100%}
 .detail-card h3{font-size:1.25rem;margin-bottom:8px;color:var(--emerald-dark)}
 .detail-card p{font-size:.95rem}
 .age-section{padding:48px 0;background:linear-gradient(135deg,var(--sage-pale),var(--gold-pale))}
@@ -124,8 +141,8 @@ p{color:var(--mid);font-weight:400}
 .cta-section h2{font-size:clamp(1.75rem,4vw,2.75rem);margin-bottom:10px;font-weight:500}
 .cta-section p{max-width:800px;margin:0 auto 24px}
 @media(max-width:1020px){.hero-grid,.intro-grid,.product-panel,.age-card{grid-template-columns:1fr}.hero-actions{justify-content:flex-start}.carousel{max-width:590px;margin:0 auto}.details-grid{grid-template-columns:1fr}}
-@media(max-width:900px){.buy-card ul{grid-template-columns:1fr}.buy-card-action{position:static}}
-@media(max-width:760px){.hero{padding:58px 0 44px}.hero-actions .btn{width:100%}.pill-grid,.included-list,.faq-grid{grid-template-columns:1fr}.product-panel{padding:18px;border-radius:24px}.carousel-thumbs{grid-template-columns:repeat(5,1fr);gap:6px}.container{padding:0 18px}.buy-card{grid-template-columns:1fr}.buy-card-action{align-items:stretch;min-width:0}.buy-card .btn{white-space:normal}.buy-price{text-align:left}}
+@media(max-width:900px){.buy-card ul{grid-template-columns:1fr}.buy-card-action{position:static}.feature-grid{grid-template-columns:1fr}.product-purchase{align-items:flex-start;flex-direction:column}}
+@media(max-width:760px){.hero{padding:58px 0 44px}.hero-actions .btn{width:100%}.pill-grid,.included-list,.faq-grid{grid-template-columns:1fr}.product-panel{padding:18px;border-radius:24px}.carousel-thumbs{grid-template-columns:repeat(5,1fr);gap:6px}.container{padding:0 18px}.buy-card{grid-template-columns:1fr}.buy-card-action{align-items:stretch;min-width:0}.buy-card .btn{white-space:normal}.buy-price{text-align:left}.product-purchase .btn{width:100%;min-width:0}}
 </style>
 <script type="application/ld+json">
 {
@@ -205,178 +222,186 @@ p{color:var(--mid);font-weight:400}
 <section class="product-section" id="preview">
   <div class="container">
     <div class="section-head">
-      <p class="label">Preview the curriculum</p>
-      <h2>See the teaching, practice, and parent support <em>before you buy</em>.</h2>
-      <p>Preview pages from the Child Workbook, Parent Teaching Guide, and Printable Money & Budget Game Pack.</p>
+      <p class="label">Choose your download</p>
+      <h2>Each product has its own purpose, preview pages, and teaching role.</h2>
+      <p>Browse the complete bundle first, then explore the Child Workbook, Parent Teaching Guide, and Printable Money &amp; Budget Game Pack individually.</p>
     </div>
 
-    <article class="product-panel" id="buy">
-      <div class="carousel" data-carousel>
-        <div class="carousel-main">
-          <img src="images/products/dollars-deen-decisions/dollars-deen-decisions-complete-curriculum-bundle.png" alt="Dollars, Deen and Decisions complete curriculum bundle preview" data-carousel-main>
+    <div class="product-stack" id="buy">
+      <article class="product-panel" id="complete-curriculum-bundle">
+        <div class="carousel" data-carousel>
+          <div class="carousel-main">
+            <img src="images/products/dollars-deen-decisions/dollars-deen-decisions-complete-curriculum-bundle.png" alt="Dollars, Deen and Decisions complete curriculum bundle preview" data-carousel-main>
+          </div>
+          <div class="carousel-thumbs" aria-label="Complete curriculum bundle preview images">
+            <button type="button" class="carousel-thumb active" data-carousel-src="images/products/dollars-deen-decisions/dollars-deen-decisions-complete-curriculum-bundle.png"><img src="images/products/dollars-deen-decisions/dollars-deen-decisions-complete-curriculum-bundle.png" alt="Complete curriculum bundle cover"></button>
+            <button type="button" class="carousel-thumb" data-carousel-src="images/products/dollars-deen-decisions/dollars-deen-decisions-preview-child-give-save-spend.png"><img src="images/products/dollars-deen-decisions/dollars-deen-decisions-preview-child-give-save-spend.png" alt="Child workbook Give Save Spend preview"></button>
+            <button type="button" class="carousel-thumb" data-carousel-src="images/products/dollars-deen-decisions/dollars-deen-decisions-preview-parent-weekly-plan.png"><img src="images/products/dollars-deen-decisions/dollars-deen-decisions-preview-parent-weekly-plan.png" alt="Parent guide weekly plan preview"></button>
+            <button type="button" class="carousel-thumb" data-carousel-src="images/products/dollars-deen-decisions/dollars-deen-decisions-preview-game-shopping-cart-challenge.png"><img src="images/products/dollars-deen-decisions/dollars-deen-decisions-preview-game-shopping-cart-challenge.png" alt="Game pack Shopping Cart Challenge preview"></button>
+            <button type="button" class="carousel-thumb" data-carousel-src="images/products/dollars-deen-decisions/dollars-deen-decisions-preview-game-run-the-household.png"><img src="images/products/dollars-deen-decisions/dollars-deen-decisions-preview-game-run-the-household.png" alt="Run the Household game preview"></button>
+          </div>
+          <p class="preview-note">Preview includes the bundle cover plus pages sampled from all three curriculum components.</p>
         </div>
-        <div class="carousel-thumbs" aria-label="Dollars, Deen and Decisions preview images">
-          <button type="button" class="carousel-thumb active" data-carousel-src="images/products/dollars-deen-decisions/dollars-deen-decisions-complete-curriculum-bundle.png"><img src="images/products/dollars-deen-decisions/dollars-deen-decisions-complete-curriculum-bundle.png" alt="Complete curriculum bundle"></button>
-          <button type="button" class="carousel-thumb" data-carousel-src="images/products/dollars-deen-decisions/dollars-deen-decisions-preview-child-give-save-spend.png"><img src="images/products/dollars-deen-decisions/dollars-deen-decisions-preview-child-give-save-spend.png" alt="Give Save Spend child workbook preview"></button>
-          <button type="button" class="carousel-thumb" data-carousel-src="images/products/dollars-deen-decisions/dollars-deen-decisions-preview-child-pay-bills-first.png"><img src="images/products/dollars-deen-decisions/dollars-deen-decisions-preview-child-pay-bills-first.png" alt="Pay the Bills First child workbook preview"></button>
-          <button type="button" class="carousel-thumb" data-carousel-src="images/products/dollars-deen-decisions/dollars-deen-decisions-preview-child-loan-gift-trade-riba.png"><img src="images/products/dollars-deen-decisions/dollars-deen-decisions-preview-child-loan-gift-trade-riba.png" alt="Loan gift trade or riba child workbook preview"></button>
-          <button type="button" class="carousel-thumb" data-carousel-src="images/products/dollars-deen-decisions/dollars-deen-decisions-preview-parent-weekly-plan.png"><img src="images/products/dollars-deen-decisions/dollars-deen-decisions-preview-parent-weekly-plan.png" alt="Parent guide weekly teaching plan preview"></button>
-          <button type="button" class="carousel-thumb" data-carousel-src="images/products/dollars-deen-decisions/dollars-deen-decisions-preview-parent-week-8-plan.png"><img src="images/products/dollars-deen-decisions/dollars-deen-decisions-preview-parent-week-8-plan.png" alt="Week 8 daily teaching plan preview"></button>
-          <button type="button" class="carousel-thumb" data-carousel-src="images/products/dollars-deen-decisions/dollars-deen-decisions-preview-parent-riba-answer-guidance.png"><img src="images/products/dollars-deen-decisions/dollars-deen-decisions-preview-parent-riba-answer-guidance.png" alt="Riba debt and borrowing answer guidance preview"></button>
-          <button type="button" class="carousel-thumb" data-carousel-src="images/products/dollars-deen-decisions/dollars-deen-decisions-preview-game-give-save-spend-mat.png"><img src="images/products/dollars-deen-decisions/dollars-deen-decisions-preview-game-give-save-spend-mat.png" alt="Give Save Spend budget mat preview"></button>
-          <button type="button" class="carousel-thumb" data-carousel-src="images/products/dollars-deen-decisions/dollars-deen-decisions-preview-game-shopping-cart-challenge.png"><img src="images/products/dollars-deen-decisions/dollars-deen-decisions-preview-game-shopping-cart-challenge.png" alt="Shopping Cart Challenge game preview"></button>
-          <button type="button" class="carousel-thumb" data-carousel-src="images/products/dollars-deen-decisions/dollars-deen-decisions-preview-game-riba-red-flags.png"><img src="images/products/dollars-deen-decisions/dollars-deen-decisions-preview-game-riba-red-flags.png" alt="Riba red flag cards preview"></button>
-        </div>
-      </div>
 
-      <div class="product-copy">
-        <span class="kicker">Printable digital downloads</span>
-        <h2>Dollars, Deen & Decisions</h2>
-        <p class="product-meaning">Learning to Treat Money as an Amanah from Allah</p>
-        <p>Choose any individual resource or purchase the complete curriculum. The complete bundle includes all three main products and saves $10 compared with buying them separately.</p>
-
-        <div class="included-box">
-          <h3>Complete Curriculum Bundle includes</h3>
-          <ul class="included-list">
-            <li>110-page Child Workbook</li>
-            <li>126-page Parent Teaching Guide</li>
-            <li>118-page Printable Money & Budget Game Pack</li>
-            <li>Ten structured curriculum units</li>
-            <li>Weekly and daily teaching plans</li>
-            <li>Answer guidance and sample responses</li>
-            <li>Printable learning money and budget tools</li>
-            <li>Sorting cards, challenge boards, and final project</li>
+        <div class="product-copy">
+          <span class="kicker">Best value — save $10</span>
+          <h2>Complete Curriculum Bundle</h2>
+          <p class="product-meaning">Everything you need to teach Islamic financial literacy as one connected curriculum.</p>
+          <p class="long-description">Choose the complete bundle when you want the child lessons, parent teaching support, and hands-on practice to work together as one full curriculum. The Child Workbook introduces each money topic through reflection, written activities, budgeting practice, and real-life scenarios. The Parent Teaching Guide explains what to teach, how to discuss sensitive topics carefully, which workbook pages to use, and which game-pack activity supports the lesson. The Game Pack then gives children repeated practice through sorting, shopping, budgeting, planning, and household decision-making activities.</p>
+          <p class="product-bestfor"><strong>Best for:</strong> Families who want a complete open-and-teach Islamic financial literacy program rather than separate worksheets.</p>
+          <div class="included-box">
+            <h3>What is included in the bundle</h3>
+            <ul class="included-list">
+              <li>110-page Child Workbook</li>
+              <li>126-page Parent Teaching Guide</li>
+              <li>118-page Printable Money &amp; Budget Game Pack</li>
+              <li>Ten connected financial-literacy units</li>
+              <li>Weekly and daily teaching plans</li>
+              <li>Workbook activities and final project</li>
+              <li>Parent answers, cautions, and discussion help</li>
+              <li>Games, budget mats, cards, and trackers</li>
+            </ul>
+          </div>
+          <ul class="feature-grid">
+            <li>354 total printable curriculum pages</li>
+            <li>Separate PDF files for flexible printing</li>
+            <li>Faith-centered lessons rooted in Islamic values</li>
+            <li>Budgeting, bills, saving, giving, debt, and riba awareness</li>
+            <li>Discussion support for difficult money topics</li>
+            <li>Hands-on reinforcement beyond reading and writing</li>
+            <li>Strong fit for homeschool, co-op, or family study</li>
+            <li>Save $10 compared with buying separately</li>
           </ul>
-        </div>
-
-        <div class="buy-grid">
-          <div class="buy-card featured">
-            <div class="buy-card-copy">
-              <strong>Complete Curriculum Bundle</strong>
-              <small>
-                Choose the complete bundle when you want the child lessons, parent teaching support, and hands-on practice to work together as one full curriculum. The Child Workbook introduces each money topic through reflection, written activities, budgeting practice, and real-life scenarios. The Parent Teaching Guide explains what to teach, how to discuss sensitive topics carefully, which workbook pages to use, and which game-pack activity supports the lesson. The Game Pack then gives children repeated practice through sorting, shopping, budgeting, planning, and household decision-making activities.
-              </small>
-              <p class="buy-extra"><strong>Best for:</strong> Families who want a complete open-and-teach Islamic financial literacy program rather than separate worksheets.</p>
-              <ul>
-                <li>354 total printable curriculum pages</li>
-                <li>Ten connected financial-literacy units</li>
-                <li>Weekly and daily teaching plans</li>
-                <li>Workbook activities and final project</li>
-                <li>Parent answers, cautions, and discussion help</li>
-                <li>Games, budget mats, cards, and trackers</li>
-                <li>Separate PDF files for flexible printing</li>
-                <li>Save $10 compared with buying separately</li>
-              </ul>
-            </div>
-            <div class="buy-card-action">
+          <div class="product-purchase">
+            <div class="product-price-wrap">
+              <small>Complete 3-part curriculum</small>
               <span class="buy-price">$70</span>
-              <button type="button" class="btn btn-primary" data-product-id="dollars-deen-decisions-complete-curriculum-bundle">Add Complete Bundle</button>
             </div>
+            <button type="button" class="btn btn-primary" data-product-id="dollars-deen-decisions-complete-curriculum-bundle">Add Complete Bundle</button>
           </div>
+        </div>
+      </article>
 
-          <div class="buy-card">
-            <div class="buy-card-copy">
-              <strong>Child Workbook</strong>
-              <small>
-                This 110-page student workbook leads children through ten carefully sequenced units beginning with money as an amanah from Allah. Children explore halal earning, needs and wants, avoiding waste, budgeting, paying bills, saving, giving, debt, riba awareness, and responsible financial decision-making. The workbook does not simply ask children to memorize definitions. It gives them realistic choices to evaluate, budgets to build, household responsibilities to consider, and guided reflections that connect money habits to gratitude, honesty, patience, generosity, and self-control.
-              </small>
-              <p class="buy-extra"><strong>Best for:</strong> Independent learners, guided parent-and-child lessons, or families that already feel confident teaching the topics.</p>
-              <ul>
-                <li>110 printable student pages</li>
-                <li>Ten complete learning units</li>
-                <li>Reflection and written-response activities</li>
-                <li>Needs, wants, and waste practice</li>
-                <li>Budgeting and bill-paying challenges</li>
-                <li>Saving, giving, debt, and riba scenarios</li>
-                <li>Household decision-making practice</li>
-                <li>Final Islamic money-plan project</li>
-              </ul>
-            </div>
-            <div class="buy-card-action">
+      <article class="product-panel reverse" id="child-workbook">
+        <div class="carousel" data-carousel>
+          <div class="carousel-main">
+            <img src="images/products/dollars-deen-decisions/dollars-deen-decisions-child-workbook-cover.png" alt="Dollars, Deen and Decisions Child Workbook cover" data-carousel-main>
+          </div>
+          <div class="carousel-thumbs" aria-label="Child workbook preview images">
+            <button type="button" class="carousel-thumb active" data-carousel-src="images/products/dollars-deen-decisions/dollars-deen-decisions-child-workbook-cover.png"><img src="images/products/dollars-deen-decisions/dollars-deen-decisions-child-workbook-cover.png" alt="Child Workbook cover"></button>
+            <button type="button" class="carousel-thumb" data-carousel-src="images/products/dollars-deen-decisions/dollars-deen-decisions-preview-child-give-save-spend.png"><img src="images/products/dollars-deen-decisions/dollars-deen-decisions-preview-child-give-save-spend.png" alt="Give Save Spend child workbook preview"></button>
+            <button type="button" class="carousel-thumb" data-carousel-src="images/products/dollars-deen-decisions/dollars-deen-decisions-preview-child-pay-bills-first.png"><img src="images/products/dollars-deen-decisions/dollars-deen-decisions-preview-child-pay-bills-first.png" alt="Pay the Bills First child workbook preview"></button>
+            <button type="button" class="carousel-thumb" data-carousel-src="images/products/dollars-deen-decisions/dollars-deen-decisions-preview-child-loan-gift-trade-riba.png"><img src="images/products/dollars-deen-decisions/dollars-deen-decisions-preview-child-loan-gift-trade-riba.png" alt="Loan Gift Trade or Riba preview"></button>
+            <button type="button" class="carousel-thumb" data-carousel-src="images/products/dollars-deen-decisions/dollars-deen-decisions-preview-child-final-project.png"><img src="images/products/dollars-deen-decisions/dollars-deen-decisions-preview-child-final-project.png" alt="Child workbook final project preview"></button>
+          </div>
+          <p class="preview-note">Preview includes the cover page plus four sample workbook pages.</p>
+        </div>
+
+        <div class="product-copy">
+          <span class="product-label">Individual product</span>
+          <h2>Child Workbook</h2>
+          <p class="product-meaning">Student-facing lessons, activities, reflection, and final project.</p>
+          <p class="long-description">This 110-page student workbook leads children through ten carefully sequenced units beginning with money as an amanah from Allah. Children explore halal earning, needs and wants, avoiding waste, budgeting, paying bills, saving, giving, debt, riba awareness, and responsible financial decision-making. The workbook does not simply ask children to memorize definitions. It gives them realistic choices to evaluate, budgets to build, household responsibilities to consider, and guided reflections that connect money habits to gratitude, honesty, patience, generosity, and self-control.</p>
+          <p class="product-bestfor"><strong>Best for:</strong> Independent learners, guided parent-and-child lessons, or families that already feel confident teaching the topics.</p>
+          <ul class="feature-grid">
+            <li>110 printable student pages</li>
+            <li>Ten complete learning units</li>
+            <li>Reflection and written-response activities</li>
+            <li>Needs, wants, and waste practice</li>
+            <li>Budgeting and bill-paying challenges</li>
+            <li>Saving, giving, debt, and riba scenarios</li>
+            <li>Household decision-making practice</li>
+            <li>Final Islamic money-plan project</li>
+          </ul>
+          <div class="product-purchase">
+            <div class="product-price-wrap">
+              <small>110-page digital workbook</small>
               <span class="buy-price">$30</span>
-              <button type="button" class="btn btn-gold" data-product-id="dollars-deen-decisions-child-workbook">Add Workbook</button>
             </div>
+            <button type="button" class="btn btn-gold" data-product-id="dollars-deen-decisions-child-workbook">Add Workbook</button>
           </div>
+        </div>
+      </article>
 
-          <div class="buy-card">
-            <div class="buy-card-copy">
-              <strong>Parent Teaching Guide</strong>
-              <small>
-                This 126-page open-and-teach guide helps parents present each topic with clarity and care. It explains the main lesson, gives Qur’an and authentic Sunnah connections, identifies what children need to understand, and warns against common teaching mistakes. Parents receive a ten-week teaching rhythm, daily lesson plans, discussion prompts, workbook connections, game-pack recommendations, answer guidance, sample responses, and age-appropriate language for difficult topics such as debt, borrowing, and riba. The guide is designed to reduce preparation while helping parents teach confidently without turning the curriculum into a fatwa course or overwhelming children with adult financial problems.
-              </small>
-              <p class="buy-extra"><strong>Best for:</strong> Parents who want exact teaching support, careful wording, lesson pacing, and clear connections between every curriculum component.</p>
-              <ul>
-                <li>126 printable parent pages</li>
-                <li>Ten-week suggested teaching rhythm</li>
-                <li>Daily open-and-teach lesson plans</li>
-                <li>Qur’an and authentic hadith references</li>
-                <li>Discussion prompts and teaching scripts</li>
-                <li>Workbook page and activity connections</li>
-                <li>Game-pack recommendations by lesson</li>
-                <li>Answers, cautions, and sample responses</li>
-              </ul>
-            </div>
-            <div class="buy-card-action">
+      <article class="product-panel" id="parent-teaching-guide">
+        <div class="carousel" data-carousel>
+          <div class="carousel-main">
+            <img src="images/products/dollars-deen-decisions/dollars-deen-decisions-parent-teaching-guide-cover.png" alt="Dollars, Deen and Decisions Parent Teaching Guide cover" data-carousel-main>
+          </div>
+          <div class="carousel-thumbs" aria-label="Parent teaching guide preview images">
+            <button type="button" class="carousel-thumb active" data-carousel-src="images/products/dollars-deen-decisions/dollars-deen-decisions-parent-teaching-guide-cover.png"><img src="images/products/dollars-deen-decisions/dollars-deen-decisions-parent-teaching-guide-cover.png" alt="Parent Teaching Guide cover"></button>
+            <button type="button" class="carousel-thumb" data-carousel-src="images/products/dollars-deen-decisions/dollars-deen-decisions-preview-parent-weekly-plan.png"><img src="images/products/dollars-deen-decisions/dollars-deen-decisions-preview-parent-weekly-plan.png" alt="How the weekly teaching plan works"></button>
+            <button type="button" class="carousel-thumb" data-carousel-src="images/products/dollars-deen-decisions/dollars-deen-decisions-preview-parent-week-8-plan.png"><img src="images/products/dollars-deen-decisions/dollars-deen-decisions-preview-parent-week-8-plan.png" alt="Week 8 daily teaching plan"></button>
+            <button type="button" class="carousel-thumb" data-carousel-src="images/products/dollars-deen-decisions/dollars-deen-decisions-preview-parent-riba-answer-guidance.png"><img src="images/products/dollars-deen-decisions/dollars-deen-decisions-preview-parent-riba-answer-guidance.png" alt="Riba answer guidance"></button>
+            <button type="button" class="carousel-thumb" data-carousel-src="images/products/dollars-deen-decisions/dollars-deen-decisions-preview-parent-teaching-riba.png"><img src="images/products/dollars-deen-decisions/dollars-deen-decisions-preview-parent-teaching-riba.png" alt="Teaching riba without overwhelming children"></button>
+          </div>
+          <p class="preview-note">Preview includes the cover page plus four sample parent-guide pages.</p>
+        </div>
+
+        <div class="product-copy">
+          <span class="product-label">Individual product</span>
+          <h2>Parent Teaching Guide</h2>
+          <p class="product-meaning">Open-and-teach support that reduces planning and strengthens confidence.</p>
+          <p class="long-description">This 126-page open-and-teach guide helps parents present each topic with clarity and care. It explains the main lesson, gives Qur’an and authentic Sunnah connections, identifies what children need to understand, and warns against common teaching mistakes. Parents receive a ten-week teaching rhythm, daily lesson plans, discussion prompts, workbook connections, game-pack recommendations, answer guidance, sample responses, and age-appropriate language for difficult topics such as debt, borrowing, and riba. The guide is designed to reduce preparation while helping parents teach confidently without turning the curriculum into a fatwa course or overwhelming children with adult financial problems.</p>
+          <p class="product-bestfor"><strong>Best for:</strong> Parents who want exact teaching support, careful wording, lesson pacing, and clear connections between every curriculum component.</p>
+          <ul class="feature-grid">
+            <li>126 printable parent pages</li>
+            <li>Ten-week suggested teaching rhythm</li>
+            <li>Daily open-and-teach lesson plans</li>
+            <li>Qur’an and authentic hadith references</li>
+            <li>Discussion prompts and teaching scripts</li>
+            <li>Workbook page and activity connections</li>
+            <li>Game-pack recommendations by lesson</li>
+            <li>Answers, cautions, and sample responses</li>
+          </ul>
+          <div class="product-purchase">
+            <div class="product-price-wrap">
+              <small>126-page digital parent guide</small>
               <span class="buy-price">$30</span>
-              <button type="button" class="btn btn-secondary" data-product-id="dollars-deen-decisions-parent-teaching-guide">Add Parent Guide</button>
             </div>
+            <button type="button" class="btn btn-secondary" data-product-id="dollars-deen-decisions-parent-teaching-guide">Add Parent Guide</button>
           </div>
+        </div>
+      </article>
 
-          <div class="buy-card">
-            <div class="buy-card-copy">
-              <strong>Printable Money &amp; Budget Game Pack</strong>
-              <small>
-                This 118-page hands-on pack turns financial ideas into practical learning. Children can sort choices, build budgets, plan purchases, compare needs and wants, practice giving and saving, identify warning signs in money agreements, and experience the consequences of household decisions through play. The pack includes printable learning money, budget mats, trackers, challenge boards, sorting cards, shopping activities, mini-business planning, riba red-flag practice, and a full household-budget simulation. It is designed to help children apply what they learned instead of only reading about it.
-              </small>
-              <p class="buy-extra"><strong>Best for:</strong> Hands-on learners, siblings learning together, review days, co-op use within the household license, and children who understand concepts better through practice.</p>
-              <ul>
-                <li>118 printable activity pages</li>
-                <li>Learning money and budget tools</li>
-                <li>Give, Save, and Spend activities</li>
-                <li>Needs, wants, and waste sorting</li>
-                <li>Shopping Cart Challenge</li>
-                <li>Mini-business planning activities</li>
-                <li>Riba red-flag sorting cards</li>
-                <li>Run-the-Household budget game</li>
-              </ul>
-            </div>
-            <div class="buy-card-action">
+      <article class="product-panel reverse" id="money-budget-game-pack">
+        <div class="carousel" data-carousel>
+          <div class="carousel-main">
+            <img src="images/products/dollars-deen-decisions/dollars-deen-decisions-game-pack-cover.png" alt="Dollars, Deen and Decisions Printable Money and Budget Game Pack cover" data-carousel-main>
+          </div>
+          <div class="carousel-thumbs" aria-label="Game pack preview images">
+            <button type="button" class="carousel-thumb active" data-carousel-src="images/products/dollars-deen-decisions/dollars-deen-decisions-game-pack-cover.png"><img src="images/products/dollars-deen-decisions/dollars-deen-decisions-game-pack-cover.png" alt="Game Pack cover"></button>
+            <button type="button" class="carousel-thumb" data-carousel-src="images/products/dollars-deen-decisions/dollars-deen-decisions-preview-game-give-save-spend-mat.png"><img src="images/products/dollars-deen-decisions/dollars-deen-decisions-preview-game-give-save-spend-mat.png" alt="Give Save Spend budget mat"></button>
+            <button type="button" class="carousel-thumb" data-carousel-src="images/products/dollars-deen-decisions/dollars-deen-decisions-preview-game-shopping-cart-challenge.png"><img src="images/products/dollars-deen-decisions/dollars-deen-decisions-preview-game-shopping-cart-challenge.png" alt="Shopping Cart Challenge"></button>
+            <button type="button" class="carousel-thumb" data-carousel-src="images/products/dollars-deen-decisions/dollars-deen-decisions-preview-game-riba-red-flags.png"><img src="images/products/dollars-deen-decisions/dollars-deen-decisions-preview-game-riba-red-flags.png" alt="Riba red flag cards"></button>
+            <button type="button" class="carousel-thumb" data-carousel-src="images/products/dollars-deen-decisions/dollars-deen-decisions-preview-game-run-the-household.png"><img src="images/products/dollars-deen-decisions/dollars-deen-decisions-preview-game-run-the-household.png" alt="Run the Household budget game"></button>
+          </div>
+          <p class="preview-note">Preview includes the cover page plus four sample game-pack pages.</p>
+        </div>
+
+        <div class="product-copy">
+          <span class="product-label">Individual product</span>
+          <h2>Printable Money &amp; Budget Game Pack</h2>
+          <p class="product-meaning">Hands-on reinforcement for children who learn best by doing.</p>
+          <p class="long-description">This 118-page hands-on pack turns financial ideas into practical learning. Children can sort choices, build budgets, plan purchases, compare needs and wants, practice giving and saving, identify warning signs in money agreements, and experience the consequences of household decisions through play. The pack includes printable learning money, budget mats, trackers, challenge boards, sorting cards, shopping activities, mini-business planning, riba red-flag practice, and a full household-budget simulation. It is designed to help children apply what they learned instead of only reading about it.</p>
+          <p class="product-bestfor"><strong>Best for:</strong> Hands-on learners, siblings learning together, review days, co-op use within the household license, and children who understand concepts better through practice.</p>
+          <ul class="feature-grid">
+            <li>118 printable activity pages</li>
+            <li>Learning money and budget tools</li>
+            <li>Give, Save, and Spend activities</li>
+            <li>Needs, wants, and waste sorting</li>
+            <li>Shopping Cart Challenge</li>
+            <li>Mini-business planning activities</li>
+            <li>Riba red-flag sorting cards</li>
+            <li>Run-the-Household budget game</li>
+          </ul>
+          <div class="product-purchase">
+            <div class="product-price-wrap">
+              <small>118-page digital game pack</small>
               <span class="buy-price">$20</span>
-              <button type="button" class="btn btn-secondary" data-product-id="dollars-deen-decisions-money-budget-game-pack">Add Game Pack</button>
             </div>
+            <button type="button" class="btn btn-secondary" data-product-id="dollars-deen-decisions-money-budget-game-pack">Add Game Pack</button>
           </div>
-        </div>        </div>
-      </div>
-    </article>
-  </div>
-</section>
-
-<section class="details-section">
-  <div class="container">
-    <div class="section-head">
-      <p class="label">What makes this curriculum different</p>
-      <h2>It teaches children how to think, not merely which box to check.</h2>
-    </div>
-    <div class="details-grid">
-      <article class="detail-card">
-        <img src="images/products/dollars-deen-decisions/dollars-deen-decisions-child-workbook-cover.png" alt="Dollars, Deen and Decisions Child Workbook cover" loading="lazy">
-        <div class="detail-card-caption">
-          <h3>Child Workbook</h3>
-          <p>Ten units move from amanah and halal earning into budgeting, bills, saving, giving, debt, riba awareness, investing caution, and a final Islamic money plan.</p>
-        </div>
-      </article>
-      <article class="detail-card">
-        <img src="images/products/dollars-deen-decisions/dollars-deen-decisions-parent-teaching-guide-cover.png" alt="Dollars, Deen and Decisions Parent Teaching Guide cover" loading="lazy">
-        <div class="detail-card-caption">
-          <h3>Parent Teaching Guide</h3>
-          <p>Parents receive a 10-week rhythm, daily teaching plans, Islamic evidence, discussion prompts, cautions, answers, and exact connections to workbook and game-pack activities.</p>
-        </div>
-      </article>
-      <article class="detail-card">
-        <img src="images/products/dollars-deen-decisions/dollars-deen-decisions-game-pack-cover.png" alt="Dollars, Deen and Decisions Printable Money and Budget Game Pack cover" loading="lazy">
-        <div class="detail-card-caption">
-          <h3>Hands-on Game Pack</h3>
-          <p>Children practise with printable learning money, budget mats, bill cards, grocery challenges, scenario sorts, savings tools, riba red flags, and a final household-budget project.</p>
         </div>
       </article>
     </div>
