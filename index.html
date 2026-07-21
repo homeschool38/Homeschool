@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Muslim Homeschool Resources & Islamic Printables</title>
-<meta name="description" content="Printable Islamic homeschool resources for Muslim families: Names of Allah workbooks, morning routines, homeschool reset planning, Prophet story scripts, screen-free Muslim kids activities, and faith-filled homeschool tools.">
+<meta name="description" content="Printable Islamic homeschool resources for Muslim families, including Islamic financial literacy, Names of Allah workbooks, Prophet stories, homeschool planning tools, and screen-free activities.">
 
 <link rel="canonical" href="https://mymuslimhomeschool.com/">
 <meta name="robots" content="index, follow, max-image-preview:large">
@@ -18,7 +18,7 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="My Muslim Homeschool">
 <meta property="og:title" content="Muslim Homeschool Resources | My Muslim Homeschool">
-<meta property="og:description" content="Printable Islamic homeschool resources for Muslim families: Names of Allah workbooks, routines, reset workbooks, Prophet story scripts, and screen-free Muslim kids activities.">
+<meta property="og:description" content="Printable Islamic homeschool resources for Muslim families, including Islamic financial literacy, Names of Allah workbooks, Prophet stories, homeschool planning tools, and screen-free activities.">
 <meta property="og:url" content="https://mymuslimhomeschool.com/">
 <meta property="og:image" content="https://mymuslimhomeschool.com/images/social/muslim-homeschool-resources.jpg">
 <meta property="og:image:alt" content="My Muslim Homeschool printable Islamic homeschool resources">
@@ -26,7 +26,7 @@
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Muslim Homeschool Resources | My Muslim Homeschool">
-<meta name="twitter:description" content="Printable Islamic homeschool resources for Muslim families: Names of Allah workbooks, routines, reset workbooks, Prophet story scripts, and screen-free Muslim kids activities.">
+<meta name="twitter:description" content="Printable Islamic homeschool resources for Muslim families, including Islamic financial literacy, Names of Allah workbooks, Prophet stories, homeschool planning tools, and screen-free activities.">
 <meta name="twitter:image" content="https://mymuslimhomeschool.com/images/social/muslim-homeschool-resources.jpg">
 <meta name="twitter:image:alt" content="My Muslim Homeschool printable Islamic homeschool resources">
 
@@ -367,6 +367,88 @@ h2 em {
 .featured-btn-lavender { background: #9b8cb0; }
 .featured-btn-gold { background: #c9a83a; }
 
+
+/* ===== DOLLARS, DEEN & DECISIONS FEATURE ===== */
+.ddd-feature {
+  background: linear-gradient(135deg, #f8fbf8 0%, #fffdf8 52%, var(--yellow-pale) 100%);
+}
+.ddd-card {
+  display: grid;
+  grid-template-columns: minmax(320px, 0.92fr) minmax(0, 1.08fr);
+  gap: clamp(28px, 4.5vw, 70px);
+  align-items: center;
+  background: var(--white);
+  border: 2px solid var(--yellow);
+  border-radius: 30px;
+  padding: clamp(24px, 4vw, 48px);
+  box-shadow: 0 18px 48px rgba(70, 50, 42, 0.09);
+}
+.ddd-image-wrap {
+  background: linear-gradient(135deg, var(--sage-pale), var(--yellow-pale));
+  border-radius: 24px;
+  padding: clamp(14px, 2vw, 24px);
+}
+.ddd-image-wrap img {
+  width: 100%;
+  border-radius: 18px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}
+.ddd-copy .section-title {
+  text-align: left;
+}
+.ddd-copy > p {
+  max-width: 720px;
+}
+.ddd-points {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px 18px;
+  margin: 22px 0 26px;
+}
+.ddd-points li {
+  position: relative;
+  padding-left: 25px;
+  color: var(--mid);
+  font-size: 0.94rem;
+  font-weight: 600;
+}
+.ddd-points li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--sage-deep);
+  font-weight: 900;
+}
+.ddd-price-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin: 0 0 22px;
+}
+.ddd-price {
+  font-family: 'Playfair Display', Georgia, serif;
+  color: var(--pink);
+  font-size: 2.6rem;
+  line-height: 1;
+  font-weight: 700;
+}
+.ddd-save {
+  display: inline-flex;
+  background: var(--yellow);
+  color: var(--charcoal);
+  border-radius: 999px;
+  padding: 5px 13px;
+  font-size: 0.78rem;
+  font-weight: 900;
+}
+.ddd-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
 /* ===== NAMES OF ALLAH FEATURE ===== */
 .names-feature {
   display: grid;
@@ -659,7 +741,7 @@ footer a { color: var(--pink-light); }
   .home-hero-image img { min-height: 360px; object-position: center right; }
   .home-hero-copy { order: 1; width: 100%; min-height: auto; padding: 44px 28px 30px; max-width: 760px; }
   .home-hero-promise-row { flex-wrap: wrap; gap: 18px 32px; padding-top: 22px; }
-  .names-feature, .bundle-content, .about-grid, .free-course-layout { grid-template-columns: 1fr; }
+  .names-feature, .bundle-content, .about-grid, .free-course-layout, .ddd-card { grid-template-columns: 1fr; }
   .names-mini-grid { max-width: 720px; }
   .promise-list, .free-benefits, .faq-grid, .testimonials-grid { grid-template-columns: 1fr; }
   .free-course-copy .section-title,
@@ -681,6 +763,8 @@ footer a { color: var(--pink-light); }
   .home-promise-item img { width: 62px; height: 62px; }
   .shop-category-grid, .featured-grid, .mother-grid, .course-grid { grid-template-columns: 1fr; }
   .names-mini-grid { grid-template-columns: 1fr; }
+  .ddd-points { grid-template-columns: 1fr; }
+  .ddd-actions .btn { width: 100%; }
   .name-mini-card img { aspect-ratio: 1.2 / 1; }
   .free-form-row { flex-direction: column; }
   .free-course-image-wrap { padding: 10px; border-radius: 24px; }
@@ -739,11 +823,12 @@ footer a { color: var(--pink-light); }
       "@id": "https://mymuslimhomeschool.com/#resources",
       "name": "Islamic Homeschool Resources",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "url": "https://mymuslimhomeschool.com/99-names-of-allah-for-kids.html", "name": "99 Names of Allah for Kids" },
-        { "@type": "ListItem", "position": 2, "url": "https://mymuslimhomeschool.com/product-playbook.html", "name": "Muslim Mom's Morning Routine Playbook" },
-        { "@type": "ListItem", "position": 3, "url": "https://mymuslimhomeschool.com/product-workbook.html", "name": "Homeschool Reset Workbook" },
-        { "@type": "ListItem", "position": 4, "url": "https://mymuslimhomeschool.com/product-scripts.html", "name": "Open & Teach: 15 Prophet Story Scripts" },
-        { "@type": "ListItem", "position": 5, "url": "https://mymuslimhomeschool.com/product-screenfree.html", "name": "100 Screen-Free Challenge Cards for Muslim Kids" }
+        { "@type": "ListItem", "position": 1, "url": "https://mymuslimhomeschool.com/dollars-deen-decisions.html", "name": "Dollars, Deen & Decisions Islamic Financial Literacy Curriculum" },
+        { "@type": "ListItem", "position": 2, "url": "https://mymuslimhomeschool.com/99-names-of-allah-for-kids.html", "name": "99 Names of Allah for Kids" },
+        { "@type": "ListItem", "position": 3, "url": "https://mymuslimhomeschool.com/product-playbook.html", "name": "Muslim Mom's Morning Routine Playbook" },
+        { "@type": "ListItem", "position": 4, "url": "https://mymuslimhomeschool.com/product-workbook.html", "name": "Homeschool Reset Workbook" },
+        { "@type": "ListItem", "position": 5, "url": "https://mymuslimhomeschool.com/product-scripts.html", "name": "Open & Teach: 15 Prophet Story Scripts" },
+        { "@type": "ListItem", "position": 6, "url": "https://mymuslimhomeschool.com/product-screenfree.html", "name": "100 Screen-Free Challenge Cards for Muslim Kids" }
       ]
     }
   ]
@@ -843,9 +928,9 @@ footer a { color: var(--pink-light); }
     <h2 class="section-title">Start with a resource that makes today <em>easier.</em></h2>
 
     <div class="featured-grid">
-      <a class="featured-card" href="/product-bundle.html">
-        <div class="featured-image"><img src="images/products/complete-bundle.png" alt="Complete Homeschool Bundle printable resource set"></div>
-        <div class="featured-body"><h3>Complete<br>Homeschool Bundle</h3><p>Everything you need to plan, teach, and nurture your way.</p><span class="featured-btn featured-btn-teal">View Product</span></div>
+      <a class="featured-card" href="/dollars-deen-decisions.html">
+        <div class="featured-image"><img src="images/products/dollars-deen-decisions/dollars-deen-decisions-complete-curriculum-bundle.png" alt="Dollars, Deen and Decisions Islamic financial literacy curriculum"></div>
+        <div class="featured-body"><h3>Dollars, Deen<br>&amp; Decisions</h3><p>A complete Islamic financial literacy curriculum for children.</p><span class="featured-btn featured-btn-gold">View Curriculum</span></div>
       </a>
       <a class="featured-card" href="/product-playbook.html">
         <div class="featured-image"><img src="images/products/morning-routine-playbook.png" alt="Morning Routine Playbook printable resource"></div>
@@ -867,6 +952,50 @@ footer a { color: var(--pink-light); }
         <div class="featured-image"><img src="images/products/Ar-Rahman Bundle image.png" alt="Ar-Rahman Discovery Pack for children"></div>
         <div class="featured-body"><h3>Ar-Raḥmān<br>Discovery Pack</h3><p>Help your child learn Allah's mercy through Qur'an, Sunnah, and activities.</p><span class="featured-btn featured-btn-gold">View Collection</span></div>
       </a>
+    </div>
+  </div>
+</section>
+
+
+<section class="section ddd-feature" id="dollars-deen-decisions">
+  <div class="inner">
+    <div class="ddd-card">
+      <div class="ddd-image-wrap">
+        <img
+          src="images/products/dollars-deen-decisions/dollars-deen-decisions-complete-curriculum-bundle.png"
+          alt="Dollars, Deen and Decisions complete Islamic financial literacy curriculum bundle"
+          loading="lazy"
+        >
+      </div>
+
+      <div class="ddd-copy">
+        <p class="section-label">New Islamic Financial Literacy Curriculum</p>
+        <h2 class="section-title">Teach money as an <em>amanah from Allah.</em></h2>
+        <p>
+          Dollars, Deen &amp; Decisions helps Muslim children build practical money skills while learning that earning, spending, saving, giving, debt, and financial choices are connected to faith and responsibility.
+        </p>
+
+        <ul class="ddd-points">
+          <li>Budgeting, saving, giving, and paying bills</li>
+          <li>Needs, wants, waste, and thoughtful spending</li>
+          <li>Halal earning and responsible choices</li>
+          <li>Age-appropriate teaching about riba and debt</li>
+          <li>110-page Child Workbook</li>
+          <li>126-page Parent Teaching Guide</li>
+          <li>118-page printable game pack</li>
+          <li>Designed for approximately ages 9–14</li>
+        </ul>
+
+        <div class="ddd-price-row">
+          <span class="ddd-price">$70</span>
+          <span class="ddd-save">Complete 3-part curriculum</span>
+        </div>
+
+        <div class="ddd-actions">
+          <a class="btn btn-sage" href="/dollars-deen-decisions.html">Explore the Curriculum</a>
+          <a class="btn btn-outline" href="/shop.html#islamic-financial-literacy">View Buying Options</a>
+        </div>
+      </div>
     </div>
   </div>
 </section>
