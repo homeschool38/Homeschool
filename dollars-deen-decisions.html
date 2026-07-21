@@ -108,7 +108,7 @@ p{color:var(--mid);font-weight:400}
 .buy-card.featured .buy-card-copy::before{content:'Best value — save $10';display:inline-flex;width:max-content;background:var(--gold-pale);color:var(--gold-dark);border-radius:999px;padding:4px 10px;font-size:.66rem;font-weight:900;letter-spacing:.07em;text-transform:uppercase;margin-bottom:8px}
 .details-section{padding:34px 0 42px}
 .details-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.detail-card{background:var(--white);border:1px solid var(--border);border-radius:24px;padding:24px;box-shadow:0 10px 30px rgba(57,77,66,.06)}
+.detail-card{background:var(--white);border:1px solid var(--border);border-radius:24px;padding:24px;box-shadow:0 10px 30px rgba(57,77,66,.06);display:flex;flex-direction:column;align-items:center;text-align:left}\n.detail-card img{width:min(100%,230px);height:auto;display:block;border-radius:16px;box-shadow:0 12px 28px rgba(57,77,66,.12);margin:0 auto 18px}\n.detail-card-caption{width:100%}
 .detail-card h3{font-size:1.25rem;margin-bottom:8px;color:var(--emerald-dark)}
 .detail-card p{font-size:.95rem}
 .age-section{padding:48px 0;background:linear-gradient(135deg,var(--sage-pale),var(--gold-pale))}
@@ -358,9 +358,27 @@ p{color:var(--mid);font-weight:400}
       <h2>It teaches children how to think, not merely which box to check.</h2>
     </div>
     <div class="details-grid">
-      <article class="detail-card"><h3>Child Workbook</h3><p>Ten units move from amanah and halal earning into budgeting, bills, saving, giving, debt, riba awareness, investing caution, and a final Islamic money plan.</p></article>
-      <article class="detail-card"><h3>Parent Teaching Guide</h3><p>Parents receive a 10-week rhythm, daily teaching plans, Islamic evidence, discussion prompts, cautions, answers, and exact connections to workbook and game-pack activities.</p></article>
-      <article class="detail-card"><h3>Hands-on Game Pack</h3><p>Children practise with printable learning money, budget mats, bill cards, grocery challenges, scenario sorts, savings tools, riba red flags, and a final household-budget project.</p></article>
+      <article class="detail-card">
+        <img src="images/products/dollars-deen-decisions/dollars-deen-decisions-child-workbook-cover.png" alt="Dollars, Deen and Decisions Child Workbook cover" loading="lazy">
+        <div class="detail-card-caption">
+          <h3>Child Workbook</h3>
+          <p>Ten units move from amanah and halal earning into budgeting, bills, saving, giving, debt, riba awareness, investing caution, and a final Islamic money plan.</p>
+        </div>
+      </article>
+      <article class="detail-card">
+        <img src="images/products/dollars-deen-decisions/dollars-deen-decisions-parent-teaching-guide-cover.png" alt="Dollars, Deen and Decisions Parent Teaching Guide cover" loading="lazy">
+        <div class="detail-card-caption">
+          <h3>Parent Teaching Guide</h3>
+          <p>Parents receive a 10-week rhythm, daily teaching plans, Islamic evidence, discussion prompts, cautions, answers, and exact connections to workbook and game-pack activities.</p>
+        </div>
+      </article>
+      <article class="detail-card">
+        <img src="images/products/dollars-deen-decisions/dollars-deen-decisions-game-pack-cover.png" alt="Dollars, Deen and Decisions Printable Money and Budget Game Pack cover" loading="lazy">
+        <div class="detail-card-caption">
+          <h3>Hands-on Game Pack</h3>
+          <p>Children practise with printable learning money, budget mats, bill cards, grocery challenges, scenario sorts, savings tools, riba red flags, and a final household-budget project.</p>
+        </div>
+      </article>
     </div>
   </div>
 </section>
